@@ -1,0 +1,130 @@
+@mixin animation($animation)
+{
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin backface-visibility($visibility)
+{
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    backface-visibility: $visibility;
+}
+
+@mixin border-radius($radius)
+{
+    -webkit-border-radius: $radius; 
+    -moz-border-radius: $radius; 
+    border-radius: $radius;
+}
+
+@mixin box-shadow($box-shadow)
+{
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+@mixin box-sizing($box-sizing)
+{
+    -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+
+@mixin calc($property, $calc)
+{
+    #{$property}: -moz-calc(#{$calc});
+    #{$property}: -webkit-calc(#{$calc});
+    #{$property}: -o-calc(#{$calc});
+    #{$property}: calc(#{$calc});
+}
+
+@mixin input-placeholder-color($color)
+{
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    
+    &:-moz-placeholder {
+    color: $color;
+    @include opacity(1);
+    }
+    
+    &::-moz-placeholder {
+    color: $color;
+    @include opacity(1);
+    }
+    
+    &:-ms-input-placeholder {
+    color: $color;
+    }
+    
+    &::-ms-input-placeholder {
+    color: $color;
+    }
+}
+
+@mixin keyframes($name)
+{
+    @keyframes #{$name} {
+        @content;
+    }
+
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin opacity($opacity)
+{
+    filter: alpha(opacity = $opacity * 100);
+    opacity: $opacity;
+}
+
+@mixin touch-action($touch-action)
+{
+    -ms-touch-action: $touch-action;
+    touch-action: $touch-action;
+}
+
+@mixin transform($transform)
+{
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition...)
+{
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin user-select($user-select)
+{
+    -webkit-user-select: $user-select;
+    -moz-user-select: $user-select;
+    -ms-user-select: $user-select;
+    user-select: $user-select;
+}
+
+@mixin visibility($visibility)
+{
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    visibility: $visibility;
+}

@@ -1,0 +1,51 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.app, .app-sidebar, .app-content
+{
+    height: 100%;
+}
+
+.app
+{
+    position: relative;
+    width: 100%;
+
+    &:before
+    {
+        content: "";
+        height: 100%;
+        float: left;
+    }
+
+    &:after
+    {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .app-body
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .app-sidebar
+        {
+            background-color: $clouds;
+            float: left;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .app-content
+        {
+            position: relative;
+            overflow: auto;
+        }
+    }
+}
