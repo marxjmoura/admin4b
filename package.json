@@ -1,0 +1,24 @@
+{
+  "name": "admin4bs",
+  "title": "Admin 4BS",
+  "version": "0.1.0",
+  "homepage": "https://marxjmoura.github.io/admin4bs/demo/index.html",
+  "author": "Marx J. Moura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marxjmoura/admin4bs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marxjmoura/admin4bs.git"
+  },
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp sass"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
