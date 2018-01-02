@@ -1,4 +1,4 @@
-@mixin animation($animation)
+@mixin crossbrowser-animation($animation)
 {
     -webkit-animation: $animation;
     -moz-animation: $animation;
@@ -6,35 +6,41 @@
     animation: $animation;
 }
 
-@mixin backface-visibility($visibility)
+@mixin crossbrowser-backface-visibility($visibility)
 {
     -webkit-backface-visibility: $visibility;
     -moz-backface-visibility: $visibility;
     backface-visibility: $visibility;
 }
 
-@mixin border-radius($radius)
+@mixin crossbrowser-background-gradient($gradient...)
+{
+    background: -webkit-linear-gradient($gradient);
+    background: linear-gradient($gradient);
+}
+
+@mixin crossbrowser-border-radius($radius)
 {
     -webkit-border-radius: $radius; 
     -moz-border-radius: $radius; 
     border-radius: $radius;
 }
 
-@mixin box-shadow($box-shadow)
+@mixin crossbrowser-box-shadow($box-shadow)
 {
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
 }
 
-@mixin box-sizing($box-sizing)
+@mixin crossbrowser-box-sizing($box-sizing)
 {
     -webkit-box-sizing: $box-sizing;
     -moz-box-sizing: $box-sizing;
     box-sizing: $box-sizing;
 }
 
-@mixin calc($property, $calc)
+@mixin crossbrowser-calc($property, $calc)
 {
     #{$property}: -moz-calc(#{$calc});
     #{$property}: -webkit-calc(#{$calc});
@@ -42,63 +48,71 @@
     #{$property}: calc(#{$calc});
 }
 
-@mixin input-placeholder-color($color)
+@mixin crossbrowser-input-placeholder-color($color)
 {
-    &::-webkit-input-placeholder {
+    &::-webkit-input-placeholder
+    {
         color: $color;
     }
     
-    &:-moz-placeholder {
-    color: $color;
-    @include opacity(1);
+    &:-moz-placeholder
+    {
+        color: $color;
+        @include crossbrowser-opacity(1);
     }
     
-    &::-moz-placeholder {
-    color: $color;
-    @include opacity(1);
+    &::-moz-placeholder
+    {
+        color: $color;
+        @include crossbrowser-opacity(1);
     }
     
-    &:-ms-input-placeholder {
-    color: $color;
+    &:-ms-input-placeholder
+    {
+        color: $color;
     }
     
     &::-ms-input-placeholder {
-    color: $color;
+        color: $color;
     }
 }
 
-@mixin keyframes($name)
+@mixin crossbrowser-keyframes($name)
 {
-    @keyframes #{$name} {
+    @keyframes #{$name}
+    {
         @content;
     }
 
-    @-webkit-keyframes #{$name} {
+    @-webkit-keyframes #{$name}
+    {
         @content;
     }
 
-    @-moz-keyframes #{$name} {
+    @-moz-keyframes #{$name}
+    {
         @content;
     }
 
-    @-o-keyframes #{$name} {
+    @-o-keyframes #{$name}
+    {
         @content;
     }
 }
 
-@mixin opacity($opacity)
+@mixin crossbrowser-opacity($opacity)
 {
     filter: alpha(opacity = $opacity * 100);
     opacity: $opacity;
 }
 
-@mixin touch-action($touch-action)
+@mixin crossbrowser-touch-action($touch-action)
 {
     -ms-touch-action: $touch-action;
     touch-action: $touch-action;
 }
 
-@mixin transform($transform)
+@mixin crossbrowser-transform($transform)
 {
     -webkit-transform: $transform;
     -moz-transform: $transform;
@@ -106,7 +120,7 @@
     transform: $transform;
 }
 
-@mixin transition($transition...)
+@mixin crossbrowser-transition($transition...)
 {
     -webkit-transition: $transition;
     -moz-transition: $transition;
@@ -114,7 +128,7 @@
     transition: $transition;
 }
 
-@mixin user-select($user-select)
+@mixin crossbrowser-user-select($user-select)
 {
     -webkit-user-select: $user-select;
     -moz-user-select: $user-select;
@@ -122,7 +136,7 @@
     user-select: $user-select;
 }
 
-@mixin visibility($visibility)
+@mixin crossbrowser-visibility($visibility)
 {
     -webkit-backface-visibility: $visibility;
     -moz-backface-visibility: $visibility;

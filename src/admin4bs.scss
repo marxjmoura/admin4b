@@ -1,4 +1,8 @@
-@import 'util/cross-browser';
-@import 'util/flat-ui-colors';
+@import 'utilities/cross-browser';
 
-@import 'theme/layout';
+@import 'palette/bs-colors';
+@import 'palette/flat-ui-colors';
+
+@import 'layout/app';
+
+@import 'components/profile';

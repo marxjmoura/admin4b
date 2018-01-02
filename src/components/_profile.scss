@@ -1,0 +1,17 @@
+.app-sidebar .profile
+{
+    .user-photo
+    {
+        background-color: darken($bscolors-blue, 10%);
+        border: 3px solid lighten($bscolors-blue, 15%);
+        border-radius: 50%;
+        width: 80px;
+    }
+
+    .username
+    {
+        color: lighten($bscolors-blue, 40%);
+        padding: 10px 0;
+        text-align: center;
+    }
+}
