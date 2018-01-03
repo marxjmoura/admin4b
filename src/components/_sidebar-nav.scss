@@ -1,0 +1,50 @@
+.sidebar-nav
+{
+    $nav-group-item-border-color: lighten($sidebar-bg-color, 15%);
+    $nav-group-bg-color: darken($sidebar-bg-color, 3%);
+
+    padding: 0;
+    overflow: hidden;
+
+    .nav-group
+    {
+        margin-bottom: 0;
+
+        .nav-group
+        {
+            background: darken($nav-group-bg-color, 3%);
+        }
+    }
+
+    .nav-group-item
+    {
+        border-bottom: 1px solid $nav-group-item-border-color;
+        color: lighten($sidebar-bg-color, 40%);
+        display: block;
+        padding: 5px 55px;
+        text-decoration: none;
+        @include crossbrowser-transition(color 0.25s ease-out);
+
+        .fa
+        {
+            padding-right: 10px;
+        }
+
+        &:hover,
+        &:active
+        {
+            color: $bscolors-white;
+        }
+    }
+
+    > .nav-group-item,
+    > .nav-group > .nav-group-item
+    {
+        padding: 10px 50px 10px 20px;
+    }
+
+    > .nav-group:first-child > .nav-group-item
+    {
+        border-top: 1px solid $nav-group-item-border-color;
+    }
+}

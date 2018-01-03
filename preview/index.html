@@ -16,6 +16,50 @@
             <img src="images/user-photo.png" class="user-photo">
             <p class="username">John Doe</p>
           </div>
+          <div id="sidebar-nav" class="sidebar-nav" data-children=".nav-group">
+            <div class="nav-group">
+              <a href="#dashboard" class="nav-group-item" data-toggle="collapse" data-parent="#sidebar-nav">
+                <i class="fa fa-dashboard"></i>
+                <span>Dashboard</span>
+              </a>
+              <div id="dashboard" class="nav-group collapse">
+                <a href="#" class="nav-group-item">Link 1</a>
+                <a href="#" class="nav-group-item">Link 2</a>
+                <a href="#" class="nav-group-item">Link 3</a>
+              </div>
+            </div>
+            <div class="nav-group">
+              <a href="#forms" class="nav-group-item" data-toggle="collapse" data-parent="#sidebar-nav">
+                <i class="fa fa-pencil-square-o"></i>
+                <span>Forms</span>
+              </a>
+              <div id="forms" class="nav-group collapse">
+                <a href="#" class="nav-group-item">Link 1</a>
+                <a href="#" class="nav-group-item">Link 2</a>
+                <a href="#" class="nav-group-item">Link 3</a>
+              </div>
+            </div>
+            <a href="#" class="nav-group-item">
+              <i class="fa fa-power-off"></i>
+              <span>Log Off</span>
+            </a>
+          </div>
+          <!-- <ul class="sidebar-nav">
+            <li>
+              <a href="#">
+                <i class="fa fa-dashboard"></i>
+                <span>Dashboard</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+            <li>
+                <a href="#">
+                  <i class="fa fa-dashboard"></i>
+                  <span>Forms</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+              </li>
+          </ul> -->
         </div>
         <div class="app-content">
           <nav class="navbar navbar-expand navbar-light bg-white">
