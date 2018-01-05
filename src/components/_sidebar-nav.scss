@@ -1,50 +1,83 @@
 .sidebar-nav
 {
-    $nav-group-item-border-color: lighten($sidebar-bg-color, 15%);
     $nav-group-bg-color: darken($sidebar-bg-color, 3%);
+    $nav-group-item-active-color: darken($nav-group-bg-color, 3%);
+    $nav-group-item-border-color: lighten($sidebar-bg-color, 15%);
+    $nav-group-item-icon-color: lighten($sidebar-bg-color, 40%);
 
-    padding: 0;
     overflow: hidden;
+    padding: 0;
 
     .nav-group
     {
-        margin-bottom: 0;
+        background: $nav-group-item-active-color;
 
         .nav-group
         {
-            background: darken($nav-group-bg-color, 3%);
+            padding: 5px 0;
+
+            .nav-group-item
+            {
+                padding: 5px 60px;
+
+                &:hover,
+                &:active
+                {
+                    color: $sidebar-user-photo-border-color;
+                }
+            }
         }
     }
 
     .nav-group-item
     {
-        border-bottom: 1px solid $nav-group-item-border-color;
-        color: lighten($sidebar-bg-color, 40%);
+        color: $nav-group-item-icon-color;
         display: block;
-        padding: 5px 55px;
         text-decoration: none;
         @include crossbrowser-transition(color 0.25s ease-out);
-
-        .fa
-        {
-            padding-right: 10px;
-        }
-
-        &:hover,
-        &:active
-        {
-            color: $bscolors-white;
-        }
     }
 
     > .nav-group-item,
     > .nav-group > .nav-group-item
     {
-        padding: 10px 50px 10px 20px;
+        border: none;
+        color: lighten($sidebar-bg-color, 60%);
+        font-size: 13pt;
+        font-weight: 400;
+        padding: 15px 40px 15px 20px;
+        @include crossbrowser-transition(background-color 0.25s ease-out);
+
+        .fa
+        {
+            font-size: 16pt;
+            padding-right: 10px;
+            @include crossbrowser-transition(color 0.25s ease-out);
+        }
+
+        &.collapsed
+        {
+            background-color: $sidebar-bg-color;
+
+            .fa
+            {
+                color: $nav-group-item-icon-color;
+            }
+        }
+
+        &:active,
+        &:hover
+        {
+            background-color: $nav-group-item-active-color;
+        }
     }
 
-    > .nav-group:first-child > .nav-group-item
+    > .nav-group-item .fa
     {
-        border-top: 1px solid $nav-group-item-border-color;
+        color: $nav-group-item-icon-color;
+    }
+
+    > .nav-group > .nav-group-item .fa
+    {
+        color: $sidebar-user-photo-border-color;
     }
 }
