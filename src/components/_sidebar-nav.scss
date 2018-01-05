@@ -12,19 +12,14 @@
     {
         background: $nav-group-item-active-color;
 
-        .nav-group
+        .nav-group .nav-group-item
         {
-            padding: 5px 0;
+            padding: 5px 60px 10px;
 
-            .nav-group-item
+            &:hover,
+            &:active
             {
-                padding: 5px 60px;
-
-                &:hover,
-                &:active
-                {
-                    color: $sidebar-user-photo-border-color;
-                }
+                color: $sidebar-user-photo-border-color;
             }
         }
     }
