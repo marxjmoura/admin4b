@@ -75,4 +75,33 @@
     {
         color: $sidebar-user-photo-border-color;
     }
+
+    .nav-footer
+    {
+        text-align: center;
+
+        &:before
+        {
+            border-top: 1px solid lighten($sidebar-bg-color, 7%);
+            content: "";
+            display: block;
+            margin: 15px auto;
+            width: 90%;
+        }
+
+        a
+        {
+            color: $nav-group-item-icon-color;
+            font-size: 16pt;
+            padding: 10px;
+            text-decoration: none;
+            @include crossbrowser-transition(color 0.25s ease-out);
+
+            &:active,
+            &:hover
+            {
+                color: $bscolors-white;
+            }
+        }
+    }
 }
