@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../preview/assets/css/highlight.css">
 <link rel="stylesheet" href="../dist/admin4bs.min.css">
 <title>Admin 4BS</title>
 
@@ -20,7 +21,7 @@
 <div id="sidebar-nav" class="sidebar-nav" data-children=".nav-group">
   <a href="../preview/index.html" class="nav-group-item">
     <i class="fa fa-play"></i>
-    <span>Get Started</span>
+    <span>Get started</span>
   </a>
   <div class="nav-group">
     <a href="#components" class="nav-group-item collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
@@ -90,12 +91,80 @@
               <li class="breadcrumb-item active" aria-current="page">Get started</li>
             </ol>
           </nav>
+          <div class="container">
+            <h3>
+              Introduction
+            </h3>
+            <p>
+              Admin 4BS is is an open source, admin dashboard template and control panel theme built on top of Bootstrap 4.
+              The source code can be found on the <a href="https://github.com/marxjmoura/admin4bs">GitHub Repository</a>.
+            </p>
+            <h3>
+              Quick start
+            </h3>
+            <p>
+              For the template work properly you need to add Bootstrap CSS and JavaScript files.
+              Refer to <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap documentation</a>
+              for more information. Then <a href="https://github.com/marxjmoura/admin4bs/tree/master/dist">download the latest release</a>
+              of the template Admin 4BS.
+            </p>
+            <h4>
+              CSS
+            </h4>
+            <p>
+              Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> after the Bootstrap
+              stylesheets to load our CSS.
+            </p>
+            <pre><code class="html">&lt;!-- link to Bootstrap CSS --&gt;
+&lt;link rel="stylesheet" href="admin4bs.min.css"&gt;
+</code></pre>
+            <h4>
+              JS
+            </h4>
+            <p>
+              Place the following <code>&lt;script&gt;</code>s near the end of your pages, right before the closing <code>&lt;body&gt;</code> tag.
+              Bootstrap denpencies and plugins must come first and then our JavaScript plugins.
+            </p>
+            <pre><code class="html">&lt;!-- scripts to Bootstrap JS dependencies --&gt;
+&lt;!-- scripts to Bootstrap JS --&gt;
+&lt;scripts src="admin4bs.min.js"&gt;&lt;scripts&gt;
+</code></pre>
+            <h3>
+              Initial setup
+            </h3>
+            <p>
+              A example code of the initial setup can be seen below.
+            </p>
+            <pre><code class="html">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+    &lt;!-- link to Bootstrap CSS --&gt;
+    &lt;link rel="stylesheet" href="admin4bs.min.css"&gt;
+    &lt;title&gt;Admin 4BS&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- scripts to Bootstrap JS dependencies --&gt;
+    &lt;!-- scripts to Bootstrap JS --&gt;
+    &lt;scripts src="admin4bs.min.js"&gt;&lt;scripts&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            <h3>
+              What's next?
+            </h3>
+            <p>
+              Configure the <a href="../preview/pages/components/sidebar-nav.html">Sidebar Navigation</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="assets/js/admin4bs.preview.js"></script>
 
   </body>
