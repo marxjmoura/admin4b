@@ -17,15 +17,30 @@
             <p class="username">John Doe</p>
           </div>
           <div id="sidebar-nav" class="sidebar-nav" data-children=".nav-group">
+            <a href="#" class="nav-group-item">
+              <i class="fa fa-play"></i>
+              <span>Get Started</span>
+            </a>
             <div class="nav-group">
-              <a href="#dashboard" class="nav-group-item collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-                <i class="fa fa-dashboard"></i>
-                <span>Dashboard</span>
+              <a href="#components" class="nav-group-item collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+                <i class="fa fa-check-square-o"></i>
+                <span>Components</span>
               </a>
-              <div id="dashboard" class="nav-group collapse">
-                <a href="#" class="nav-group-item">Link 1</a>
-                <a href="#" class="nav-group-item">Link 2</a>
-                <a href="#" class="nav-group-item">Link 3</a>
+              <div id="components" class="nav-group collapse">
+                <a href="#" class="nav-group-item">Input group</a>
+                <a href="#" class="nav-group-item">Input suggestion</a>
+                <a href="#" class="nav-group-item">Sidebar nav</a>
+                <a href="#" class="nav-group-item">Toggle switch</a>
+              </div>
+            </div>
+            <div class="nav-group">
+              <a href="#content" class="nav-group-item collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+                <i class="fa fa-file-text-o"></i>
+                <span>Content</span>
+              </a>
+              <div id="content" class="nav-group collapse">
+                <a href="#" class="nav-group-item">Dashboard</a>
+                <a href="#" class="nav-group-item">Timeline</a>
               </div>
             </div>
             <div class="nav-group">
@@ -34,16 +49,30 @@
                 <span>Forms</span>
               </a>
               <div id="forms" class="nav-group collapse">
-                <a href="#" class="nav-group-item">Link 1</a>
-                <a href="#" class="nav-group-item">Link 2</a>
-                <a href="#" class="nav-group-item">Link 3</a>
+                <a href="#" class="nav-group-item">Basic form</a>
+                <a href="#" class="nav-group-item">Mult step form</a>
+                <a href="#" class="nav-group-item">Tabbed form</a>
+              </div>
+            </div>
+            <div class="nav-group">
+              <a href="#pages" class="nav-group-item collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+                <i class="fa fa-file-o"></i>
+                <span>Sample pages</span>
+              </a>
+              <div id="pages" class="nav-group collapse">
+                <a href="#" class="nav-group-item">Blank page</a>
+                <a href="#" class="nav-group-item">Error page</a>
+                <a href="#" class="nav-group-item">Sign in</a>
               </div>
             </div>
             <div class="nav-footer">
-              <a href="#">
+              <a href="https://github.com/marxjmoura/admin4bs" data-toggle="tooltip" title="GitHub">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="#" data-toggle="tooltip" title="Settings">
                 <i class="fa fa-cog"></i>
               </a>
-              <a href="#">
+              <a href="#" data-toggle="tooltip" title="Logout">
                 <i class="fa fa-power-off"></i>
               </a>
             </div>
@@ -92,5 +121,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="js/admin4bs.preview.js"></script>
   </body>
 </html>

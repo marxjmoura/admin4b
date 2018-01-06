@@ -38,11 +38,22 @@ html, body
         .app-sidebar
         {
             background: $sidebar-bg-color;
-            border-right: 3px solid darken($sidebar-bg-color, 5%);
             float: left;
-            padding: 15px 0;
             overflow-x: hidden;
-            overflow-y: auto;
+            overflow-y: scroll;
+            padding: 15px 0;
+            width: 260px;
+
+            &::-webkit-scrollbar
+            {
+                background-color: darken($sidebar-bg-color, 5%);
+                width: 3px;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: $sidebar-scrollbar-thumb-color;
+            }
         }
 
         .app-content

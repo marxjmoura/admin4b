@@ -14,11 +14,17 @@
   },
   "scripts": {
     "start": "gulp start",
-    "build": "gulp sass"
+    "build-sass": "gulp build-sass",
+    "build-es6": "gulp build-es6",
+    "build": "gulp build"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
   }
 }

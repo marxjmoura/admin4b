@@ -14,12 +14,12 @@
 
         .nav-group .nav-group-item
         {
-            padding: 5px 60px 10px;
+            padding: 5px 57px 10px;
 
             &:hover,
             &:active
             {
-                color: $sidebar-user-photo-border-color;
+                color: $sidebar-scrollbar-thumb-color;
             }
         }
     }
@@ -39,7 +39,7 @@
         color: lighten($sidebar-bg-color, 60%);
         font-size: 13pt;
         font-weight: 400;
-        padding: 15px 40px 15px 20px;
+        padding: 15px 20px;
         @include crossbrowser-transition(background-color 0.25s ease-out);
 
         .fa
@@ -73,7 +73,7 @@
 
     > .nav-group > .nav-group-item .fa
     {
-        color: $sidebar-user-photo-border-color;
+        color: $sidebar-scrollbar-thumb-color;
     }
 
     .nav-footer
@@ -93,7 +93,7 @@
         {
             color: $nav-group-item-icon-color;
             font-size: 16pt;
-            padding: 10px;
+            padding: 0 10px;
             text-decoration: none;
             @include crossbrowser-transition(color 0.25s ease-out);
 
