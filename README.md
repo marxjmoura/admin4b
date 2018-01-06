@@ -18,6 +18,6 @@ The documentation included in the preview is hosted on GitHub pages at
 
 Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4bs/issues) here on GitHub.
 
-## Copyright and license
+## License
 
 Code released under the [MIT License](https://github.com/marxjmoura/admin4bs/blob/master/LICENSE).
