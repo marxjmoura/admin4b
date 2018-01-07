@@ -1,0 +1,39 @@
+@mixin bsmedia-breakpoint-xs
+{
+  @media (max-width: 575.99px)
+  {
+    @content;
+  }
+}
+
+@mixin bsmedia-breakpoint-sm
+{
+  @media (min-width: 576px) and (max-width: 767.99px)
+  {
+    @content;
+  }
+}
+
+@mixin bsmedia-breakpoint-md
+{
+  @media (min-width: 768px) and (max-width: 991.99px)
+  {
+    @content;
+  }
+}
+
+@mixin bsmedia-breakpoint-lg
+{
+  @media (min-width: 992px) and (max-width: 1199.99px)
+  {
+    @content;
+  }
+}
+
+@mixin bsmedia-breakpoint-xl
+{
+  @media (min-width: 1200px)
+  {
+    @content;
+  }
+}

@@ -1,9 +1,9 @@
 .sidebar-nav
 {
-    $nav-group-bg-color: darken($sidebar-bg-color, 3%);
+    $nav-group-bg-color: darken($variables-sidebar-bg-color, 3%);
     $nav-group-item-active-color: darken($nav-group-bg-color, 3%);
-    $nav-group-item-border-color: lighten($sidebar-bg-color, 15%);
-    $nav-group-item-icon-color: lighten($sidebar-bg-color, 40%);
+    $nav-group-item-border-color: lighten($variables-sidebar-bg-color, 15%);
+    $nav-group-item-icon-color: lighten($variables-sidebar-bg-color, 40%);
 
     overflow: hidden;
     padding: 0;
@@ -19,7 +19,7 @@
             &:hover,
             &:active
             {
-                color: $sidebar-scrollbar-thumb-color;
+                color: $variables-sidebar-scrollbar-thumb-color;
             }
         }
     }
@@ -29,6 +29,7 @@
         color: $nav-group-item-icon-color;
         display: block;
         text-decoration: none;
+        white-space: nowrap;
         @include crossbrowser-transition(color 0.25s ease-out);
     }
 
@@ -36,10 +37,11 @@
     > .nav-group > .nav-group-item
     {
         border: none;
-        color: lighten($sidebar-bg-color, 60%);
+        color: lighten($variables-sidebar-bg-color, 60%);
         font-size: 13pt;
         font-weight: 400;
         padding: 15px 20px;
+        width: $variables-sidebar-width;
         @include crossbrowser-transition(background-color 0.25s ease-out);
 
         .fa
@@ -51,7 +53,7 @@
 
         &.collapsed
         {
-            background-color: $sidebar-bg-color;
+            background-color: $variables-sidebar-bg-color;
 
             .fa
             {
@@ -73,16 +75,17 @@
 
     > .nav-group > .nav-group-item .fa
     {
-        color: $sidebar-scrollbar-thumb-color;
+        color: $variables-sidebar-scrollbar-thumb-color;
     }
 
     .nav-footer
     {
         text-align: center;
+        width: $variables-sidebar-width;
 
         &:before
         {
-            border-top: 1px solid lighten($sidebar-bg-color, 7%);
+            border-top: 1px solid lighten($variables-sidebar-bg-color, 7%);
             content: "";
             display: block;
             margin: 15px auto;

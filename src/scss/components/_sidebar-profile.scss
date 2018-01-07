@@ -1,0 +1,22 @@
+.app-sidebar .profile
+{
+    padding: 0 20px;
+    text-align: center;
+    width: $variables-sidebar-width;
+
+    .user-photo
+    {
+        background-color: darken($variables-sidebar-bg-color, 5%);
+        border: 3px solid $variables-sidebar-scrollbar-thumb-color;
+        border-radius: 50%;
+        height: 96px;
+        padding: 3px;
+        width: 96px;
+    }
+
+    .username
+    {
+        color: lighten($variables-sidebar-bg-color, 40%);
+        padding: 10px 0;
+    }
+}

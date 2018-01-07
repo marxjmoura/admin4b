@@ -1,10 +1,11 @@
+@import 'utilities/bs-media';
 @import 'utilities/cross-browser';
 
 @import 'palette/bs-colors';
 @import 'palette/flat-ui-colors';
-@import 'palette/theme';
 
+@import 'layout/variables';
 @import 'layout/app';
 
-@import 'components/profile';
 @import 'components/sidebar-nav';
+@import 'components/sidebar-profile';
