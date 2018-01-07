@@ -3,7 +3,6 @@
     $nav-group-bg-color: darken($variables-sidebar-bg-color, 3%);
     $nav-group-item-active-color: darken($nav-group-bg-color, 3%);
     $nav-group-item-border-color: lighten($variables-sidebar-bg-color, 15%);
-    $nav-group-item-icon-color: lighten($variables-sidebar-bg-color, 40%);
 
     overflow: hidden;
     padding: 0;
@@ -26,7 +25,7 @@
 
     .nav-group-item
     {
-        color: $nav-group-item-icon-color;
+        color: $variables-sidebar-text-color;
         display: block;
         text-decoration: none;
         white-space: nowrap;
@@ -41,7 +40,7 @@
         font-size: 13pt;
         font-weight: 400;
         padding: 15px 20px;
-        width: $variables-sidebar-width;
+        white-space: nowrap;
         @include crossbrowser-transition(background-color 0.25s ease-out);
 
         .fa
@@ -57,7 +56,7 @@
 
             .fa
             {
-                color: $nav-group-item-icon-color;
+                color: $variables-sidebar-text-color;
             }
         }
 
@@ -70,7 +69,7 @@
 
     > .nav-group-item .fa
     {
-        color: $nav-group-item-icon-color;
+        color: $variables-sidebar-text-color;
     }
 
     > .nav-group > .nav-group-item .fa
@@ -81,7 +80,7 @@
     .nav-footer
     {
         text-align: center;
-        width: $variables-sidebar-width;
+        white-space: nowrap;
 
         &:before
         {
@@ -94,7 +93,7 @@
 
         a
         {
-            color: $nav-group-item-icon-color;
+            color: $variables-sidebar-text-color;
             font-size: 16pt;
             padding: 0 10px;
             text-decoration: none;

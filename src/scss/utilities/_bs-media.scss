@@ -1,39 +1,62 @@
+$xs-max: 575.99px;
+$sm-min: 576px;
+$sm-max: 767.99px;
+$md-min: 768px;
+$md-max: 991.99px;
+$lg-min: 992px;
+$lg-max: 1199.99px;
+$xl-min: 1200px;
+
 @mixin bsmedia-breakpoint-xs
 {
-  @media (max-width: 575.99px)
-  {
-    @content;
-  }
+  @media (max-width: $xs-max) { @content; }
 }
 
 @mixin bsmedia-breakpoint-sm
 {
-  @media (min-width: 576px) and (max-width: 767.99px)
-  {
-    @content;
-  }
+  @media (min-width: $sm-min) and (max-width: $sm-max) { @content; }
 }
 
 @mixin bsmedia-breakpoint-md
 {
-  @media (min-width: 768px) and (max-width: 991.99px)
-  {
-    @content;
-  }
+  @media (min-width: $md-min) and (max-width: $md-max) { @content; }
 }
 
 @mixin bsmedia-breakpoint-lg
 {
-  @media (min-width: 992px) and (max-width: 1199.99px)
-  {
-    @content;
-  }
+  @media (min-width: $lg-min) and (max-width: $lg-max) { @content; }
 }
 
 @mixin bsmedia-breakpoint-xl
 {
-  @media (min-width: 1200px)
-  {
-    @content;
-  }
+  @media (min-width: $xl-min) { @content; }
+}
+
+@mixin bsmedia-breakpoint-down-to-sm
+{
+  @media (max-width: $sm-max) { @content; }
+}
+
+@mixin bsmedia-breakpoint-down-to-md
+{
+  @media (max-width: $md-max) { @content; }
+}
+
+@mixin bsmedia-breakpoint-down-to-lg
+{
+  @media (max-width: $lg-max) { @content; }
+}
+
+@mixin bsmedia-breakpoint-up-to-sm
+{
+  @media (min-width: $sm-min) { @content; }
+}
+
+@mixin bsmedia-breakpoint-up-to-md
+{
+  @media (min-width: $md-min) { @content; }
+}
+@mixin bsmedia-breakpoint-up-to-lg
+{
+  @media (min-width: $lg-min) { @content; }
 }

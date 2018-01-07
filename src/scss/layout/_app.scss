@@ -43,7 +43,7 @@ html, body
             overflow-y: scroll;
             padding: 15px 0;
             width: $variables-sidebar-width;
-            @include crossbrowser-transition(width .5s);
+            @include crossbrowser-transition(width .3s);
 
             &::-webkit-scrollbar
             {
@@ -56,14 +56,18 @@ html, body
                 background-color: $variables-sidebar-scrollbar-thumb-color;
             }
 
-            @include bsmedia-breakpoint-xs
+            @include bsmedia-breakpoint-down-to-sm
             {
-            width: 0;
-            }
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                z-index: 2050;
 
-            @include bsmedia-breakpoint-sm
-            {
-            width: 0;
+                &.sidebar-open
+                {
+                    width: 100%;
+                }
             }
         }
 

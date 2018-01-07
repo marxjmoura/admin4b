@@ -14,7 +14,8 @@
     <div class="app">
       <div class="app-body">
         <div class="app-sidebar">
-          <div class="profile">
+          <div data-dismiss="sidebar"></div>
+<div class="profile">
   <img src="../../../preview/assets/images/user-photo.png" class="user-photo">
   <p class="username">John Doe</p>
 </div>
@@ -84,8 +85,12 @@
         </div>
         <div class="app-content">
           <nav class="navbar navbar-expand navbar-light bg-white">
-            <div class="navbar-brand">Admin 4BS</div>
-          </nav>
+  <button type="button" class="btn" data-toggle="sidebar">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="navbar-brand">Admin 4BS</div>
+</nav>
+
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Forms</li>
@@ -104,6 +109,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="../../../dist/admin4bs.min.js"></script>
 <script src="assets/js/admin4bs.preview.js"></script>
 
   </body>

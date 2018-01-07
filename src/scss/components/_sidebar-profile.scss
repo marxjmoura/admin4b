@@ -2,7 +2,6 @@
 {
     padding: 0 20px;
     text-align: center;
-    width: $variables-sidebar-width;
 
     .user-photo
     {
@@ -18,5 +17,6 @@
     {
         color: lighten($variables-sidebar-bg-color, 40%);
         padding: 10px 0;
+        white-space: nowrap;
     }
 }
