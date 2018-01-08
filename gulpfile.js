@@ -21,22 +21,15 @@ gulp.task('build-js', function () {
 });
 
 gulp.task('build-html', function () {
-    gulp.src('preview/**/*.code.html', { base: './' })
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: './preview/'
-        }))
-        .pipe(rename(function (file) {
-            file.basename = file.basename.replace('.code', '');
-            return file;
-        }))
-        .pipe(gulp.dest('./'));
+    gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'], { base: 'src/html/' })
+        .pipe(fileinclude({ prefix: '@@', basepath: 'src/html/' }))
+        .pipe(gulp.dest('preview/'));
 });
 
 gulp.task('build', ['build-sass', 'build-js', 'build-html']);
 
 gulp.task('start', ['build'], function () {
+    gulp.watch('src/html/**/*.html', ['build-html']);
     gulp.watch('src/scss/**/*.scss', ['build-sass']);
     gulp.watch('src/js/**/*.js', ['build-js']);
-    gulp.watch('preview/**/*.code.html', ['build-html']);
 });
