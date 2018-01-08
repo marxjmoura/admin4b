@@ -1,41 +1,37 @@
-[data-toggle=sidebar]
+.btn-sidebar
 {
   background: transparent;
   font-size: 16pt;
-  margin-right: 15px;
-}
+  margin-right: 5px;
 
-[data-dismiss=sidebar]
-{
-  width: 32px;
-  height: 32px;
-
-  &:before,
-  &:after
-  {
-    position: absolute;
-    right: 30px;
-    content: "";
-    height: 33px;
-    width: 2px;
-    background-color: $variables-sidebar-text-color;
-  }
-
-  &:before
-  {
-    transform: rotate(45deg);
-  }
-  &:after
-  {
-    transform: rotate(-45deg);
-  }
-}
-
-[data-toggle=sidebar],
-[data-dismiss=sidebar]
-{
   @include bsmedia-breakpoint-up-to-md
   {
     display: none;
+  }
+  
+  .x
+  {
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    &:before,
+    &:after
+    {
+      position: absolute;
+      content: "";
+      height: 33px;
+      width: 2px;
+      background-color: $variables-sidebar-text-color;
+    }
+
+    &:before
+    {
+      transform: rotate(45deg);
+    }
+    &:after
+    {
+      transform: rotate(-45deg);
+    }
   }
 }
