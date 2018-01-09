@@ -7,11 +7,11 @@
     overflow: hidden;
     padding: 0;
 
-    .nav-group
+    .sidebar-nav-group
     {
         background: $nav-group-item-active-color;
 
-        .nav-group .nav-group-item
+        .sidebar-nav-group .sidebar-nav-link
         {
             padding: 5px 57px 10px;
 
@@ -23,7 +23,7 @@
         }
     }
 
-    .nav-group-item
+    .sidebar-nav-link
     {
         color: $variables-sidebar-text-color;
         display: block;
@@ -32,8 +32,8 @@
         @include crossbrowser-transition(color 0.25s ease-out);
     }
 
-    > .nav-group-item,
-    > .nav-group > .nav-group-item
+    > .sidebar-nav-link,
+    > .sidebar-nav-group > .sidebar-nav-link
     {
         border: none;
         color: lighten($variables-sidebar-bg-color, 60%);
@@ -67,43 +67,13 @@
         }
     }
 
-    > .nav-group-item .fa
+    > .sidebar-nav-link .fa
     {
         color: $variables-sidebar-text-color;
     }
 
-    > .nav-group > .nav-group-item .fa
+    > .sidebar-nav-group > .sidebar-nav-link .fa
     {
         color: $variables-sidebar-scrollbar-thumb-color;
-    }
-
-    .nav-footer
-    {
-        text-align: center;
-        white-space: nowrap;
-
-        &:before
-        {
-            border-top: 1px solid lighten($variables-sidebar-bg-color, 7%);
-            content: "";
-            display: block;
-            margin: 15px auto;
-            width: 90%;
-        }
-
-        a
-        {
-            color: $variables-sidebar-text-color;
-            font-size: 16pt;
-            padding: 0 10px;
-            text-decoration: none;
-            @include crossbrowser-transition(color 0.25s ease-out);
-
-            &:active,
-            &:hover
-            {
-                color: $bscolors-white;
-            }
-        }
     }
 }

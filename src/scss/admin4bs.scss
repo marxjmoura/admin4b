@@ -7,6 +7,7 @@
 @import 'layout/variables';
 @import 'layout/app';
 
-@import 'components/sidebar-nav';
-@import 'components/sidebar-profile';
-@import 'components/sidebar-toggle';
+@import 'components/sidebar/sidebar-toggle';
+@import 'components/sidebar/sidebar-header';
+@import 'components/sidebar/sidebar-nav';
+@import 'components/sidebar/sidebar-footer';
