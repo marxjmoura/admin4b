@@ -16,9 +16,33 @@
             </ol>
           </nav>
           <div class="container-fluid">
-            <h1 class="display-4">
-              Soon...
-            </h1>
+            <h2>
+              Input suggestion
+            </h2>
+            <p>
+              The component <code>.input-suggestion</code> is an extension of the <code>.input.form-control</code>.
+            </p>
+            <div class="form-group">
+              <label>What juice do you like?</label>
+              <div class="input-suggestion">
+                <input type="text" class="form-control" data-toggle="suggestion" data-target=".input-suggestion" data-event="input">
+                <div class="input-suggestion-list" data-item=".list-group-item-action" data-empty=".no-results">
+                  <div class="list-group">
+                    <p class="list-group-item no-results">
+                      <em class="text-muted">No results found</em>
+                    </p>
+                    <a href="#" class="list-group-item list-group-item-action">Apple, carrot, and orange</a>
+                    <a href="#" class="list-group-item list-group-item-action">Beet, carrot, ginger, and turmeric</a>
+                    <a href="#" class="list-group-item list-group-item-action">Homemade tomato juice</a>
+                    <a href="#" class="list-group-item list-group-item-action">Orange and grapefruit</a>
+                    <a href="#" class="list-group-item list-group-item-action">Pumpkin seed</a>
+                    <a href="#" class="list-group-item list-group-item-action">Spinach, lettuce, and kale</a>
+                    <a href="#" class="list-group-item list-group-item-action">Strawberry-kiwi mint</a>
+                    <a href="#" class="list-group-item list-group-item-action">Strawberry and mango</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
