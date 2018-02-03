@@ -3,22 +3,22 @@
     return this.each(function () {
       var $input = $(this);
       var $suggestion = $input.closest('.input-suggestion');
-      var $suggestionList = $suggestion.find('.input-suggestion-list');
-      var $itemsParent = $suggestionList.find($suggestionList.attr('data-item')).parent();
-      var $isEmpty = $suggestionList.find($suggestionList.attr('data-empty')).hide();
+      var $list = $suggestion.find('.input-suggestion-list');
+      var $items = $list.find($input.attr('data-item')).parent();
+      var $isEmpty = $list.find($input.attr('data-empty')).hide();
       var event = $input.attr('data-event') || 'focus';
       var detachedItems = [];
 
       function textOf($item) {
-        if ($suggestionList.is('[data-text]')) {
-          $item = $item.find($suggestionList.attr('data-text'));
+        if ($input.is('[data-text]')) {
+          $item = $item.find($input.attr('data-text'));
         }
 
         return $item.text().trim();
       }
 
       function search() {
-        $itemsParent.children().removeClass('active');
+        $items.children().removeClass('active');
         $suggestion.addClass('open');
 
         detachedItems.forEach(function ($item) {
@@ -27,16 +27,16 @@
           if ($prev.length) {
             $item.insertAfter($prev);
           } else {
-            $itemsParent.prepend($item);
+            $items.prepend($item);
           }
         });
 
         detachedItems = [];
 
-        $itemsParent.children().each(function () {
+        $items.children().each(function () {
           var $item = $(this);
 
-          if ($item.is($suggestionList.attr('data-item')) && !textOf($item).contains($input.val())) {
+          if ($item.is($input.attr('data-item')) && !textOf($item).contains($input.val())) {
             detachedItems.push($item);
             $item.data('prev', $item.prev());
           }
@@ -46,7 +46,7 @@
           $item.detach();
         });
 
-        if ($itemsParent.children($suggestionList.attr('data-item')).length) {
+        if ($items.children($input.attr('data-item')).length) {
           $isEmpty.hide();
         } else {
           $isEmpty.show();
@@ -65,17 +65,17 @@
             return;
           }
 
-          var $currentItem = $itemsParent.find('.active');
+          var $currentItem = $items.find('.active');
 
           if (!$currentItem.length) {
-            $itemsParent.children($suggestionList.attr('data-item')).eq(0).addClass('active');
+            $items.children($input.attr('data-item')).eq(0).addClass('active');
             return;
           }
 
           if (keyPressed.isArrowDown()) {
             var $nextItem = $currentItem.next();
 
-            if ($nextItem.is($suggestionList.attr('data-item'))) {
+            if ($nextItem.is($input.attr('data-item'))) {
               $currentItem.removeClass('active');
               $nextItem.addClass('active');
             }
@@ -84,7 +84,7 @@
           if (keyPressed.isArrowUp()) {
             var $previousItem = $currentItem.prev();
 
-            if ($previousItem.is($suggestionList.attr('data-item'))) {
+            if ($previousItem.is($input.attr('data-item'))) {
               $currentItem.removeClass('active');
               $previousItem.addClass('active');
             }
@@ -97,8 +97,8 @@
         var keyPressed = keyboard(key);
 
         if (keyPressed.isEnter()) {
-          if ($itemsParent.children('.active').length) {
-            $itemsParent.find('.active').trigger('click');
+          if ($items.children('.active').length) {
+            $items.find('.active').trigger('click');
           }
         }
       });
@@ -116,7 +116,7 @@
         search();
       })
       .on('input-suggestion:load', function() {
-        $itemsParent.children().on('click', function () {
+        $items.children().on('click', function () {
           $input.val(textOf($(this)));
           $input.trigger('input-suggestion:change', this);
           $suggestion.removeClass('open');
