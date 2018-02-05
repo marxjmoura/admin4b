@@ -1,0 +1,60 @@
+.callout
+{
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+
+  h4
+  {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+
+  p:last-child
+  {
+    margin-bottom: 0;
+  }
+
+  code
+  {
+    border-radius: .25rem;
+  }
+
+  & + .callout
+  {
+    margin-top: -.25rem;
+  }
+
+  &.callout-info
+  {
+    border-left-color: #5bc0de;
+
+    h4
+    {
+      color: #5bc0de;
+    }
+  }
+
+  &.callout-warning
+  {
+    border-left-color: #f0ad4e;
+
+    h4
+    {
+      color: #f0ad4e;
+    }
+  }
+
+  &.callout-danger
+  {
+    border-left-color: #d9534f;
+
+    h4
+    {
+      color: #d9534f;
+    }
+  }
+}
