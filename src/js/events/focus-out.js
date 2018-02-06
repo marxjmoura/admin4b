@@ -1,9 +1,9 @@
 (function() {
   $.fn.onFocusOut = function(callback) {
-    var $element = $(this);
-    var $document = $(document);
-
     return this.each(function () {
+      var $document = $(document);
+      var $element = $(this);
+
       function focusOut(e) {
         if (!$(e.target).closest($element).length) {
           if (typeof callback === 'function') {
