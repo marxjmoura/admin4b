@@ -15,6 +15,8 @@
     };
 
     var hide = function () {
+      if (!$suggestion.is('.open')) return;
+
       $suggestion.removeClass('open');
       $input.trigger('suggestion:hide');
     };
