@@ -23,7 +23,7 @@ gulp.task('build-js', () => {
 gulp.task('build-html', () => {
     gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'], { base: 'src/html/' })
         .pipe(fileinclude({ prefix: '@@', basepath: 'src/html/' }).on('error', (e) => console.log(e)))
-        .pipe(gulp.dest('preview/'));
+        .pipe(gulp.dest('docs/'));
 });
 
 gulp.task('build', ['build-sass', 'build-js', 'build-html']);

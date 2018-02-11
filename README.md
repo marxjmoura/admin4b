@@ -1,13 +1,12 @@
 # Admin 4BS
 
-[Admin 4BS](https://marxjmoura.github.io/admin4bs/) is an open source, admin dashboard template and control panel theme built on top of [Bootstrap 4](http://getbootstrap.com).
+[Admin 4BS](https://marxjmoura.github.io/admin4bs/) is an open source and admin template built on top of [Bootstrap 4](http://getbootstrap.com).
 
 ## Documentation
 
-The documentation included in the preview is hosted on GitHub pages at
-[https://marxjmoura.github.io/admin4bs/](https://marxjmoura.github.io/admin4bs/). The preview may also be run locally.
+The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/admin4bs/](https://marxjmoura.github.io/admin4bs/).
 
-### Running and debugging locally
+### Running the docs locally
 
 1. Install [Node.js](https://nodejs.org/)
 2. Run `npm install` to install node dependencies
