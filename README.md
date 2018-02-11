@@ -15,7 +15,7 @@ The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/adm
 
 ## Bugs and features
 
-Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4b/issues) here on GitHub.
+Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4b/issues) on GitHub.
 
 ## License
 
