@@ -108,13 +108,13 @@
             <h2>Input suggestion</h2>
             <p>
               The <code>.input-suggestion</code> is a simple and flexible autocomplete component.
-              For displaying the list of items you use the <code>.list-group</code> and to define the selectable items of the list you use
-              <code>.list-group-item-action</code>. Refer to <a href="https://getbootstrap.com/docs/4.0/components/list-group/">bootstrap documentation</a>
-              for more details about these classes.
+              You can use simple texts or customized templates for display the list of items.
+              For create the list of items you may use the class <code>.list-group</code>
+              (refer to <a href="https://getbootstrap.com/docs/4.0/components/list-group/">bootstrap documentation</a> for details).
             </p>
+            <h3>Operation mode</h3>
             <p>
-              You can use simple texts or customized templates for display the items of the list.
-              Also, the component has two modes of operation: static and async.
+              The component has two modes of operation: static and async.
             </p>
             <div class="table-responsive">
               <table class="table table-bordered table-striped">
@@ -134,16 +134,97 @@
                   <tr>
                     <td>async</td>
                     <td>
-                      Used for dynamic items that requires DOM manipulation. This mode disable the built-in DOM search.
+                      Used for dynamic items that requires DOM manipulation.
+                      This mode disable the built-in DOM search.
+                      It is setted by the attribute <code>data-async</code>.
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <h3>Utility classes</h3>
             <p>
-              Follow to the next topcis for details.
+              There are some utility classes that can be combined with <code>.list-group</code> to automate the component behavior.
             </p>
-            <h3>Simple text</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>list-group empty</code></td>
+                    <td>
+                      It will be automatically toggled if the list has or does not have items to display.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>list-group loading</code></td>
+                    <td>
+                      Only for async mode. Displayed when the user start to typing
+                      and hidden when <code>suggestion:refresh</code> is triggered.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>list-group items</code></td>
+                    <td>
+                      Indicates the <code>.list-group</code> that contains the selectable items.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Events</h3>
+            <p>
+              Events that can be used by developer to interact with the component and write custom logic.
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Who fires</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>suggestion:change</code></td>
+                    <td>Component</td>
+                    <td>Fired when the user select a item in the list.</td>
+                  </tr>
+                  <tr>
+                    <td><code>suggestion:hide</code></td>
+                    <td>Component</td>
+                    <td>Triggered when the user select a item in the list or the <code>input</code> loses the focus.</td>
+                  </tr>
+                  <tr>
+                    <td><code>suggestion:refresh</code></td>
+                    <td>Developer</td>
+                    <td>Only for async mode. Should be triggered after DOM manipulation.</td>
+                  </tr>
+                  <tr>
+                    <td><code>suggestion:search</code></td>
+                    <td>Component</td>
+                    <td>Triggered when the user end to typing.</td>
+                  </tr>
+                  <tr>
+                    <td><code>suggestion:show</code></td>
+                    <td>Component</td>
+                    <td>Triggered when the user start to typing.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Examples</h3>
+            <p>
+              Follow to the next topcis for details and examples how to create the component using
+              simple text, custom templates and asynchronous items.
+            </p>
+            <h4>Simple text</h4>
             <p>
               This is the most basic way to create the component. The suggestions are displayed whenever the user start to typing
               in the input element, that is, when the <code>input</code> event is triggered. See the example below:
@@ -176,10 +257,10 @@
   &lt;div class="input-suggestion"&gt;
     &lt;input type="text" class="form-control" data-toggle="suggestion"&gt;
     &lt;div class="input-suggestion-list"&gt;
-      &lt;div class="list-group"&gt;
-        &lt;p class="list-group-item no-results"&gt;
-          &lt;em class="text-muted"&gt;No results found&lt;/em&gt;
-        &lt;/p&gt;
+      &lt;div class="list-group empty"&gt;
+        &lt;p class="list-group-item text-muted"&gt;No results found&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="list-group items"&gt;
         &lt;a href="#" class="list-group-item list-group-item-action" tabindex="-1"&gt;Apple, carrot, and orange&lt;/a&gt;
         &lt;a href="#" class="list-group-item list-group-item-action" tabindex="-1"&gt;Beet, carrot, ginger, and turmeric&lt;/a&gt;
         &lt;a href="#" class="list-group-item list-group-item-action" tabindex="-1"&gt;Homemade tomato juice&lt;/a&gt;
@@ -193,7 +274,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <h3>Customized template</h3>
+            <h4>Customized template</h4>
             <p>
               You do not need to restrict yourself by using only simple texts for items of the list.
               You can customize like you wish.
@@ -206,102 +287,67 @@
             <div class="form-group">
               <label>What juice do you like?</label>
               <div class="input-suggestion">
-                <input type="text" class="form-control" data-toggle="suggestion"
-                  data-item=".list-group-item-action" data-text="h5" data-empty=".no-results">
+                <input type="text" class="form-control" data-toggle="suggestion" data-text="h5">
                 <div class="input-suggestion-list">
                   <div class="list-group empty">
-                    <p class="list-group-item text-muted">
-                      No results found
-                    </p>
+                    <p class="list-group-item text-muted">No results found</p>
                   </div>
                   <div class="list-group items">
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Apple, carrot, and orange</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 12
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 12</small>
                       </div>
-                      <p class="mb-1">
-                        Winning combination for helping your body protect itself and fight off infections.
-                      </p>
+                      <p class="mb-1">Winning combination for helping your body protect itself and fight off infections.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Beet, carrot, ginger, and turmeric</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 10
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 10</small>
                       </div>
-                      <p class="mb-1">
-                        Four root vegetables that’ll help your immune system and decrease inflammatory symptoms.
-                      </p>
+                      <p class="mb-1">Four root vegetables that’ll help your immune system and decrease inflammatory symptoms.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Homemade tomato juice</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 8
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 8</small>
                       </div>
-                      <p class="mb-1">
-                        The best way to be sure your tomato juice is fresh and without added ingredients is to make it yourself.
-                      </p>
+                      <p class="mb-1">The best way to be sure your tomato juice is fresh and without added ingredients is to make it yourself.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Orange and grapefruit</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 10
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 10</small>
                       </div>
-                      <p class="mb-1">
-                        Vitamin C has antioxidant and other properties that protect your cells from substances that damage the body.
-                      </p>
+                      <p class="mb-1">Vitamin C has antioxidant and other properties that protect your cells from substances that damage the body.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Pumpkin seed</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 12
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 12</small>
                       </div>
-                      <p class="mb-1">
-                        It’s one of the freshest, most natural recipes available online. And it works as a great base for fruit smoothies.
-                      </p>
+                      <p class="mb-1">It’s one of the freshest, most natural recipes available online. And it works as a great base for fruit smoothies.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Spinach, lettuce, and kale</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 10
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 10</small>
                       </div>
-                      <p class="mb-1">
-                        A vegetable-based green juice is a powerhouse of nutrients for a strong immune system.
-                      </p>
+                      <p class="mb-1">A vegetable-based green juice is a powerhouse of nutrients for a strong immune system.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Strawberry and mango</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 6
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 6</small>
                       </div>
-                      <p class="mb-1">
-                        The healthy way to satisfy your cravings for a bottomless brunch.
-                      </p>
+                      <p class="mb-1">The healthy way to satisfy your cravings for a bottomless brunch.</p>
                     </a>
                     <a href="#" class="list-group-item list-group-item-action" tabindex="-1">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">Strawberry-kiwi mint</h5>
-                        <small>
-                          <i class="fa fa-heart-o"></i> 8
-                        </small>
+                        <small><i class="fa fa-heart-o"></i> 8</small>
                       </div>
-                      <p class="mb-1">
-                        Other healthy alternatives for a vitamin C-packed drink.
-                      </p>
+                      <p class="mb-1">Other healthy alternatives for a vitamin C-packed drink.</p>
                     </a>
                   </div>
                 </div>
@@ -312,10 +358,10 @@
   &lt;div class="input-suggestion"&gt;
     &lt;input type="text" class="form-control" data-toggle="suggestion" data-text="h5"&gt;
     &lt;div class="input-suggestion-list"&gt;
-      &lt;div class="list-group"&gt;
-        &lt;p class="list-group-item no-results"&gt;
-          &lt;em class="text-muted"&gt;No results found&lt;/em&gt;
-        &lt;/p&gt;
+      &lt;div class="list-group empty"&gt;
+        &lt;p class="list-group-item text-muted"&gt;No results found&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="list-group items"&gt;
         &lt;a href="#" class="list-group-item list-group-item-action" tabindex="-1"&gt;
           &lt;div class="d-flex w-100 justify-content-between"&gt;
             &lt;h5 class="mb-1"&gt;Apple, carrot, and orange&lt;/h5&gt;
@@ -377,15 +423,19 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <h3>Asynchronous</h3>
+            <h4>Asynchronous</h4>
             <p>
               You can use simple text or customized templates for async items, however the built-in DOM search is disabled.
+            </p>
+            <p>
+              When the user end to typing the event <code>suggestion:search</code> will be triggered.
+              You will need to write your search logic, manipulate the DOM and then fire the event <code>suggestion:refresh</code>.
+              See the example below:
             </p>
             <div class="form-group">
               <label>What juice do you like?</label>
               <div class="input-suggestion">
-                <input id="input-suggestion-async-example" type="text" class="form-control" data-toggle="suggestion"
-                  data-item=".list-group-item-action" data-empty=".no-results" data-loader=".loader" data-async>
+                <input type="text" class="form-control" data-toggle="suggestion" data-async>
                 <div class="input-suggestion-list">
                   <div class="list-group loading">
                     <p class="list-group-item">
@@ -397,22 +447,35 @@
                       No results found
                     </p>
                   </div>
-                  <div class="list-group items"></div>
+                  <div class="list-group items">
+                    <!-- Dynamically generated -->
+                    <!-- <a href="#" class="list-group-item list-group-item-action" tabindex="-1"></a> -->
+                  </div>
                 </div>
               </div>
             </div>
-            <pre><code class="html">&lt;div class="form-group"&gt;
+            <ul class="nav nav-tabs mb-1">
+              <li class="nav-item">
+                <a href="#input-suggestion-async-html" class="nav-link active" data-toggle="tab">HTML</a>
+              </li>
+              <li class="nav-item">
+                <a href="#input-suggestion-async-js" class="nav-link" data-toggle="tab">JavaScript</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="input-suggestion-async-html" class="tab-pane active">
+                <pre><code class="html">&lt;div class="form-group"&gt;
   &lt;label&gt;What juice do you like?&lt;/label&gt;
   &lt;div class="input-suggestion"&gt;
-    &lt;input id="input-suggestion-async-example" type="text" class="form-control" data-toggle="suggestion" data-async&gt;
+    &lt;input id="my-input" type="text" class="form-control" data-toggle="suggestion" data-async&gt;
     &lt;div class="input-suggestion-list"&gt;
-      &lt;div class="list-group"&gt;
-        &lt;p class="list-group-item loader"&gt;
-          &lt;em class="text-muted"&gt;Searching juices...&lt;/em&gt;
-        &lt;/p&gt;
-        &lt;p class="list-group-item no-results"&gt;
-          &lt;em class="text-muted"&gt;No results found&lt;/em&gt;
-        &lt;/p&gt;
+      &lt;div class="list-group loading"&gt;
+        &lt;p class="list-group-item text-muted"&gt;Searching juices...&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="list-group empty"&gt;
+        &lt;p class="list-group-item text-muted"&gt;No results found&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="list-group items"&gt;
         &lt;!-- Dynamically generated --&gt;
         &lt;!-- &lt;a href="#" class="list-group-item list-group-item-action" tabindex="-1"&gt;&lt;/a&gt; --&gt;
       &lt;/div&gt;
@@ -420,6 +483,15 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+              </div>
+              <div id="input-suggestion-async-js" class="tab-pane">
+                <pre><code class="js">$('#my-input').on('suggestion:search', function () {
+    // Your magic
+    $input.suggestion('refresh');
+});
+</code></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
