@@ -1,12 +1,12 @@
-# Admin 4BS
+# Admin 4B
 
-[Admin 4BS](https://marxjmoura.github.io/admin4bs/) is an open source and admin template built on top of [Bootstrap 4](http://getbootstrap.com).
+[Admin 4B](https://marxjmoura.github.io/admin4b/) is an open source admin template built on top of [Bootstrap 4](http://getbootstrap.com).
 
 ## Documentation
 
-The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/admin4bs/](https://marxjmoura.github.io/admin4bs/).
+The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/admin4b/](https://marxjmoura.github.io/admin4b/).
 
-### Running the docs locally
+### Running documentation locally
 
 1. Install [Node.js](https://nodejs.org/)
 2. Run `npm install` to install node dependencies
@@ -15,8 +15,8 @@ The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/adm
 
 ## Bugs and features
 
-Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4bs/issues) here on GitHub.
+Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4b/issues) here on GitHub.
 
 ## License
 
-Code released under the [MIT License](https://github.com/marxjmoura/admin4bs/blob/master/LICENSE).
+Code released under the [MIT License](https://github.com/marxjmoura/admin4b/blob/master/LICENSE).

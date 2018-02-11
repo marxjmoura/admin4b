@@ -6,7 +6,7 @@ const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
 gulp.task('build-sass', () => {
-    gulp.src('src/scss/admin4bs.scss')
+    gulp.src('src/scss/admin4b.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest('dist'));
@@ -14,7 +14,7 @@ gulp.task('build-sass', () => {
 
 gulp.task('build-js', () => {
     gulp.src(['src/js/**/*.js', 'src/js/init.js'])
-        .pipe(concat('admin4bs.js'))
+        .pipe(concat('admin4b.js'))
         .pipe(uglify().on('error', (e) => console.log(e)))
         .pipe(rename({ extname: '.min.js' }))
         .pipe(gulp.dest('dist'));
