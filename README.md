@@ -2,6 +2,14 @@
 
 [Admin 4B](https://marxjmoura.github.io/admin4b/) is an open source admin template built on top of [Bootstrap 4](http://getbootstrap.com).
 
+## Quick start
+
+Some options are available:
+
+- Install with [npm](https://www.npmjs.com/): `npm install admin4b`
+- Download the latest release: [https://github.com/marxjmoura/admin4b/releases/](https://github.com/marxjmoura/admin4b/releases/)
+- Clone the repo: `git clone git@github.com:marxjmoura/admin4b.git`
+
 ## Documentation
 
 The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/admin4b/](https://marxjmoura.github.io/admin4b/).
