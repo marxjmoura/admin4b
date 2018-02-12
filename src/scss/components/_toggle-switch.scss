@@ -1,0 +1,142 @@
+@mixin switch-color($name, $color)
+{
+  label.switch-#{$name} input[type=checkbox]
+  {
+    + .switch-slider
+    {
+      background: $color;
+    }
+
+    &:disabled + .switch-slider
+    {
+      background: lighten($color, 5%);
+    }
+  }
+}
+
+@mixin switch-to-color($name, $color)
+{
+  label.switch-to-#{$name} input[type=checkbox]
+  {
+    &:checked + .switch-slider
+    {
+      background: $color;
+    }
+
+    &:checked:disabled + .switch-slider
+    {
+      background: lighten($color, 5%);
+    }
+  }
+}
+
+label.switch
+{
+  align-items: center;
+	display: inline-block;
+
+  input[type=checkbox]
+  {
+    display: none;
+
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + span
+    {
+      box-sizing: border-box;
+
+      &::selection
+      {
+        background: none;
+      }
+    }
+
+    + .switch-slider
+    {
+      background: $bscolors-gray-400;
+      border-radius: 2em;
+      cursor: pointer;
+      display: block;
+      height: 2em;
+      outline: 0;
+      padding: 2px;
+      position: relative;
+      transition: all .4s ease;
+      user-select: none;
+      width: 4em;
+
+      &:after,
+      &:before
+      {
+        position: relative;
+        display: block;
+        content: "";
+        width: 50%;
+        height: 100%;
+      }
+
+      &:after
+      {
+        left: 0;
+        background: $bscolors-white;
+        border-radius: 50%;
+        transition: all .2s ease;
+      }
+
+      &:before
+      {
+        display: none;
+      }
+    }
+
+    &:checked + .switch-slider:after
+    {
+      left: 50%;
+    }
+
+    &:disabled + .switch-slider
+    {
+      background: lighten($bscolors-gray-400, 5%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+label.switch
+{
+  &.switch-sm input[type=checkbox]
+  {
+    + .switch-slider
+    {
+      border-radius: 1.5em;
+      height: 1.5em;
+      width: 3em;
+    }
+  }
+
+  &.switch-lg input[type=checkbox]
+  {
+    + .switch-slider
+    {
+      border-radius: 2.5em;
+      height: 2.5em;
+      width: 5em;
+    }
+  }
+}
+
+@include switch-color(danger, $bscolors-red);
+@include switch-color(info, $bscolors-cyan);
+@include switch-color(primary, $bscolors-blue);
+@include switch-color(success, $bscolors-green);
+@include switch-color(warning, $bscolors-yellow);
+
+@include switch-to-color(danger, $bscolors-red);
+@include switch-to-color(info, $bscolors-cyan);
+@include switch-to-color(primary, $bscolors-blue);
+@include switch-to-color(success, $bscolors-green);
+@include switch-to-color(warning, $bscolors-yellow);
