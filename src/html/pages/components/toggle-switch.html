@@ -57,7 +57,7 @@
               <input type="checkbox"/>
               <span class="switch-slider"></span>
             </label>
-            <pre><code class="html">@@include('includes/code-examples/components/toggle-switch/toggle-switch-from-to.html')</code></pre>
+            <pre><code class="html">@@include('includes/code-examples/components/toggle-switch/toggle-switch-transition.html')</code></pre>
             <h3>Sizes</h3>
             <p>
               Add <code>.switch-sm</code> for smaller switches or <code>.switch-lg</code> for larger.
@@ -75,6 +75,19 @@
               <span class="switch-slider"></span>
             </label>
             <pre><code class="html">@@include('includes/code-examples/components/toggle-switch/toggle-switch-sizes.html')</code></pre>
+            <h3>Disabled state</h3>
+            <p>
+              When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
+            </p>
+            <label class="switch switch-to-primary">
+              <input type="checkbox" checked disabled/>
+              <span class="switch-slider"></span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" disabled/>
+              <span class="switch-slider"></span>
+            </label>
+            <pre><code class="html">@@include('includes/code-examples/components/toggle-switch/toggle-switch-disabled.html')</code></pre>
           </div>
         </div>
       </div>
