@@ -33,7 +33,9 @@
 label.switch
 {
   align-items: center;
-  display: inline-block;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: inline-flex;
   margin-bottom: 0;
 
   input[type=checkbox]
@@ -60,7 +62,6 @@ label.switch
     {
       background: $bscolors-gray-400;
       border-radius: 2em;
-      cursor: pointer;
       display: block;
       height: 2em;
       outline: 0;
