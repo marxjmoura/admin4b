@@ -9,7 +9,7 @@
 
     &:disabled + .switch-slider
     {
-      background: lighten($color, 5%);
+      background: lighten($color, 20%);
     }
 
     &:focus + .switch-slider
@@ -30,7 +30,7 @@
 
     &:checked:disabled + .switch-slider
     {
-      background: lighten($color, 5%);
+      background: lighten($color, 20%);
     }
 
     &:checked:focus + .switch-slider
