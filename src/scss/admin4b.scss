@@ -6,11 +6,13 @@
 
 @import 'layout/variables';
 @import 'layout/app';
+@import 'layout/sidebar/animations/sidebar-fade';
+@import 'layout/sidebar/animations/sidebar-slide-left';
+@import 'layout/sidebar/sidebar-toggle';
+@import 'layout/sidebar/sidebar-header';
+@import 'layout/sidebar/sidebar-nav';
+@import 'layout/sidebar/sidebar-footer';
 
 @import 'components/callout';
 @import 'components/input-suggestion';
-@import 'components/sidebar/sidebar-toggle';
-@import 'components/sidebar/sidebar-header';
-@import 'components/sidebar/sidebar-nav';
-@import 'components/sidebar/sidebar-footer';
 @import 'components/toggle-switch';

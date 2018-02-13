@@ -1,0 +1,12 @@
+.app .app-body .app-sidebar.sidebar-slide-left
+{
+  @include crossbrowser-transition(width .3s);
+
+  @include bsmedia-breakpoint-down-to-sm
+  {
+    &.sidebar-open
+    {
+      width: 100%;
+    }
+  }
+}

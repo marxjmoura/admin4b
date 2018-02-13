@@ -43,7 +43,6 @@ html, body
             overflow-y: scroll;
             padding: 15px 0;
             width: $variables-sidebar-width;
-            @include crossbrowser-transition(width .3s);
 
             &::-webkit-scrollbar
             {
@@ -63,11 +62,6 @@ html, body
                 left: 0;
                 width: 0;
                 z-index: 2050;
-
-                &.sidebar-open
-                {
-                    width: 100%;
-                }
             }
         }
 
