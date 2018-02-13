@@ -11,6 +11,11 @@
     {
       background: lighten($color, 5%);
     }
+
+    &:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
   }
 }
 
@@ -27,6 +32,11 @@
     {
       background: lighten($color, 5%);
     }
+
+    &:checked:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
   }
 }
 
@@ -37,10 +47,12 @@ label.switch
   cursor: pointer;
   display: inline-flex;
   margin-bottom: 0;
+  position: relative;
 
   input[type=checkbox]
   {
-    display: none;
+    position: absolute;
+    @include crossbrowser-opacity(0);
 
     &,
     &:after,
@@ -87,6 +99,7 @@ label.switch
         background: $bscolors-white;
         border-radius: 50%;
         transition: all .2s ease;
+        @include crossbrowser-box-shadow(none);
       }
 
       &:before
@@ -104,6 +117,11 @@ label.switch
     {
       background: lighten($bscolors-gray-400, 5%);
       cursor: not-allowed;
+    }
+
+    &:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-gray-400, .25));
     }
   }
 
