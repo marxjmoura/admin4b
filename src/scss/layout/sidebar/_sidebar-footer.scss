@@ -1,11 +1,11 @@
-.sidebar-footer
+.app-sidebar .sidebar-footer
 {
   text-align: center;
   white-space: nowrap;
 
   &:before
   {
-    border-top: 1px solid lighten($variables-sidebar-bg-color, 7%);
+    border-top: 1px solid $bscolors-gray-400;
     content: "";
     display: block;
     margin: 15px auto;
@@ -14,16 +14,9 @@
 
   a
   {
-    color: $variables-sidebar-text-color;
     font-size: 16pt;
     padding: 0 10px;
     text-decoration: none;
     @include crossbrowser-transition(color 0.25s ease-out);
-
-    &:active,
-    &:hover
-    {
-      color: $bscolors-white;
-    }
   }
 }

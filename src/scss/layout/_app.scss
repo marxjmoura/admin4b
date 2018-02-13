@@ -1,6 +1,6 @@
 html, body
 {
-    background: $variables-body-bg-color;
+    background: $bscolors-gray-100;
     width: 100%;
     height: 100%;
 }
@@ -37,22 +37,26 @@ html, body
 
         .app-sidebar
         {
-            background: $variables-sidebar-bg-color;
+            background: $bscolors-white;
             float: left;
             overflow-x: hidden;
             overflow-y: scroll;
             padding: 15px 0;
-            width: $variables-sidebar-width;
+            width: 260px;
 
             &::-webkit-scrollbar
             {
-                background-color: darken($variables-sidebar-bg-color, 5%);
                 width: 3px;
+            }
+
+            &::-webkit-scrollbar
+            {
+                background-color: $bscolors-gray-300;
             }
 
             &::-webkit-scrollbar-thumb
             {
-                background-color: $variables-sidebar-scrollbar-thumb-color;
+                background-color: $bscolors-blue;
             }
 
             @include bsmedia-breakpoint-down-to-sm

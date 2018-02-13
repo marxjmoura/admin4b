@@ -1,12 +1,11 @@
-.sidebar-header
+.app-sidebar .sidebar-header
 {
     padding: 0 20px;
     text-align: center;
 
     .user-photo
     {
-        background-color: darken($variables-sidebar-bg-color, 5%);
-        border: 3px solid $variables-sidebar-scrollbar-thumb-color;
+        border: 3px solid $bscolors-gray-300;
         border-radius: 50%;
         height: 96px;
         padding: 3px;
@@ -15,7 +14,6 @@
 
     .username
     {
-        color: lighten($variables-sidebar-bg-color, 40%);
         padding: 10px 0;
         white-space: nowrap;
     }
