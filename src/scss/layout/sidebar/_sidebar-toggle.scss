@@ -18,6 +18,7 @@
     &:before,
     &:after
     {
+      background-color: $bscolors-gray-400;
       position: absolute;
       content: "";
       height: 33px;
