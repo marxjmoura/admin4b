@@ -1,9 +1,10 @@
-.app-sidebar.sidebar-fade
+.app .app-body .app-sidebar.sidebar-fade
 {
   @include crossbrowser-transition(opacity .3s linear, visibility .3s);
 
   @include bsmedia-breakpoint-down-to-sm
   {
+    width: 100%;
     @include crossbrowser-opacity(0);
     @include crossbrowser-visibility(hidden);
 
