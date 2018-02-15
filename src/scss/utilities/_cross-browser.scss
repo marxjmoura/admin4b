@@ -21,8 +21,8 @@
 
 @mixin crossbrowser-border-radius($radius)
 {
-    -webkit-border-radius: $radius; 
-    -moz-border-radius: $radius; 
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
     border-radius: $radius;
 }
 
@@ -62,6 +62,7 @@
 
 @mixin crossbrowser-calc($property, $calc)
 {
+    #{$property}: expression(#{$calc});
     #{$property}: -moz-calc(#{$calc});
     #{$property}: -webkit-calc(#{$calc});
     #{$property}: -o-calc(#{$calc});
@@ -74,24 +75,24 @@
     {
         color: $color;
     }
-    
+
     &:-moz-placeholder
     {
         color: $color;
         @include crossbrowser-opacity(1);
     }
-    
+
     &::-moz-placeholder
     {
         color: $color;
         @include crossbrowser-opacity(1);
     }
-    
+
     &:-ms-input-placeholder
     {
         color: $color;
     }
-    
+
     &::-ms-input-placeholder {
         color: $color;
     }

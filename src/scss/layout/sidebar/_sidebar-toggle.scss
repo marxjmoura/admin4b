@@ -8,7 +8,7 @@
   {
     display: none;
   }
-  
+
   .x
   {
     display: block;
@@ -18,11 +18,11 @@
     &:before,
     &:after
     {
+      background-color: $bscolors-gray-400;
       position: absolute;
       content: "";
       height: 33px;
       width: 2px;
-      background-color: $variables-sidebar-text-color;
     }
 
     &:before

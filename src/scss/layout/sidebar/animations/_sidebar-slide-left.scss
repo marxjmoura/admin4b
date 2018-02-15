@@ -1,0 +1,4 @@
+.app .app-body .app-sidebar.sidebar-slide-left
+{
+  @include crossbrowser-transition(width .3s);
+}
