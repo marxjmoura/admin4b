@@ -7,12 +7,12 @@
 Some options are available:
 
 - Install with [npm](https://www.npmjs.com/): `npm install admin4b`
-- Download the latest release: [https://github.com/marxjmoura/admin4b/releases/](https://github.com/marxjmoura/admin4b/releases/)
+- Download the latest release from [GitHub repo](https://github.com/marxjmoura/admin4b/releases/)
 - Clone the repo: `git clone git@github.com:marxjmoura/admin4b.git`
 
 ## Documentation
 
-The documentation is hosted on GitHub pages at [https://marxjmoura.github.io/admin4b/](https://marxjmoura.github.io/admin4b/).
+The documentation is hosted on [GitHub pages](https://marxjmoura.github.io/admin4b/).
 
 ### Running documentation locally
 
