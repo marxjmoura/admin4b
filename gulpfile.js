@@ -1,9 +1,10 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const fileinclude = require('gulp-file-include');
-const rename = require("gulp-rename");
-const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var fileinclude = require('gulp-file-include');
+var htmlextend = require('gulp-html-extend')
+var rename = require("gulp-rename");
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
 
 gulp.task('build-sass', () => {
     gulp.src('src/scss/admin4b.scss')
@@ -21,8 +22,16 @@ gulp.task('build-js', () => {
 });
 
 gulp.task('build-html', () => {
-    gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'], { base: 'src/html/' })
-        .pipe(fileinclude({ prefix: '@@', basepath: 'src/html/' }).on('error', (e) => console.log(e)))
+    gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'])
+        .pipe(htmlextend({
+            annotations: false,
+            verbose: false,
+            root: './src/html'
+        }).on('error', (e) => console.log(e)))
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: './src/html/'
+        }).on('error', (e) => console.log(e)))
         .pipe(gulp.dest('docs/'));
 });
 

@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../../assets/css/syntax-highlighter.css">
-<link rel="stylesheet" href="../../../dist/admin4b.min.css">
-<title>Admin 4B</title>
-
-  </head>
-  <body>
-    <div class="app">
-      <div class="app-body">
-        <div class="app-sidebar sidebar-dark sidebar-slide-left">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/css/syntax-highlighter.css">
+  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
+  <title>Admin 4B</title>
+</head>
+<body>
+  <div class="app">
+    <div class="app-body">
+      <div class="app-sidebar sidebar-dark sidebar-slide-left">
   <div class="text-right">
     <button type="button" class="btn btn-sidebar" data-dismiss="sidebar">
       <span class="x"></span>
@@ -91,31 +90,60 @@
   </div>
 </div>
 
-        <div class="app-content">
-          <nav class="navbar navbar-expand navbar-light bg-white">
+      <div class="app-content">
+        <nav class="navbar navbar-expand navbar-light bg-white">
   <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
     <i class="fa fa-bars"></i>
   </button>
   <div class="navbar-brand">
     Admin 4B
   </div>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="badge badge-pill badge-primary">3</span>
+        <i class="fa fa-bell-o"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (today)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (yesterday)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (12/25/2017)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item text-primary">
+          See all notifications
+        </a>
+      </div>
+    </li>
+  </ul>
 </nav>
 
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">Layout</li>
-              <li class="breadcrumb-item active" aria-current="page">Sidebar</li>
-            </ol>
-          </nav>
-          <div class="container-fluid">
-            <h2>
-              Layout
-            </h2>
-            <p>
-              The layout structure consists of two columns. The first column is the sidebar and the second is the app content
-              that takes the remaining width. The basic code of the layout structure can be seen below.
-            </p>
-            <pre><code class="html">&lt;div class="app"&gt;
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Layout</li>
+    <li class="breadcrumb-item active" aria-current="page">Sidebar</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Layout
+  </h2>
+  <p>
+    The layout structure consists of two columns. The first column is the sidebar and the second is the app content
+    that takes the remaining width. The basic code of the layout structure can be seen below.
+  </p>
+  <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;!-- Header --&gt;
@@ -128,34 +156,34 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <h3>
-              Sidebar
-            </h3>
-            <p>
-              The sidebar is the left column of the layout structure and has a header, a navigation and a footer.
-              The template was designed using a sidebar with a maximum of two level of navigation.
-            </p>
-            <h4>
-              Header
-            </h4>
-            <p>
-              The header of the sidebar comes first. It contains the user informations like photo and name.
-            </p>
-            <pre><code class="html">&lt;div class="sidebar-header"&gt;
+  <h3>
+    Sidebar
+  </h3>
+  <p>
+    The sidebar is the left column of the layout structure and has a header, a navigation and a footer.
+    The template was designed using a sidebar with a maximum of two level of navigation.
+  </p>
+  <h4>
+    Header
+  </h4>
+  <p>
+    The header of the sidebar comes first. It contains the user informations like photo and name.
+  </p>
+  <pre><code class="html">&lt;div class="sidebar-header"&gt;
   &lt;img src="john-doe.png" class="user-photo"&gt;
   &lt;p class="username"&gt;John Doe&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-            <h4>
-              Navigation
-            </h4>
-            <p>
-              The single level of navigation is defined by class <code>.sidebar-nav-link</code> and takes the user to desired page.
-              The two level of navigation is defined by class <code>.sidebar-nav-group</code> and opens the corresponding group of links.
-              The attributes <code>data-children</code> and <code>data-parent</code> configure the accordion menu. Refer to
-              <a href="https://getbootstrap.com/docs/4.0/components/collapse">bootstrap documentation</a> for details.
-            </p>
-            <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
+  <h4>
+    Navigation
+  </h4>
+  <p>
+    The single level of navigation is defined by class <code>.sidebar-nav-link</code> and takes the user to desired page.
+    The two level of navigation is defined by class <code>.sidebar-nav-group</code> and opens the corresponding group of links.
+    The attributes <code>data-children</code> and <code>data-parent</code> configure the accordion menu. Refer to
+    <a href="https://getbootstrap.com/docs/4.0/components/collapse">bootstrap documentation</a> for details.
+  </p>
+  <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
   &lt;a href="page.html" class="sidebar-nav-link"&gt;
     Go to page
   &lt;/a&gt;
@@ -187,13 +215,13 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <h4>
-              Footer
-            </h4>
-            <p>
-              The sidebar footer contains a set of other buttons like a small toolbar.
-            </p>
-            <pre><code class="html">&lt;div class="sidebar-footer"&gt;
+  <h4>
+    Footer
+  </h4>
+  <p>
+    The sidebar footer contains a set of other buttons like a small toolbar.
+  </p>
+  <pre><code class="html">&lt;div class="sidebar-footer"&gt;
   &lt;a href="#" data-toggle="tooltip" title="GitHub"&gt;
     &lt;i class="fa fa-github"&gt;&lt;/i&gt;
   &lt;/a&gt;
@@ -205,14 +233,14 @@
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
-            <h3>
-              Content
-            </h3>
-            <p>
-              The content is the right column of the layout structure and contains the page content that the user navigated to.
-              The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
-            </p>
-            <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
+  <h3>
+    Content
+  </h3>
+  <p>
+    The content is the right column of the layout structure and contains the page content that the user navigated to.
+    The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
+  </p>
+  <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
   &lt;div class="navbar-brand"&gt;Admin 4B&lt;/div&gt;
 &lt;/nav&gt;
 &lt;nav aria-label="breadcrumb"&gt;
@@ -225,15 +253,15 @@
   Hello World!
 &lt;/div&gt;
 </code></pre>
-            <h3>
-              Responsive
-            </h3>
-            <p>
-              The template uses the bootstrap breakpoints to define the minimum width to show the sidebar.
-              When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
-              can be used to show and close the sidebar respectively.
-            </p>
-            <pre><code class="html">&lt;!-- Open sidebar --&gt;
+  <h3>
+    Responsive
+  </h3>
+  <p>
+    The template uses the bootstrap breakpoints to define the minimum width to show the sidebar.
+    When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
+    can be used to show and close the sidebar respectively.
+  </p>
+  <pre><code class="html">&lt;!-- Open sidebar --&gt;
 &lt;button type="button" class="btn btn-sidebar" data-toggle="sidebar"&gt;
   &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
 &lt;/button&gt;
@@ -243,13 +271,13 @@
   &lt;span class="x"&gt;&lt;/span&gt;
 &lt;/button&gt;
 </code></pre>
-            <h3>
-              Example
-            </h3>
-            <p>
-              An example code for the full setup of the sidebar can be seen below.
-            </p>
-            <pre><code class="html">&lt;div class="app"&gt;
+  <h3>
+    Example
+  </h3>
+  <p>
+    An example code for the full setup of the sidebar can be seen below.
+  </p>
+  <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;button type="button" class="btn btn-sidebar" data-dismiss="sidebar"&gt;
@@ -322,22 +350,22 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <h3>
-              What's next?
-            </h3>
-            <p>
-              <a href="../../pages/layout/style.html">Stylize the sidebar navigation</a>
-            </p>
-          </div>
-        </div>
+  <h3>
+    What's next?
+  </h3>
+  <p>
+    <a href="../../pages/layout/style.html">Stylize the sidebar navigation</a>
+  </p>
+</div>
+
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="../../../dist/admin4b.min.js"></script>
-<script src="../../assets/js/admin4b.docs.js"></script>
-
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="../../../dist/admin4b.min.js"></script>
+  <script src="../../assets/js/admin4b.docs.js"></script>
+</body>
 </html>

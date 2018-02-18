@@ -1,59 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    @@include('includes/header.html')
-  </head>
-  <body>
-    <div class="app">
-      <div class="app-body">
-        @@include('includes/sidebar.html')
-        <div class="app-content">
-          @@include('includes/navbar.html')
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">Layout</li>
-              <li class="breadcrumb-item active" aria-current="page">Style</li>
-            </ol>
-          </nav>
-          <div class="container-fluid">
-            <h2>
-              Style
-            </h2>
-            <p>
-              Some colors and animations are available to the sidebar.
-            </p>
-            <h3>
-              Colors
-            </h3>
-            <p>
-              The sidebar come with two basic colors:
-              <ul>
-                <li>default: uses the default element colors.</li>
-                <li>dark: applied using the class <code>.sidebar-dark</code>.</li>
-              </ul>
-              <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-colors.html')</code></pre>
-            </p>
-            <h3>
-              Animations
-            </h3>
-            <p>
-              The sidebar come with two animations:
-              <ul>
-                <li><code>.sidebar-fade</code>: fade in and fade out effects.</li>
-                <li><code>.sidebar-slide-left</code>: slide from left to right.</li>
-              </ul>
-              <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-animations.html')</code></pre>
-            </p>
-            <h3>
-              What's next?
-            </h3>
-            <p>
-              You've done a good job so far. From here you can decide what you want to see next.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    @@include('includes/scripts.html')
-  </body>
-</html>
+<!-- @@master = /includes/master.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Layout</li>
+    <li class="breadcrumb-item active" aria-current="page">Style</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Style
+  </h2>
+  <p>
+    Some colors and animations are available to the sidebar.
+  </p>
+  <h3>
+    Colors
+  </h3>
+  <p>
+    The sidebar come with two basic colors:
+    <ul>
+      <li>default: uses the default element colors.</li>
+      <li>dark: applied using the class <code>.sidebar-dark</code>.</li>
+    </ul>
+    <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-colors.html')</code></pre>
+  </p>
+  <h3>
+    Animations
+  </h3>
+  <p>
+    The sidebar come with two animations:
+    <ul>
+      <li><code>.sidebar-fade</code>: fade in and fade out effects.</li>
+      <li><code>.sidebar-slide-left</code>: slide from left to right.</li>
+    </ul>
+    <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-animations.html')</code></pre>
+  </p>
+  <h3>
+    What's next?
+  </h3>
+  <p>
+    You've done a good job so far. From here you can decide what you want to see next.
+  </p>
+</div>
+<!-- @@close -->
