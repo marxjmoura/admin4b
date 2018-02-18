@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../../assets/css/syntax-highlighter.css">
-<link rel="stylesheet" href="../../../dist/admin4b.min.css">
-<title>Admin 4B</title>
-
-  </head>
-  <body>
-    <div class="app">
-      <div class="app-body">
-        <div class="app-sidebar sidebar-dark sidebar-slide-left">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/css/syntax-highlighter.css">
+  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
+  <title>Admin 4B</title>
+</head>
+<body>
+  <div class="app">
+    <div class="app-body">
+      <div class="app-sidebar sidebar-dark sidebar-slide-left">
   <div class="text-right">
     <button type="button" class="btn btn-sidebar" data-dismiss="sidebar">
       <span class="x"></span>
@@ -91,58 +90,87 @@
   </div>
 </div>
 
-        <div class="app-content">
-          <nav class="navbar navbar-expand navbar-light bg-white">
+      <div class="app-content">
+        <nav class="navbar navbar-expand navbar-light bg-white">
   <button type="button" class="btn btn-sidebar" data-toggle="sidebar">
     <i class="fa fa-bars"></i>
   </button>
   <div class="navbar-brand">
     Admin 4B
   </div>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="badge badge-pill badge-primary">3</span>
+        <i class="fa fa-bell-o"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (today)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (yesterday)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <small class="text-secondary">Lorem ipsum (12/25/2017)</small><br>
+          <div>Lorem ipsum dolor sit amet...</div>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item text-primary">
+          See all notifications
+        </a>
+      </div>
+    </li>
+  </ul>
 </nav>
 
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">Components</li>
-              <li class="breadcrumb-item active" aria-current="page">Input group</li>
-            </ol>
-          </nav>
-          <div class="container-fluid">
-            <h2>
-              Input group
-            </h2>
-            <p>
-              The <code>.input-group</code> is a
-              <a href="https://getbootstrap.com/docs/4.0/components/input-group/">bootstrap component</a>
-              that allow us to extend form controls. The template allow us to treated the <code>.input-group</code>
-              component as an <code>input</code> by adding the class <code>.as-input</code>.
-              See the example below:
-            </p>
-            <div class="form-group">
-              <label><code>.input-group</code></label>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                <div class="input-group-append">
-                  <span class="input-group-text">.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label><code>.input-group.as-input</code></label>
-              <div class="input-group as-input prepend append">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-                </div>
-                <input type="text" class="form-control">
-                <div class="input-group-append">
-                  <span class="input-group-text">.00</span>
-                </div>
-              </div>
-            </div>
-            <pre><code class="html">&lt;div class="input-group"&gt;
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Components</li>
+    <li class="breadcrumb-item active" aria-current="page">Input group</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Input group
+  </h2>
+  <p>
+    The <code>.input-group</code> is a
+    <a href="https://getbootstrap.com/docs/4.0/components/input-group/">bootstrap component</a>
+    that allow us to extend form controls. The template allow us to treated the <code>.input-group</code>
+    component as an <code>input</code> by adding the class <code>.as-input</code>.
+    See the example below:
+  </p>
+  <div class="form-group">
+    <label><code>.input-group</code></label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <div class="input-group-append">
+        <span class="input-group-text">.00</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label><code>.input-group.as-input</code></label>
+    <div class="input-group as-input prepend append">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input type="text" class="form-control">
+      <div class="input-group-append">
+        <span class="input-group-text">.00</span>
+      </div>
+    </div>
+  </div>
+  <pre><code class="html">&lt;div class="input-group"&gt;
   &lt;div class="input-group-prepend"&gt;
     &lt;span class="input-group-text"&gt;$&lt;/span&gt;
   &lt;/div&gt;
@@ -162,87 +190,87 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-            <div class="callout callout-warning">
-              <h5>Component limitations</h5>
-              <ol>
-                <li>
-                  Only works with <code>input-group-text</code>.
-                </li>
-                <li>
-                  For remove the side borders of the <code>input</code> you will need to add the utility classes:
-                  <ul>
-                    <li><code>.prepend</code> if the <code>.input-group</code> has <code>input-group-prepend</code></li>
-                    <li><code>.append</code> if the <code>.input-group</code> has <code>input-group-append</code></li>
-                  </ul>
-                </li>
-              </ol>
-            </div>
-            <h3>
-              Input states
-            </h3>
-            <p>
-              The component automatically respond to the <code>input</code> attributes states <code>readonly</code> and <code>disabled</code>.
-              For validation you will need to add <code>.is-valid</code> or <code>.is-invalid</code> classes.
-            </p>
-            <h4>
-              Examples
-            </h4>
-            <div class="form-group">
-              <label>Append with default state</label>
-              <div class="input-group as-input append">
-                <input type="text" class="form-control">
-                <div class="input-group-append">
-                  <span class="input-group-text">%</span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Append with readonly state</label>
-              <div class="input-group as-input append">
-                <input type="text" class="form-control" readonly>
-                <div class="input-group-append">
-                  <span class="input-group-text">%</span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Append with disabled state</label>
-              <div class="input-group as-input append">
-                <input type="text" class="form-control" disabled>
-                <div class="input-group-append">
-                  <span class="input-group-text">%</span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Prepend and append with invalid state</label>
-              <div class="input-group as-input prepend append is-invalid">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-                </div>
-                <input type="text" class="form-control">
-                <div class="input-group-append">
-                  <span class="input-group-text">.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Prepend and append with valid state</label>
-              <div class="input-group as-input prepend append is-valid">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fa fa-user"></i>
-                  </span>
-                </div>
-                <input type="text" class="form-control" value="johndoe">
-                <div class="input-group-append">
-                  <span class="input-group-text">
-                    <i class="fa fa-check text-success"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <pre><code class="html">&lt;div class="form-group"&gt;
+  <div class="callout callout-warning">
+    <h5>Component limitations</h5>
+    <ol>
+      <li>
+        Only works with <code>input-group-text</code>.
+      </li>
+      <li>
+        For remove the side borders of the <code>input</code> you will need to add the utility classes:
+        <ul>
+          <li><code>.prepend</code> if the <code>.input-group</code> has <code>input-group-prepend</code></li>
+          <li><code>.append</code> if the <code>.input-group</code> has <code>input-group-append</code></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <h3>
+    Input states
+  </h3>
+  <p>
+    The component automatically respond to the <code>input</code> attributes states <code>readonly</code> and <code>disabled</code>.
+    For validation you will need to add <code>.is-valid</code> or <code>.is-invalid</code> classes.
+  </p>
+  <h4>
+    Examples
+  </h4>
+  <div class="form-group">
+    <label>Append with default state</label>
+    <div class="input-group as-input append">
+      <input type="text" class="form-control">
+      <div class="input-group-append">
+        <span class="input-group-text">%</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Append with readonly state</label>
+    <div class="input-group as-input append">
+      <input type="text" class="form-control" readonly>
+      <div class="input-group-append">
+        <span class="input-group-text">%</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Append with disabled state</label>
+    <div class="input-group as-input append">
+      <input type="text" class="form-control" disabled>
+      <div class="input-group-append">
+        <span class="input-group-text">%</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Prepend and append with invalid state</label>
+    <div class="input-group as-input prepend append is-invalid">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input type="text" class="form-control">
+      <div class="input-group-append">
+        <span class="input-group-text">.00</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Prepend and append with valid state</label>
+    <div class="input-group as-input prepend append is-valid">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="fa fa-user"></i>
+        </span>
+      </div>
+      <input type="text" class="form-control" value="johndoe">
+      <div class="input-group-append">
+        <span class="input-group-text">
+          <i class="fa fa-check text-success"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <pre><code class="html">&lt;div class="form-group"&gt;
   &lt;label&gt;Append with default state&lt;/label&gt;
   &lt;div class="input-group as-input append"&gt;
     &lt;input type="text" class="form-control"&gt;
@@ -302,16 +330,16 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-        </div>
+</div>
+
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="../../../dist/admin4b.min.js"></script>
-<script src="../../assets/js/admin4b.docs.js"></script>
-
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="../../../dist/admin4b.min.js"></script>
+  <script src="../../assets/js/admin4b.docs.js"></script>
+</body>
 </html>

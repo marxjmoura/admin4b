@@ -1,74 +1,60 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    @@include('includes/header.html')
-  </head>
-  <body>
-    <div class="app">
-      <div class="app-body">
-        @@include('includes/sidebar.html')
-        <div class="app-content">
-          @@include('includes/navbar.html')
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Get started</li>
-            </ol>
-          </nav>
-          <div class="container-fluid">
-            <h2>
-              Introduction
-            </h2>
-            <p>
-              Admin 4B is an open source admin template built on top of Bootstrap 4.
-              The source code can be found on the <a href="https://github.com/marxjmoura/admin4b">GitHub Repository</a>.
-            </p>
-            <h3>
-              Quick start
-            </h3>
-            <p>
-              For the template work properly you need to add Bootstrap CSS and JavaScript files.
-              Refer to <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">bootstrap documentation</a>
-              for more information. Also, add the <a href="http://fontawesome.io/">Font Awesome</a> CSS file.
-              Then <a href="https://github.com/marxjmoura/admin4b/tree/master/dist">download the latest release</a>
-              of the template Admin 4B.
-            </p>
-            <h4>
-              CSS
-            </h4>
-            <p>
-              Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> after the Bootstrap and
-              Font Awesome stylesheets to load our CSS.
-            </p>
-            <pre><code class="html">@@include('includes/code-examples/get-started/css-setup.html')</code></pre>
-            <h4>
-              JS
-            </h4>
-            <p>
-              Place the following <code>&lt;script&gt;</code> tags near the end of your pages, right before the closing
-              <code>&lt;body&gt;</code> tag. Bootstrap denpencies and plugins must come first and then our JavaScript plugins.
-            </p>
-            <pre><code class="html">@@include('includes/code-examples/get-started/js-setup.html')</code></pre>
-            <h3>
-              Initial setup
-            </h3>
-            <p>
-              An example code of the initial setup can be seen below.
-            </p>
-            <pre><code class="html">@@include('includes/code-examples/get-started/initial-setup.html')</code></pre>
-            <div class="callout callout-info">
-              <h5>JavaScript initialization</h5>
-              <p>All components (including bootstrap) are automatically initialized by the template.</p>
-            </div>
-            <h3>
-              What's next?
-            </h3>
-            <p>
-              <a href="@@webRoot/pages/layout/sidebar.html">Configure the sidebar navigation</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    @@include('includes/scripts.html')
-  </body>
-</html>
+<!-- @@master = /includes/master.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Get started</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Introduction
+  </h2>
+  <p>
+    Admin 4B is an open source admin template built on top of Bootstrap 4.
+    The source code can be found on the <a href="https://github.com/marxjmoura/admin4b">GitHub Repository</a>.
+  </p>
+  <h3>
+    Quick start
+  </h3>
+  <p>
+    For the template work properly you need to add Bootstrap CSS and JavaScript files.
+    Refer to <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">bootstrap documentation</a>
+    for more information. Also, add the <a href="http://fontawesome.io/">Font Awesome</a> CSS file.
+    Then <a href="https://github.com/marxjmoura/admin4b/tree/master/dist">download the latest release</a>
+    of the template Admin 4B.
+  </p>
+  <h4>
+    CSS
+  </h4>
+  <p>
+    Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> after the Bootstrap and
+    Font Awesome stylesheets to load our CSS.
+  </p>
+  <pre><code class="html">@@include('includes/code-examples/get-started/css-setup.html')</code></pre>
+  <h4>
+    JS
+  </h4>
+  <p>
+    Place the following <code>&lt;script&gt;</code> tags near the end of your pages, right before the closing
+    <code>&lt;body&gt;</code> tag. Bootstrap denpencies and plugins must come first and then our JavaScript plugins.
+  </p>
+  <pre><code class="html">@@include('includes/code-examples/get-started/js-setup.html')</code></pre>
+  <h3>
+    Initial setup
+  </h3>
+  <p>
+    An example code of the initial setup can be seen below.
+  </p>
+  <pre><code class="html">@@include('includes/code-examples/get-started/initial-setup.html')</code></pre>
+  <div class="callout callout-info">
+    <h5>JavaScript initialization</h5>
+    <p>All components (including bootstrap) are automatically initialized by the template.</p>
+  </div>
+  <h3>
+    What's next?
+  </h3>
+  <p>
+    <a href="@@webRoot/pages/layout/sidebar.html">Configure the sidebar navigation</a>
+  </p>
+</div>
+<!-- @@close -->
