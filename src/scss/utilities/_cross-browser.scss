@@ -69,7 +69,7 @@
     #{$property}: calc(#{$calc});
 }
 
-@mixin crossbrowser-input-placeholder-color($color)
+@mixin crossbrowser-input-placeholder($color)
 {
     &::-webkit-input-placeholder
     {
