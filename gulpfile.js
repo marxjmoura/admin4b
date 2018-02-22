@@ -7,7 +7,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 
 gulp.task('build-sass', () => {
-    gulp.src('src/scss/admin4b.scss')
+    gulp.src('src/scss/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
         .pipe(rename({ extname: '.min.css' }))
         .pipe(gulp.dest('dist'));
