@@ -15,14 +15,30 @@
     background-color: $bscolors-white;
   }
 
-  &.prepend .form-control
+  &.prepend
   {
-    border-left: none;
+    .form-control
+    {
+      border-left: none;
+    }
+
+    .input-group-prepend > .input-group-text
+    {
+      border-right: none;
+    }
   }
 
-  &.append .form-control
+  &.append
   {
-    border-right: none;
+    .form-control
+    {
+      border-right: none;
+    }
+
+    .input-group-append > .input-group-text
+    {
+      border-left: none;
+    }
   }
 
   &.is-invalid
