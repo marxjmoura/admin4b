@@ -107,10 +107,4 @@
       background: $bscolors-gray-200;
     }
   }
-
-  &.disabled,
-  input:disabled
-  {
-    cursor: not-allowed;
-  }
 }
