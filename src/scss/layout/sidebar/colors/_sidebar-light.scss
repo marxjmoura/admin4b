@@ -1,0 +1,127 @@
+.app .app-body .app-sidebar.sidebar-light
+{
+  $sidebar-bg-color: $flatuicolors-clouds;
+  $sidebar-btn-close-color: darken($bscolors-gray-400, 7%);
+  $sidebar-scrollbar-color: $bscolors-gray-300;
+  $username-img-bg: $bscolors-gray-300;
+  $username-img-border: $bscolors-gray-400;
+  $username-text-color: $bscolors-gray-700;
+  $nav-group-active-bg-color: darken($sidebar-bg-color, 5%);
+  $nav-group-icon: $bscolors-gray-500;
+  $nav-group-icon-active: $bscolors-gray-600;
+  $nav-link-level-1-color: $bscolors-gray-700;
+  $nav-link-level-1-hover: darken($sidebar-bg-color, 7%);
+  $nav-link-level-2-color: $bscolors-gray-600;
+  $nav-link-level-2-hover: $bscolors-blue;
+  $nav-footer-border-color: $bscolors-gray-300;
+  $nav-footer-link-color: $bscolors-gray-600;
+  $nav-footer-link-hover: $bscolors-blue;
+
+  background: $sidebar-bg-color;
+
+  &::-webkit-scrollbar
+  {
+    background-color: $sidebar-scrollbar-color;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: darken($sidebar-scrollbar-color, 10%);
+  }
+
+  .btn-sidebar .x
+  {
+    &:before,
+    &:after
+    {
+      background-color: $sidebar-btn-close-color;
+    }
+  }
+
+  .sidebar-header
+  {
+    .user-photo
+    {
+      background-color:$username-img-bg;
+      border: 3px solid $username-img-border;
+    }
+
+    .username
+    {
+      color: $username-text-color;
+    }
+  }
+
+  .sidebar-nav
+  {
+    .sidebar-nav-group
+    {
+      background: $nav-group-active-bg-color;
+
+      .sidebar-nav-group .sidebar-nav-link
+      {
+        &:hover,
+        &:active
+        {
+          color: $nav-link-level-2-hover;
+        }
+      }
+    }
+
+    .sidebar-nav-link
+    {
+      color: $nav-link-level-1-color;
+    }
+
+    > .sidebar-nav-link,
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+      color: $nav-link-level-1-color;
+
+      &.collapsed
+      {
+        background-color: $sidebar-bg-color;
+
+        .fa
+        {
+          color: $nav-group-icon;
+        }
+      }
+
+      &:active,
+      &:hover
+      {
+        background-color: $nav-link-level-1-hover;
+      }
+    }
+
+    > .sidebar-nav-link .fa
+    {
+      color: $nav-group-icon;
+    }
+
+    > .sidebar-nav-group > .sidebar-nav-link .fa
+    {
+      color: $nav-group-icon-active;
+    }
+  }
+
+  .sidebar-footer
+  {
+    &:before
+    {
+      border-top: 1px solid $nav-footer-border-color;
+    }
+
+    a
+    {
+      color: $nav-footer-link-color;
+
+      &:active,
+      &:hover
+      {
+        color: $nav-footer-link-hover;
+      }
+    }
+  }
+}
