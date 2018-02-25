@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/css/syntax-highlighter.css">
   <link rel="stylesheet" href="../../../dist/admin4b.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b.highlight.min.css">
   <title>Admin 4B</title>
 </head>
 <body>
@@ -32,7 +32,6 @@
         <i class="fa fa-check-square-o"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
-        <a href="../../pages/components/code-highlight.html" class="sidebar-nav-link">Code highlight</a>
         <a href="../../pages/components/input-group.html" class="sidebar-nav-link">Input group</a>
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
         <a href="../../pages/components/label.html" class="sidebar-nav-link">Label</a>
@@ -130,16 +129,71 @@
 
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">Content</li>
-    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-  </ol>
-</nav>
-<div class="container-fluid">
-  <h1 class="display-4">
-    Soon...
-  </h1>
-</div>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Components</li>
+      <li class="breadcrumb-item active" aria-current="page">Label</li>
+    </ol>
+  </nav>
+  <div class="container-fluid">
+    <h2>Label</h2>
+    <p>
+      The label component can be placed outside or within the field.
+    </p>
+    <div class="form-group">
+      <label>Normal label</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <div class="label-infield">
+        <label for="infield">Infield label</label>
+        <input id="infield" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="label-floating">
+        <input id="floating" type="text" class="form-control" placeholder="Floating">
+        <label for="floating">Floating label</label>
+      </div>
+    </div>
+    <pre><code class="html">&lt;div class="form-group"&gt;
+  &lt;label&gt;Normal label&lt;/label&gt;
+  &lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;div class="label-infield"&gt;
+    &lt;label for="infield"&gt;Infield label&lt;/label&gt;
+    &lt;input id="infield" type="text" class="form-control"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;div class="label-floating"&gt;
+    &lt;input id="floating" type="text" class="form-control" placeholder="Floating label"&gt;
+    &lt;label for="floating"&gt;Floating label&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    <div class="callout callout-warning">
+      <h5>Warranties</h5>
+      <ol>
+        <li>
+          The <code>.floating-label</code> component needs space to move into and
+          the <code>.label-infield</code> component needs space to stay inside.
+          To do this, it is need to increase the input height.
+        </li>
+        <li>
+          In order for the <code>.floating-label</code> and <code>.label-infield</code> components to work properly
+          you have to set the attribute <code>id</code> of the <code>input</code> and the attribute <code>for</code>
+          of the <code>label</code>.
+        </li>
+        <li>
+            In order for the <code>.floating-label</code> component to work properly
+            you have to set the attribute attribute <code>placeholder</code> of the <code>input</code>.
+        </li>
+      </ol>
+    </div>
+  </div>
 
     </div>
   </div>
