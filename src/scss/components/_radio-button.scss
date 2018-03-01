@@ -1,0 +1,73 @@
+label.radio
+{
+  margin-bottom: 0;
+
+  input[type=radio],
+  input[type=checkbox]
+  {
+    position: absolute;
+    @include crossbrowser-opacity(0);
+
+    + .check-mark
+    {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      padding-left: 28px;
+      line-height: 17px;
+
+      &:before
+      {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        background: $bscolors-white;
+        border: 1px solid $bscolors-gray-500;
+        border-radius: 100%;
+      }
+
+      &:after
+      {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: $bscolors-gray-600;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+    }
+
+    &:disabled
+    {
+      + .check-mark
+      {
+        color: lighten($bscolors-gray-700, 10%);
+        cursor: default;
+
+        &:after
+        {
+          background: lighten($bscolors-gray-600, 10%);
+        }
+      }
+    }
+
+    &:checked + .check-mark:after
+    {
+      @include crossbrowser-opacity(1);
+      @include crossbrowser-transform(scale(1));
+    }
+
+    &:not(:checked) + .check-mark:after
+    {
+      @include crossbrowser-opacity(0);
+      @include crossbrowser-transform(scale(0));
+    }
+  }
+}
