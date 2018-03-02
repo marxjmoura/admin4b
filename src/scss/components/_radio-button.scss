@@ -1,3 +1,39 @@
+@mixin radio-color($name, $color)
+{
+  label.radio-#{$name}
+  {
+    input[type=radio],
+    input[type=checkbox]
+    {
+      + .check-mark
+      {
+        &:before
+        {
+          border-color: $color;
+        }
+
+        &:after
+        {
+          background: $color;
+        }
+      }
+
+      &:disabled + .check-mark
+      {
+        &:before
+        {
+          border-color: lighten($color, 20%);
+        }
+
+        &:after
+        {
+          background: lighten($color, 20%);
+        }
+      }
+    }
+  }
+}
+
 label.radio
 {
   margin-bottom: 0;
@@ -49,7 +85,12 @@ label.radio
       + .check-mark
       {
         color: lighten($bscolors-gray-700, 10%);
-        cursor: default;
+        cursor: not-allowed;
+
+        &:before
+        {
+          border-color: lighten($bscolors-gray-500, 5%);
+        }
 
         &:after
         {
@@ -71,3 +112,9 @@ label.radio
     }
   }
 }
+
+@include radio-color(danger, $bscolors-red);
+@include radio-color(info, $bscolors-cyan);
+@include radio-color(primary, $bscolors-blue);
+@include radio-color(success, $bscolors-green);
+@include radio-color(warning, $bscolors-yellow);
