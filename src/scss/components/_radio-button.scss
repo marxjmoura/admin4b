@@ -62,7 +62,7 @@ label.radio
         height: 18px;
         background: $bscolors-white;
         border: 1px solid $bscolors-gray-500;
-        border-radius: 100%;
+        @include crossbrowser-border-radius(100%);
       }
 
       &:after
@@ -74,9 +74,8 @@ label.radio
         position: absolute;
         top: 3px;
         left: 3px;
-        border-radius: 100%;
-        -webkit-transition: all 0.2s ease;
-        transition: all 0.2s ease;
+        @include crossbrowser-border-radius(100%);
+        @include crossbrowser-transition(all 0.2s ease);
       }
     }
 
@@ -109,6 +108,62 @@ label.radio
     {
       @include crossbrowser-opacity(0);
       @include crossbrowser-transform(scale(0));
+    }
+  }
+
+  &.radio-sm
+  {
+    input[type=radio],
+    input[type=checkbox]
+    {
+      + .check-mark
+      {
+        font-size: 10.5pt;
+        line-height: 15px;
+        padding-left: 24px;
+
+        &:before
+        {
+          width: 16px;
+          height: 16px;
+        }
+
+        &:after
+        {
+          top: 3px;
+          left: 3px;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  &.radio-lg
+  {
+    input[type=radio],
+    input[type=checkbox]
+    {
+      + .check-mark
+      {
+        font-size: 14pt;
+        line-height: 20px;
+        padding-left: 32px;
+
+        &:before
+        {
+          width: 22px;
+          height: 22px;
+        }
+
+        &:after
+        {
+          top: 4px;
+          left: 4px;
+          width: 14px;
+          height: 14px;
+        }
+      }
     }
   }
 }
