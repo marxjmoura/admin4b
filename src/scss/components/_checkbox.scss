@@ -1,0 +1,147 @@
+@mixin checkbox-color($name, $color)
+{
+  label.checkbox-#{$name} input[type=checkbox]
+  {
+    + .check-mark
+    {
+      border-color: $color;
+    }
+
+    &:checked + .check-mark
+    {
+      background: $color;
+    }
+
+    &:checked:disabled + .check-mark
+    {
+      background: lighten($color, 20%);
+      border-color: lighten($color, 20%);
+    }
+
+    &:focus + .check-mark
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
+  }
+}
+
+label.checkbox
+{
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 0;
+  @include crossbrowser-user-select(none);
+
+  input[type=checkbox]
+  {
+    position: absolute;
+    @include crossbrowser-opacity(0);
+
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + span
+    {
+      box-sizing: border-box;
+
+      &::selection
+      {
+        background: none;
+      }
+    }
+
+    + .check-mark
+    {
+      background-color: $bscolors-white;
+      border: 1px solid $bscolors-gray-500;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+      position: relative;
+      @include crossbrowser-border-radius(5px);
+
+      &:after
+      {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 3px;
+        width: 6px;
+        height: 10px;
+        border: solid $bscolors-white;
+        border-width: 0 2px 2px 0;
+        @include crossbrowser-transform(rotate(45deg));
+      }
+    }
+
+    &:focus + .check-mark
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-gray-500, .25));
+    }
+
+    &:checked + .check-mark
+    {
+      background: $bscolors-gray-500;
+
+      &:after
+      {
+        display: block;
+      }
+    }
+
+    &:disabled + .check-mark
+    {
+      cursor: not-allowed;
+    }
+  }
+
+  &.checkbox-sm
+  {
+    font-size: 10pt;
+
+    input[type=checkbox] + .check-mark
+    {
+      height: 17px;
+      width: 17px;
+
+      &:after
+      {
+        left: 5px;
+        top: 2px;
+        width: 5px;
+        height: 9px;
+      }
+    }
+  }
+
+  &.checkbox-lg
+  {
+    font-size: 13pt;
+
+    input[type=checkbox] + .check-mark
+    {
+      height: 25px;
+      width: 25px;
+
+      &:after
+      {
+        left: 8px;
+        top: 4px;
+        width: 7px;
+        height: 12px;
+        border-width: 0 3px 3px 0;
+      }
+    }
+  }
+}
+
+@include checkbox-color(danger, $bscolors-red);
+@include checkbox-color(info, $bscolors-cyan);
+@include checkbox-color(primary, $bscolors-blue);
+@include checkbox-color(success, $bscolors-green);
+@include checkbox-color(warning, $bscolors-yellow);
