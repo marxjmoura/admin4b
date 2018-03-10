@@ -5,8 +5,8 @@
 - Radio button component
 - Checkbox component
 - Improve `.sidebar-nav-link` active by tab key
+- Remove margins of `callout` component and add documentation
 - Documentation for how to customize sidebar width
-- Documentation for `callout` component
 
 ## [v0.5.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.5.0) (2018-02-25)
 ### Features
