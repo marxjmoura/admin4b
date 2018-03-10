@@ -138,7 +138,24 @@
 </nav>
 <div class="container-fluid">
   <h2>Checkbox</h2>
+  <p>
+    You can customize checkboxes by combining different colors and sizes. See the basic example bellow:
+  </p>
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Basic example
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox"/&gt;
+  &lt;span class="check-mark"&gt;&lt;/span&gt; Basic example
+&lt;/label&gt;
+</code></pre>
   <h3>Colors</h3>
+  <p>
+    The checkbox styles follow the contextual bootstrap colors.
+  </p>
   <div class="form-group">
     <label class="checkbox checkbox-primary">
       <input type="checkbox"/>
@@ -169,7 +186,16 @@
       <span class="check-mark"></span> Info
     </label>
   </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-primary"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-success"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-danger"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-warning"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-info"&gt;&lt;/label&gt;
+</code></pre>
   <h3>Sizes</h3>
+  <p>
+    Add <code>.checkbox-sm</code> for smaller checkboxes or <code>.checkbox-lg</code> for larger.
+  </p>
   <div class="form-group">
     <label class="checkbox checkbox-sm">
       <input type="checkbox"/>
@@ -188,13 +214,25 @@
       <span class="check-mark"></span> I agree to terms
     </label>
   </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-sm"&gt;&lt;/label&gt;
+&lt;label class="checkbox"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-lg"&gt;&lt;/label&gt;
+</code></pre>
   <h3>Disabled state</h3>
+  <p>
+    When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
+  </p>
   <div class="form-group">
     <label class="checkbox checkbox-danger">
       <input type="checkbox" checked disabled/>
       <span class="check-mark"></span> You can't change
     </label>
   </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-danger"&gt;
+  &lt;input type="checkbox" checked disabled/&gt;
+  &lt;span class="check-mark"&gt;&lt;/span&gt; You can't change
+&lt;/label&gt;
+</code></pre>
 </div>
 
     </div>
