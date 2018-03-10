@@ -1,10 +1,10 @@
-## v0.6.0 (unreleased)
+## [v0.6.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.6.0) (2018-03-10)
 ### Breaking changes
 - Rename `.form-signin` to `form-sign`
 ### Features
 - Radio button component
 - Checkbox component
-- Improve `.sidebar-nav-link` active by tab key
+- Improve `.sidebar-nav-link` active by tab key (default browser outline)
 - Remove margins of `callout` component and add documentation
 - Documentation for how to customize sidebar width
 
