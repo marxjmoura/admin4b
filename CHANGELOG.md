@@ -2,11 +2,11 @@
 ### Breaking changes
 - Rename `.form-signin` to `form-sign`
 ### Features
-- Documentation for `callout` component
 - Radio button component
 - Checkbox component
 - Improve `.sidebar-nav-link` active by tab key
-- Customization tips for sidebar
+- Documentation for how to customize sidebar width
+- Documentation for `callout` component
 
 ## [v0.5.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.5.0) (2018-02-25)
 ### Features
