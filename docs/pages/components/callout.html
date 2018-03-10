@@ -135,68 +135,48 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">Components</li>
-      <li class="breadcrumb-item active" aria-current="page">Label</li>
+      <li class="breadcrumb-item active" aria-current="page">Callout</li>
     </ol>
   </nav>
   <div class="container-fluid">
-    <h2>Label</h2>
+    <h2>Callout</h2>
     <p>
-      The label component can be placed outside or within the field.
+      Callout components provide contextual messages to draw attention of the user.
+      See the examples below:
     </p>
-    <div class="form-group">
-      <label>Normal label</label>
-      <input type="text" class="form-control">
+    <div class="callout mb-2">
+      <h5>Basic</h5>
+      <p>I have a message for you, but not so important.</p>
     </div>
-    <div class="form-group">
-      <div class="label-infield">
-        <label for="infield">Infield label</label>
-        <input id="infield" type="text" class="form-control">
-      </div>
+    <div class="callout callout-info mb-2">
+      <h5>Good</h5>
+      <p>I have a message that may help you to understand better.</p>
     </div>
-    <div class="form-group">
-      <div class="label-floating">
-        <input id="floating" type="text" class="form-control" placeholder="Floating">
-        <label for="floating">Floating label</label>
-      </div>
+    <div class="callout callout-warning mb-2">
+      <h5>Warning</h5>
+      <p>I have a warning for you. Be careful.</p>
     </div>
-    <pre><code class="html">&lt;div class="form-group"&gt;
-  &lt;label&gt;Normal label&lt;/label&gt;
-  &lt;input type="text" class="form-control"&gt;
+    <div class="callout callout-danger mb-3">
+      <h5>Critital</h5>
+      <p>I have a critical message for you. This is really important.</p>
+    </div>
+    <pre><code class="html">&lt;div class="callout"&gt;
+  &lt;h5&gt;Basic&lt;/h5&gt;
+  &lt;p&gt;I have a message for you, but not so important.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div class="form-group"&gt;
-  &lt;div class="label-infield"&gt;
-    &lt;label for="infield"&gt;Infield label&lt;/label&gt;
-    &lt;input id="infield" type="text" class="form-control"&gt;
-  &lt;/div&gt;
+&lt;div class="callout callout-info"&gt;
+  &lt;h5&gt;Good&lt;/h5&gt;
+  &lt;p&gt;I have a message that may help you to understand better.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div class="form-group"&gt;
-  &lt;div class="label-floating"&gt;
-    &lt;input id="floating" type="text" class="form-control" placeholder="Floating label"&gt;
-    &lt;label for="floating"&gt;Floating label&lt;/label&gt;
-  &lt;/div&gt;
+&lt;div class="callout callout-warning"&gt;
+  &lt;h5&gt;Warning&lt;/h5&gt;
+  &lt;p&gt;I have a warning for you. Be careful.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="callout callout-danger"&gt;
+  &lt;h5&gt;Critital&lt;/h5&gt;
+  &lt;p&gt;I have a critical message for you. This is really important.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-    <div class="callout callout-warning">
-      <h5>Warranties</h5>
-      <ol>
-        <li>
-          The <code>.floating-label</code> component needs space to move into and
-          the <code>.label-infield</code> component needs space to stay inside.
-          To do this, it is need to increase the input height.
-        </li>
-        <li>
-          In order for the <code>.floating-label</code> and <code>.label-infield</code> components to work properly
-          you have to set the attribute <code>id</code> of the <code>input</code> and the attribute <code>for</code>
-          of the <code>label</code>.
-        </li>
-        <li>
-            In order for the <code>.floating-label</code> component to work properly
-            you have to set the attribute attribute <code>placeholder</code> of the <code>input</code>.
-        </li>
-      </ol>
-    </div>
   </div>
 
     </div>
