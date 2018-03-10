@@ -60,8 +60,9 @@
 
       .sidebar-nav-group .sidebar-nav-link
       {
-        &:hover,
-        &:active
+        &:active,
+        &:focus,
+        &:hover
         {
           color: $nav-link-level-2-hover;
         }
@@ -89,6 +90,7 @@
       }
 
       &:active,
+      &:focus,
       &:hover
       {
         background-color: $nav-link-level-1-hover;
@@ -118,6 +120,7 @@
       color: $nav-footer-link-color;
 
       &:active,
+      &:focus,
       &:hover
       {
         color: $nav-footer-link-hover;
