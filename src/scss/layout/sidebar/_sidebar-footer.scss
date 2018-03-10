@@ -15,6 +15,7 @@
   a
   {
     font-size: 16pt;
+    outline: none;
     padding: 0 10px;
     text-decoration: none;
     @include crossbrowser-transition(color 0.25s ease-out);

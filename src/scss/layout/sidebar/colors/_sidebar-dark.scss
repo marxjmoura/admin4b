@@ -50,8 +50,9 @@
 
       .sidebar-nav-group .sidebar-nav-link
       {
-        &:hover,
-        &:active
+        &:active,
+        &:focus,
+        &:hover
         {
           color: $scrollbar-thumb-color;
         }
@@ -79,6 +80,7 @@
       }
 
       &:active,
+      &:focus,
       &:hover
       {
         background-color: $nav-group-item-active-color;
@@ -108,6 +110,7 @@
       color: $text-color;
 
       &:active,
+      &:focus,
       &:hover
       {
         color: $bscolors-white;
