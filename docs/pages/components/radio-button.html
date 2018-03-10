@@ -130,16 +130,138 @@
 </nav>
 
 
-<nav aria-label="breadcrumb">
+<nav aria-span="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Sample pages</li>
-    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+    <li class="breadcrumb-item">Components</li>
+    <li class="breadcrumb-item active" aria-current="page">Radio button</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h1 class="display-4">
-    Soon...
-  </h1>
+  <h2>Radio button</h2>
+  <p>
+    You can customize radio buttons by combining different colors and sizes. See the basic example bellow:
+  </p>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group" checked>
+      <span class="check-mark">Apple</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group">
+      <span class="check-mark">Peach</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group">
+      <span class="check-mark">Orange</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group" checked&gt;
+    &lt;span class="check-mark"&gt;Apple&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group"&gt;
+    &lt;span class="check-mark"&gt;Peach&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group"&gt;
+    &lt;span class="check-mark"&gt;Orange&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+  <div class="callout callout-info">
+    You also can use <code>input[type=checkbox]</code> to create your radio button component.
+  </div>
+  <h3>Colors</h3>
+  <p>
+    The radio button styles follow the contextual bootstrap colors.
+  </p>
+  <div class="form-group">
+    <label class="radio radio-primary">
+      <input type="checkbox" checked>
+      <span class="check-mark">Primary</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-success">
+      <input type="checkbox" checked>
+      <span class="check-mark">Success</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-danger">
+      <input type="checkbox" checked>
+      <span class="check-mark">Danger</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-warning">
+      <input type="checkbox" checked>
+      <span class="check-mark">Warning</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-info">
+      <input type="checkbox" checked>
+      <span class="check-mark">Info</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-primary"&gt;&lt;/label&gt;
+&lt;label class="radio radio-success"&gt;&lt;/label&gt;
+&lt;label class="radio radio-danger"&gt;&lt;/label&gt;
+&lt;label class="radio radio-warning"&gt;&lt;/label&gt;
+&lt;label class="radio radio-info"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Sizes</h3>
+  <p>
+    Add <code>.radio-sm</code> for smaller radio buttons or <code>.radio-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <label class="radio radio-sm">
+      <input type="radio" name="radio-size">
+      <span class="check-mark">Small</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-size" checked>
+      <span class="check-mark">Normal</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-lg">
+      <input type="radio" name="radio-size">
+      <span class="check-mark">Large</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-sm"&gt;&lt;/label&gt;
+&lt;label class="radio"&gt;&lt;/label&gt;
+&lt;label class="radio radio-lg"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Disabled state</h3>
+  <p>
+    When adding the disabled boolean attribute to the input element, the appearance changes to reflect this state.
+  </p>
+  <div class="form-group">
+    <label class="radio radio-danger">
+      <input type="checkbox" checked disabled>
+      <span class="check-mark">You can't change</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-danger"&gt;
+  &lt;input type="checkbox" checked disabled&gt;
+  &lt;span class="check-mark"&gt;You can't change&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
 </div>
 
     </div>
