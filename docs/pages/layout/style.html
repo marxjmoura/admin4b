@@ -204,6 +204,21 @@
 &lt;div class="app-sidebar sidebar-slide-left"&gt;&lt;/div&gt;
 </code></pre>
   <h3>
+    Width
+  </h3>
+  <p>
+    The width of sidebar can only be changed by code. See the example below:
+  </p>
+  <pre><code class="css">/* The media query prevents breaking the sidebar on smaller screens */
+@media (min-width: 768px)
+{
+  .app .app-body .app-sidebar
+  {
+    width: 360px; /* Your custom width */
+  }
+}
+</code></pre>
+  <h3>
     What's next?
   </h3>
   <p>

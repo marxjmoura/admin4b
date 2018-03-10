@@ -1,0 +1,8 @@
+/* The media query prevents breaking the sidebar on smaller screens */
+@media (min-width: 768px)
+{
+  .app .app-body .app-sidebar
+  {
+    width: 360px; /* Your custom width */
+  }
+}
