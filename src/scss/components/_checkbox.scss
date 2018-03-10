@@ -63,6 +63,7 @@ label.checkbox
       margin-right: 10px;
       position: relative;
       @include crossbrowser-border-radius(5px);
+      @include crossbrowser-transition(background-color 0.2s ease);
 
       &:after
       {
