@@ -43,11 +43,11 @@
 label.switch
 {
   align-items: center;
-  border-radius: 2rem;
   cursor: pointer;
   display: inline-flex;
   margin-bottom: 0;
   position: relative;
+  @include crossbrowser-border-radius(2rem);
 
   input[type=checkbox]
   {

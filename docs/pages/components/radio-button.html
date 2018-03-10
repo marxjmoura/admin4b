@@ -32,7 +32,6 @@
         <i class="fa fa-check-square-o"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
-        <a href="../../pages/components/checkbox.html" class="sidebar-nav-link">Checkbox</a>
         <a href="../../pages/components/code-highlight.html" class="sidebar-nav-link">Code highlight</a>
         <a href="../../pages/components/input-group.html" class="sidebar-nav-link">Input group</a>
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
@@ -131,38 +130,137 @@
 </nav>
 
 
-<nav aria-label="breadcrumb">
+<nav aria-span="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Components</li>
-    <li class="breadcrumb-item active" aria-current="page">Code highlight</li>
+    <li class="breadcrumb-item active" aria-current="page">Radio button</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>
-    Code highlight
-  </h2>
+  <h2>Radio button</h2>
   <p>
-    Code highlight is a feature with predefined styles for HTML, JavaScript and JSON.
-    These styles are a customization for the languages supported by the library
-    <a href="https://highlightjs.org/">highlight.js</a>.
+    You can customize radio buttons by combining different colors and sizes. See the basic example bellow:
   </p>
-  <div class="callout callout-info">
-    You do not need the entire template to work with code highlight.
-    You only need the <a href="https://highlightjs.org/">highlight.js</a> library and
-    the <code>admin4b.highlight.min.css</code> present in the <a href="https://www.npmjs.com/package/admin4b">NPM package</a>.
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group" checked>
+      <span class="check-mark">Apple</span>
+    </label>
   </div>
-  <h3>
-    How to use
-  </h3>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group">
+      <span class="check-mark">Peach</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-group">
+      <span class="check-mark">Orange</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group" checked&gt;
+    &lt;span class="check-mark"&gt;Apple&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group"&gt;
+    &lt;span class="check-mark"&gt;Peach&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label class="radio"&gt;
+    &lt;input type="radio" name="radio-group"&gt;
+    &lt;span class="check-mark"&gt;Orange&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+  <div class="callout callout-info">
+    You also can use <code>input[type=checkbox]</code> to create your radio button component.
+  </div>
+  <h3>Colors</h3>
   <p>
-    An example code of the how to use can be seen below.
+    The radio button styles follow the contextual bootstrap colors.
   </p>
-  <pre><code class="html">&lt;!-- HTML --&gt;
-&lt;pre&gt;&lt;code class="html"&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- JavaScript --&gt;
-&lt;pre&gt;&lt;code class="js"&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- JSON --&gt;
-&lt;pre&gt;&lt;code class="json"&gt;&lt;/code&gt;&lt;/pre&gt;
+  <div class="form-group">
+    <label class="radio radio-primary">
+      <input type="checkbox" checked>
+      <span class="check-mark">Primary</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-success">
+      <input type="checkbox" checked>
+      <span class="check-mark">Success</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-danger">
+      <input type="checkbox" checked>
+      <span class="check-mark">Danger</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-warning">
+      <input type="checkbox" checked>
+      <span class="check-mark">Warning</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-info">
+      <input type="checkbox" checked>
+      <span class="check-mark">Info</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-primary"&gt;&lt;/label&gt;
+&lt;label class="radio radio-success"&gt;&lt;/label&gt;
+&lt;label class="radio radio-danger"&gt;&lt;/label&gt;
+&lt;label class="radio radio-warning"&gt;&lt;/label&gt;
+&lt;label class="radio radio-info"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Sizes</h3>
+  <p>
+    Add <code>.radio-sm</code> for smaller radio buttons or <code>.radio-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <label class="radio radio-sm">
+      <input type="radio" name="radio-size">
+      <span class="check-mark">Small</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio">
+      <input type="radio" name="radio-size" checked>
+      <span class="check-mark">Normal</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="radio radio-lg">
+      <input type="radio" name="radio-size">
+      <span class="check-mark">Large</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-sm"&gt;&lt;/label&gt;
+&lt;label class="radio"&gt;&lt;/label&gt;
+&lt;label class="radio radio-lg"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Disabled state</h3>
+  <p>
+    When adding the disabled boolean attribute to the input element, the appearance changes to reflect this state.
+  </p>
+  <div class="form-group">
+    <label class="radio radio-danger">
+      <input type="checkbox" checked disabled>
+      <span class="check-mark">You can't change</span>
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="radio radio-danger"&gt;
+  &lt;input type="checkbox" checked disabled&gt;
+  &lt;span class="check-mark"&gt;You can't change&lt;/span&gt;
+&lt;/label&gt;
 </code></pre>
 </div>
 
