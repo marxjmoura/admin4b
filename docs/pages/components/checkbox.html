@@ -37,7 +37,6 @@
         <a href="../../pages/components/input-group.html" class="sidebar-nav-link">Input group</a>
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
         <a href="../../pages/components/label.html" class="sidebar-nav-link">Label</a>
-        <a href="../../pages/components/radio-button.html" class="sidebar-nav-link">Radio button</a>
         <a href="../../pages/components/toggle-switch.html" class="sidebar-nav-link">Toggle switch</a>
       </div>
     </div>
@@ -134,35 +133,105 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Components</li>
-    <li class="breadcrumb-item active" aria-current="page">Code highlight</li>
+    <li class="breadcrumb-item active" aria-current="page">Checkbox</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>
-    Code highlight
-  </h2>
+  <h2>Checkbox</h2>
   <p>
-    Code highlight is a feature with predefined styles for HTML, JavaScript and JSON.
-    These styles are a customization for the languages supported by the library
-    <a href="https://highlightjs.org/">highlight.js</a>.
+    You can customize checkboxes by combining different colors and sizes. See the basic example bellow:
   </p>
-  <div class="callout callout-info">
-    You do not need the entire template to work with code highlight.
-    You only need the <a href="https://highlightjs.org/">highlight.js</a> library and
-    the <code>admin4b.highlight.min.css</code> present in the <a href="https://www.npmjs.com/package/admin4b">NPM package</a>.
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Basic example
+    </label>
   </div>
-  <h3>
-    How to use
-  </h3>
+  <pre><code class="html">&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox"/&gt;
+  &lt;span class="check-mark"&gt;&lt;/span&gt; Basic example
+&lt;/label&gt;
+</code></pre>
+  <h3>Colors</h3>
   <p>
-    An example code of the how to use can be seen below.
+    The checkbox styles follow the contextual bootstrap colors.
   </p>
-  <pre><code class="html">&lt;!-- HTML --&gt;
-&lt;pre&gt;&lt;code class="html"&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- JavaScript --&gt;
-&lt;pre&gt;&lt;code class="js"&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;!-- JSON --&gt;
-&lt;pre&gt;&lt;code class="json"&gt;&lt;/code&gt;&lt;/pre&gt;
+  <div class="form-group">
+    <label class="checkbox checkbox-primary">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Primary
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox checkbox-success">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Success
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox checkbox-danger">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Danger
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox checkbox-warning">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Warning
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox checkbox-info">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> Info
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-primary"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-success"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-danger"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-warning"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-info"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Sizes</h3>
+  <p>
+    Add <code>.checkbox-sm</code> for smaller checkboxes or <code>.checkbox-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <label class="checkbox checkbox-sm">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> I agree to terms
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> I agree to terms
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox checkbox-lg">
+      <input type="checkbox"/>
+      <span class="check-mark"></span> I agree to terms
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-sm"&gt;&lt;/label&gt;
+&lt;label class="checkbox"&gt;&lt;/label&gt;
+&lt;label class="checkbox checkbox-lg"&gt;&lt;/label&gt;
+</code></pre>
+  <h3>Disabled state</h3>
+  <p>
+    When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
+  </p>
+  <div class="form-group">
+    <label class="checkbox checkbox-danger">
+      <input type="checkbox" checked disabled/>
+      <span class="check-mark"></span> You can't change
+    </label>
+  </div>
+  <pre><code class="html">&lt;label class="checkbox checkbox-danger"&gt;
+  &lt;input type="checkbox" checked disabled/&gt;
+  &lt;span class="check-mark"&gt;&lt;/span&gt; You can't change
+&lt;/label&gt;
 </code></pre>
 </div>
 
