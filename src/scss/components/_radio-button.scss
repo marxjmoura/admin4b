@@ -61,7 +61,7 @@ label.radio
         width: 1.125rem;
         height: 1.125rem;
         background: $bscolors-white;
-        border: 1px solid $bscolors-gray-500;
+        border: .0625rem solid $bscolors-gray-500;
         @include crossbrowser-border-radius(100%);
       }
 
