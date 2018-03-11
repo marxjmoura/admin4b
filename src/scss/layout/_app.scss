@@ -46,12 +46,12 @@ body
             float: left;
             overflow-x: hidden;
             overflow-y: scroll;
-            padding: 15px 0;
-            width: 260px;
+            padding: .95rem 0;
+            width: 16rem;
 
             &::-webkit-scrollbar
             {
-                width: 3px;
+                width: .2rem;
             }
 
             &::-webkit-scrollbar

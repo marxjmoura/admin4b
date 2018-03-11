@@ -1,8 +1,8 @@
 .btn-sidebar
 {
   background: transparent;
-  font-size: 16pt;
-  margin-right: 5px;
+  font-size: 1.4rem;
+  margin-right: .3125rem;
 
   @include bsmedia-breakpoint-up-to-md
   {
@@ -12,8 +12,8 @@
   .x
   {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     &:before,
     &:after
@@ -21,8 +21,8 @@
       background-color: $bscolors-gray-400;
       position: absolute;
       content: "";
-      height: 33px;
-      width: 2px;
+      height: 2.125rem;
+      width: .125rem;
     }
 
     &:before

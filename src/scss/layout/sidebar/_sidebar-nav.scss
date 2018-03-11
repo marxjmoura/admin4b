@@ -5,7 +5,7 @@
 
     .sidebar-nav-group .sidebar-nav-group .sidebar-nav-link
     {
-        padding: 5px 57px 10px;
+        padding: .375rem 3.5rem .625rem;
     }
 
     .sidebar-nav-link
@@ -14,24 +14,24 @@
         outline: none;
         text-decoration: none;
         white-space: nowrap;
-        @include crossbrowser-transition(color 0.25s ease-out);
+        @include crossbrowser-transition(color .25s ease-out);
     }
 
     > .sidebar-nav-link,
     > .sidebar-nav-group > .sidebar-nav-link
     {
         border: none;
-        font-size: 12pt;
+        font-size: 1rem;
         font-weight: 400;
-        padding: 15px 20px;
+        padding: .95rem 1.25rem;
         white-space: nowrap;
-        @include crossbrowser-transition(background-color 0.25s ease-out);
+        @include crossbrowser-transition(background-color .25s ease-out);
 
         .fa
         {
-            font-size: 16pt;
-            padding-right: 10px;
-            @include crossbrowser-transition(color 0.25s ease-out);
+            font-size: 1.4rem;
+            padding-right: .625rem;
+            @include crossbrowser-transition(color .25s ease-out);
         }
     }
 }
