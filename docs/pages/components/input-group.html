@@ -178,7 +178,27 @@
       </div>
     </div>
   </div>
-  <pre><code class="html">&lt;div class="input-group"&gt;
+  <div class="callout callout-warning">
+    <h5>Component limitations</h5>
+    <ol>
+      <li>
+        Only works with <code>input-group-text</code>.
+      </li>
+      <li>
+        For remove the side borders of the <code>input</code> you will need to add the utility classes:
+        <ul>
+          <li><code>.prepend</code> if the <code>.input-group</code> has <code>input-group-prepend</code></li>
+          <li><code>.append</code> if the <code>.input-group</code> has <code>input-group-append</code></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <div class="source-code">
+    <a href="#input-group-basic" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="input-group-basic" class="collapse">
+      <pre><code class="html">&lt;div class="input-group"&gt;
   &lt;div class="input-group-prepend"&gt;
     &lt;span class="input-group-text"&gt;$&lt;/span&gt;
   &lt;/div&gt;
@@ -198,20 +218,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-  <div class="callout callout-warning">
-    <h5>Component limitations</h5>
-    <ol>
-      <li>
-        Only works with <code>input-group-text</code>.
-      </li>
-      <li>
-        For remove the side borders of the <code>input</code> you will need to add the utility classes:
-        <ul>
-          <li><code>.prepend</code> if the <code>.input-group</code> has <code>input-group-prepend</code></li>
-          <li><code>.append</code> if the <code>.input-group</code> has <code>input-group-append</code></li>
-        </ul>
-      </li>
-    </ol>
+    </div>
   </div>
   <h3>
     Input states
@@ -278,7 +285,12 @@
       </div>
     </div>
   </div>
-  <pre><code class="html">&lt;div class="form-group"&gt;
+  <div class="source-code">
+    <a href="#input-group-states" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="input-group-states" class="collapse">
+      <pre><code class="html">&lt;div class="form-group"&gt;
   &lt;label&gt;Append with default state&lt;/label&gt;
   &lt;div class="input-group as-input append"&gt;
     &lt;input type="text" class="form-control"&gt;
@@ -338,6 +350,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
 </div>
 
     </div>

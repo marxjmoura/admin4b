@@ -151,7 +151,12 @@
     The layout structure consists of two columns. The first column is the sidebar and the second is the app content
     that takes the remaining width. The basic code of the layout structure can be seen below.
   </p>
-  <pre><code class="html">&lt;div class="app"&gt;
+  <div class="source-code">
+    <a href="#basic-structure" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="basic-structure" class="collapse">
+      <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;!-- Header --&gt;
@@ -164,6 +169,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Sidebar
   </h3>
@@ -177,11 +184,18 @@
   <p>
     The header of the sidebar comes first. It contains the user informations like photo and name.
   </p>
-  <pre><code class="html">&lt;div class="sidebar-header"&gt;
+  <div class="source-code">
+    <a href="#sidebar-header" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-header" class="collapse">
+      <pre><code class="html">&lt;div class="sidebar-header"&gt;
   &lt;img src="john-doe.png" class="user-photo"&gt;
   &lt;p class="username"&gt;John Doe&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h4>
     Navigation
   </h4>
@@ -191,7 +205,12 @@
     The attributes <code>data-children</code> and <code>data-parent</code> configure the accordion menu. Refer to
     <a href="https://getbootstrap.com/docs/4.0/components/collapse">bootstrap documentation</a> for details.
   </p>
-  <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
+  <div class="source-code">
+    <a href="#sidebar-navigation" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-navigation" class="collapse">
+      <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
   &lt;a href="page.html" class="sidebar-nav-link"&gt;
     Go to page
   &lt;/a&gt;
@@ -223,13 +242,20 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h4>
     Footer
   </h4>
   <p>
     The sidebar footer contains a set of other buttons like a small toolbar.
   </p>
-  <pre><code class="html">&lt;div class="sidebar-footer"&gt;
+  <div class="source-code">
+    <a href="#sidebar-footer" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-footer" class="collapse">
+      <pre><code class="html">&lt;div class="sidebar-footer"&gt;
   &lt;a href="#" data-toggle="tooltip" title="GitHub"&gt;
     &lt;i class="fa fa-github"&gt;&lt;/i&gt;
   &lt;/a&gt;
@@ -241,6 +267,8 @@
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Content
   </h3>
@@ -248,7 +276,12 @@
     The content is the right column of the layout structure and contains the page content that the user navigated to.
     The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
   </p>
-  <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
+  <div class="source-code">
+    <a href="#app-content" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="app-content" class="collapse">
+      <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
   &lt;div class="navbar-brand"&gt;Admin 4B&lt;/div&gt;
 &lt;/nav&gt;
 &lt;nav aria-label="breadcrumb"&gt;
@@ -261,6 +294,8 @@
   Hello World!
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Responsive
   </h3>
@@ -269,7 +304,12 @@
     When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
     can be used to show and close the sidebar respectively.
   </p>
-  <pre><code class="html">&lt;!-- Open sidebar --&gt;
+  <div class="source-code">
+    <a href="#sidebar-triggers" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-triggers" class="collapse">
+      <pre><code class="html">&lt;!-- Open sidebar --&gt;
 &lt;button type="button" class="btn btn-sidebar" data-toggle="sidebar"&gt;
   &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
 &lt;/button&gt;
@@ -279,13 +319,20 @@
   &lt;span class="x"&gt;&lt;/span&gt;
 &lt;/button&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Example
   </h3>
   <p>
     An example code for the full setup of the sidebar can be seen below.
   </p>
-  <pre><code class="html">&lt;div class="app"&gt;
+  <div class="source-code">
+    <a href="#starter-template" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="starter-template" class="collapse">
+      <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;button type="button" class="btn btn-sidebar" data-dismiss="sidebar"&gt;
@@ -358,6 +405,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     What's next?
   </h3>
