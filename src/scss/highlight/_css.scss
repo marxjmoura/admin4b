@@ -1,24 +1,24 @@
 .css .hljs-keyword
 {
-  color: #e83e8c;
+  color: $highlight-keyword;
 }
 
 .css .hljs-selector-class
 {
-  color: #0a8;
+  color: $highlight-class;
 }
 
 .css .hljs-attribute
 {
-  color: #95F;
+  color: $highlight-attribute;
 }
 
 .css .hljs-comment
 {
-  color: #999;
+  color: $highlight-comment;
 }
 
 .css .hljs-number
 {
-  color: #f5871f;
+  color: $highlight-number;
 }
