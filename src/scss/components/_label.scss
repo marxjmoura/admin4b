@@ -3,10 +3,19 @@ label
   margin-bottom: .25rem;
 }
 
-.label-infield
+.label-infield,
+.label-floating
 {
   position: relative;
 
+  label
+  {
+    cursor: text;
+  }
+}
+
+.label-infield
+{
   > input
   {
     padding-top: 1.75rem;
@@ -31,8 +40,6 @@ label
 {
   $input-padding-x: .75rem;
   $input-padding-y: .75rem;
-
-  position: relative;
 
   > input,
   > label
