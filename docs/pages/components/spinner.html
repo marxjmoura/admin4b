@@ -135,14 +135,35 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item active" aria-current="page">Multi step form</li>
+    <li class="breadcrumb-item">Components</li>
+    <li class="breadcrumb-item active" aria-current="page">Spinner</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h1 class="display-4">
-    Soon...
-  </h1>
+  <h2>Spinner</h2>
+  <div class="spinner">
+    <div class="spinner-bar"></div>
+  </div>
+  <h3>Sizes</h3>
+  <div class="spinner spinner-sm">
+    <div class="spinner-bar"></div>
+  </div>
+  <div class="spinner">
+    <div class="spinner-bar"></div>
+  </div>
+  <div class="spinner spinner-lg">
+    <div class="spinner-bar"></div>
+  </div>
+  <h3>Blocker</h3>
+  <div class="form-group">
+    <button id="spinner-toggle" type="button" class="btn btn-primary">
+      Start loading
+    </button>
+  </div>
+  <div id="spinner" class="spinner spinner-block">
+    <div class="spinner-bar"></div>
+    <div class="spinner-info">Will close after 3 seconds...</div>
+  </div>
 </div>
 
     </div>
