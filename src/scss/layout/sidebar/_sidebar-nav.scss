@@ -5,7 +5,7 @@
 
     .sidebar-nav-group .sidebar-nav-group .sidebar-nav-link
     {
-        padding: .375rem 3.5rem .625rem;
+        padding: .375rem 3.75rem .625rem;
     }
 
     .sidebar-nav-link
@@ -21,16 +21,15 @@
     > .sidebar-nav-group > .sidebar-nav-link
     {
         border: none;
-        font-size: 1rem;
         font-weight: 400;
-        padding: .95rem 1.25rem;
+        padding: .95rem 1.5rem;
         white-space: nowrap;
         @include crossbrowser-transition(background-color .25s ease-out);
 
-        .fa
+        i
         {
-            font-size: 1.4rem;
-            padding-right: .625rem;
+            font-size: 1rem;
+            padding-right: 1rem;
             @include crossbrowser-transition(color .25s ease-out);
         }
     }

@@ -5,16 +5,23 @@
 
     .user-photo
     {
-        border: 3px solid $bscolors-gray-300;
+        border: 0.125rem solid transparent;
         border-radius: 50%;
-        height: 6rem;
-        padding: .1875rem;
-        width: 6rem;
+        height: 4.5rem;
+        padding: .125rem;
+        width: 4.5rem;
     }
 
     .username
     {
         padding: .625rem 0;
         white-space: nowrap;
+
+        small
+        {
+            display: block;
+            padding-top: .25rem;
+            @include crossbrowser-opacity(.75);
+        }
     }
 }

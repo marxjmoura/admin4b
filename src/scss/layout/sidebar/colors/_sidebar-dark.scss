@@ -11,7 +11,7 @@
 
   &::-webkit-scrollbar
   {
-    background-color: darken($bg-color, 5%);
+    background-color: darken($bg-color, 2.5%);
   }
 
   &::-webkit-scrollbar-thumb
@@ -33,12 +33,12 @@
     .user-photo
     {
       background-color: darken($bg-color, 5%);
-      border: 3px solid $scrollbar-thumb-color;
+      border-color: $scrollbar-thumb-color;
     }
 
     .username
     {
-      color: lighten($bg-color, 40%);
+      color: lighten($bg-color, 50%);
     }
   }
 

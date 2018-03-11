@@ -1,16 +1,8 @@
 .app-sidebar .sidebar-footer
 {
+  margin: 1.5rem 0;
   text-align: center;
   white-space: nowrap;
-
-  &:before
-  {
-    border-top: 1px solid $bscolors-gray-400;
-    content: "";
-    display: block;
-    margin: 15px auto;
-    width: 90%;
-  }
 
   a
   {
