@@ -1,3 +1,13 @@
+## 0.7.0 (unreleased)
+### Features
+- Spinner component
+- Notification pages
+- Improve sidebar style
+- Code refactoring for switch, radio and checkbox
+- Use the font Open Sans in template
+- Use Simple Line Icons in sidebar
+- Change units to `rem`
+
 ## [v0.6.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.6.0) (2018-03-10)
 ### Breaking changes
 - Rename `.form-signin` to `form-sign`
