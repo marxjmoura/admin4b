@@ -28,7 +28,7 @@
     @include crossbrowser-animation(spinner 1s linear infinite);
   }
 
-  .spinner-info
+  .spinner-text
   {
     position: relative;
     font-size: .875rem;
@@ -60,7 +60,7 @@
       @include crossbrowser-animation(spinner 1s linear infinite);
     }
 
-    .spinner-info
+    .spinner-text
     {
       padding: .25rem 0;
       text-align: center;
@@ -82,7 +82,7 @@
       height: 2.25rem;
     }
 
-    .spinner-info
+    .spinner-text
     {
       font-size: .8rem;
     }
@@ -96,7 +96,7 @@
       height: 3.75rem;
     }
 
-    .spinner-info
+    .spinner-text
     {
       font-size: .95rem;
     }

@@ -38,8 +38,8 @@
         <a href="../../pages/components/input-group.html" class="sidebar-nav-link">Input group</a>
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
         <a href="../../pages/components/label.html" class="sidebar-nav-link">Label</a>
-        <a href="../../pages/components/spinner.html" class="sidebar-nav-link">Spinner</a>
         <a href="../../pages/components/radio-button.html" class="sidebar-nav-link">Radio button</a>
+        <a href="../../pages/components/spinner.html" class="sidebar-nav-link">Spinner</a>
         <a href="../../pages/components/toggle-switch.html" class="sidebar-nav-link">Toggle switch</a>
       </div>
     </div>
@@ -140,29 +140,105 @@
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>Spinner</h2>
-  <div class="spinner">
-    <div class="spinner-bar"></div>
+  <h2>
+    Spinner
+  </h2>
+  <p>
+    Spinners enables you to tell the users that the app is currently processing.
+    See a basic example below:
+  </p>
+  <div class="form-group">
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
   </div>
-  <h3>Sizes</h3>
-  <div class="spinner spinner-sm">
-    <div class="spinner-bar"></div>
+  <pre><code class="html">&lt;div class="spinner"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Add <code>.spinner-sm</code> for smaller spinners or <code>.spinner-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <div class="spinner spinner-sm">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner spinner-lg">
+      <div class="spinner-bar"></div>
+    </div>
   </div>
-  <div class="spinner">
-    <div class="spinner-bar"></div>
-  </div>
-  <div class="spinner spinner-lg">
-    <div class="spinner-bar"></div>
-  </div>
-  <h3>Blocker</h3>
+  <pre><code class="html">&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;
+</code></pre>
+  <h3>
+    Blocker
+  </h3>
+  <p>
+    You can block user interaction to the app by using a blocker spinner.
+  </p>
+  <p>
+    How it works:
+  </p>
+  <ul>
+    <li>
+      To make the spinner full screen and block the interaction of the user to the app
+      you need to add the class <code>.spinner-block</code> to <code>.spinner</code>.
+    </li>
+    <li>
+      To show the spinner you just need to add the class <code>.show</code> to <code>.spinner</code>
+      and to hide you just need to remove this class.
+    </li>
+    <li>
+      You can also show small information to the user while the app is processing by using the
+      class <code>.spinner-text</code>.
+    </li>
+  </ul>
   <div class="form-group">
     <button id="spinner-toggle" type="button" class="btn btn-primary">
-      Start loading
+      Start processing
     </button>
   </div>
   <div id="spinner" class="spinner spinner-block">
     <div class="spinner-bar"></div>
-    <div class="spinner-info">Will close after 3 seconds...</div>
+    <div class="spinner-text">Will close after 3 seconds...</div>
+  </div>
+  <ul class="nav nav-tabs mb-1">
+    <li class="nav-item">
+      <a href="#spinner-html" class="nav-link active" data-toggle="tab">HTML</a>
+    </li>
+    <li class="nav-item">
+      <a href="#spinner-js" class="nav-link" data-toggle="tab">JavaScript</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="spinner-html" class="tab-pane active">
+      <pre><code class="html">&lt;button id="spinner-toggle" type="button" class="btn btn-primary"&gt;
+  Start processing
+&lt;/button&gt;
+
+&lt;div id="spinner" class="spinner spinner-block"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
+  &lt;div class="spinner-text"&gt;Will close after 3 seconds...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+    <div id="spinner-js" class="tab-pane">
+      <pre><code class="js">$('#spinner-toggle').on('click', function () {
+  $('#spinner').addClass('show');
+
+  setTimeout(function () {
+    $('#spinner').removeClass('show');
+  }, 3000);
+});
+</code></pre>
+    </div>
   </div>
 </div>
 
