@@ -1,7 +1,6 @@
-## 0.7.0 (unreleased)
+## v0.7.0 (unreleased)
 ### Features
 - Spinner component
-- Notification pages
 - Improve sidebar style
 - Code refactoring for switch, radio and checkbox
 - Use the font Open Sans in template
