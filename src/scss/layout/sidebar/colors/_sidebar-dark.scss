@@ -1,7 +1,7 @@
 .app .app-body .app-sidebar.sidebar-dark
 {
   $bg-color: $flatuicolors-wet-asphalt;
-  $text-color: lighten($bg-color, 40%);
+  $link-color: lighten($bg-color, 40%);
   $scrollbar-thumb-color: $bscolors-cyan;
   $nav-group-bg-color: darken($bg-color, 3%);
   $nav-group-item-active-color: darken($nav-group-bg-color, 3%);
@@ -61,7 +61,7 @@
 
     .sidebar-nav-link
     {
-      color: $text-color;
+      color: $link-color;
     }
 
     > .sidebar-nav-link,
@@ -75,7 +75,7 @@
 
         .fa
         {
-          color: $text-color;
+          color: $link-color;
         }
       }
 
@@ -89,7 +89,7 @@
 
     > .sidebar-nav-link .fa
     {
-      color: $text-color;
+      color: $link-color;
     }
 
     > .sidebar-nav-group > .sidebar-nav-link .fa
@@ -100,14 +100,9 @@
 
   .sidebar-footer
   {
-    &:before
-    {
-      border-top: .0625rem solid lighten($bg-color, 7%);
-    }
-
     a
     {
-      color: $text-color;
+      color: lighten($bg-color, 25%);
 
       &:active,
       &:focus,
