@@ -63,7 +63,7 @@ label.checkbox
       margin-right: 10px;
       position: relative;
       @include crossbrowser-border-radius(5px);
-      @include crossbrowser-transition(background-color 0.2s ease);
+      @include crossbrowser-transition(all 0.2s ease);
 
       &:after
       {
@@ -103,7 +103,7 @@ label.checkbox
 
   &.checkbox-sm
   {
-    font-size: 10pt;
+    font-size: 10.5pt;
 
     input[type=checkbox] + .check-mark
     {
@@ -122,7 +122,7 @@ label.checkbox
 
   &.checkbox-lg
   {
-    font-size: 13pt;
+    font-size: 13.5pt;
 
     input[type=checkbox] + .check-mark
     {

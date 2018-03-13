@@ -79,12 +79,12 @@ label.switch
       outline: 0;
       padding: 2px;
       position: relative;
-      transition: all .4s ease;
-      user-select: none;
       width: 4em;
+      @include crossbrowser-transition(all .4s ease);
+      @include crossbrowser-user-select(none);
 
-      &:after,
-      &:before
+      &:before,
+      &:after
       {
         position: relative;
         display: block;
@@ -93,18 +93,18 @@ label.switch
         height: 100%;
       }
 
+      &:before
+      {
+        display: none;
+      }
+
       &:after
       {
         left: 0;
         background: $bscolors-white;
         border-radius: 50%;
-        transition: all .2s ease;
         @include crossbrowser-box-shadow(none);
-      }
-
-      &:before
-      {
-        display: none;
+        @include crossbrowser-transition(all .2s ease);
       }
     }
 

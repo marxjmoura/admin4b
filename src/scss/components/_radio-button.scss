@@ -7,10 +7,7 @@
     {
       + .check-mark
       {
-        &:before
-        {
-          border-color: $color;
-        }
+        border-color: $color;
 
         &:after
         {
@@ -20,15 +17,17 @@
 
       &:disabled + .check-mark
       {
-        &:before
-        {
-          border-color: lighten($color, 20%);
-        }
+        border-color: lighten($color, 20%);
 
         &:after
         {
           background: lighten($color, 20%);
         }
+      }
+
+      &:focus + .check-mark
+      {
+        @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
       }
     }
   }
@@ -36,7 +35,10 @@
 
 label.radio
 {
+  align-items: center;
+  display: inline-flex;
   margin-bottom: 0;
+  @include crossbrowser-user-select(none);
 
   input[type=radio],
   input[type=checkbox]
@@ -44,39 +46,60 @@ label.radio
     position: absolute;
     @include crossbrowser-opacity(0);
 
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + span
+    {
+      box-sizing: border-box;
+
+      &::selection
+      {
+        background: none;
+      }
+    }
+
     + .check-mark
     {
+      background-color: $bscolors-white;
+      border: 1px solid $bscolors-gray-500;
       cursor: pointer;
-      display: inline-block;
+      height: 18px;
+      width: 18px;
+      margin-right: 10px;
       position: relative;
-      padding-left: 28px;
-      line-height: 17px;
-
-      &:before
-      {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px;
-        height: 18px;
-        background: $bscolors-white;
-        border: 1px solid $bscolors-gray-500;
-        @include crossbrowser-border-radius(100%);
-      }
+      @include crossbrowser-border-radius(100%);
+      @include crossbrowser-transition(all .2s ease);
 
       &:after
       {
-        content: "";
-        width: 12px;
-        height: 12px;
         background: $bscolors-gray-600;
+        border: 2px solid $bscolors-white;
+        content: "";
         position: absolute;
-        top: 3px;
-        left: 3px;
+        width: 16px;
+        height: 16px;
         @include crossbrowser-border-radius(100%);
-        @include crossbrowser-transition(all 0.2s ease);
+        @include crossbrowser-transition(transform .2s ease);
       }
+    }
+
+    &:focus + .check-mark
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-gray-500, .25));
+    }
+
+    &:checked + .check-mark:after
+    {
+      @include crossbrowser-transform(scale(1));
+    }
+
+    &:not(:checked) + .check-mark:after
+    {
+      @include crossbrowser-transform(scale(0));
     }
 
     &:disabled
@@ -97,43 +120,25 @@ label.radio
         }
       }
     }
-
-    &:checked + .check-mark:after
-    {
-      @include crossbrowser-opacity(1);
-      @include crossbrowser-transform(scale(1));
-    }
-
-    &:not(:checked) + .check-mark:after
-    {
-      @include crossbrowser-opacity(0);
-      @include crossbrowser-transform(scale(0));
-    }
   }
 
   &.radio-sm
   {
+    font-size: 10.5pt;
+
     input[type=radio],
     input[type=checkbox]
     {
       + .check-mark
       {
-        font-size: 10.5pt;
-        line-height: 15px;
-        padding-left: 24px;
-
-        &:before
-        {
-          width: 16px;
-          height: 16px;
-        }
+        margin-right: 8px;
+        width: 15px;
+        height: 15px;
 
         &:after
         {
-          top: 3px;
-          left: 3px;
-          width: 10px;
-          height: 10px;
+          width: 13px;
+          height: 13px;
         }
       }
     }
@@ -141,27 +146,21 @@ label.radio
 
   &.radio-lg
   {
+    font-size: 13.5pt;
+
     input[type=radio],
     input[type=checkbox]
     {
       + .check-mark
       {
-        font-size: 14pt;
-        line-height: 20px;
-        padding-left: 32px;
-
-        &:before
-        {
-          width: 22px;
-          height: 22px;
-        }
+        width: 22px;
+        height: 22px;
 
         &:after
         {
-          top: 4px;
-          left: 4px;
-          width: 14px;
-          height: 14px;
+          border-width: 3px;
+          width: 20px;
+          height: 20px;
         }
       }
     }
