@@ -6,9 +6,9 @@
   .input-suggestion-list
   {
     background-color: $bscolors-white;
-    border-bottom: 1px solid $bscolors-blue;
-    border-left: 1px solid $bscolors-blue;
-    border-right: 1px solid $bscolors-blue;
+    border-bottom: .0625rem solid $bscolors-blue;
+    border-left: .0625rem solid $bscolors-blue;
+    border-right: .0625rem solid $bscolors-blue;
     display: none;
     position: absolute;
     width: 100%;
@@ -25,7 +25,7 @@
   &.open
   {
     @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-blue, .25));
-    
+
     input
     {
       @include crossbrowser-border-bottom-radius(0);

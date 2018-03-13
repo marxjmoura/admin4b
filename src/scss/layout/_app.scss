@@ -5,6 +5,12 @@ html, body
     height: 100%;
 }
 
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
 .app, .app-sidebar, .app-content
 {
     height: 100%;
@@ -39,14 +45,16 @@ html, body
         {
             background: $bscolors-white;
             float: left;
+            font-size: 0.95rem;
             overflow-x: hidden;
             overflow-y: scroll;
-            padding: 15px 0;
-            width: 260px;
+            padding: .95rem 0;
+            position: relative;
+            width: 15rem;
 
             &::-webkit-scrollbar
             {
-                width: 3px;
+                width: .2rem;
             }
 
             &::-webkit-scrollbar
