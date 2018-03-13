@@ -73,13 +73,13 @@ label.switch
     + .switch-slider
     {
       background: $bscolors-gray-400;
-      border-radius: 2em;
+      border-radius: 2rem;
       display: block;
-      height: 2em;
+      height: 2rem;
       outline: 0;
       padding: 2px;
       position: relative;
-      width: 4em;
+      width: 4rem;
       @include crossbrowser-transition(all .4s ease);
       @include crossbrowser-user-select(none);
 
@@ -125,23 +125,33 @@ label.switch
     }
   }
 
-  &.switch-sm input[type=checkbox]
+  &.switch-sm
   {
-    + .switch-slider
+    font-size: 10.5pt;
+
+    input[type=checkbox]
     {
-      border-radius: 1.5em;
-      height: 1.5em;
-      width: 3em;
+      + .switch-slider
+      {
+        border-radius: 1.5rem;
+        height: 1.5rem;
+        width: 2.75rem;
+      }
     }
   }
 
-  &.switch-lg input[type=checkbox]
+  &.switch-lg
   {
-    + .switch-slider
+    font-size: 13.5pt;
+
+    input[type=checkbox]
     {
-      border-radius: 2.5em;
-      height: 2.5em;
-      width: 5em;
+      + .switch-slider
+      {
+        border-radius: 2.5rem;
+        height: 2.5rem;
+        width: 5rem;
+      }
     }
   }
 }
