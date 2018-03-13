@@ -3,6 +3,14 @@ $(function () {
         hljs.highlightBlock(code);
     });
 
+    $('#spinner-toggle').on('click', function () {
+        $('#spinner').addClass('show');
+
+        setTimeout(function () {
+            $('#spinner').removeClass('show');
+        }, 3000);
+    });
+
     var juices = [
         'Apple, carrot, and orange',
         'Beet, carrot, ginger, and turmeric',

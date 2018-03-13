@@ -3,12 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-  <link href="../../../dist/admin4b.min.css" rel="stylesheet">
-  <link href="../../../dist/admin4b-highlight.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
+  <link rel="stylesheet" href="../../../dist/admin4b-highlight.min.css">
   <title>Admin 4B</title>
 </head>
 <body>
@@ -23,18 +21,15 @@
   </div>
   <div class="sidebar-header">
     <img src="../../assets/images/user-photo.png" class="user-photo">
-    <p class="username">
-      John Doe
-      <small>Administrator</small>
-    </p>
+    <p class="username">John Doe</p>
   </div>
   <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
     <a href="../../index.html" class="sidebar-nav-link">
-      <i class="icon-rocket"></i> Get started
+      <i class="fa fa-play"></i> Get started
     </a>
     <div class="sidebar-nav-group">
       <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="icon-puzzle"></i> Components
+        <i class="fa fa-check-square-o"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
         <a href="../../pages/components/callout.html" class="sidebar-nav-link">Callout</a>
@@ -50,7 +45,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#content" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="icon-folder"></i> Content
+        <i class="fa fa-file-text-o"></i> Content
       </a>
       <div id="content" class="sidebar-nav-group collapse">
         <a href="../../pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a>
@@ -59,7 +54,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#forms" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="icon-note"></i> Forms
+        <i class="fa fa-pencil-square-o"></i> Forms
       </a>
       <div id="forms" class="sidebar-nav-group collapse">
         <a href="../../pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a>
@@ -69,7 +64,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sidebar" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="icon-layers"></i> Layout
+        <i class="fa fa-columns"></i> Layout
       </a>
       <div id="sidebar" class="sidebar-nav-group collapse">
         <a href="../../pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a>
@@ -78,7 +73,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sample-pages" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="icon-doc"></i> Pages
+        <i class="fa fa-file-o"></i> Pages
       </a>
       <div id="sample-pages" class="sidebar-nav-group collapse">
         <a href="../../pages/sample-pages/blank-page.html" class="sidebar-nav-link">Blank page</a>
@@ -138,163 +133,110 @@
 </nav>
 
 
-<nav aria-span="breadcrumb">
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Components</li>
-    <li class="breadcrumb-item active" aria-current="page">Radio button</li>
+    <li class="breadcrumb-item active" aria-current="page">Spinner</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>Radio button</h2>
+  <h2>
+    Spinner
+  </h2>
   <p>
-    You can customize radio buttons by combining different colors and sizes. See the basic example bellow:
+    Spinners enables you to tell the users that the app is currently processing.
+    See a basic example below:
   </p>
   <div class="form-group">
-    <label class="radio">
-      <input type="radio" name="radio-group" checked>
-      <span class="check-mark">Apple</span>
-    </label>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
   </div>
-  <div class="form-group">
-    <label class="radio">
-      <input type="radio" name="radio-group">
-      <span class="check-mark">Peach</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio">
-      <input type="radio" name="radio-group">
-      <span class="check-mark">Orange</span>
-    </label>
-  </div>
-  <div class="source-code">
-    <a href="#radio-button-basic" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="radio-button-basic" class="collapse">
-      <pre><code class="html">&lt;div class="form-group"&gt;
-  &lt;label class="radio"&gt;
-    &lt;input type="radio" name="radio-group" checked&gt;
-    &lt;span class="check-mark"&gt;Apple&lt;/span&gt;
-  &lt;/label&gt;
+  <pre><code class="html">&lt;div class="spinner"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;label class="radio"&gt;
-    &lt;input type="radio" name="radio-group"&gt;
-    &lt;span class="check-mark"&gt;Peach&lt;/span&gt;
-  &lt;/label&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;label class="radio"&gt;
-    &lt;input type="radio" name="radio-group"&gt;
-    &lt;span class="check-mark"&gt;Orange&lt;/span&gt;
-  &lt;/label&gt;
+</code></pre>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Add <code>.spinner-sm</code> for smaller spinners or <code>.spinner-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <div class="spinner spinner-sm">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner spinner-lg">
+      <div class="spinner-bar"></div>
+    </div>
+  </div>
+  <pre><code class="html">&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;
+</code></pre>
+  <h3>
+    Blocker
+  </h3>
+  <p>
+    You can block user interaction to the app by using a blocker spinner.
+  </p>
+  <p>
+    How it works:
+  </p>
+  <ul>
+    <li>
+      To make the spinner full screen and block the interaction of the user to the app
+      you need to add the class <code>.spinner-block</code> to <code>.spinner</code>.
+    </li>
+    <li>
+      To show the spinner you just need to add the class <code>.show</code> to <code>.spinner</code>
+      and to hide you just need to remove this class.
+    </li>
+    <li>
+      You can also show small information to the user while the app is processing by using the
+      class <code>.spinner-text</code>.
+    </li>
+  </ul>
+  <div class="form-group">
+    <button id="spinner-toggle" type="button" class="btn btn-primary">
+      Start processing
+    </button>
+  </div>
+  <div id="spinner" class="spinner spinner-block">
+    <div class="spinner-bar"></div>
+    <div class="spinner-text">Will close after 3 seconds...</div>
+  </div>
+  <ul class="nav nav-tabs mb-1">
+    <li class="nav-item">
+      <a href="#spinner-html" class="nav-link active" data-toggle="tab">HTML</a>
+    </li>
+    <li class="nav-item">
+      <a href="#spinner-js" class="nav-link" data-toggle="tab">JavaScript</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="spinner-html" class="tab-pane active">
+      <pre><code class="html">&lt;button id="spinner-toggle" type="button" class="btn btn-primary"&gt;
+  Start processing
+&lt;/button&gt;
+
+&lt;div id="spinner" class="spinner spinner-block"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
+  &lt;div class="spinner-text"&gt;Will close after 3 seconds...&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
-  </div>
-  <div class="callout callout-info">
-    You also can use <code>input[type=checkbox]</code> to create your radio button component.
-  </div>
-  <h3>Colors</h3>
-  <p>
-    The radio button styles follow the contextual bootstrap colors.
-  </p>
-  <div class="form-group">
-    <label class="radio radio-primary">
-      <input type="checkbox" checked>
-      <span class="check-mark">Primary</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio radio-success">
-      <input type="checkbox" checked>
-      <span class="check-mark">Success</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio radio-danger">
-      <input type="checkbox" checked>
-      <span class="check-mark">Danger</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio radio-warning">
-      <input type="checkbox" checked>
-      <span class="check-mark">Warning</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio radio-info">
-      <input type="checkbox" checked>
-      <span class="check-mark">Info</span>
-    </label>
-  </div>
-  <div class="source-code">
-    <a href="#radio-button-colors" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="radio-button-colors" class="collapse">
-      <pre><code class="html">&lt;label class="radio radio-primary"&gt;&lt;/label&gt;
-&lt;label class="radio radio-success"&gt;&lt;/label&gt;
-&lt;label class="radio radio-danger"&gt;&lt;/label&gt;
-&lt;label class="radio radio-warning"&gt;&lt;/label&gt;
-&lt;label class="radio radio-info"&gt;&lt;/label&gt;
-</code></pre>
-    </div>
-  </div>
-  <h3>Sizes</h3>
-  <p>
-    Add <code>.radio-sm</code> for smaller radio buttons or <code>.radio-lg</code> for larger.
-  </p>
-  <div class="form-group">
-    <label class="radio radio-sm">
-      <input type="radio" name="radio-size">
-      <span class="check-mark">Small</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio">
-      <input type="radio" name="radio-size" checked>
-      <span class="check-mark">Normal</span>
-    </label>
-  </div>
-  <div class="form-group">
-    <label class="radio radio-lg">
-      <input type="radio" name="radio-size">
-      <span class="check-mark">Large</span>
-    </label>
-  </div>
-  <div class="source-code">
-    <a href="#radio-button-sizes" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="radio-button-sizes" class="collapse">
-      <pre><code class="html">&lt;label class="radio radio-sm"&gt;&lt;/label&gt;
-&lt;label class="radio"&gt;&lt;/label&gt;
-&lt;label class="radio radio-lg"&gt;&lt;/label&gt;
-</code></pre>
-    </div>
-  </div>
-  <h3>Disabled state</h3>
-  <p>
-    When adding the disabled boolean attribute to the input element, the appearance changes to reflect this state.
-  </p>
-  <div class="form-group">
-    <label class="radio radio-danger">
-      <input type="checkbox" checked disabled>
-      <span class="check-mark">You can't change</span>
-    </label>
-  </div>
-  <div class="source-code">
-    <a href="#radio-button-disabled" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="radio-button-disabled" class="collapse">
-      <pre><code class="html">&lt;label class="radio radio-danger"&gt;
-  &lt;input type="checkbox" checked disabled&gt;
-  &lt;span class="check-mark"&gt;You can't change&lt;/span&gt;
-&lt;/label&gt;
+    <div id="spinner-js" class="tab-pane">
+      <pre><code class="js">$('#spinner-toggle').on('click', function () {
+  $('#spinner').addClass('show');
+
+  setTimeout(function () {
+    $('#spinner').removeClass('show');
+  }, 3000);
+});
 </code></pre>
     </div>
   </div>
