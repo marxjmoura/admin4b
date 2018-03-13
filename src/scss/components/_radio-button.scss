@@ -49,8 +49,8 @@ label.radio
       cursor: pointer;
       display: inline-block;
       position: relative;
-      padding-left: 28px;
-      line-height: 17px;
+      padding-left: 1.75rem;
+      line-height: 1rem;
 
       &:before
       {
@@ -58,24 +58,24 @@ label.radio
         position: absolute;
         left: 0;
         top: 0;
-        width: 18px;
-        height: 18px;
+        width: 1.125rem;
+        height: 1.125rem;
         background: $bscolors-white;
-        border: 1px solid $bscolors-gray-500;
+        border: .0625rem solid $bscolors-gray-500;
         @include crossbrowser-border-radius(100%);
       }
 
       &:after
       {
         content: "";
-        width: 12px;
-        height: 12px;
+        width: .75rem;
+        height: .75rem;
         background: $bscolors-gray-600;
         position: absolute;
-        top: 3px;
-        left: 3px;
+        top: .1875rem;
+        left: .1875rem;
         @include crossbrowser-border-radius(100%);
-        @include crossbrowser-transition(all 0.2s ease);
+        @include crossbrowser-transition(all .2s ease);
       }
     }
 
@@ -118,22 +118,22 @@ label.radio
     {
       + .check-mark
       {
-        font-size: 10.5pt;
-        line-height: 15px;
-        padding-left: 24px;
+        font-size: .875rem;
+        line-height: .95rem;
+        padding-left: 1.5rem;
 
         &:before
         {
-          width: 16px;
-          height: 16px;
+          width: 1rem;;
+          height: 1rem;;
         }
 
         &:after
         {
-          top: 3px;
-          left: 3px;
-          width: 10px;
-          height: 10px;
+          top: .1875rem;
+          left: .1875rem;
+          width: .625rem;
+          height: .625rem;
         }
       }
     }
@@ -146,22 +146,22 @@ label.radio
     {
       + .check-mark
       {
-        font-size: 14pt;
-        line-height: 20px;
-        padding-left: 32px;
+        font-size: 1.2rem;
+        line-height: 1.25rem;
+        padding-left: 2rem;
 
         &:before
         {
-          width: 22px;
-          height: 22px;
+          width: 1.4rem;
+          height: 1.4rem;
         }
 
         &:after
         {
-          top: 4px;
-          left: 4px;
-          width: 14px;
-          height: 14px;
+          top: .25rem;
+          left: .25rem;
+          width: .875rem;
+          height: .875rem;
         }
       }
     }

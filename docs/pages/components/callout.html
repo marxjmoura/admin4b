@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b-highlight.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b-highlight.min.css" rel="stylesheet">
   <title>Admin 4B</title>
 </head>
 <body>
@@ -21,15 +23,18 @@
   </div>
   <div class="sidebar-header">
     <img src="../../assets/images/user-photo.png" class="user-photo">
-    <p class="username">John Doe</p>
+    <p class="username">
+      John Doe
+      <small>Administrator</small>
+    </p>
   </div>
   <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
     <a href="../../index.html" class="sidebar-nav-link">
-      <i class="fa fa-play"></i> Get started
+      <i class="icon-rocket"></i> Get started
     </a>
     <div class="sidebar-nav-group">
       <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-check-square-o"></i> Components
+        <i class="icon-puzzle"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
         <a href="../../pages/components/callout.html" class="sidebar-nav-link">Callout</a>
@@ -44,7 +49,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#content" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-text-o"></i> Content
+        <i class="icon-folder"></i> Content
       </a>
       <div id="content" class="sidebar-nav-group collapse">
         <a href="../../pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a>
@@ -53,7 +58,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#forms" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-pencil-square-o"></i> Forms
+        <i class="icon-note"></i> Forms
       </a>
       <div id="forms" class="sidebar-nav-group collapse">
         <a href="../../pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a>
@@ -63,7 +68,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sidebar" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-columns"></i> Layout
+        <i class="icon-layers"></i> Layout
       </a>
       <div id="sidebar" class="sidebar-nav-group collapse">
         <a href="../../pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a>
@@ -72,7 +77,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sample-pages" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-o"></i> Pages
+        <i class="icon-doc"></i> Pages
       </a>
       <div id="sample-pages" class="sidebar-nav-group collapse">
         <a href="../../pages/sample-pages/blank-page.html" class="sidebar-nav-link">Blank page</a>
@@ -160,7 +165,12 @@
       <h5>Critital</h5>
       <p>I have a critical message for you. This is really important.</p>
     </div>
-    <pre><code class="html">&lt;div class="callout"&gt;
+    <div class="source-code">
+      <a href="#callout-colors" data-toggle="collapse">
+        <i class="fa fa-code"></i> Source code
+      </a>
+      <div id="callout-colors" class="collapse">
+        <pre><code class="html">&lt;div class="callout"&gt;
   &lt;h5&gt;Basic&lt;/h5&gt;
   &lt;p&gt;I have a message for you, but not so important.&lt;/p&gt;
 &lt;/div&gt;
@@ -177,6 +187,8 @@
   &lt;p&gt;I have a critical message for you. This is really important.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+      </div>
+    </div>
   </div>
 
     </div>

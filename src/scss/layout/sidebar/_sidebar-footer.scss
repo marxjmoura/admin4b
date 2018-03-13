@@ -1,23 +1,15 @@
 .app-sidebar .sidebar-footer
 {
+  margin: 1.5rem 0;
   text-align: center;
   white-space: nowrap;
 
-  &:before
-  {
-    border-top: 1px solid $bscolors-gray-400;
-    content: "";
-    display: block;
-    margin: 15px auto;
-    width: 90%;
-  }
-
   a
   {
-    font-size: 16pt;
+    font-size: 1.4rem;
     outline: none;
-    padding: 0 10px;
+    padding: 0 .625rem;
     text-decoration: none;
-    @include crossbrowser-transition(color 0.25s ease-out);
+    @include crossbrowser-transition(color .25s ease-out);
   }
 }
