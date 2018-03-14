@@ -1,4 +1,4 @@
-## v0.7.0 (unreleased)
+## [v0.7.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.0) (2018-03-13)
 ### Features
 - Spinner component
 - Improve sidebar style
