@@ -1,9 +1,10 @@
 .app .app-body .app-sidebar.sidebar-light
 {
-  $sidebar-bg-color: $flatuicolors-clouds;
+  $sidebar-bg-color: $bscolors-white;
   $sidebar-btn-close-color: darken($bscolors-gray-400, 7%);
-  $sidebar-scrollbar-color: $bscolors-gray-300;
-  $username-img-bg: $bscolors-gray-300;
+  $sidebar-scrollbar: $bscolors-blue;
+  $sidebar-scrollbar-bg: $bscolors-gray-100;
+  $username-img-bg: $bscolors-gray-100;
   $username-img-border: $bscolors-gray-400;
   $username-text-color: $bscolors-gray-700;
   $nav-group-active-bg-color: darken($sidebar-bg-color, 5%);
@@ -14,19 +15,19 @@
   $nav-link-level-2-color: $bscolors-gray-600;
   $nav-link-level-2-hover: $bscolors-blue;
   $nav-footer-border-color: $bscolors-gray-300;
-  $nav-footer-link-color: $bscolors-gray-600;
+  $nav-footer-link-color: lighten($bscolors-gray-600, 10%);
   $nav-footer-link-hover: $bscolors-blue;
 
   background: $sidebar-bg-color;
 
   &::-webkit-scrollbar
   {
-    background-color: $sidebar-scrollbar-color;
+    background-color: $sidebar-scrollbar-bg;
   }
 
   &::-webkit-scrollbar-thumb
   {
-    background-color: darken($sidebar-scrollbar-color, 10%);
+    background-color: $sidebar-scrollbar;
   }
 
   .btn-sidebar .x
@@ -43,7 +44,7 @@
     .user-photo
     {
       background-color:$username-img-bg;
-      border: 3px solid $username-img-border;
+      border-color: $username-img-border;
     }
 
     .username
@@ -82,29 +83,15 @@
       &.collapsed
       {
         background-color: $sidebar-bg-color;
-
-        .fa
-        {
-          color: $nav-group-icon;
-        }
       }
 
       &:active,
       &:focus,
-      &:hover
+      &:hover,
+      &[aria-expanded=true]
       {
         background-color: $nav-link-level-1-hover;
       }
-    }
-
-    > .sidebar-nav-link .fa
-    {
-      color: $nav-group-icon;
-    }
-
-    > .sidebar-nav-group > .sidebar-nav-link .fa
-    {
-      color: $nav-group-icon-active;
     }
   }
 
@@ -112,7 +99,7 @@
   {
     &:before
     {
-      border-top: 1px solid $nav-footer-border-color;
+      border-top: .0625rem solid $nav-footer-border-color;
     }
 
     a

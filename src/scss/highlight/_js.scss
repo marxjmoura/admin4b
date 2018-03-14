@@ -1,14 +1,14 @@
 .js .hljs-string
 {
-  color: #c30;
+  color: $highlight-string;
 }
 
 .js .hljs-keyword
 {
-  color: #069;
+  color: $highlight-keyword;
 }
 
 .js .hljs-comment
 {
-  color: #999;
+  color: $highlight-comment;
 }

@@ -141,35 +141,125 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Components</li>
-    <li class="breadcrumb-item active" aria-current="page">Code highlight</li>
+    <li class="breadcrumb-item active" aria-current="page">Spinner</li>
   </ol>
 </nav>
 <div class="container-fluid">
   <h2>
-    Code highlight
+    Spinner
   </h2>
   <p>
-    Code highlight is a feature with predefined styles for HTML, CSS, JavaScript and JSON.
-    These styles are a customization for the languages supported by the library
-    <a href="https://highlightjs.org/">highlight.js</a>.
+    Spinners enables you to tell the users that the app is currently processing.
+    See a basic example below:
   </p>
-  <div class="callout callout-info">
-    You do not need the entire template to work with code highlight.
-    You only need the <a href="https://highlightjs.org/">highlight.js</a> library and
-    the <code>admin4b-highlight.min.css</code> file present in the <a href="https://www.npmjs.com/package/admin4b">NPM package</a>.
+  <div class="form-group">
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
   </div>
   <div class="source-code">
-    <a href="#how-to-use" data-toggle="collapse">
+    <a href="#spinner-basic" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="how-to-use" class="collapse">
-      <pre><code class="html">&lt;div class="source-code"&gt;
-  &lt;pre&gt;&lt;code class="html"&gt;&lt;/code&gt;&lt;/pre&gt;
-  &lt;pre&gt;&lt;code class="css"&gt;&lt;/code&gt;&lt;/pre&gt;
-  &lt;pre&gt;&lt;code class="js"&gt;&lt;/code&gt;&lt;/pre&gt;
-  &lt;pre&gt;&lt;code class="json"&gt;&lt;/code&gt;&lt;/pre&gt;
+    <div id="spinner-basic" class="collapse">
+      <pre><code class="html">&lt;div class="spinner"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Add <code>.spinner-sm</code> for smaller spinners or <code>.spinner-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <div class="spinner spinner-sm">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner spinner-lg">
+      <div class="spinner-bar"></div>
+    </div>
+  </div>
+  <div class="source-code">
+    <a href="#spinner-sizes" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="spinner-sizes" class="collapse">
+      <pre><code class="html">&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>
+    Blocker
+  </h3>
+  <p>
+    You can block user interaction to the app by using a blocker spinner.
+  </p>
+  <p>
+    How it works:
+  </p>
+  <ul>
+    <li>
+      To make the spinner full screen and block the interaction of the user to the app
+      you need to add the class <code>.spinner-block</code> to <code>.spinner</code>.
+    </li>
+    <li>
+      To show the spinner you just need to add the class <code>.show</code> to <code>.spinner</code>
+      and to hide you just need to remove this class.
+    </li>
+    <li>
+      You can also show small information to the user while the app is processing by using the
+      class <code>.spinner-text</code>.
+    </li>
+  </ul>
+  <div class="form-group">
+    <button id="spinner-toggle" type="button" class="btn btn-primary">
+      Start processing
+    </button>
+  </div>
+  <div id="spinner" class="spinner spinner-block">
+    <div class="spinner-bar"></div>
+    <div class="spinner-text">Will close after 3 seconds...</div>
+  </div>
+  <div class="source-code">
+    <a href="#spinner-block" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="spinner-block" class="collapse">
+      <div class="nav nav-tabs">
+        <a href="#spinner-block-html" class="active" data-toggle="tab">HTML</a>
+        <a href="#spinner-block-js" data-toggle="tab">JavaScript</a>
+      </div>
+      <div class="tab-content">
+        <div id="spinner-block-html" class="tab-pane active">
+          <pre><code class="html">&lt;button id="spinner-toggle" type="button" class="btn btn-primary"&gt;
+  Start processing
+&lt;/button&gt;
+
+&lt;div id="spinner" class="spinner spinner-block"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
+  &lt;div class="spinner-text"&gt;Will close after 3 seconds...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <div id="spinner-block-js" class="tab-pane">
+          <pre><code class="js">$('#spinner-toggle').on('click', function () {
+  $('#spinner').addClass('show');
+
+  setTimeout(function () {
+    $('#spinner').removeClass('show');
+  }, 3000);
+});
+</code></pre>
+        </div>
+      </div>
     </div>
   </div>
 </div>

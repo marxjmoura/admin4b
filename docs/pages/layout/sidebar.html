@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b-highlight.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b-highlight.min.css" rel="stylesheet">
   <title>Admin 4B</title>
 </head>
 <body>
@@ -21,15 +23,18 @@
   </div>
   <div class="sidebar-header">
     <img src="../../assets/images/user-photo.png" class="user-photo">
-    <p class="username">John Doe</p>
+    <p class="username">
+      John Doe
+      <small>Administrator</small>
+    </p>
   </div>
   <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
     <a href="../../index.html" class="sidebar-nav-link">
-      <i class="fa fa-play"></i> Get started
+      <i class="icon-rocket"></i> Get started
     </a>
     <div class="sidebar-nav-group">
       <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-check-square-o"></i> Components
+        <i class="icon-puzzle"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
         <a href="../../pages/components/callout.html" class="sidebar-nav-link">Callout</a>
@@ -39,12 +44,13 @@
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
         <a href="../../pages/components/label.html" class="sidebar-nav-link">Label</a>
         <a href="../../pages/components/radio-button.html" class="sidebar-nav-link">Radio button</a>
+        <a href="../../pages/components/spinner.html" class="sidebar-nav-link">Spinner</a>
         <a href="../../pages/components/toggle-switch.html" class="sidebar-nav-link">Toggle switch</a>
       </div>
     </div>
     <div class="sidebar-nav-group">
       <a href="#content" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-text-o"></i> Content
+        <i class="icon-folder"></i> Content
       </a>
       <div id="content" class="sidebar-nav-group collapse">
         <a href="../../pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a>
@@ -53,7 +59,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#forms" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-pencil-square-o"></i> Forms
+        <i class="icon-note"></i> Forms
       </a>
       <div id="forms" class="sidebar-nav-group collapse">
         <a href="../../pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a>
@@ -63,7 +69,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sidebar" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-columns"></i> Layout
+        <i class="icon-layers"></i> Layout
       </a>
       <div id="sidebar" class="sidebar-nav-group collapse">
         <a href="../../pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a>
@@ -72,7 +78,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sample-pages" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-o"></i> Pages
+        <i class="icon-doc"></i> Pages
       </a>
       <div id="sample-pages" class="sidebar-nav-group collapse">
         <a href="../../pages/sample-pages/blank-page.html" class="sidebar-nav-link">Blank page</a>
@@ -146,7 +152,12 @@
     The layout structure consists of two columns. The first column is the sidebar and the second is the app content
     that takes the remaining width. The basic code of the layout structure can be seen below.
   </p>
-  <pre><code class="html">&lt;div class="app"&gt;
+  <div class="source-code">
+    <a href="#basic-structure" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="basic-structure" class="collapse">
+      <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;!-- Header --&gt;
@@ -159,6 +170,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Sidebar
   </h3>
@@ -172,11 +185,18 @@
   <p>
     The header of the sidebar comes first. It contains the user informations like photo and name.
   </p>
-  <pre><code class="html">&lt;div class="sidebar-header"&gt;
+  <div class="source-code">
+    <a href="#sidebar-header" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-header" class="collapse">
+      <pre><code class="html">&lt;div class="sidebar-header"&gt;
   &lt;img src="john-doe.png" class="user-photo"&gt;
   &lt;p class="username"&gt;John Doe&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h4>
     Navigation
   </h4>
@@ -186,7 +206,12 @@
     The attributes <code>data-children</code> and <code>data-parent</code> configure the accordion menu. Refer to
     <a href="https://getbootstrap.com/docs/4.0/components/collapse">bootstrap documentation</a> for details.
   </p>
-  <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
+  <div class="source-code">
+    <a href="#sidebar-navigation" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-navigation" class="collapse">
+      <pre><code class="html">&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
   &lt;a href="page.html" class="sidebar-nav-link"&gt;
     Go to page
   &lt;/a&gt;
@@ -218,13 +243,20 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h4>
     Footer
   </h4>
   <p>
     The sidebar footer contains a set of other buttons like a small toolbar.
   </p>
-  <pre><code class="html">&lt;div class="sidebar-footer"&gt;
+  <div class="source-code">
+    <a href="#sidebar-footer" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-footer" class="collapse">
+      <pre><code class="html">&lt;div class="sidebar-footer"&gt;
   &lt;a href="#" data-toggle="tooltip" title="GitHub"&gt;
     &lt;i class="fa fa-github"&gt;&lt;/i&gt;
   &lt;/a&gt;
@@ -236,6 +268,8 @@
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Content
   </h3>
@@ -243,7 +277,12 @@
     The content is the right column of the layout structure and contains the page content that the user navigated to.
     The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
   </p>
-  <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
+  <div class="source-code">
+    <a href="#app-content" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="app-content" class="collapse">
+      <pre><code class="html">&lt;nav class="navbar navbar-expand navbar-light bg-white"&gt;
   &lt;div class="navbar-brand"&gt;Admin 4B&lt;/div&gt;
 &lt;/nav&gt;
 &lt;nav aria-label="breadcrumb"&gt;
@@ -256,6 +295,8 @@
   Hello World!
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Responsive
   </h3>
@@ -264,7 +305,12 @@
     When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
     can be used to show and close the sidebar respectively.
   </p>
-  <pre><code class="html">&lt;!-- Open sidebar --&gt;
+  <div class="source-code">
+    <a href="#sidebar-triggers" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-triggers" class="collapse">
+      <pre><code class="html">&lt;!-- Open sidebar --&gt;
 &lt;button type="button" class="btn btn-sidebar" data-toggle="sidebar"&gt;
   &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
 &lt;/button&gt;
@@ -274,13 +320,20 @@
   &lt;span class="x"&gt;&lt;/span&gt;
 &lt;/button&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     Example
   </h3>
   <p>
     An example code for the full setup of the sidebar can be seen below.
   </p>
-  <pre><code class="html">&lt;div class="app"&gt;
+  <div class="source-code">
+    <a href="#starter-template" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="starter-template" class="collapse">
+      <pre><code class="html">&lt;div class="app"&gt;
   &lt;div class="app-body"&gt;
     &lt;div class="app-sidebar"&gt;
       &lt;button type="button" class="btn btn-sidebar" data-dismiss="sidebar"&gt;
@@ -353,6 +406,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>
     What's next?
   </h3>
