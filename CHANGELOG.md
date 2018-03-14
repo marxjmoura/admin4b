@@ -1,4 +1,7 @@
 ## [v0.7.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.0) (2018-03-13)
+### Breaking changes
+- The text of radio button must to be stay outside of `.check-mark` (just like checkbox and switcher)
+- The element `pre > code` must to be wrapped with the class `.source-code`
 ### Features
 - Spinner component
 - Improve sidebar style
