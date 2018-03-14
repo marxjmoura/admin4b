@@ -63,7 +63,7 @@ label.checkbox
       margin-right: .625rem;
       position: relative;
       @include crossbrowser-border-radius(.3125rem);
-      @include crossbrowser-transition(background-color .2s ease);
+      @include crossbrowser-transition(all 0.2s ease);
 
       &:after
       {
@@ -115,14 +115,14 @@ label.checkbox
         left: .3125rem;
         top: .125rem;
         width: .3125rem;
-        height: .55em;
+        height: .55rem;
       }
     }
   }
 
   &.checkbox-lg
   {
-    font-size: 1.05em;
+    font-size: 1.05rem;
 
     input[type=checkbox] + .check-mark
     {
@@ -131,7 +131,7 @@ label.checkbox
 
       &:after
       {
-        left: .5em;
+        left: .5rem;
         top: .25rem;
         width: .4375rem;
         height: .75rem;
