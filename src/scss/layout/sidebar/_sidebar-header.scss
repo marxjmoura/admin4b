@@ -1,20 +1,27 @@
 .app-sidebar .sidebar-header
 {
-    padding: 0 20px;
+    padding: 0 1.25rem;
     text-align: center;
 
     .user-photo
     {
-        border: 3px solid $bscolors-gray-300;
+        border: 0.125rem solid transparent;
         border-radius: 50%;
-        height: 96px;
-        padding: 3px;
-        width: 96px;
+        height: 4.5rem;
+        padding: .125rem;
+        width: 4.5rem;
     }
 
     .username
     {
-        padding: 10px 0;
+        padding: .625rem 0;
         white-space: nowrap;
+
+        small
+        {
+            display: block;
+            padding-top: .25rem;
+            @include crossbrowser-opacity(.75);
+        }
     }
 }

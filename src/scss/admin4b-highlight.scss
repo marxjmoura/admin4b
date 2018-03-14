@@ -1,5 +1,9 @@
+@import 'utilities/cross-browser';
+
+@import 'palette/highlight';
+
 @import 'highlight/css';
 @import 'highlight/html';
 @import 'highlight/js';
 @import 'highlight/json';
-@import 'highlight/pre-code';
+@import 'highlight/source-code';

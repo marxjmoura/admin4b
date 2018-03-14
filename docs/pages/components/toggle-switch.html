@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b.min.css">
-  <link rel="stylesheet" href="../../../dist/admin4b-highlight.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b.min.css" rel="stylesheet">
+  <link href="../../../dist/admin4b-highlight.min.css" rel="stylesheet">
   <title>Admin 4B</title>
 </head>
 <body>
@@ -21,15 +23,18 @@
   </div>
   <div class="sidebar-header">
     <img src="../../assets/images/user-photo.png" class="user-photo">
-    <p class="username">John Doe</p>
+    <p class="username">
+      John Doe
+      <small>Administrator</small>
+    </p>
   </div>
   <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
     <a href="../../index.html" class="sidebar-nav-link">
-      <i class="fa fa-play"></i> Get started
+      <i class="icon-rocket"></i> Get started
     </a>
     <div class="sidebar-nav-group">
       <a href="#components" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-check-square-o"></i> Components
+        <i class="icon-puzzle"></i> Components
       </a>
       <div id="components" class="sidebar-nav-group collapse">
         <a href="../../pages/components/callout.html" class="sidebar-nav-link">Callout</a>
@@ -39,12 +44,13 @@
         <a href="../../pages/components/input-suggestion.html" class="sidebar-nav-link">Input suggestion</a>
         <a href="../../pages/components/label.html" class="sidebar-nav-link">Label</a>
         <a href="../../pages/components/radio-button.html" class="sidebar-nav-link">Radio button</a>
+        <a href="../../pages/components/spinner.html" class="sidebar-nav-link">Spinner</a>
         <a href="../../pages/components/toggle-switch.html" class="sidebar-nav-link">Toggle switch</a>
       </div>
     </div>
     <div class="sidebar-nav-group">
       <a href="#content" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-text-o"></i> Content
+        <i class="icon-folder"></i> Content
       </a>
       <div id="content" class="sidebar-nav-group collapse">
         <a href="../../pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a>
@@ -53,7 +59,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#forms" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-pencil-square-o"></i> Forms
+        <i class="icon-note"></i> Forms
       </a>
       <div id="forms" class="sidebar-nav-group collapse">
         <a href="../../pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a>
@@ -63,7 +69,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sidebar" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-columns"></i> Layout
+        <i class="icon-layers"></i> Layout
       </a>
       <div id="sidebar" class="sidebar-nav-group collapse">
         <a href="../../pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a>
@@ -72,7 +78,7 @@
     </div>
     <div class="sidebar-nav-group">
       <a href="#sample-pages" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
-        <i class="fa fa-file-o"></i> Pages
+        <i class="icon-doc"></i> Pages
       </a>
       <div id="sample-pages" class="sidebar-nav-group collapse">
         <a href="../../pages/sample-pages/blank-page.html" class="sidebar-nav-link">Blank page</a>
@@ -149,11 +155,18 @@
       <span class="switch-slider"></span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch"&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-basic" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-basic" class="collapse">
+      <pre><code class="html">&lt;label class="switch"&gt;
   &lt;input type="checkbox"/&gt;
   &lt;span class="switch-slider"&gt;&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
   <p>
     You can also add outside text.
   </p>
@@ -165,13 +178,20 @@
       <span class="ml-1">Yes</span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch"&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-text" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-text" class="collapse">
+      <pre><code class="html">&lt;label class="switch"&gt;
   &lt;span class="mr-1"&gt;No&lt;/span&gt;
   &lt;input type="checkbox"/&gt;
   &lt;span class="switch-slider"&gt;&lt;/span&gt;
   &lt;span class="ml-1"&gt;Yes&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>Colors</h3>
   <p>
     The toggle switch styles follow the contextual bootstrap colors.
@@ -198,12 +218,19 @@
       <span class="switch-slider"></span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;&lt;/label&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-colors" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-colors" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;&lt;/label&gt;
 &lt;label class="switch switch-to-success"&gt;&lt;/label&gt;
 &lt;label class="switch switch-to-danger"&gt;&lt;/label&gt;
 &lt;label class="switch switch-to-warning"&gt;&lt;/label&gt;
 &lt;label class="switch switch-to-info"&gt;&lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
   <p>
     You can also customize the color transition using <code>switch-*</code> and <code>switch-to-*</code>.
   </p>
@@ -213,8 +240,15 @@
       <span class="switch-slider"></span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch switch-danger switch-to-success"&gt;&lt;/label&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-transition" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-transition" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-danger switch-to-success"&gt;&lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>Sizes</h3>
   <p>
     Add <code>.switch-sm</code> for smaller switches or <code>.switch-lg</code> for larger.
@@ -233,10 +267,17 @@
       <span class="switch-slider"></span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch switch-sm"&gt;&lt;/label&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-sizes" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-sizes" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-sm"&gt;&lt;/label&gt;
 &lt;label class="switch"&gt;&lt;/label&gt;
 &lt;label class="switch switch-lg"&gt;&lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
   <h3>Disabled state</h3>
   <p>
     When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
@@ -251,7 +292,12 @@
       <span class="switch-slider"></span>
     </label>
   </div>
-  <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;
+  <div class="source-code">
+    <a href="#toggle-switch-disabled" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-disabled" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;
   &lt;input type="checkbox" checked disabled/&gt;
   &lt;span class="switch-slider"&gt;&lt;/span&gt;
 &lt;/label&gt;
@@ -260,6 +306,8 @@
   &lt;span class="switch-slider"&gt;&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
+    </div>
+  </div>
 </div>
 
     </div>

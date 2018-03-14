@@ -1,0 +1,33 @@
+.source-code
+{
+  margin-bottom: 1rem;
+
+  .nav-tabs a
+  {
+    color: darken(#fff, 50%);
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .75rem;
+    @include crossbrowser-transition(color .2s ease);
+
+    &.active,
+    &:hover
+    {
+      color: #fff;
+    }
+  }
+
+  pre,
+  .nav-tabs
+  {
+    background: #222d32;
+    border: none;
+  }
+
+  pre
+  {
+    color: #e8e8e8;
+    margin: 0;
+    overflow-x: auto;
+  }
+}

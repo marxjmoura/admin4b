@@ -3,10 +3,19 @@ label
   margin-bottom: .25rem;
 }
 
-.label-infield
+.label-infield,
+.label-floating
 {
   position: relative;
 
+  label
+  {
+    cursor: text;
+  }
+}
+
+.label-infield
+{
   > input
   {
     padding-top: 1.75rem;
@@ -19,7 +28,7 @@ label
     left: 0;
     color: $bscolors-gray-600;
     display: block;
-    font-size: 11pt;
+    font-size: .95rem;
     line-height: 1.5;
     margin-bottom: 0;
     padding: .5rem .75rem;
@@ -31,8 +40,6 @@ label
 {
   $input-padding-x: .75rem;
   $input-padding-y: .75rem;
-
-  position: relative;
 
   > input,
   > label
@@ -49,7 +56,7 @@ label
     margin-bottom: 0;
     line-height: 1.5;
     color: $bscolors-gray-600;
-    border: 1px solid transparent;
+    border: .0625rem solid transparent;
     border-radius: .25rem;
     transition: all .1s ease-in-out;
   }
@@ -68,7 +75,7 @@ label
     {
       padding-top: calc(#{$input-padding-y} / 3);
       padding-bottom: calc(#{$input-padding-y} / 3);
-      font-size: 12px;
+      font-size: .75rem;
       color: $bscolors-gray-600;
     }
   }
