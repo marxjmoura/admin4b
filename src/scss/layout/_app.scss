@@ -54,12 +54,8 @@ body
 
             &::-webkit-scrollbar
             {
-                width: .2rem;
-            }
-
-            &::-webkit-scrollbar
-            {
                 background-color: $bscolors-gray-300;
+                width: .2rem;
             }
 
             &::-webkit-scrollbar-thumb
