@@ -57,8 +57,8 @@ label
     line-height: 1.5;
     color: $bscolors-gray-600;
     border: .0625rem solid transparent;
-    border-radius: .25rem;
     transition: all .1s ease-in-out;
+    @include crossbrowser-border-radius(.25rem);
   }
 
   input

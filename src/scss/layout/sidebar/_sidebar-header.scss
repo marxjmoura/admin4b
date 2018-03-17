@@ -6,10 +6,10 @@
     .user-photo
     {
         border: 0.125rem solid transparent;
-        border-radius: 50%;
         height: 4.5rem;
         padding: .125rem;
         width: 4.5rem;
+        @include crossbrowser-border-radius(50%);
     }
 
     .username
