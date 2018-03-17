@@ -1,0 +1,109 @@
+@mixin sidebar-color($name, $color-settings)
+{
+  .app .app-body .app-sidebar.sidebar-#{$name}
+  {
+    $sidebar-bg-color: map-get($color-settings, sidebar-bg-color);
+    $sidebar-btn-close-color: map-get($color-settings, sidebar-btn-close-color);
+    $sidebar-scrollbar: map-get($color-settings, sidebar-scrollbar);
+    $sidebar-scrollbar-bg: map-get($color-settings, sidebar-scrollbar-bg);
+    $username-img-bg: map-get($color-settings, username-img-bg);
+    $username-img-border: map-get($color-settings, username-img-border);
+    $username-text-color: map-get($color-settings, username-text-color);
+    $nav-group-active-bg-color: map-get($color-settings, nav-group-active-bg-color);
+    $nav-link-level-1-color: map-get($color-settings, nav-link-level-1-color);
+    $nav-link-level-1-hover: map-get($color-settings, nav-link-level-1-hover);
+    $nav-link-level-2-color: map-get($color-settings, nav-link-level-2-color);
+    $nav-link-level-2-hover: map-get($color-settings, nav-link-level-2-hover);
+    $nav-footer-link-color: map-get($color-settings, nav-footer-link-color);
+    $nav-footer-link-hover: map-get($color-settings, nav-footer-link-hover);
+
+    background: $sidebar-bg-color;
+
+    &::-webkit-scrollbar
+    {
+      background-color: $sidebar-scrollbar-bg;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: $sidebar-scrollbar;
+    }
+
+    .btn-sidebar .x
+    {
+      &:before,
+      &:after
+      {
+        background-color: $sidebar-btn-close-color;
+      }
+    }
+
+    .sidebar-header
+    {
+      .user-photo
+      {
+        background-color: $username-img-bg;
+        border-color: $username-img-border;
+      }
+
+      .username
+      {
+        color: $username-text-color;
+      }
+    }
+
+    .sidebar-nav
+    {
+      .sidebar-nav-group
+      {
+        background: $nav-group-active-bg-color;
+
+        .sidebar-nav-group .sidebar-nav-link
+        {
+          &:active,
+          &:focus,
+          &:hover
+          {
+            color: $nav-link-level-2-hover;
+          }
+        }
+      }
+
+      .sidebar-nav-link
+      {
+        color: $nav-link-level-2-color;
+      }
+
+      > .sidebar-nav-link,
+      > .sidebar-nav-group > .sidebar-nav-link
+      {
+        color: $nav-link-level-1-color;
+
+        &.collapsed
+        {
+          background-color: $sidebar-bg-color;
+        }
+
+        &:active,
+        &:focus,
+        &:hover,
+        &[aria-expanded=true]
+        {
+          background-color: $nav-link-level-1-hover;
+        }
+      }
+    }
+
+    .sidebar-footer a
+    {
+      color: $nav-footer-link-color;
+
+      &:active,
+      &:focus,
+      &:hover
+      {
+        color: $nav-footer-link-hover;
+      }
+    }
+  }
+}
