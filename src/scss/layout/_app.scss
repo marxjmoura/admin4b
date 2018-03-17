@@ -67,7 +67,7 @@ body
                 background-color: $bscolors-blue;
             }
 
-            @include bsmedia-breakpoint-down-to-sm
+            @include bsmedia-down-to-sm
             {
                 position: absolute;
                 top: 0;

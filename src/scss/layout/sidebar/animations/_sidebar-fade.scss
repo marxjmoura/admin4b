@@ -2,7 +2,7 @@
 {
   @include crossbrowser-transition(opacity .3s linear, visibility .3s);
 
-  @include bsmedia-breakpoint-down-to-sm
+  @include bsmedia-down-to-sm
   {
     width: 100%;
     @include crossbrowser-opacity(0);
