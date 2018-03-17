@@ -42,10 +42,10 @@
 
 label.switch
 {
-  align-items: center;
-  display: inline-flex;
   margin-bottom: 0;
   position: relative;
+  @include crossbrowser-align-items(center);
+  @include crossbrowser-display-inline-flex();
   @include crossbrowser-border-radius(2rem);
 
   input[type=checkbox]

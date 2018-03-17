@@ -35,9 +35,9 @@
 
 label.radio
 {
-  align-items: center;
-  display: inline-flex;
   margin-bottom: 0;
+  @include crossbrowser-align-items(center);
+  @include crossbrowser-display-inline-flex();
   @include crossbrowser-user-select(none);
 
   input[type=radio],
