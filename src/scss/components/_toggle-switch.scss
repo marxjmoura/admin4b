@@ -43,7 +43,6 @@
 label.switch
 {
   align-items: center;
-  cursor: pointer;
   display: inline-flex;
   margin-bottom: 0;
   position: relative;
@@ -73,6 +72,7 @@ label.switch
     + .switch-slider
     {
       background: $bscolors-gray-400;
+      cursor: pointer;
       display: block;
       height: 2rem;
       outline: 0;
