@@ -1,3 +1,15 @@
+## [v0.7.1](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.1) (2018-03-17)
+### Bug fixes
+- Fix check mark for small and large radio buttons
+- Fix cross-browser border radius for some components
+- Fix toggle switch cursor on hover
+### Features
+- Change JSON attribute color in code highlight
+- Increase opacity of spinner backdrop
+- Cross-browser for display flex
+- Code refactoring for sidebar colors
+- Form responsiveness in documentation
+
 ## [v0.7.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.0) (2018-03-13)
 ### Breaking changes
 - The text of radio button must to be stay outside of `.check-mark` (just like checkbox and switcher)

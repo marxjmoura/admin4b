@@ -283,13 +283,10 @@
     When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
   </p>
   <div class="form-group">
-    <label class="switch switch-to-primary">
+    <label class="switch switch-danger">
       <input type="checkbox" checked disabled/>
       <span class="switch-slider"></span>
-    </label>
-    <label class="switch">
-      <input type="checkbox" disabled/>
-      <span class="switch-slider"></span>
+      <span class="ml-2">You can't change</span>
     </label>
   </div>
   <div class="source-code">
@@ -297,13 +294,10 @@
       <i class="fa fa-code"></i> Source code
     </a>
     <div id="toggle-switch-disabled" class="collapse">
-      <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;
+      <pre><code class="html">&lt;label class="switch switch-danger"&gt;
   &lt;input type="checkbox" checked disabled/&gt;
   &lt;span class="switch-slider"&gt;&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class="switch"&gt;
-  &lt;input type="checkbox" disabled/&gt;
-  &lt;span class="switch-slider"&gt;&lt;/span&gt;
+  &lt;span class="ml-2"&gt;You can't change&lt;/span&gt;
 &lt;/label&gt;
 </code></pre>
     </div>

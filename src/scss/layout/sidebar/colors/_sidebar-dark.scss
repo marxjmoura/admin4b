@@ -1,115 +1,16 @@
-.app .app-body .app-sidebar.sidebar-dark
-{
-  $bg-color: $flatuicolors-wet-asphalt;
-  $link-color: lighten($bg-color, 40%);
-  $scrollbar-thumb-color: $bscolors-cyan;
-  $nav-group-bg-color: darken($bg-color, 3%);
-  $nav-group-item-active-color: darken($nav-group-bg-color, 3%);
-  $nav-group-item-border-color: lighten($bg-color, 15%);
-
-  background: $bg-color;
-
-  &::-webkit-scrollbar
-  {
-    background-color: darken($bg-color, 2.5%);
-  }
-
-  &::-webkit-scrollbar-thumb
-  {
-    background-color: $scrollbar-thumb-color;
-  }
-
-  .btn-sidebar .x
-  {
-    &:before,
-    &:after
-    {
-      background-color: lighten($bg-color, 40%);
-    }
-  }
-
-  .sidebar-header
-  {
-    .user-photo
-    {
-      background-color: darken($bg-color, 5%);
-      border-color: $scrollbar-thumb-color;
-    }
-
-    .username
-    {
-      color: lighten($bg-color, 50%);
-    }
-  }
-
-  .sidebar-nav
-  {
-    .sidebar-nav-group
-    {
-      background: $nav-group-item-active-color;
-
-      .sidebar-nav-group .sidebar-nav-link
-      {
-        &:active,
-        &:focus,
-        &:hover
-        {
-          color: $scrollbar-thumb-color;
-        }
-      }
-    }
-
-    .sidebar-nav-link
-    {
-      color: $link-color;
-    }
-
-    > .sidebar-nav-link,
-    > .sidebar-nav-group > .sidebar-nav-link
-    {
-      color: lighten($bg-color, 60%);
-
-      &.collapsed
-      {
-        background-color: $bg-color;
-
-        .fa
-        {
-          color: $link-color;
-        }
-      }
-
-      &:active,
-      &:focus,
-      &:hover
-      {
-        background-color: $nav-group-item-active-color;
-      }
-    }
-
-    > .sidebar-nav-link .fa
-    {
-      color: $link-color;
-    }
-
-    > .sidebar-nav-group > .sidebar-nav-link .fa
-    {
-      color: $scrollbar-thumb-color;
-    }
-  }
-
-  .sidebar-footer
-  {
-    a
-    {
-      color: lighten($bg-color, 25%);
-
-      &:active,
-      &:focus,
-      &:hover
-      {
-        color: $bscolors-white;
-      }
-    }
-  }
-}
+@include sidebar-color("dark", (
+  "sidebar-bg-color": $flatuicolors-wet-asphalt,
+  "sidebar-btn-close-color": lighten($flatuicolors-wet-asphalt, 40%),
+  "sidebar-scrollbar": $bscolors-cyan,
+  "sidebar-scrollbar-bg": darken($flatuicolors-wet-asphalt, 2.5%),
+  "username-img-bg": darken($flatuicolors-wet-asphalt, 5%),
+  "username-img-border": $bscolors-cyan,
+  "username-text-color": lighten($flatuicolors-wet-asphalt, 50%),
+  "nav-group-active-bg-color": darken($flatuicolors-wet-asphalt, 6%),
+  "nav-link-level-1-color": lighten($flatuicolors-wet-asphalt, 60%),
+  "nav-link-level-1-hover": darken($flatuicolors-wet-asphalt, 6%),
+  "nav-link-level-2-color": lighten($flatuicolors-wet-asphalt, 40%),
+  "nav-link-level-2-hover": $bscolors-cyan,
+  "nav-footer-link-color": lighten($flatuicolors-wet-asphalt, 25%),
+  "nav-footer-link-hover": $bscolors-white
+));

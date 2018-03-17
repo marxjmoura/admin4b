@@ -42,11 +42,10 @@
 
 label.switch
 {
-  align-items: center;
-  cursor: pointer;
-  display: inline-flex;
   margin-bottom: 0;
   position: relative;
+  @include crossbrowser-align-items(center);
+  @include crossbrowser-display-inline-flex();
   @include crossbrowser-border-radius(2rem);
 
   input[type=checkbox]
@@ -73,13 +72,14 @@ label.switch
     + .switch-slider
     {
       background: $bscolors-gray-400;
-      border-radius: 2rem;
+      cursor: pointer;
       display: block;
       height: 2rem;
       outline: 0;
       padding: .125rem;
       position: relative;
       width: 4rem;
+      @include crossbrowser-border-radius(2rem);
       @include crossbrowser-transition(all .4s ease);
       @include crossbrowser-user-select(none);
 
@@ -102,7 +102,7 @@ label.switch
       {
         left: 0;
         background: $bscolors-white;
-        border-radius: 50%;
+        @include crossbrowser-border-radius(50%);
         @include crossbrowser-box-shadow(none);
         @include crossbrowser-transition(all .2s ease);
       }
@@ -133,9 +133,9 @@ label.switch
     {
       + .switch-slider
       {
-        border-radius: 1.5rem;
         height: 1.5rem;
         width: 2.75rem;
+        @include crossbrowser-border-radius(1.5rem);
       }
     }
   }
@@ -148,9 +148,9 @@ label.switch
     {
       + .switch-slider
       {
-        border-radius: 2.5rem;
         height: 2.5rem;
         width: 5rem;
+        @include crossbrowser-border-radius(2.5rem);
       }
     }
   }

@@ -20,12 +20,12 @@
     position: relative;
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
     border: .25rem solid transparent;
     border-top-color: $flatuicolors-belize-hole;
     border-left-color: $flatuicolors-belize-hole;
     border-right-color: $flatuicolors-belize-hole;
     @include crossbrowser-animation(spinner 1s linear infinite);
+    @include crossbrowser-border-radius(50%);
   }
 
   .spinner-text
@@ -37,7 +37,7 @@
   &.spinner-block
   {
     position: fixed;
-    background: rgba($bscolors-white, 0.75);
+    background: rgba($bscolors-white, .85);
     top: 0;
     left: 0;
     width: 100%;
@@ -52,12 +52,12 @@
       left: 50%;
       top: 50%;
       margin: -2rem 0 0 -2rem;
-      border-radius: 50%;
       border: .25rem solid transparent;
       border-top-color: $flatuicolors-belize-hole;
       border-left-color: $flatuicolors-belize-hole;
       border-right-color: $flatuicolors-belize-hole;
       @include crossbrowser-animation(spinner 1s linear infinite);
+      @include crossbrowser-border-radius(50%);
     }
 
     .spinner-text

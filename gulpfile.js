@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var fileinclude = require('gulp-file-include');
-var htmlextend = require('gulp-html-extend')
-var rename = require("gulp-rename");
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const fileinclude = require('gulp-file-include');
+const htmlextend = require('gulp-html-extend')
+const rename = require("gulp-rename");
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 
 gulp.task('build-sass', () => {
     gulp.src('src/scss/*.scss')

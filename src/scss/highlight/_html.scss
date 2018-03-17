@@ -1,25 +1,25 @@
 .html .hljs-meta
 {
-  color: $highlight-html-meta;
+  color: $highlight-colors-namespace;
 }
 
 .html .hljs-section,
 .html .hljs-tag
 {
-  color: $highlight-keyword;
+  color: $highlight-colors-keyword;
 }
 
 .html .hljs-tag .hljs-attr
 {
-  color: $highlight-attribute;
+  color: $highlight-colors-attribute;
 }
 
 .html .hljs-tag .hljs-string
 {
-  color: $highlight-string;
+  color: $highlight-colors-string;
 }
 
 .html .hljs-comment
 {
-  color: $highlight-comment;
+  color: $highlight-colors-comment;
 }
