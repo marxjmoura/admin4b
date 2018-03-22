@@ -1,3 +1,11 @@
+## v0.8.0 (unreleased)
+### Features
+- Chat
+- Calendar component
+- Notification pages
+- File manager
+- Colors (light and dark) for Code highlight
+
 ## [v0.7.1](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.1) (2018-03-17)
 ### Bug fixes
 - Fix check mark for small and large radio buttons
