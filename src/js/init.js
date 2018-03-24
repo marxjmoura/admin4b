@@ -5,4 +5,5 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   $('[data-toggle="suggestion"]').suggestion();
   $('.chat').chat();
+  $('[data-toggle="file-manager"]').fileManager();
 });

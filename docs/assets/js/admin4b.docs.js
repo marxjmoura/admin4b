@@ -44,4 +44,12 @@ $(function () {
 
         $input.suggestion('refresh');
     });
+
+    $('[data-toggle="file-manager"]').on('change:file', function (e, file) {
+        $element = $(this);
+        $formGroup = $element.closest('.form-group');
+        $formControl = $formGroup.find('.form-control');
+
+        $formControl.text(file.name);
+    });
 });
