@@ -46,10 +46,30 @@ $(function () {
     });
 
     $('[data-toggle="file-manager"]').on('change:file', function (e, file) {
-        $element = $(this);
-        $formGroup = $element.closest('.form-group');
-        $formControl = $formGroup.find('.form-control');
+        $fileName = $('#file-name');
+        $fileSize = $('#file-size');
+        $preview = $('#preview');
+        $isInvalid = $('#is-invalid');
+        $isValid = $('#is-valid');
 
-        $formControl.text(file ? file.name : '');
+        if (file) {
+            $fileName.text(file.name);
+            $fileSize.text((file.size / 1024).toFixed(2) + ' KB');
+            $isInvalid.toggleClass('d-none', !file.$errors.length);
+            $isValid.toggleClass('d-none', !!file.$errors.length);
+            $preview.attr('src', file.type.startsWith('image') ? file.dataURL : null);
+
+            if (file.type.startsWith('image')) {
+                $preview.attr('src', file.dataURL).removeClass('d-none');
+            } else {
+                $preview.removeAttr('src').addClass('d-none');
+            }
+        } else {
+            $fileName.text('');
+            $fileSize.text('');
+            $isInvalid.addClass('d-none');
+            $isValid.addClass('d-none');
+            $preview.removeAttr('src').addClass('d-none');
+        }
     });
 });

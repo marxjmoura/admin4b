@@ -9,14 +9,29 @@
 <div class="container-fluid">
   <h2>File manager</h2>
   <div class="form-group">
-    <div class="input-group">
-      <div class="form-control"></div>
-      <div class="input-group-append">
-        <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
-          <i class="fa fa-folder-open-o"></i>
-        </button>
-      </div>
-    </div>
+    <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
+      <i class="fa fa-folder-open-o"></i> Select a file
+    </button>
+    <small class="text-secondary">Only .jpeg and .png and maximum 1MB.</small>
+  </div>
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>Filename</th>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td class="align-middle">
+          <img id="preview" class="rounded d-none" width="64">
+          <span id="file-name"></span>
+          <i id="is-invalid" class="fa fa-times-circle text-danger d-none"></i>
+          <i id="is-valid" class="fa fa-check-circle text-success d-none"></i>
+        </td>
+        <td class="align-middle">
+          <span id="file-size"></span>
+        </td>
+      </tr>
+    </table>
   </div>
 </div>
 <!-- @@close -->
