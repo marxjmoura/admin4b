@@ -50,6 +50,6 @@ $(function () {
         $formGroup = $element.closest('.form-group');
         $formControl = $formGroup.find('.form-control');
 
-        $formControl.text(file.name);
+        $formControl.text(file ? file.name : '');
     });
 });

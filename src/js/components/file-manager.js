@@ -8,11 +8,15 @@
       $input.on('change', function () {
         var file = $input.get(0).files[0];
 
-        file.$errors = $.fn.fileManager.validate($element, file);
+        if (file) {
+          $.fn.fileManager.validate(file, $element);
 
-        $.fn.fileManager.read(file, function () {
-          $element.trigger('change:file', file);
-        });
+          $.fn.fileManager.read(file, function () {
+            $element.trigger('change:file', file);
+          });
+        } else {
+          $element.trigger('change:file');
+        }
       });
 
       $element.on('click', function () {
