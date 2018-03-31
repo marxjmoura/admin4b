@@ -45,31 +45,20 @@ $(function () {
         $input.suggestion('refresh');
     });
 
-    $('[data-toggle="file-manager"]').on('change:file', function (e, file) {
-        $fileName = $('#file-name');
-        $fileSize = $('#file-size');
-        $preview = $('#preview');
-        $isInvalid = $('#is-invalid');
-        $isValid = $('#is-valid');
+    $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
+        $('#file-name').text(file.name);
+        $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
+        $('#is-invalid').toggleClass('d-none', !file.errors.length);
+        $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
-        if (file) {
-            $fileName.text(file.name);
-            $fileSize.text((file.size / 1024).toFixed(2) + ' KB');
-            $isInvalid.toggleClass('d-none', !file.$errors.length);
-            $isValid.toggleClass('d-none', !!file.$errors.length);
-            $preview.attr('src', file.type.startsWith('image') ? file.dataURL : null);
-
-            if (file.type.startsWith('image')) {
-                $preview.attr('src', file.dataURL).removeClass('d-none');
-            } else {
-                $preview.removeAttr('src').addClass('d-none');
-            }
+        if (file.type.startsWith('image')) {
+            $('#preview').attr('src', file.dataURL).removeClass('d-none');
         } else {
-            $fileName.text('');
-            $fileSize.text('');
-            $isInvalid.addClass('d-none');
-            $isValid.addClass('d-none');
-            $preview.removeAttr('src').addClass('d-none');
+            $('#preview').removeAttr('src').addClass('d-none');
         }
+
+        $('#file-empty').addClass('d-none');
+        $('#file-data').removeClass('d-none');
     });
+
 });

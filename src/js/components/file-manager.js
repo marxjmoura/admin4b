@@ -12,10 +12,8 @@
           $.fn.fileManager.validate(file, $element);
 
           $.fn.fileManager.read(file, function () {
-            $element.trigger('change:file', file);
+            $element.trigger('file:change', file);
           });
-        } else {
-          $element.trigger('change:file');
         }
       });
 
