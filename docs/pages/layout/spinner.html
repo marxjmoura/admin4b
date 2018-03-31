@@ -152,99 +152,126 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item active" aria-current="page">Basic form</li>
+    <li class="breadcrumb-item">Components</li>
+    <li class="breadcrumb-item active" aria-current="page">Spinner</li>
   </ol>
 </nav>
 <div class="container-fluid">
   <h2>
-    Basic form
+    Spinner
   </h2>
   <p>
-    The template uses the components and validations of the
-    <a href="https://getbootstrap.com/docs/4.0/components/forms/">bootstrap form</a>.
-    Also, the template includes the validation class <code>.has-error</code>.
+    Spinners enables you to tell the users that the app is currently processing.
+    See a basic example below:
   </p>
-  <div class="callout callout-info">
-    <p>By design <code>.has-error</code> class is applicable only for <code>.form-group</code>.</p>
-  </div>
-  <h3>
-    Example
-  </h3>
-  <div class="row">
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Name</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field name is required.</small>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Email</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field email is invalid.</small>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group">
-        <label>
-          Company <small class="text-secondary">(optional)</small>
-        </label>
-        <input type="text" class="form-control">
-      </div>
-    </div>
-  </div>
   <div class="form-group">
-    <label>Message</label>
-    <textarea rows="3" class="form-control"></textarea>
-    <small class="text-secondary">Maximum of 255 characters.</small>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-success">
-      Send message
-    </button>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
   </div>
   <div class="source-code">
-    <a href="#basic-form" data-toggle="collapse">
+    <a href="#spinner-basic" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="basic-form" class="collapse">
-      <pre><code class="html">&lt;div class="row"&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Name&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field name is required.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field email is invalid.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
-        Company &lt;small class="text-secondary"&gt;(optional)&lt;/small&gt;
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;label&gt;Message&lt;/label&gt;
-  &lt;textarea rows="3" class="form-control"&gt;&lt;/textarea&gt;
-  &lt;small class="text-secondary"&gt;Maximum of 255 characters.&lt;/small&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;button class="btn btn-success"&gt;
-    Send message
-  &lt;/button&gt;
+    <div id="spinner-basic" class="collapse">
+      <pre><code class="html">&lt;div class="spinner"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+    </div>
+  </div>
+  <h3>
+    Sizes
+  </h3>
+  <p>
+    Add <code>.spinner-sm</code> for smaller spinners or <code>.spinner-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <div class="spinner spinner-sm">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner">
+      <div class="spinner-bar"></div>
+    </div>
+    <div class="spinner spinner-lg">
+      <div class="spinner-bar"></div>
+    </div>
+  </div>
+  <div class="source-code">
+    <a href="#spinner-sizes" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="spinner-sizes" class="collapse">
+      <pre><code class="html">&lt;div class="spinner spinner-sm"&gt;&lt;/div&gt;
+&lt;div class="spinner"&gt;&lt;/div&gt;
+&lt;div class="spinner spinner-lg"&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>
+    Blocker
+  </h3>
+  <p>
+    You can block user interaction to the app by using a blocker spinner.
+  </p>
+  <p>
+    How it works:
+  </p>
+  <ul>
+    <li>
+      To make the spinner full screen and block the interaction of the user to the app
+      you need to add the class <code>.spinner-block</code> to <code>.spinner</code>.
+    </li>
+    <li>
+      To show the spinner you just need to add the class <code>.show</code> to <code>.spinner</code>
+      and to hide you just need to remove this class.
+    </li>
+    <li>
+      You can also show small information to the user while the app is processing by using the
+      class <code>.spinner-text</code>.
+    </li>
+  </ul>
+  <div class="form-group">
+    <button id="spinner-toggle" type="button" class="btn btn-primary">
+      Start processing
+    </button>
+  </div>
+  <div id="spinner" class="spinner spinner-block">
+    <div class="spinner-bar"></div>
+    <div class="spinner-text">Will close after 3 seconds...</div>
+  </div>
+  <div class="source-code">
+    <a href="#spinner-block" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="spinner-block" class="collapse">
+      <div class="nav nav-tabs">
+        <a href="#spinner-block-html" class="active" data-toggle="tab">HTML</a>
+        <a href="#spinner-block-js" data-toggle="tab">JavaScript</a>
+      </div>
+      <div class="tab-content">
+        <div id="spinner-block-html" class="tab-pane active">
+          <pre><code class="html">&lt;button id="spinner-toggle" type="button" class="btn btn-primary"&gt;
+  Start processing
+&lt;/button&gt;
+
+&lt;div id="spinner" class="spinner spinner-block"&gt;
+  &lt;div class="spinner-bar"&gt;&lt;/div&gt;
+  &lt;div class="spinner-text"&gt;Will close after 3 seconds...&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <div id="spinner-block-js" class="tab-pane">
+          <pre><code class="js">$('#spinner-toggle').on('click', function () {
+  $('#spinner').addClass('show');
+
+  setTimeout(function () {
+    $('#spinner').removeClass('show');
+  }, 3000);
+});
+</code></pre>
+        </div>
+      </div>
     </div>
   </div>
 </div>

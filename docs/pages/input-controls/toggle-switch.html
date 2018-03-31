@@ -152,98 +152,165 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item active" aria-current="page">Basic form</li>
+    <li class="breadcrumb-item">Input controls</li>
+    <li class="breadcrumb-item active" aria-current="page">Toggle switch</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>
-    Basic form
-  </h2>
+  <h2>Toggle switch</h2>
   <p>
-    The template uses the components and validations of the
-    <a href="https://getbootstrap.com/docs/4.0/components/forms/">bootstrap form</a>.
-    Also, the template includes the validation class <code>.has-error</code>.
+    You can customize switches by combining different colors and sizes. See the basic example bellow:
   </p>
-  <div class="callout callout-info">
-    <p>By design <code>.has-error</code> class is applicable only for <code>.form-group</code>.</p>
-  </div>
-  <h3>
-    Example
-  </h3>
-  <div class="row">
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Name</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field name is required.</small>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Email</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field email is invalid.</small>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group">
-        <label>
-          Company <small class="text-secondary">(optional)</small>
-        </label>
-        <input type="text" class="form-control">
-      </div>
-    </div>
-  </div>
   <div class="form-group">
-    <label>Message</label>
-    <textarea rows="3" class="form-control"></textarea>
-    <small class="text-secondary">Maximum of 255 characters.</small>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-success">
-      Send message
-    </button>
+    <label class="switch">
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+    </label>
   </div>
   <div class="source-code">
-    <a href="#basic-form" data-toggle="collapse">
+    <a href="#toggle-switch-basic" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="basic-form" class="collapse">
-      <pre><code class="html">&lt;div class="row"&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Name&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field name is required.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field email is invalid.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
-        Company &lt;small class="text-secondary"&gt;(optional)&lt;/small&gt;
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;label&gt;Message&lt;/label&gt;
-  &lt;textarea rows="3" class="form-control"&gt;&lt;/textarea&gt;
-  &lt;small class="text-secondary"&gt;Maximum of 255 characters.&lt;/small&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;button class="btn btn-success"&gt;
-    Send message
-  &lt;/button&gt;
-&lt;/div&gt;
+    <div id="toggle-switch-basic" class="collapse">
+      <pre><code class="html">&lt;label class="switch"&gt;
+  &lt;input type="checkbox"/&gt;
+  &lt;span class="switch-slider"&gt;&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+    </div>
+  </div>
+  <p>
+    You can also add outside text.
+  </p>
+  <div class="form-group">
+    <label class="switch">
+      <span class="mr-1">No</span>
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+      <span class="ml-1">Yes</span>
+    </label>
+  </div>
+  <div class="source-code">
+    <a href="#toggle-switch-text" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-text" class="collapse">
+      <pre><code class="html">&lt;label class="switch"&gt;
+  &lt;span class="mr-1"&gt;No&lt;/span&gt;
+  &lt;input type="checkbox"/&gt;
+  &lt;span class="switch-slider"&gt;&lt;/span&gt;
+  &lt;span class="ml-1"&gt;Yes&lt;/span&gt;
+&lt;/label&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>Colors</h3>
+  <p>
+    The toggle switch styles follow the contextual bootstrap colors.
+  </p>
+  <div class="form-group">
+    <label class="switch switch-to-primary">
+      <input type="checkbox" checked/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch switch-to-success">
+      <input type="checkbox" checked/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch switch-to-danger">
+      <input type="checkbox" checked/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch switch-to-warning">
+      <input type="checkbox" checked/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch switch-to-info">
+      <input type="checkbox" checked/>
+      <span class="switch-slider"></span>
+    </label>
+  </div>
+  <div class="source-code">
+    <a href="#toggle-switch-colors" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-colors" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-to-primary"&gt;&lt;/label&gt;
+&lt;label class="switch switch-to-success"&gt;&lt;/label&gt;
+&lt;label class="switch switch-to-danger"&gt;&lt;/label&gt;
+&lt;label class="switch switch-to-warning"&gt;&lt;/label&gt;
+&lt;label class="switch switch-to-info"&gt;&lt;/label&gt;
+</code></pre>
+    </div>
+  </div>
+  <p>
+    You can also customize the color transition using <code>switch-*</code> and <code>switch-to-*</code>.
+  </p>
+  <div class="form-group">
+    <label class="switch switch-danger switch-to-success">
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+    </label>
+  </div>
+  <div class="source-code">
+    <a href="#toggle-switch-transition" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-transition" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-danger switch-to-success"&gt;&lt;/label&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>Sizes</h3>
+  <p>
+    Add <code>.switch-sm</code> for smaller switches or <code>.switch-lg</code> for larger.
+  </p>
+  <div class="form-group">
+    <label class="switch switch-sm">
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch">
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+    </label>
+    <label class="switch switch-lg">
+      <input type="checkbox"/>
+      <span class="switch-slider"></span>
+    </label>
+  </div>
+  <div class="source-code">
+    <a href="#toggle-switch-sizes" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-sizes" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-sm"&gt;&lt;/label&gt;
+&lt;label class="switch"&gt;&lt;/label&gt;
+&lt;label class="switch switch-lg"&gt;&lt;/label&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>Disabled state</h3>
+  <p>
+    When adding the disabled boolean attribute to the <code>input</code> element, the appearance changes to reflect this state.
+  </p>
+  <div class="form-group">
+    <label class="switch switch-danger">
+      <input type="checkbox" checked disabled/>
+      <span class="switch-slider"></span>
+      <span class="ml-2">You can't change</span>
+    </label>
+  </div>
+  <div class="source-code">
+    <a href="#toggle-switch-disabled" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="toggle-switch-disabled" class="collapse">
+      <pre><code class="html">&lt;label class="switch switch-danger"&gt;
+  &lt;input type="checkbox" checked disabled/&gt;
+  &lt;span class="switch-slider"&gt;&lt;/span&gt;
+  &lt;span class="ml-2"&gt;You can't change&lt;/span&gt;
+&lt;/label&gt;
 </code></pre>
     </div>
   </div>

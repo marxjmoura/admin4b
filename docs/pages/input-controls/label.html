@@ -151,103 +151,76 @@
 
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">Forms</li>
-    <li class="breadcrumb-item active" aria-current="page">Basic form</li>
-  </ol>
-</nav>
-<div class="container-fluid">
-  <h2>
-    Basic form
-  </h2>
-  <p>
-    The template uses the components and validations of the
-    <a href="https://getbootstrap.com/docs/4.0/components/forms/">bootstrap form</a>.
-    Also, the template includes the validation class <code>.has-error</code>.
-  </p>
-  <div class="callout callout-info">
-    <p>By design <code>.has-error</code> class is applicable only for <code>.form-group</code>.</p>
-  </div>
-  <h3>
-    Example
-  </h3>
-  <div class="row">
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Name</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field name is required.</small>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Input controls</li>
+      <li class="breadcrumb-item active" aria-current="page">Label</li>
+    </ol>
+  </nav>
+  <div class="container-fluid">
+    <h2>Label</h2>
+    <p>
+      The label component can be placed outside or within the field.
+    </p>
+    <div class="form-group">
+      <label>Normal label</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <div class="label-infield">
+        <label for="infield">Infield label</label>
+        <input id="infield" type="text" class="form-control">
       </div>
     </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group has-error">
-        <label>Email</label>
-        <input type="text" class="form-control">
-        <small class="text-danger">Field email is invalid.</small>
+    <div class="form-group">
+      <div class="label-floating">
+        <input id="floating" type="text" class="form-control" placeholder="Floating">
+        <label for="floating">Floating label</label>
       </div>
     </div>
-    <div class="col-12 col-md-4 col-lg-4">
-      <div class="form-group">
-        <label>
-          Company <small class="text-secondary">(optional)</small>
-        </label>
-        <input type="text" class="form-control">
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>Message</label>
-    <textarea rows="3" class="form-control"></textarea>
-    <small class="text-secondary">Maximum of 255 characters.</small>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-success">
-      Send message
-    </button>
-  </div>
-  <div class="source-code">
-    <a href="#basic-form" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="basic-form" class="collapse">
-      <pre><code class="html">&lt;div class="row"&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Name&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field name is required.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group has-error"&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-      &lt;small class="text-danger"&gt;Field email is invalid.&lt;/small&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col col-md-4 col-lg-4"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label&gt;
-        Company &lt;small class="text-secondary"&gt;(optional)&lt;/small&gt;
-      &lt;/label&gt;
-      &lt;input type="text" class="form-control"&gt;
-    &lt;/div&gt;
+    <div class="source-code">
+      <a href="#label" data-toggle="collapse">
+        <i class="fa fa-code"></i> Source code
+      </a>
+      <div id="label" class="collapse">
+        <pre><code class="html">&lt;div class="form-group"&gt;
+  &lt;label&gt;Normal label&lt;/label&gt;
+  &lt;input type="text" class="form-control"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;div class="label-infield"&gt;
+    &lt;label for="infield"&gt;Infield label&lt;/label&gt;
+    &lt;input id="infield" type="text" class="form-control"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Message&lt;/label&gt;
-  &lt;textarea rows="3" class="form-control"&gt;&lt;/textarea&gt;
-  &lt;small class="text-secondary"&gt;Maximum of 255 characters.&lt;/small&gt;
-&lt;/div&gt;
-&lt;div class="form-group"&gt;
-  &lt;button class="btn btn-success"&gt;
-    Send message
-  &lt;/button&gt;
+  &lt;div class="label-floating"&gt;
+    &lt;input id="floating" type="text" class="form-control" placeholder="Floating label"&gt;
+    &lt;label for="floating"&gt;Floating label&lt;/label&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+      </div>
+    </div>
+    <div class="callout callout-warning">
+      <h5>Warranties</h5>
+      <ol>
+        <li>
+          The <code>.floating-label</code> component needs space to move into and
+          the <code>.label-infield</code> component needs space to stay inside.
+          To do this, it is need to increase the input height.
+        </li>
+        <li>
+          In order for the <code>.floating-label</code> and <code>.label-infield</code> components to work properly
+          you have to set the attribute <code>id</code> of the <code>input</code> and the attribute <code>for</code>
+          of the <code>label</code>.
+        </li>
+        <li>
+            In order for the <code>.floating-label</code> component to work properly
+            you have to set the attribute attribute <code>placeholder</code> of the <code>input</code>.
+        </li>
+      </ol>
     </div>
   </div>
-</div>
 
     </div>
   </div>
