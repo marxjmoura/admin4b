@@ -61,20 +61,20 @@ $(function () {
         $('#file-data').removeClass('d-none');
     });
 
-    $('#camera')
+    $('#modal-camera')
         .on('shown.bs.modal', function () {
-            $('video.camera').camera('play');
+            $('#camera').camera('play');
         })
         .on('hidden.bs.modal', function () {
-            $('video.camera').camera('stop');
+            $('#camera').camera('stop');
         });
 
-    $('#snapshot').on('click', function () {
-        $('video.camera').camera('snapshot', { width: 320, height: 240 });
+    $('#button-snapshot').on('click', function () {
+        $('#camera').camera('snapshot', { width: 320, height: 240 });
     });
 
-    $('video.camera').on('camera:snapshot', function (e, blob) {
+    $('#camera').on('camera:snapshot', function (e, blob) {
         $('#snapshot-preview').attr('src', blob.dataURL);
-        $('#camera').modal('hide');
+        $('#modal-camera').modal('hide');
     });
 });

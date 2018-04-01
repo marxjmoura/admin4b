@@ -1,6 +1,18 @@
 (function ($) {
 
-  $.fn.camera.snapshot = function (options) {
+  var regex = /^(\d+)x(\d+)$/gi;
+
+  function getSize(size) {
+    if (!size.match(regex)) {
+      return { width: 320, height: 240 };
+    }
+
+    var matches = regex.exec(size);
+
+    return { width: matches[1], height: matches[2] };
+  }
+
+  $.fn.camera.snapshot = function () {
     var $video = $(this);
 
     if (!$video.prop('playing')) {
@@ -9,18 +21,16 @@
 
     var video = $video.get(0);
 
-    options = options || {};
-    options.width = isNaN(options.width) ? 0 : Number(options.width);
-    options.height = isNaN(options.height) ? 0 : Number(options.height);
+    var size = getSize($video.attr('data-size'));
 
     var canvas = document.createElement('canvas');
-    canvas.width = options.width;
-    canvas.height = options.height;
+    canvas.width = size.width;
+    canvas.height = size.height;
 
     var context = canvas.getContext('2d');
-    context.translate(options.width, 0); // 'translate' and 'scale' to flip horizontally
+    context.translate(size.width, 0); // 'translate' and 'scale' to flip horizontally
     context.scale(-1, 1);
-    context.drawImage(video, 0, 0, options.width, options.height);
+    context.drawImage(video, 0, 0, size.width, size.height);
 
     var dataURL = canvas.toDataURL();
     var blob = $.fn.camera.toBlob(dataURL);

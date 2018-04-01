@@ -157,15 +157,214 @@
   </ol>
 </nav>
 <div class="container-fluid">
+  <h2>Camera</h2>
+  <p>
+    This session introduces methods and events to control and interact with the camera of the device enabling users to take pictures.
+    See the example below:
+  </p>
   <div class="form-group">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#camera">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-camera">
       <i class="fa fa-camera"></i> Take a picture
     </button>
   </div>
-  <img id="snapshot-preview" src="../../assets/images/unknown.png" class="img-thumbnail">
+  <div class="form-group">
+    <img id="snapshot-preview" src="../../assets/images/unknown.png" class="img-thumbnail">
+  </div>
+  <p>
+    In this example, the camera is turned on and off according to the events show and hide of the modal. Refer to
+    <a href="https://getbootstrap.com/docs/4.0/components/modal/">bootstrap documentation</a> for more details about the modal plugin.
+  </p>
+  <div class="source-code">
+    <a href="#camera-example" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="camera-example" class="collapse">
+      <div class="nav nav-tabs">
+        <a href="#camera-html" class="active" data-toggle="tab">HTML</a>
+        <a href="#camera-js" data-toggle="tab">JavaScript</a>
+      </div>
+      <div class="tab-content">
+        <div id="camera-html" class="tab-pane active">
+          <pre><code class="html">&lt;div class="form-group"&gt;
+  &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-camera"&gt;
+    &lt;i class="fa fa-camera"&gt;&lt;/i&gt; Take a picture
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;img id="snapshot-preview" src="unknown.png" class="img-thumbnail"&gt;
+
+&lt;div id="modal-camera" class="modal" tabindex="-1" data-backdrop="static"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title"&gt;
+          &lt;i class="fa fa-camera"&gt;&lt;/i&gt; Camera
+        &lt;/h5&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;video id="camera" class="camera" data-size="320x240"&gt;&lt;/video&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button id="button-snapshot" type="button" class="btn btn-info"&gt;Take a picture&lt;/button&gt;
+        &lt;button type="button" class="btn btn-outline-danger" data-dismiss="modal"&gt;Turn off&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <div id="camera-js" class="tab-pane">
+          <pre><code class="js">$('#modal-camera')
+  .on('shown.bs.modal', function () {
+    $('#camera').camera('play');
+  })
+  .on('hidden.bs.modal', function () {
+    $('#camera').camera('stop');
+  });
+
+$('#button-snapshot').on('click', function () {
+  $('#camera').camera('snapshot');
+});
+
+$('#camera').on('camera:snapshot', function (e, blob) {
+  $('#snapshot-preview').attr('src', blob.dataURL);
+  $('#modal-camera').modal('hide');
+});
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3>Options</h3>
+  <p>
+    Options can be passed via data attributes:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>data-size</code></td>
+          <td>string</td>
+          <td>320x240</td>
+          <td>The size of the picture. Invalid size will be converted to default size.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="source-code">
+    <a href="#camera-options" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="camera-options" class="sidebar-nav-group collapse">
+      <pre><code class="html">&lt;video class="camera" data-size="320x240"&gt;&lt;/video&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>Methods</h3>
+  <p>
+    A few methods are available to control the camera:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>camera('play')</code></td>
+          <td>Starts the camera. Triggers the event <code>camera:play</code> or <code>camera:error</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>camera('stop')</code></td>
+          <td>Stop the camera. Triggers the event <code>camera:stop</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>camera('snapshot')</code></td>
+          <td>Take a picture from the camera. Triggers the event <code>camera:snapshot</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="source-code">
+    <a href="#camera-methods" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="camera-methods" class="sidebar-nav-group collapse">
+      <pre><code class="js">$('#myCamera').camera('start');
+$('#myCamera').camera('stop');
+$('#myCamera').camera('snapshot');
+</code></pre>
+    </div>
+  </div>
+  <h3>Events</h3>
+  <p>
+    Events triggered from the camera can be listened to write custom logic:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>camera:play</code></td>
+          <td>Triggered after the camera starts to play.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>camera:error</code></td>
+          <td>Triggered if any error occur during the start of the camera.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>camera:stop</code></td>
+          <td>Triggered after the camera stop.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>camera:snapshot</code></td>
+          <td>Triggered after a picture is taken. Blob and data URL are ready.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="source-code">
+    <a href="#camera-events" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="camera-events" class="sidebar-nav-group collapse">
+      <pre><code class="js">$('#myCamera').on('camera:play', function (e) {
+  console.log('Camera is playing.');
+});
+
+$('#myCamera').on('camera:error', function (e, error) {
+  console.log('Could not start the camera: ' + error);
+});
+
+$('#myCamera').on('camera:stop', function (e) {
+  console.log('Camera is stopped.');
+});
+
+$('#myCamera').on('camera:snapshot', function (e, blob) {
+  console.log('Base64 picture URL: ' + blob.dataURL);
+});
+</code></pre>
+    </div>
+  </div>
 </div>
-<div id="camera" class="modal" tabindex="-1">
-  <div class="modal-dialog" role="document">
+<div id="modal-camera" class="modal fade" tabindex="-1" data-backdrop="static">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">
@@ -173,10 +372,10 @@
         </h5>
       </div>
       <div class="modal-body">
-        <video class="camera"></video>
+        <video id="camera" class="camera" data-size="320x240"></video>
       </div>
       <div class="modal-footer">
-        <button id="snapshot" type="button" class="btn btn-info">Take a picture</button>
+        <button id="button-snapshot" type="button" class="btn btn-info">Take a picture</button>
         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Turn off</button>
       </div>
     </div>
