@@ -9,9 +9,10 @@
 <div class="container-fluid">
   <div class="form-group">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#camera">
-      <i class="fa fa-camera"></i> Turn on camera
+      <i class="fa fa-camera"></i> Take a picture
     </button>
   </div>
+  <img id="snapshot-preview" src="@@webRoot/assets/images/unknown.png" class="img-thumbnail">
 </div>
 <div id="camera" class="modal" tabindex="-1">
   <div class="modal-dialog" role="document">
@@ -25,7 +26,7 @@
         <video class="camera"></video>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-info">Take a picture</button>
+        <button id="snapshot" type="button" class="btn btn-info">Take a picture</button>
         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Turn off</button>
       </div>
     </div>

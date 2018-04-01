@@ -9,17 +9,17 @@
 
     var video = $video.get(0);
 
-    video.addEventListener('canplay', function () {
-      $video.prop('playing', true);
-      $video.trigger('camera:play');
-    }, false);
-
     var mediaConstraint = { video: true, audio: false };
 
     var onSuccess = function (stream) {
-      $video.prop('stream', stream);
       $.fn.camera.link(video, stream);
+
       video.play();
+
+      $video.prop('stream', stream);
+      $video.prop('playing', true);
+
+      $video.trigger('camera:play');
     };
 
     var onFailure = function (error) {
