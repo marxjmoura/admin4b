@@ -1,6 +1,7 @@
 ## v0.8.0 (unreleased)
 ### Features
-- Chat
+- Camera (take picture)
+- Chat (technical support)
 - Calendar component
 - Notification pages
 - File manager
