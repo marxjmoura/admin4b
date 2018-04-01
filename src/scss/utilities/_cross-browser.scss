@@ -96,6 +96,12 @@
     display: inline-flex;
 }
 
+@mixin crossbrowser-filter($filter)
+{
+    -ms-filter: "#{$filter}";
+    filter: $filter;
+}
+
 @mixin crossbrowser-input-placeholder($color)
 {
     &::-webkit-input-placeholder

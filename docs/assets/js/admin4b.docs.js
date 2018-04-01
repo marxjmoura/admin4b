@@ -61,4 +61,11 @@ $(function () {
         $('#file-data').removeClass('d-none');
     });
 
+    $('#camera')
+        .on('shown.bs.modal', function () {
+            $('video.camera').camera('play');
+        })
+        .on('hidden.bs.modal', function () {
+            $('video.camera').camera('stop');
+        });
 });
