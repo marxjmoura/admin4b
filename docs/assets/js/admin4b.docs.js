@@ -52,13 +52,29 @@ $(function () {
         $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
         if (file.type.startsWith('image')) {
-            $('#preview').attr('src', file.dataURL).removeClass('d-none');
+            $('#file-preview').attr('src', file.dataURL).removeClass('d-none');
         } else {
-            $('#preview').removeAttr('src').addClass('d-none');
+            $('#file-preview').removeAttr('src').addClass('d-none');
         }
 
         $('#file-empty').addClass('d-none');
         $('#file-data').removeClass('d-none');
     });
 
+    $('#modal-camera')
+        .on('shown.bs.modal', function () {
+            $('#camera').camera('play');
+        })
+        .on('hidden.bs.modal', function () {
+            $('#camera').camera('stop');
+        });
+
+    $('#button-snapshot').on('click', function () {
+        $('#camera').camera('snapshot', { width: 320, height: 240 });
+    });
+
+    $('#camera').on('camera:snapshot', function (e, blob) {
+        $('#snapshot-preview').attr('src', blob.dataURL);
+        $('#modal-camera').modal('hide');
+    });
 });
