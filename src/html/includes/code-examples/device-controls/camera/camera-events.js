@@ -3,7 +3,7 @@ $('#myCamera').on('camera:play', function (e) {
 });
 
 $('#myCamera').on('camera:error', function (e, error) {
-  console.log('Could not start the camera: ' + error);
+  console.log('Could not start the camera: ' + error); // Original error from browser
 });
 
 $('#myCamera').on('camera:stop', function (e) {

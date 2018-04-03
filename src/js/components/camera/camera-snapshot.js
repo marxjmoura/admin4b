@@ -3,7 +3,7 @@
   var regex = /^(\d+)x(\d+)$/gi;
 
   function getSize(size) {
-    if (!size.match(regex)) {
+    if (!size || !size.match(regex)) {
       return { width: 320, height: 240 };
     }
 

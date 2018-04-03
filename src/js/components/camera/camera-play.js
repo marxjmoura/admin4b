@@ -23,7 +23,7 @@
     };
 
     var onFailure = function (error) {
-      $video.trigger('camera:error', { error: 'No camera available.' });
+      $video.trigger('camera:error', error);
     };
 
     $.fn.camera.getUserMedia(mediaConstraint, onSuccess, onFailure);
