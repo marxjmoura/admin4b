@@ -1,0 +1,113 @@
+.modal.modal-calendar .modal-dialog
+{
+  max-width: 320px;
+
+  .modal-content
+  {
+    background: $bscolors-blue;
+
+    .modal-header,
+    .modal-body,
+    .modal-footer
+    {
+      border-width: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .modal-header
+    {
+      background: $bscolors-white;
+      padding-top: 30px;
+
+      .modal-title
+      {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    }
+
+    .modal-body
+    {
+      background: $bscolors-white;
+
+      table
+      {
+        text-align: center;
+        width: 100%;
+
+        th
+        {
+          font-weight: normal;
+          padding-bottom: 15px;
+        }
+
+        td
+        {
+          padding: 5px;
+
+          &.disabled
+          {
+            color: $bscolors-gray-500;
+          }
+
+          a
+          {
+            color: $bscolors-gray-700;
+            display: block;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            z-index: 1;
+
+            &::before
+            {
+              border: 1px solid $bscolors-blue;
+              content: " ";
+              display: none;
+              position: absolute;
+              top: -4px;
+              left: -1px;
+              width: 32px;
+              height: 32px;
+              z-index: -1;
+              @include crossbrowser-border-radius(50%);
+            }
+
+            &:hover
+            {
+              color: $bscolors-white;
+
+              &::before
+              {
+                background: $bscolors-blue;
+                display: block;
+              }
+            }
+
+            &.today::before
+            {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .modal-footer
+    {
+      color: $bscolors-white;
+      display: block;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+
+      .calendar-day
+      {
+        font-size: 48pt;
+        line-height: 48pt;
+      }
+    }
+  }
+}

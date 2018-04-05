@@ -1,0 +1,45 @@
+<!-- @@master = /includes/app.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Input controls</li>
+    <li class="breadcrumb-item active" aria-current="page">Input date</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>Input date</h2>
+  <div class="form-group">
+    <div class="input-group input-date" data-default="2018-04-03">
+      <div class="form-control"></div>
+      <div class="input-group-append">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-calendar">
+          <i class="fa fa-calendar"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-calendar" class="modal modal-calendar fade" tabindex="-1" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            January 2018
+          </h5>
+        </div>
+        <div class="modal-body">
+          <table id="calendar"></table>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+            <div class="calendar-day">02</div>
+            <div class="calendar-weekday">Monday</div>
+          </div>
+          <button type="button" class="btn btn-outline-light" data-toggle="input-date" data-dismiss="modal">
+            Select date
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- @@close -->

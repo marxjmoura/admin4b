@@ -3,7 +3,7 @@
 - Support for print media (hide sidebar and scrollbar of the content)
 - Camera (take picture)
 - Chat (technical support)
-- Calendar component
+- Component for date input (displays calendar)
 - Notification pages
 - File manager
 - Colors (light and dark) for Code highlight
