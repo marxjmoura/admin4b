@@ -4,8 +4,6 @@
 
   .modal-content
   {
-    background: $bscolors-blue;
-
     .modal-header,
     .modal-body,
     .modal-footer
@@ -17,96 +15,115 @@
 
     .modal-header
     {
-      background: $bscolors-white;
-      padding-top: 30px;
-
-      .modal-title
+      .input-group
       {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
-    }
+        height: auto;
+        width: auto;
 
-    .modal-body
-    {
-      background: $bscolors-white;
-
-      table
-      {
-        text-align: center;
-        width: 100%;
-
-        th
+        .btn,
+        .form-control
         {
-          font-weight: normal;
-          padding-bottom: 15px;
+          font-size: 14pt;
+          padding: 15px 5px 0 5px;
+
+          &.btn-link
+          {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
         }
 
-        td
+        .form-control
         {
-          padding: 5px;
+          border: none;
+          display: inline-block;
+          flex: 0 1 auto;
+          text-align: center;
+          width: 60px;
+          @include crossbrowser-box-shadow(none);
+        }
 
-          &.disabled
+        .btn.dropdown-toggle
+        {
+          border: none;
+          background: $bscolors-white;
+          color: $bscolors-gray-700;
+          @include crossbrowser-box-shadow(none);
+
+          &::after
           {
-            color: $bscolors-gray-500;
-          }
-
-          a
-          {
-            color: $bscolors-gray-700;
-            display: block;
-            position: relative;
-            text-align: center;
-            text-decoration: none;
-            z-index: 1;
-
-            &::before
-            {
-              border: 1px solid $bscolors-blue;
-              content: " ";
-              display: none;
-              position: absolute;
-              top: -4px;
-              left: -1px;
-              width: 32px;
-              height: 32px;
-              z-index: -1;
-              @include crossbrowser-border-radius(50%);
-            }
-
-            &:hover
-            {
-              color: $bscolors-white;
-
-              &::before
-              {
-                background: $bscolors-blue;
-                display: block;
-              }
-            }
-
-            &.today::before
-            {
-              display: block;
-            }
+            display:none
           }
         }
       }
     }
+  }
+}
 
-    .modal-footer
+table.table-calendar
+{
+  text-align: center;
+  width: 100%;
+
+  th
+  {
+    font-weight: normal;
+    padding-bottom: 15px;
+
+    &:first-child
     {
-      color: $bscolors-white;
+      color: $bscolors-red;
+    }
+  }
+
+  td
+  {
+    color: $bscolors-gray-500;
+    padding: 5px;
+
+    a
+    {
+      color: $bscolors-gray-700;
       display: block;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      position: relative;
       text-align: center;
+      text-decoration: none;
+      z-index: 1;
 
-      .calendar-day
+      &::before
       {
-        font-size: 48pt;
-        line-height: 48pt;
+        border: 1px solid $bscolors-blue;
+        content: " ";
+        display: none;
+        position: absolute;
+        top: -4px;
+        left: -1px;
+        width: 32px;
+        height: 32px;
+        z-index: -1;
+        @include crossbrowser-border-radius(50%);
+      }
+
+      &:hover,
+      &.active
+      {
+        color: $bscolors-white !important;
+
+        &::before
+        {
+          background: $bscolors-blue;
+          display: block;
+        }
+      }
+
+      &.today::before
+      {
+        display: block;
+      }
+
+      &.sunday
+      {
+        color: $bscolors-red;
       }
     }
   }

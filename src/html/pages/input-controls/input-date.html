@@ -8,35 +8,102 @@
 </nav>
 <div class="container-fluid">
   <h2>Input date</h2>
-  <div class="form-group">
-    <div class="input-group input-date" data-default="2018-04-03">
-      <div class="form-control"></div>
-      <div class="input-group-append">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-calendar">
-          <i class="fa fa-calendar"></i>
-        </button>
+  <p>
+    When you change the date the calendar automatically query the selected date.
+  </p>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="form-group">
+        <label>From</label>
+        <div class="input-group">
+          <div class="form-control"></div>
+          <div class="input-group-append">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+              <i class="fa fa-calendar"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="form-group">
+        <label>Until</label>
+        <div class="input-group">
+          <div class="form-control"></div>
+          <div class="input-group-append">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+              <i class="fa fa-calendar"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div id="modal-calendar" class="modal modal-calendar fade" tabindex="-1" data-backdrop="static">
+  <div id="calendar" class="modal modal-calendar fade" tabindex="-1" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">
-            January 2018
-          </h5>
+          <div class="input-group mx-auto">
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-link" data-month="previous">
+                <i class="fa fa-angle-left"></i>
+              </button>
+            </div>
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"></button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMonth">
+                <a href="#" class="dropdown-item" data-month="0">January</a>
+                <a href="#" class="dropdown-item" data-month="1">February</a>
+                <a href="#" class="dropdown-item" data-month="2">March</a>
+                <a href="#" class="dropdown-item" data-month="3">April</a>
+                <a href="#" class="dropdown-item" data-month="4">May</a>
+                <a href="#" class="dropdown-item" data-month="5">June</a>
+                <a href="#" class="dropdown-item" data-month="6">July</a>
+                <a href="#" class="dropdown-item" data-month="7">August</a>
+                <a href="#" class="dropdown-item" data-month="8">September</a>
+                <a href="#" class="dropdown-item" data-month="9">October</a>
+                <a href="#" class="dropdown-item" data-month="10">November</a>
+                <a href="#" class="dropdown-item" data-month="11">December</a>
+              </div>
+            </div>
+            <input type="text" class="form-control" maxlength="4">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-link" data-month="next">
+                <i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="modal-body">
-          <table id="calendar"></table>
-        </div>
-        <div class="modal-footer">
-          <div class="form-group">
-            <div class="calendar-day">02</div>
-            <div class="calendar-weekday">Monday</div>
+          <table class="table-calendar mb-2">
+            <thead>
+              <tr>
+                <th>Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="form-group text-center">
+            <button type="button" class="btn btn-link" data-month="today">
+              <i class="fa fa-calendar-o"></i> today
+            </button>
+            <button type="button" class="btn btn-link" data-month="selected">
+              <i class="fa fa-calendar-check-o"></i> selected
+            </button>
           </div>
-          <button type="button" class="btn btn-outline-light" data-toggle="input-date" data-dismiss="modal">
-            Select date
-          </button>
+          <div class="text-center mb-2">
+            <button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal">
+              Apply
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
     </div>
