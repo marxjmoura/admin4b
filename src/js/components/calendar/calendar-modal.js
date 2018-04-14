@@ -4,10 +4,10 @@
     var $modalCalendar = $(this);
     var $dropdownMonths = $modalCalendar.find('.dropdown-toggle');
     var $months = $modalCalendar.find('.dropdown-menu');
-    var $previousMonth = $modalCalendar.find('[data-month=previous]');
-    var $nextMonth = $modalCalendar.find('[data-month=next]');
-    var $goToToday = $modalCalendar.find('[data-month=today]');
-    var $goToSelected = $modalCalendar.find('[data-month=selected]');
+    var $previousMonth = $modalCalendar.find('[data-calendar-month=previous]');
+    var $nextMonth = $modalCalendar.find('[data-calendar-month=next]');
+    var $goToToday = $modalCalendar.find('[data-calendar-link=today]');
+    var $goToSelected = $modalCalendar.find('[data-calendar-link=selected]');
     var $year = $modalCalendar.find('input');
 
     $modalCalendar.on('calendar:each', function (e, date) {
@@ -29,11 +29,13 @@
       $year.val(date.getFullYear());
     });
 
-    $months.find('a').on('click', function () {
+    $months.find('a').on('click', function (e) {
       var year = Number($year.val());
-      var month = Number($(this).attr('data-month'));
+      var month = Number($(this).attr('data-calendar-month'));
 
       $modalCalendar.calendar('query:date', new Date(year, month, 1));
+
+      e.preventDefault();
     });
 
     $nextMonth.on('click', function () {

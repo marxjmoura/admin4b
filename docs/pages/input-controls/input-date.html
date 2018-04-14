@@ -160,7 +160,9 @@
 <div class="container-fluid">
   <h2>Input date</h2>
   <p>
-    When you change the date the calendar automatically query the selected date.
+    Input date is a set of bootstrap components (mainly <a href="https://getbootstrap.com/docs/4.0/components/input-group/">input-group</a>
+    and <a href="https://getbootstrap.com/docs/4.0/components/modal/">modal</a>) to build a control that allows users to navigate in the
+    calendar and select a date. See the example below:
   </p>
   <div class="row">
     <div class="col-12 col-md-6 col-lg-6">
@@ -196,30 +198,30 @@
         <div class="modal-header">
           <div class="input-group mx-auto">
             <div class="input-group-prepend">
-              <button type="button" class="btn btn-link" data-month="previous">
+              <button type="button" class="btn btn-link" data-calendar-month="previous">
                 <i class="fa fa-angle-left"></i>
               </button>
             </div>
             <div class="input-group-prepend">
               <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"></button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMonth">
-                <a href="#" class="dropdown-item" data-month="0">January</a>
-                <a href="#" class="dropdown-item" data-month="1">February</a>
-                <a href="#" class="dropdown-item" data-month="2">March</a>
-                <a href="#" class="dropdown-item" data-month="3">April</a>
-                <a href="#" class="dropdown-item" data-month="4">May</a>
-                <a href="#" class="dropdown-item" data-month="5">June</a>
-                <a href="#" class="dropdown-item" data-month="6">July</a>
-                <a href="#" class="dropdown-item" data-month="7">August</a>
-                <a href="#" class="dropdown-item" data-month="8">September</a>
-                <a href="#" class="dropdown-item" data-month="9">October</a>
-                <a href="#" class="dropdown-item" data-month="10">November</a>
-                <a href="#" class="dropdown-item" data-month="11">December</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-calendar-month="0">January</a>
+                <a href="#" class="dropdown-item" data-calendar-month="1">February</a>
+                <a href="#" class="dropdown-item" data-calendar-month="2">March</a>
+                <a href="#" class="dropdown-item" data-calendar-month="3">April</a>
+                <a href="#" class="dropdown-item" data-calendar-month="4">May</a>
+                <a href="#" class="dropdown-item" data-calendar-month="5">June</a>
+                <a href="#" class="dropdown-item" data-calendar-month="6">July</a>
+                <a href="#" class="dropdown-item" data-calendar-month="7">August</a>
+                <a href="#" class="dropdown-item" data-calendar-month="8">September</a>
+                <a href="#" class="dropdown-item" data-calendar-month="9">October</a>
+                <a href="#" class="dropdown-item" data-calendar-month="10">November</a>
+                <a href="#" class="dropdown-item" data-calendar-month="11">December</a>
               </div>
             </div>
             <input type="text" class="form-control" maxlength="4">
             <div class="input-group-append">
-              <button type="button" class="btn btn-link" data-month="next">
+              <button type="button" class="btn btn-link" data-calendar-month="next">
                 <i class="fa fa-angle-right"></i>
               </button>
             </div>
@@ -239,24 +241,420 @@
               </tr>
             </thead>
           </table>
-          <div class="form-group text-center">
-            <button type="button" class="btn btn-link" data-month="today">
+          <div class="text-center">
+            <button type="button" class="btn btn-link" data-calendar-link="today">
               <i class="fa fa-calendar-o"></i> today
             </button>
-            <button type="button" class="btn btn-link" data-month="selected">
+            <button type="button" class="btn btn-link" data-calendar-link="selected">
               <i class="fa fa-calendar-check-o"></i> selected
             </button>
           </div>
-          <div class="text-center mb-2">
-            <button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal">
-              Apply
-            </button>
-            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
-              Cancel
-            </button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btnApplyDate" type="button" class="btn btn-primary ml-auto" data-dismiss="modal">
+            Apply
+          </button>
+          <button type="button" class="btn btn-outline-secondary mr-auto" data-dismiss="modal">
+            Cancel
+          </button>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="source-code">
+    <a href="#input-date" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="input-date" class="collapse">
+      <div class="nav nav-tabs">
+        <a href="#input-date-html" class="active" data-toggle="tab">HTML</a>
+        <a href="#input-date-js" data-toggle="tab">JavaScript</a>
+      </div>
+      <div class="tab-content">
+        <div id="input-date-html" class="tab-pane active">
+          <pre><code class="html">&lt;div class="row"&gt;
+  &lt;div class="col-12 col-md-6 col-lg-6"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;From&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="form-control"&gt;&lt;/div&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar"&gt;
+            &lt;i class="fa fa-calendar"&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-lg-6"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;Until&lt;/label&gt;
+      &lt;div class="input-group"&gt;
+        &lt;div class="form-control"&gt;&lt;/div&gt;
+        &lt;div class="input-group-append"&gt;
+          &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar"&gt;
+            &lt;i class="fa fa-calendar"&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="calendar" class="modal modal-calendar fade" tabindex="-1" data-backdrop="static"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;div class="input-group mx-auto"&gt;
+          &lt;div class="input-group-prepend"&gt;
+            &lt;button type="button" class="btn btn-link" data-calendar-month="previous"&gt;
+              &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="input-group-prepend"&gt;
+            &lt;button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"&gt;&lt;/button&gt;
+            &lt;div class="dropdown-menu"&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="0"&gt;January&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="1"&gt;February&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="2"&gt;March&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="3"&gt;April&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="4"&gt;May&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="5"&gt;June&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="6"&gt;July&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="7"&gt;August&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="8"&gt;September&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="9"&gt;October&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="10"&gt;November&lt;/a&gt;
+              &lt;a href="#" class="dropdown-item" data-calendar-month="11"&gt;December&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;input type="text" class="form-control" maxlength="4"&gt;
+          &lt;div class="input-group-append"&gt;
+            &lt;button type="button" class="btn btn-link" data-calendar-month="next"&gt;
+              &lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;table class="table-calendar mb-2"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Su&lt;/th&gt;
+              &lt;th&gt;Mo&lt;/th&gt;
+              &lt;th&gt;Tu&lt;/th&gt;
+              &lt;th&gt;We&lt;/th&gt;
+              &lt;th&gt;Th&lt;/th&gt;
+              &lt;th&gt;Fr&lt;/th&gt;
+              &lt;th&gt;Sa&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;
+        &lt;div class="form-group text-center"&gt;
+          &lt;button type="button" class="btn btn-link" data-calendar-link="today"&gt;
+            &lt;i class="fa fa-calendar-o"&gt;&lt;/i&gt; today
+          &lt;/button&gt;
+          &lt;button type="button" class="btn btn-link" data-calendar-link="selected"&gt;
+            &lt;i class="fa fa-calendar-check-o"&gt;&lt;/i&gt; selected
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="text-center mb-2"&gt;
+          &lt;button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal"&gt;
+            Apply
+          &lt;/button&gt;
+          &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;
+            Cancel
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <div id="input-date-js" class="tab-pane">
+          <pre><code class="js">var $calendar = $('#calendar');
+var $btnApplyDate = $('#btnApplyDate')
+
+$calendar.on('show.bs.modal', function (e) {
+  var $formControl = $(e.relatedTarget)
+    .closest('.form-group')
+    .find('.form-control');
+
+  $btnApplyDate.prop('target', $formControl);
+  $calendar.calendar('date', $formControl.prop('date') || new Date());
+});
+
+$btnApplyDate.on('click', function () {
+  var $target = $btnApplyDate.prop('target');
+  var date = $calendar.calendar('date');
+  var formattedDate = moment(date).format('dddd, MMMM D, YYYY');
+
+  $target.prop('date', date).text(formattedDate);
+});
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="callout callout-info">
+    <p>It is possible have only one calendar for the entire application if you want to.</p>
+  </div>
+  <h3>Calendar</h3>
+  <p>
+    The calendar is displayed in a <a href="https://getbootstrap.com/docs/4.0/components/modal/">bootstrap modal</a>
+    and defined by the class <code>.modal-calendar</code>.
+  </p>
+  <p>
+    The navigation of the calendar is placed in the modal header. The modal body contains the current page (<code>.table-calendar</code>)
+    and the calendar links (today and selected date). The confirmation and cancel buttons are placed in the modal footer.
+    See the basic structure below:
+  </p>
+  <div class="source-code">
+    <a href="#calendar-modal" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="calendar-modal" class="collapse">
+      <pre><code class="html">&lt;div class="modal modal-calendar fade"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;!-- Calendar navigation --&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;!-- Calendar current page (table) --&gt;
+        &lt;!-- Calendar links (today and selected date) --&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;!-- Confirmation and cancel buttons --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </div>
+  <h4>Calendar header</h4>
+  <p>
+    The calendar header contains the navigation that allows the user to go to the next pages or to the previous pages of the calendar.
+    Also, the user can select a month in the dropdown or type the desired year. See the example below:
+  </p>
+  <div class="source-code">
+    <a href="#calendar-header" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="calendar-header" class="collapse">
+      <pre><code class="html">&lt;div class="input-group mx-auto"&gt;
+  &lt;div class="input-group-prepend"&gt;
+    &lt;button type="button" class="btn btn-link" data-calendar-month="previous"&gt;
+      &lt;i class="fa fa-angle-left"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group-prepend"&gt;
+    &lt;button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"&gt;&lt;/button&gt;
+    &lt;div class="dropdown-menu"&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="0"&gt;January&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="1"&gt;February&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="2"&gt;March&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="3"&gt;April&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="4"&gt;May&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="5"&gt;June&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="6"&gt;July&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="7"&gt;August&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="8"&gt;September&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="9"&gt;October&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="10"&gt;November&lt;/a&gt;
+      &lt;a href="#" class="dropdown-item" data-calendar-month="11"&gt;December&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;input type="text" class="form-control" maxlength="4"&gt;
+  &lt;div class="input-group-append"&gt;
+    &lt;button type="button" class="btn btn-link" data-calendar-month="next"&gt;
+      &lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </div>
+  <h4>Calendar body</h4>
+  <p>
+    The calendar body contains the current page and allows the user to select the desired date.
+    Also, the body contains the links to the today date and to the selected date.
+  </p>
+  <div class="source-code">
+    <a href="#calendar-body" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="calendar-body" class="collapse">
+      <pre><code class="html">&lt;table class="table-calendar mb-2"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Su&lt;/th&gt;
+      &lt;th&gt;Mo&lt;/th&gt;
+      &lt;th&gt;Tu&lt;/th&gt;
+      &lt;th&gt;We&lt;/th&gt;
+      &lt;th&gt;Th&lt;/th&gt;
+      &lt;th&gt;Fr&lt;/th&gt;
+      &lt;th&gt;Sa&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+&lt;/table&gt;
+&lt;div class="text-center"&gt;
+  &lt;button type="button" class="btn btn-link" data-calendar-link="today"&gt;
+    &lt;i class="fa fa-calendar-o"&gt;&lt;/i&gt; today
+  &lt;/button&gt;
+  &lt;button type="button" class="btn btn-link" data-calendar-link="selected"&gt;
+    &lt;i class="fa fa-calendar-check-o"&gt;&lt;/i&gt; selected
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </div>
+  <h4>Calendar footer</h4>
+  <p>
+    The calendar footer contains the buttons to confirm or cancel the selected date. See the example below:
+  </p>
+  <div class="source-code">
+    <a href="#calendar-footer" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="calendar-footer" class="collapse">
+      <pre><code class="html">&lt;button id="btnApplyDate" type="button" class="btn btn-primary ml-auto" data-dismiss="modal"&gt;
+  Apply
+&lt;/button&gt;
+&lt;button type="button" class="btn btn-outline-secondary mr-auto" data-dismiss="modal"&gt;
+  Cancel
+&lt;/button&gt;
+</code></pre>
+    </div>
+  </div>
+  <h3>Options</h3>
+  <p>
+    Options can be passed via data attributes:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>data-calendar-link</code></td>
+          <td>string</td>
+          <td>Go to calendar page directly: <code>today</code> or <code>selected</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>data-calendar-month</code></td>
+          <td>string|number</td>
+          <td>The month that will be navigated to: <code>0..11</code> (January to December), <code>previous</code> or <code>next</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Methods</h3>
+  <p>
+    A few methods are available to control the calendar:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>calendar('date')</code></td>
+          <td>Gets the selected date.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('date', myDate)</code></td>
+          <td>
+            Sets the selected date (automatically queries the selected date).
+            Triggers the events <code>calendar:change</code> and <code>calendar:query</code>.
+          </td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:date')</code></td>
+          <td>Gets the queried date (does not reflect the selected date).</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:date', myDate)</code></td>
+          <td>
+            Sets the queried date (recalculates the calendar page).
+            Triggers the event <code>calendar:query</code>.
+          </td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:nextMonth')</code></td>
+          <td>Go to next month. Triggers the event <code>calendar:query</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:nextYear')</code></td>
+          <td>Go to next year. Triggers the event <code>calendar:query</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:previousMonth')</code></td>
+          <td>Go to previous month. Triggers the event <code>calendar:query</code>.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar('query:previousYear')</code></td>
+          <td>Go to previous year. Triggers the event <code>calendar:query</code>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Events</h3>
+  <p>
+    Events triggered from the calendar can be listened to write custom logic:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>calendar:change</code></td>
+          <td>Triggered after select the date.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar:each</code></td>
+          <td>Triggered for each date while loading the calendar page.</td>
+        </tr>
+        <tr>
+          <td class="text-nowrap"><code>calendar:query</code></td>
+          <td>Triggered after querying the date.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="source-code">
+    <a href="#calendar-events" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="calendar-events" class="collapse">
+      <pre><code class="js">$modalCalendar.on('calendar:change', function (e, date) {
+  console.log('Selected date: ' + date);
+});
+
+$modalCalendar.on('calendar:each', function (e, date) {
+  console.log('Anchor tag: ' + e.relatedTarget); // Only for dates in the queried month and year
+  console.log('Current date: ' + date);
+});
+
+$modalCalendar.on('calendar:query', function (e, date) {
+  console.log('Queried date' + date);
+});
+</code></pre>
     </div>
   </div>
 </div>
