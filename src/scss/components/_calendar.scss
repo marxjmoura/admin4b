@@ -1,6 +1,6 @@
 .modal.modal-calendar .modal-dialog
 {
-  max-width: 320px;
+  max-width: 20rem;
 
   .modal-content
   {
@@ -9,8 +9,8 @@
     .modal-footer
     {
       border-width: 0;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
     }
 
     .modal-header
@@ -24,12 +24,12 @@
         .form-control
         {
           font-size: 14pt;
-          padding: 15px 5px 0 5px;
+          padding: .9375rem .3125rem 0 .3125rem;
 
           &.btn-link
           {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
           }
         }
 
@@ -39,7 +39,7 @@
           display: inline-block;
           flex: 0 1 auto;
           text-align: center;
-          width: 60px;
+          width: 3.75rem;
           @include crossbrowser-box-shadow(none);
         }
 
@@ -68,7 +68,7 @@ table.table-calendar
   th
   {
     font-weight: normal;
-    padding-bottom: 15px;
+    padding-bottom: .9375rem;
 
     &:first-child
     {
@@ -79,7 +79,7 @@ table.table-calendar
   td
   {
     color: $bscolors-gray-500;
-    padding: 5px;
+    padding: .3125rem;
 
     a
     {
@@ -92,14 +92,14 @@ table.table-calendar
 
       &::before
       {
-        border: 1px solid $bscolors-blue;
+        border: .0625rem solid $bscolors-blue;
         content: " ";
         display: none;
         position: absolute;
-        top: -4px;
-        left: -1px;
-        width: 32px;
-        height: 32px;
+        top: -.25rem;
+        left: -.0625rem;
+        width: 2rem;
+        height: 2rem;
         z-index: -1;
         @include crossbrowser-border-radius(50%);
       }
