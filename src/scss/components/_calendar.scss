@@ -57,6 +57,12 @@
         }
       }
     }
+
+    .modal-footer
+    {
+      justify-content: center;
+      @include crossbrowser-align-items(center);
+    }
   }
 }
 
