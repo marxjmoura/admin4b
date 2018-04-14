@@ -102,6 +102,15 @@
     filter: $filter;
 }
 
+@mixin crossbrowser-flex($flex...)
+{
+    -webkit-box-flex: $flex;
+    -moz-box-flex: $flex;
+    -webkit-flex: $flex;
+    -ms-flex: $flex;
+    flex: $flex;
+}
+
 @mixin crossbrowser-input-placeholder($color)
 {
     &::-webkit-input-placeholder

@@ -37,10 +37,10 @@
         {
           border: none;
           display: inline-block;
-          flex: 0 1 auto;
           text-align: center;
           width: 3.75rem;
           @include crossbrowser-box-shadow(none);
+          @include crossbrowser-flex(0 1 auto);
         }
 
         .btn.dropdown-toggle
