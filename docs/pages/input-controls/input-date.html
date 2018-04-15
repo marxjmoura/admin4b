@@ -228,7 +228,7 @@
           </div>
         </div>
         <div class="modal-body">
-          <table class="table-calendar mb-2">
+          <table class="table-calendar">
             <thead>
               <tr>
                 <th>Su</th>
@@ -336,7 +336,7 @@
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="modal-body"&gt;
-        &lt;table class="table-calendar mb-2"&gt;
+        &lt;table class="table-calendar"&gt;
           &lt;thead&gt;
             &lt;tr&gt;
               &lt;th&gt;Su&lt;/th&gt;
@@ -349,7 +349,7 @@
             &lt;/tr&gt;
           &lt;/thead&gt;
         &lt;/table&gt;
-        &lt;div class="form-group text-center"&gt;
+        &lt;div class="text-center"&gt;
           &lt;button type="button" class="btn btn-link" data-calendar-link="today"&gt;
             &lt;i class="fa fa-calendar-o"&gt;&lt;/i&gt; today
           &lt;/button&gt;
@@ -357,14 +357,14 @@
             &lt;i class="fa fa-calendar-check-o"&gt;&lt;/i&gt; selected
           &lt;/button&gt;
         &lt;/div&gt;
-        &lt;div class="text-center mb-2"&gt;
-          &lt;button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal"&gt;
-            Apply
-          &lt;/button&gt;
-          &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;
-            Cancel
-          &lt;/button&gt;
-        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal"&gt;
+          Apply
+        &lt;/button&gt;
+        &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;
+          Cancel
+        &lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -406,7 +406,7 @@ $btnApplyDate.on('click', function () {
   </p>
   <p>
     The navigation of the calendar is placed in the modal header. The modal body contains the current page (<code>.table-calendar</code>)
-    and the calendar links (today and selected date). The confirmation and cancel buttons are placed in the modal footer.
+    and the calendar links (today and selected date). The buttons for confirm and cancel are placed in the modal footer.
     See the basic structure below:
   </p>
   <div class="source-code">
@@ -425,7 +425,7 @@ $btnApplyDate.on('click', function () {
         &lt;!-- Calendar links (today and selected date) --&gt;
       &lt;/div&gt;
       &lt;div class="modal-footer"&gt;
-        &lt;!-- Confirmation and cancel buttons --&gt;
+        &lt;!-- Buttons for confirm and cancel --&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -479,14 +479,14 @@ $btnApplyDate.on('click', function () {
   <h4>Calendar body</h4>
   <p>
     The calendar body contains the current page and allows the user to select the desired date.
-    Also, the body contains the links to the today date and to the selected date.
+    In addition, the body contains the links to today's date and to the selected date.
   </p>
   <div class="source-code">
     <a href="#calendar-body" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
     <div id="calendar-body" class="collapse">
-      <pre><code class="html">&lt;table class="table-calendar mb-2"&gt;
+      <pre><code class="html">&lt;table class="table-calendar"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Su&lt;/th&gt;
@@ -519,10 +519,10 @@ $btnApplyDate.on('click', function () {
       <i class="fa fa-code"></i> Source code
     </a>
     <div id="calendar-footer" class="collapse">
-      <pre><code class="html">&lt;button id="btnApplyDate" type="button" class="btn btn-primary ml-auto" data-dismiss="modal"&gt;
+      <pre><code class="html">&lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;
   Apply
 &lt;/button&gt;
-&lt;button type="button" class="btn btn-outline-secondary mr-auto" data-dismiss="modal"&gt;
+&lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;
   Cancel
 &lt;/button&gt;
 </code></pre>
@@ -545,15 +545,18 @@ $btnApplyDate.on('click', function () {
         <tr>
           <td class="text-nowrap"><code>data-calendar-link</code></td>
           <td>string</td>
-          <td>Go to calendar page directly: <code>today</code> or <code>selected</code>.</td>
+          <td>Navigates directly to the calendar page: <code>today</code> or <code>selected</code> (selected date).</td>
         </tr>
         <tr>
           <td class="text-nowrap"><code>data-calendar-month</code></td>
           <td>string|number</td>
-          <td>The month that will be navigated to: <code>0..11</code> (January to December), <code>previous</code> or <code>next</code>.</td>
+          <td>The month for which it will be navigated: <code>0..11</code> (January to December), <code>previous</code> or <code>next</code>.</td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="callout callout-warning">
+    <p>By design these attribute options only work for children of a <code>.modal-calendar</code>.</p>
   </div>
   <h3>Methods</h3>
   <p>
@@ -624,7 +627,7 @@ $btnApplyDate.on('click', function () {
       <tbody>
         <tr>
           <td class="text-nowrap"><code>calendar:change</code></td>
-          <td>Triggered after select the date.</td>
+          <td>Triggered after select a date.</td>
         </tr>
         <tr>
           <td class="text-nowrap"><code>calendar:each</code></td>
