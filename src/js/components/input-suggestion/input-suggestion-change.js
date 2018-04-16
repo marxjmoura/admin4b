@@ -21,7 +21,7 @@
         var key = e.keyCode || e.which;
         var keyPressed = keyboard(key);
 
-        if (keyPressed.isEnter()) {
+        if (keyPressed.isEnter) {
           var $ativeItem = $items.filter('.active');
 
           if ($ativeItem.length) {

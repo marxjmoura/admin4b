@@ -1,8 +1,14 @@
 $(function () {
+    /*
+     * Code highlight
+     */
     $('pre code').each(function (i, code) {
         hljs.highlightBlock(code);
     });
 
+    /*
+     * Spinner
+     */
     $('#spinner-toggle').on('click', function () {
         $('#spinner').addClass('show');
 
@@ -11,6 +17,9 @@ $(function () {
         }, 3000);
     });
 
+    /*
+     * Input suggestion async
+     */
     var juices = [
         'Apple, carrot, and orange',
         'Beet, carrot, ginger, and turmeric',
@@ -45,6 +54,9 @@ $(function () {
         $input.suggestion('refresh');
     });
 
+    /*
+     * File manager
+     */
     $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
         $('#file-name').text(file.name);
         $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
@@ -61,6 +73,9 @@ $(function () {
         $('#file-data').removeClass('d-none');
     });
 
+    /*
+     * Camera
+     */
     $('#modal-camera')
         .on('shown.bs.modal', function () {
             $('#camera').camera('play');
@@ -76,5 +91,28 @@ $(function () {
     $('#camera').on('camera:snapshot', function (e, blob) {
         $('#snapshot-preview').attr('src', blob.dataURL);
         $('#modal-camera').modal('hide');
+    });
+
+    /*
+     * Input date (displays calendar)
+     */
+    var $calendar = $('#calendar');
+    var $btnApplyDate = $('#btnApplyDate')
+
+    $calendar.on('show.bs.modal', function (e) {
+        var $formControl = $(e.relatedTarget)
+            .closest('.form-group')
+            .find('.form-control');
+
+        $btnApplyDate.prop('target', $formControl);
+        $calendar.calendar('date', $formControl.prop('date') || new Date());
+    });
+
+    $btnApplyDate.on('click', function () {
+        var $target = $btnApplyDate.prop('target');
+        var date = $calendar.calendar('date');
+        var formattedDate = moment(date).format('dddd, MMMM D, YYYY');
+
+        $target.prop('date', date).text(formattedDate);
     });
 });
