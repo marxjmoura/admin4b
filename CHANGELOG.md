@@ -1,4 +1,6 @@
 ## v0.8.0 (unreleased)
+### Bug fixes
+- Centralize form on signin page and on signup page for IE11
 ### Features
 - Support for print media (hide sidebar and scrollbar of the content)
 - Camera (take picture)
