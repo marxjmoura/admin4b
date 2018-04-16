@@ -1,6 +1,7 @@
 ## v0.8.0 (unreleased)
 ### Bug fixes
-- Centralize form on signin page and on signup page for IE11
+- Fix `input-suggestion` on IE11: Escape button selecting the first element
+- Fix `page-sign` on IE11: Forms were not centralized
 ### Features
 - Support for print media (hide sidebar and scrollbar of the content)
 - Camera (take picture)
