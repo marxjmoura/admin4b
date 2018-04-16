@@ -2,6 +2,7 @@
 ### Bug fixes
 - Fix `input-suggestion` on IE11: Escape button selecting the first element
 - Fix `page-sign` on IE11: Forms were not centralized
+- Fix check mark of radio button when set text-align for parent
 ### Features
 - Support for print media (hide sidebar and scrollbar of the content)
 - Camera (take picture)
