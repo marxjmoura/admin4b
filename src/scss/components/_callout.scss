@@ -1,8 +1,7 @@
 .callout
 {
   padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   border: .0625rem solid #eee;
   border-left-width: .25rem;
   @include crossbrowser-border-radius(.25rem);
