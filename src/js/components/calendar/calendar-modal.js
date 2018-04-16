@@ -2,13 +2,15 @@
 
   $.fn.calendar.modal = function (date) {
     var $modalCalendar = $(this);
-    var $dropdownMonths = $modalCalendar.find('.dropdown-toggle');
-    var $months = $modalCalendar.find('.dropdown-menu');
-    var $previousMonth = $modalCalendar.find('[data-calendar-month=previous]');
-    var $nextMonth = $modalCalendar.find('[data-calendar-month=next]');
-    var $goToToday = $modalCalendar.find('[data-calendar-link=today]');
-    var $goToSelected = $modalCalendar.find('[data-calendar-link=selected]');
-    var $year = $modalCalendar.find('input');
+    var $modalHeader = $modalCalendar.find('.modal-header');
+    var $modalBody = $modalCalendar.find('.modal-body');
+    var $dropdownMonths = $modalHeader.find('.dropdown-toggle');
+    var $months = $modalHeader.find('.dropdown-menu');
+    var $previousMonth = $modalHeader.find('[data-calendar-month=previous]');
+    var $nextMonth = $modalHeader.find('[data-calendar-month=next]');
+    var $year = $modalHeader.find('.form-control');
+    var $goToToday = $modalBody.find('[data-calendar-link=today]');
+    var $goToSelected = $modalBody.find('[data-calendar-link=selected]');
 
     $modalCalendar.on('calendar:each', function (e, date) {
       var selectedDate = $modalCalendar.calendar('date');
