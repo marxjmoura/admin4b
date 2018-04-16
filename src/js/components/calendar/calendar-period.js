@@ -1,9 +1,6 @@
 (function ($) {
 
   $.fn.calendar.period = function (year, month) {
-    if (isNaN(year)) year = today.getFullYear();
-    if (isNaN(month)) month = today.getMonth();
-
     var firstDateInMonth = new Date(year, month, 1);
     var lastDateInMonth = new Date(year, month + 1, 0);
 

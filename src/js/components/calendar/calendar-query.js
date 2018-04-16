@@ -3,12 +3,7 @@
   $.fn.calendar.query = function (date) {
     var $modalCalendar = $(this);
     var $table = $modalCalendar.find('.table-calendar');
-    var $tbody = $table.find('tbody').empty();
-
-    if (!$tbody.length) {
-      $tbody = $('<tbody>');
-    }
-
+    var $tbody = $('<tbody>');
     var period = $.fn.calendar.period(date.getFullYear(), date.getMonth());
     var currentDate = period.firstDate;
 
@@ -45,6 +40,7 @@
       $tbody.append($tr);
     }
 
+    $table.find('tbody').remove();
     $table.append($tbody);
 
     $modalCalendar.prop('query', date).trigger('calendar:query', date)

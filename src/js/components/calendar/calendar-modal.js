@@ -59,7 +59,6 @@
       .on('keydown', function (e) {
         var keyCode = e.keyCode || e.which;
         var keyPressed = keyboard(keyCode);
-        var year = Number($year.val());
 
         if (keyPressed.isArrowUp) {
           $modalCalendar.calendar('query:nextYear');
