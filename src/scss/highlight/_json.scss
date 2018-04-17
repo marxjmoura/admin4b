@@ -1,19 +1,45 @@
-.json .hljs-attr
+.source-code
 {
-  color: $highlight-colors-attribute;
+  .json .hljs-attr
+  {
+    color: $highlight-light-attribute;
+  }
+
+  .json .hljs-string
+  {
+    color: $highlight-light-string;
+  }
+
+  .json .hljs-literal,
+  {
+    color: $highlight-light-keyword;
+  }
+
+  .json .hljs-number
+  {
+    color: $highlight-light-number;
+  }
 }
 
-.json .hljs-string
+.source-code.dark
 {
-  color: $highlight-colors-string;
-}
+  .json .hljs-attr
+  {
+    color: $highlight-dark-attribute;
+  }
 
-.json .hljs-literal,
-{
-  color: $highlight-colors-keyword;
-}
+  .json .hljs-string
+  {
+    color: $highlight-dark-string;
+  }
 
-.json .hljs-number
-{
-  color: $highlight-colors-number;
+  .json .hljs-literal,
+  {
+    color: $highlight-dark-keyword;
+  }
+
+  .json .hljs-number
+  {
+    color: $highlight-dark-number;
+  }
 }

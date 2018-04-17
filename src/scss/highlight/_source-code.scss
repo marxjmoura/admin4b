@@ -1,36 +1,61 @@
 .source-code
 {
-  $bg-color: #222d32;
-  $text-color: #fff;
-
   margin-bottom: 1rem;
 
   .nav-tabs a
   {
-    color: darken($text-color, 50%);
+    color: $highlight-light-editor-link;
     font-size: .95rem;
     text-decoration: none;
     padding: .75rem;
+    padding-bottom: 0;
     @include crossbrowser-transition(color .2s ease);
 
     &.active,
+    &:active,
     &:hover
     {
-      color: $text-color;
+      color: darken($highlight-light-editor-link, 30%);
     }
   }
 
   pre,
   .nav-tabs
   {
-    background: $bg-color;
+    background: $highlight-light-editor-bg;
     border: none;
   }
 
   pre
   {
-    color: $highlight-colors-literal;
     margin: 0;
     overflow-x: auto;
+    padding: .75rem;
+  }
+}
+
+.source-code.dark
+{
+  .nav-tabs a
+  {
+    color: darken($highlight-dark-editor-link, 50%);
+
+    &.active,
+    &:active,
+    &:hover
+    {
+      color: $highlight-dark-editor-link;
+    }
+  }
+
+  pre,
+  .nav-tabs
+  {
+    background: $highlight-dark-editor-bg;
+  }
+
+  pre
+  {
+    color: $highlight-dark-literal;
   }
 }

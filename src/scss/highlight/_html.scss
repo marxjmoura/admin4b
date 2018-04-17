@@ -1,25 +1,57 @@
-.html .hljs-meta
+.source-code
 {
-  color: $highlight-colors-namespace;
+  .html .hljs-meta
+  {
+    color: $highlight-light-namespace;
+  }
+
+  .html .hljs-section,
+  .html .hljs-tag
+  {
+    color: $highlight-light-keyword;
+  }
+
+  .html .hljs-tag .hljs-attr
+  {
+    color: $highlight-light-attribute;
+  }
+
+  .html .hljs-tag .hljs-string
+  {
+    color: $highlight-light-string;
+  }
+
+  .html .hljs-comment
+  {
+    color: $highlight-light-comment;
+  }
 }
 
-.html .hljs-section,
-.html .hljs-tag
+.source-code.dark
 {
-  color: $highlight-colors-keyword;
-}
+  .html .hljs-meta
+  {
+    color: $highlight-dark-namespace;
+  }
 
-.html .hljs-tag .hljs-attr
-{
-  color: $highlight-colors-attribute;
-}
+  .html .hljs-section,
+  .html .hljs-tag
+  {
+    color: $highlight-dark-keyword;
+  }
 
-.html .hljs-tag .hljs-string
-{
-  color: $highlight-colors-string;
-}
+  .html .hljs-tag .hljs-attr
+  {
+    color: $highlight-dark-attribute;
+  }
 
-.html .hljs-comment
-{
-  color: $highlight-colors-comment;
+  .html .hljs-tag .hljs-string
+  {
+    color: $highlight-dark-string;
+  }
+
+  .html .hljs-comment
+  {
+    color: $highlight-dark-comment;
+  }
 }
