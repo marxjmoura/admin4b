@@ -76,22 +76,31 @@ $(function () {
     /*
      * Camera
      */
-    $('#modal-camera')
+    var $modalCamera = $('#modal-camera');
+    var $camera = $('#camera');
+    var $btnSnapshot = $('#button-snapshot');
+    var $snapshotPreview = $('#snapshot-preview');
+
+    $modalCamera
         .on('shown.bs.modal', function () {
-            $('#camera').camera('play');
+            $camera.camera('play');
         })
         .on('hidden.bs.modal', function () {
-            $('#camera').camera('stop');
+            $camera.camera('stop');
         });
 
-    $('#button-snapshot').on('click', function () {
-        $('#camera').camera('snapshot', { width: 320, height: 240 });
+    $btnSnapshot.on('click', function () {
+        $camera.camera('snapshot', { width: 320, height: 240 });
     });
 
-    $('#camera').on('camera:snapshot', function (e, blob) {
-        $('#snapshot-preview').attr('src', blob.dataURL);
-        $('#modal-camera').modal('hide');
-    });
+    $camera
+        .on('camera:snapshot', function (e, blob) {
+            $snapshotPreview.attr('src', blob.dataURL);
+            $modalCamera.modal('hide');
+        })
+        .on('camera:notSupported', function () {
+            $modalCamera.find('.modal-body').find('p').removeClass('d-none');
+        });
 
     /*
      * Input date (displays calendar)

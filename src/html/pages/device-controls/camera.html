@@ -43,6 +43,13 @@
       </div>
     </div>
   </div>
+  <div class="callout callout-danger">
+    <h5>Browser compatibility</h5>
+    <p>
+      IE 11 and below currently does not support <code>getUserMedia</code>.
+      However, there is some polyfills available that you can explore.
+    </p>
+  </div>
   <h3>Options</h3>
   <p>
     Options can be passed via data attributes:
@@ -133,6 +140,10 @@
           <td>Triggered if any error occur during the start of the camera.</td>
         </tr>
         <tr>
+          <td class="text-nowrap"><code>camera:notSupported</code></td>
+          <td>Triggered if the browser does not support camera.</td>
+        </tr>
+        <tr>
           <td class="text-nowrap"><code>camera:stop</code></td>
           <td>Triggered after the camera stop.</td>
         </tr>
@@ -161,6 +172,7 @@
         </h5>
       </div>
       <div class="modal-body">
+        <p class="text-center d-none">Not supported</p>
         <video id="camera" class="camera" data-size="320x240"></video>
       </div>
       <div class="modal-footer">

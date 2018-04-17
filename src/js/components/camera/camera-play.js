@@ -26,7 +26,11 @@
       $video.trigger('camera:error', error);
     };
 
-    $.fn.camera.getUserMedia(mediaConstraint, onSuccess, onFailure);
+    if ($.fn.camera.isSupported()) {
+      $.fn.camera.getUserMedia(mediaConstraint, onSuccess, onFailure);
+    } else {
+      $video.trigger('camera:notSupported');
+    }
   };
 
 })(jQuery);
