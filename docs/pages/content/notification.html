@@ -153,212 +153,88 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Device controls</li>
-    <li class="breadcrumb-item active" aria-current="page">File manager</li>
+    <li class="breadcrumb-item">Notifications</li>
+    <li class="breadcrumb-item active" aria-current="page">Lorem ipsum dolor...</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>File manager</h2>
+  <div class="d-flex">
+    <h3>
+      Lorem ipsum dolor sit amet
+    </h3>
+    <a href="../../pages/content/notifications.html" class="text-nowrap ml-auto">
+      <i class="fa fa-inbox"></i> Inbox
+    </a>
+  </div>
+  <div class="mb-3">
+    <small class="text-secondary">
+      18 April, 2018
+    </small>
+  </div>
   <p>
-    The file manager is a component that conect to the device's storage and allow users to select files to submit.
-    See the example below:
+    Hello Lorem,
   </p>
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
-      <i class="fa fa-folder-open-o"></i> Select a file
-    </button>
-    <small class="text-secondary">Only .jpeg and .png and maximum 1MB.</small>
-  </div>
-  <div class="table-responsive">
-    <table class="table">
-      <tr>
-        <th>Filename</th>
-        <th>Size</th>
-      </tr>
-      <tr id="file-data" class="d-none">
-        <td class="align-middle">
-          <img id="file-preview" class="rounded d-none" width="64">
-          <span id="file-name"></span>
-          <i id="is-invalid" class="fa fa-times-circle text-danger d-none"></i>
-          <i id="is-valid" class="fa fa-check-circle text-success d-none"></i>
-        </td>
-        <td class="align-middle">
-          <span id="file-size"></span>
-        </td>
-      </tr>
-      <tr id="file-empty">
-        <td colspan="2" class="text-secondary">
-          No file selected.
-        </td>
-      </tr>
-    </table>
-  </div>
+  <p class="text-justify">
+    Lorem ipsum dolor sit amet, blandit scelerisque sem, elit est fusce metus pretium cursus vel, volutpat justo sapien ac, ornare
+    in lacinia leo ornare pede in, tempor quis mattis molestie a massa. Natoque quam nullam. Penatibus vestibulum aenean
+    sodales eleifend, sed arcu in risus urna et nec. Velit porttitor et, lacus non amet, donec est luctus nisl dis suscipit,
+    nulla mi dolor, urna suspendisse dolor amet cras. Etiam in sed donec tellus lobortis at, nonummy tellus amet sit vel
+    mauris, augue nec praesent porta, nullam tortor diam lorem. Tortor in sed donec erat. Enim neque eu ut amet, et pellentesque
+    tortor dapibus eros ac. Sed dapibus, pulvinar ut, non sed dui nibh. Leo fermentum, integer tortor pede laoreet.
+  </p>
+  <p class="text-justify">
+    Wisi sed nibh et ac, eget dui odio sem nibh urna ullamcorper, nisl egestas pellentesque metus curabitur in, scelerisque quisque
+    nullam. Porta ante rhoncus harum proin diam aliquam, felis sem iaculis arcu nunc, nulla mi dignissim vestibulum. Ante
+    et, pede diam mi. Ullamcorper amet lobortis donec a vel, sit scelerisque nulla, vestibulum est pellentesque ultrices
+    egestas id. Sapien vitae ultricies tristique quae tristique neque, diam scelerisque, vestibulum pede nulla auctor. Mauris
+    iaculis turpis eleifend vitae sed facilisis. Interdum orci ut nunc dui, praesent vestibulum elit commodo quisque, sit
+    feugiat ut donec eu accumsan lacinia, sed justo id libero et dolor, condimentum condimentum quisque vestibulum arcu sem.
+  </p>
+  <p>
+    Regards, <br>
+    Lorem ipsum
+  </p>
   <div class="source-code">
-    <a href="#file-manager" data-toggle="collapse">
+    <a href="#notification" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="file-manager" class="collapse">
-      <div class="nav nav-tabs">
-        <a href="#file-manager-html" class="active" data-toggle="tab">HTML</a>
-        <a href="#file-manager-js" data-toggle="tab">JavaScript</a>
-      </div>
-      <div class="tab-content">
-        <div id="file-manager-html" class="tab-pane active">
-          <pre><code class="html">&lt;div class="form-group"&gt;
-  &lt;button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png"&gt;
-    &lt;i class="fa fa-folder-open-o"&gt;&lt;/i&gt; Select a file
-  &lt;/button&gt;
-  &lt;small class="text-secondary"&gt;Only .jpeg and .png and maximum 1MB.&lt;/small&gt;
+    <div id="notification" class="collapse">
+      <pre><code class="html">&lt;div class="d-flex"&gt;
+  &lt;h3&gt;
+    Lorem ipsum dolor sit amet
+  &lt;/h3&gt;
+  &lt;a href="#" class="text-nowrap ml-auto"&gt;
+    &lt;i class="fa fa-inbox"&gt;&lt;/i&gt; Inbox
+  &lt;/a&gt;
 &lt;/div&gt;
-&lt;div class="table-responsive"&gt;
-  &lt;table class="table"&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Filename&lt;/th&gt;
-      &lt;th&gt;Size&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr id="file-data" class="d-none"&gt;
-      &lt;td class="align-middle"&gt;
-        &lt;img id="file-preview" class="rounded d-none" width="64"&gt;
-        &lt;span id="file-name"&gt;&lt;/span&gt;
-        &lt;i id="is-invalid" class="fa fa-times-circle text-danger d-none"&gt;&lt;/i&gt;
-        &lt;i id="is-valid" class="fa fa-check-circle text-success d-none"&gt;&lt;/i&gt;
-      &lt;/td&gt;
-      &lt;td class="align-middle"&gt;
-        &lt;span id="file-size"&gt;&lt;/span&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr id="file-empty"&gt;
-      &lt;td colspan="2" class="text-secondary"&gt;
-        No file selected.
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
+&lt;div class="mb-3"&gt;
+  &lt;small class="text-secondary"&gt;
+    18 April, 2018
+  &lt;/small&gt;
 &lt;/div&gt;
-</code></pre>
-        </div>
-        <div id="file-manager-js" class="tab-pane">
-          <pre><code class="js">$('[data-toggle="file-manager"]').on('file:change', function (e, file) {
-  $('#file-name').text(file.name);
-  $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
-  $('#is-invalid').toggleClass('d-none', !file.errors.length);
-  $('#is-valid').toggleClass('d-none', !!file.errors.length);
-
-  if (file.type.startsWith('image')) {
-    $('#preview').attr('src', file.dataURL).removeClass('d-none');
-  } else {
-    $('#preview').removeAttr('src').addClass('d-none');
-  }
-
-  $('#file-empty').addClass('d-none');
-  $('#file-data').removeClass('d-none');
-});
-</code></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-  <h3>File validation</h3>
-  <p>
-    The file manager has an built-in validation configured by attribute options:
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Validation</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap">
-            <code>data-maxsize</code>
-          </td>
-          <td>
-            Validates the size of the file. You can also define the size unit e.g., 1024B, 100KB, 2.4MB, 5GB.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-nowrap">
-            <code>data-type</code>
-          </td>
-          <td>
-            Validates the type of the file. You need to use MIME types for validation e.g.,
-            <code>image/png</code>, <code>application/pdf</code>. Use comma for separate multiple MIME types.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="callout callout-warning">
-    <h5>Warranties</h5>
-    <p>Wrong values for <code>data-maxsize</code> or <code>data-type</code> will result in invalid file after validation.</p>
-  </div>
-  <h3>Events</h3>
-  <p>
-    Events can be used by developer to interact with the component and write custom logic.
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Who fires</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>file:change</code></td>
-          <td>Component</td>
-          <td>Triggered when the user selects a file.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p>
-    After the file selection a few properties are added to the file by the component:
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>dataURL</code></td>
-          <td>Base64 data URL.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>errors</code></td>
-          <td>
-            File errors after validation:
-            <ul class="mb-0">
-              <li><code>maxsize</code>: The file exceeded the allowed maximum size.</li>
-              <li><code>type</code>: The selected file type is not allowed.</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="source-code">
-    <a href="#css-setup" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="css-setup" class="sidebar-nav-group collapse">
-      <pre><code class="js">$('[data-toggle="file-manager"]').on('file:change', function (e, file) {
-  // file.dataURL is loaded by the component
-  console.log('Base64 URL: ', file.dataURL);
-
-  // file.errors is binded by the component after validation
-  if (file.errors.length) {
-    console.log('File errors: ', file.errors);
-  }
-});
+&lt;p&gt;
+  Hello Lorem,
+&lt;/p&gt;
+&lt;p class="text-justify"&gt;
+  Lorem ipsum dolor sit amet, blandit scelerisque sem, elit est fusce metus pretium cursus vel, volutpat justo sapien ac, ornare
+  in lacinia leo ornare pede in, tempor quis mattis molestie a massa. Natoque quam nullam. Penatibus vestibulum aenean sodales
+  eleifend, sed arcu in risus urna et nec. Velit porttitor et, lacus non amet, donec est luctus nisl dis suscipit, nulla
+  mi dolor, urna suspendisse dolor amet cras. Etiam in sed donec tellus lobortis at, nonummy tellus amet sit vel mauris,
+  augue nec praesent porta, nullam tortor diam lorem. Tortor in sed donec erat. Enim neque eu ut amet, et pellentesque tortor
+  dapibus eros ac. Sed dapibus, pulvinar ut, non sed dui nibh. Leo fermentum, integer tortor pede laoreet.
+&lt;/p&gt;
+&lt;p class="text-justify"&gt;
+  Wisi sed nibh et ac, eget dui odio sem nibh urna ullamcorper, nisl egestas pellentesque metus curabitur in, scelerisque quisque
+  nullam. Porta ante rhoncus harum proin diam aliquam, felis sem iaculis arcu nunc, nulla mi dignissim vestibulum. Ante et,
+  pede diam mi. Ullamcorper amet lobortis donec a vel, sit scelerisque nulla, vestibulum est pellentesque ultrices egestas
+  id. Sapien vitae ultricies tristique quae tristique neque, diam scelerisque, vestibulum pede nulla auctor. Mauris iaculis
+  turpis eleifend vitae sed facilisis. Interdum orci ut nunc dui, praesent vestibulum elit commodo quisque, sit feugiat ut
+  donec eu accumsan lacinia, sed justo id libero et dolor, condimentum condimentum quisque vestibulum arcu sem.
+&lt;/p&gt;
+&lt;p&gt;
+  Regards, &lt;br&gt;
+  Lorem ipsum
+&lt;/p&gt;
 </code></pre>
     </div>
   </div>
