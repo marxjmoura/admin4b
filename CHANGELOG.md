@@ -1,8 +1,7 @@
-## v0.8.0 (unreleased)
+## [v0.8.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.8.0) (2018-04-21)
 ### Bug fixes
-- Fix `input-suggestion` on IE11: Escape button selecting the first element
-- Fix `page-sign` on IE11: Forms were not centralized
-- Fix check mark of radio button when set text-align for parent
+- Fix `page-sign` on IE11: forms were not centralized
+- Fix check mark of `.radio` when set text-align to parent
 ### Features
 - Support for print media (hide sidebar and scrollbar of the content)
 - Camera (take picture)
@@ -10,7 +9,7 @@
 - Component for date input (displays calendar)
 - Notification pages
 - File manager
-- Colors (light and dark) for Code highlight
+- Themes for code highlight: light and dark
 
 ## [v0.7.1](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.1) (2018-03-17)
 ### Bug fixes
