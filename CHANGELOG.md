@@ -1,3 +1,16 @@
+## [v0.8.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.8.0) (2018-04-21)
+### Bug fixes
+- Fix `page-sign` on IE11: forms were not centralized
+- Fix check mark of `.radio` when set text-align to parent
+### Features
+- Support for print media (hide sidebar and scrollbar of the content)
+- Camera (take picture)
+- Chat (technical support)
+- Component for date input (displays calendar)
+- Notification pages
+- File manager
+- Themes for code highlight: light and dark
+
 ## [v0.7.1](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.1) (2018-03-17)
 ### Bug fixes
 - Fix check mark for small and large radio buttons
@@ -33,13 +46,13 @@
 - Documentation for how to customize sidebar width
 
 ## [v0.5.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.5.0) (2018-02-25)
+### Bug fixes
+- Borders of `.input-group` input showing on small screens
 ### Features
 - `.has-error` class for validation
 - Code highlight CSS extension `admin4b-highlight.min.css`
 - `label-floating` and `label-infield` components
 - New sidebar-light color
-### Bug fixes
-- Borders of `.input-group` input showing on small screens
 
 ## [v0.4.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.4.0) (2018-02-19)
 ### Features

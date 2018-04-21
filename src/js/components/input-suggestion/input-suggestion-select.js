@@ -29,7 +29,7 @@
         var key = e.keyCode || e.which;
         var keyPressed = keyboard(key);
 
-        if (keyPressed.isEscape()) {
+        if (keyPressed.isEscape) {
           hide();
         }
       })
@@ -37,7 +37,7 @@
         var key = e.keyCode || e.which;
         var keyPressed = keyboard(key);
 
-        if (keyPressed.isArrowUp() || keyPressed.isArrowDown()) {
+        if (keyPressed.isArrowUp || keyPressed.isArrowDown) {
           e.preventDefault();
 
           if (!$suggestion.is('.open')) {
@@ -47,7 +47,7 @@
 
           var $currentItem = $items.children('.active');
 
-          if (keyPressed.isArrowDown()) {
+          if (keyPressed.isArrowDown) {
             if ($currentItem.is(':last-child')) {
               return;
             }
@@ -60,7 +60,7 @@
             }
           }
 
-          if (keyPressed.isArrowUp()) {
+          if (keyPressed.isArrowUp) {
             if ($currentItem.is(':first-child')) {
               return;
             }

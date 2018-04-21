@@ -1,0 +1,62 @@
+<!-- @@master = /includes/app.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">Input controls</li>
+      <li class="breadcrumb-item active" aria-current="page">Label</li>
+    </ol>
+  </nav>
+  <div class="container-fluid">
+    <h2>Label</h2>
+    <p>
+      The label component can be placed outside or within the field.
+    </p>
+    <div class="form-group">
+      <label>Normal label</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <div class="label-infield">
+        <label for="infield">Infield label</label>
+        <input id="infield" type="text" class="form-control">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="label-floating">
+        <input id="floating" type="text" class="form-control" placeholder="Floating">
+        <label for="floating">Floating label</label>
+      </div>
+    </div>
+    <div class="source-code">
+      <a href="#label" data-toggle="collapse">
+        <i class="fa fa-code"></i> Source code
+      </a>
+      <div id="label" class="collapse">
+        <pre><code class="html">@@include('includes/code-examples/input-controls/label/label.html')</code></pre>
+      </div>
+    </div>
+    <div class="callout callout-warning">
+      <h5>Warranties</h5>
+      <ol>
+        <li>
+          The <code>.floating-label</code> component needs space to move into and
+          the <code>.label-infield</code> component needs space to stay inside.
+          To do this, it is need to increase the input height.
+        </li>
+        <li>
+          In order for the <code>.floating-label</code> and <code>.label-infield</code> components to work properly
+          you have to set the attribute <code>id</code> of the <code>input</code> and the attribute <code>for</code>
+          of the <code>label</code>.
+        </li>
+        <li>
+            In order for the <code>.floating-label</code> component to work properly
+            you have to set the attribute attribute <code>placeholder</code> of the <code>input</code>.
+        </li>
+      </ol>
+    </div>
+    <div class="callout callout-danger">
+        <h5>Browser compatibility</h5>
+        <p>Floating labels will not work properly on IE11 and older versions.</p>
+      </div>
+  </div>
+  <!-- @@close -->

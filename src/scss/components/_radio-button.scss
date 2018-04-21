@@ -36,6 +36,7 @@
 label.radio
 {
   margin-bottom: 0;
+  text-align: left;
   @include crossbrowser-align-items(center);
   @include crossbrowser-display-inline-flex();
   @include crossbrowser-user-select(none);

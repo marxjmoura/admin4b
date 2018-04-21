@@ -1,21 +1,19 @@
-(function() {
-  window.keyboard = function(key) {
-    this.isArrowDown = function() {
-      return key === 40;
-    };
+(function () {
+  var numberRegex = /\d/;
+  var letterRegex = /[a-zA-Z]/;
 
-    this.isArrowUp = function() {
-      return key === 38;
-    };
+  window.keyboard = function (keyCode) {
+    var char = String.fromCharCode(keyCode);
 
-    this.isEnter = function() {
-      return key === 13;
+    return {
+      isArrowDown: keyCode === 40,
+      isArrowUp: keyCode === 38,
+      isBackspace: keyCode === 8,
+      isDelete: keyCode === 46 || keyCode === 63272, /* Safari */
+      isEnter: keyCode === 13,
+      isEscape: keyCode === 27,
+      isLetter: letterRegex.test(char),
+      isNumber: numberRegex.test(char)
     };
-
-    this.isEscape = function() {
-      return key === 27;
-    };
-
-    return this;
   };
 })();

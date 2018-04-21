@@ -1,14 +1,45 @@
-.js .hljs-string
+.source-code
 {
-  color: $highlight-colors-string;
+  .js .hljs-number
+  {
+    color: $highlight-light-number;
+  }
+
+  .js .hljs-string
+  {
+    color: $highlight-light-string;
+  }
+
+  .js .hljs-keyword
+  {
+    color: $highlight-light-keyword;
+  }
+
+  .js .hljs-comment
+  {
+    color: $highlight-light-comment;
+  }
 }
 
-.js .hljs-keyword
+.source-code.dark
 {
-  color: $highlight-colors-keyword;
-}
+  .js .hljs-number
+  {
+    color: $highlight-dark-number;
+  }
 
-.js .hljs-comment
-{
-  color: $highlight-colors-comment;
+  .js .hljs-string
+  {
+    color: $highlight-dark-string;
+  }
+
+  .js .hljs-keyword
+  {
+    color: $highlight-dark-keyword;
+  }
+
+  .js .hljs-comment
+  {
+    color: $highlight-dark-comment;
+  }
 }

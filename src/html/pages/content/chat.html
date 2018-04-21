@@ -1,0 +1,101 @@
+<!-- @@master = /includes/app.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item active" aria-current="page">Technical support</li>
+  </ol>
+</nav>
+<div class="chat">
+    <div class="chat-body">
+      <div class="chat-content">
+        <div class="chat-messages">
+          <div class="container-fluid">
+            <p class="text-center">
+              <small class="text-secondary">March 23, 2018</small>
+            </p>
+            <div class="message-sent">
+              <img src="@@webRoot/assets/images/john-doe.png">
+              <p>
+                Hello, there... I need some help!
+                <br><small>8:52 AM</small>
+              </p>
+            </div>
+            <p class="text-center">
+              <small class="text-secondary">Jane Doe joined the chat</small>
+            </p>
+            <div class="message-reply">
+              <img src="@@webRoot/assets/images/jane-doe.png">
+              <p>
+                Hi, John. I'm happy to help. What can I do for you today?
+                <br><small>8:54 AM</small>
+              </p>
+            </div>
+            <div class="message-sent">
+              <img src="@@webRoot/assets/images/john-doe.png">
+              <p>
+                I can't seem to pull up my order. Can you help me?
+                <br><small>9:02 AM</small>
+              </p>
+            </div>
+            <div class="message-reply">
+              <img src="@@webRoot/assets/images/jane-doe.png">
+              <p>
+                Absolutely. You can find the status of, and trak, your order here: www.app.com/orders
+                <br><small>9:03 AM</small>
+              </p>
+            </div>
+            <div class="message-sent">
+              <img src="@@webRoot/assets/images/john-doe.png">
+              <p>
+                Works great! Thank you!
+                <br><small>9:07 AM</small>
+              </p>
+            </div>
+            <div class="message-reply">
+              <img src="@@webRoot/assets/images/jane-doe.png">
+              <p>
+                I'm glad you made it! :)
+                <br><small>9:08 AM</small>
+              </p>
+            </div>
+            <div class="message-reply">
+              <img src="@@webRoot/assets/images/jane-doe.png">
+              <p>
+                Please let me know if you have any more questions.
+                <br><small>9:08 AM</small>
+              </p>
+            </div>
+            <div class="message-reply">
+              <img src="@@webRoot/assets/images/jane-doe.png">
+              <p>
+                One more thing. Do you want to see the source code?
+                <a href="#css-setup" data-toggle="collapse">
+                  Click here and take a look.
+                </a>
+                <br><small>9:10 AM</small>
+              </p>
+            </div>
+            <div class="source-code">
+              <div id="css-setup" class="sidebar-nav-group collapse">
+                <pre><code class="html">@@include('includes/code-examples/content/chat.html')</code></pre>
+              </div>
+            </div>
+            <p class="text-center">
+              <small class="text-danger">Ending conversation since you've been inactive too long.</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Write your message...">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- @@close -->

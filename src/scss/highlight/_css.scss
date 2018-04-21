@@ -1,24 +1,55 @@
-.css .hljs-keyword
+.source-code
 {
-  color: $highlight-colors-keyword;
+  .css .hljs-keyword
+  {
+    color: $highlight-light-keyword;
+  }
+
+  .css .hljs-selector-class
+  {
+    color: $highlight-light-class;
+  }
+
+  .css .hljs-attribute
+  {
+    color: $highlight-light-attribute;
+  }
+
+  .css .hljs-comment
+  {
+    color: $highlight-light-comment;
+  }
+
+  .css .hljs-number
+  {
+    color: $highlight-light-number;
+  }
 }
 
-.css .hljs-selector-class
+.source-code.dark
 {
-  color: $highlight-colors-class;
-}
+  .css .hljs-keyword
+  {
+    color: $highlight-dark-keyword;
+  }
 
-.css .hljs-attribute
-{
-  color: $highlight-colors-attribute;
-}
+  .css .hljs-selector-class
+  {
+    color: $highlight-dark-class;
+  }
 
-.css .hljs-comment
-{
-  color: $highlight-colors-comment;
-}
+  .css .hljs-attribute
+  {
+    color: $highlight-dark-attribute;
+  }
 
-.css .hljs-number
-{
-  color: $highlight-colors-number;
+  .css .hljs-comment
+  {
+    color: $highlight-dark-comment;
+  }
+
+  .css .hljs-number
+  {
+    color: $highlight-dark-number;
+  }
 }
