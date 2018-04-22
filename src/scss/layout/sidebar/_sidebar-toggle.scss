@@ -18,7 +18,7 @@
     &:before,
     &:after
     {
-      background-color: $bscolors-gray-400;
+      background-color: map-get($grays, "400");
       position: absolute;
       content: "";
       height: 2.125rem;

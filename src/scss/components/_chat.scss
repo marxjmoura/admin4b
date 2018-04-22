@@ -85,7 +85,7 @@
           p
           {
             background-color: lighten($flatuicolors-midnight-blue, 15%);
-            color: $bscolors-white;
+            color: map-get($colors, "white");
             transform-origin: top left;
           }
 
@@ -107,13 +107,13 @@
 
           p
           {
-            background-color: $bscolors-gray-400;
+            background-color: map-get($grays, "400");
             transform-origin: top right;
           }
 
           small
           {
-            color: $bscolors-gray-600;
+            color: map-get($grays, "600");
           }
         }
       }

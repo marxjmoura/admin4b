@@ -12,7 +12,7 @@
   .input-group-prepend > .input-group-text,
   .input-group-append > .input-group-text
   {
-    background-color: $bscolors-white;
+    background-color: map-get($colors, "white");
   }
 
   &.prepend
@@ -47,7 +47,7 @@
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text
     {
-      border-color: $bscolors-red;
+      border-color: map-get($colors, "red");
     }
   }
 
@@ -57,42 +57,42 @@
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text
     {
-      border-color: $bscolors-green;
+      border-color: map-get($colors, "green");
     }
   }
 
   &.focus
   {
-    @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-blue, .25));
+    @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "blue"), .25));
 
     .form-control,
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text
     {
-      border-color: lighten($bscolors-blue, 25%);
+      border-color: lighten(map-get($colors, "blue"), 25%);
     }
 
     &.is-invalid
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-red, .25));
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "red"), .25));
 
       .form-control,
       .input-group-prepend > .input-group-text,
       .input-group-append > .input-group-text
       {
-        border-color: $bscolors-red;
+        border-color: map-get($colors, "red");
       }
     }
 
     &.is-valid
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-green, .25));
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "green"), .25));
 
       .form-control,
       .input-group-prepend > .input-group-text,
       .input-group-append > .input-group-text
       {
-        border-color: $bscolors-green;
+        border-color: map-get($colors, "green");
       }
     }
   }
@@ -104,7 +104,7 @@
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text
     {
-      background: $bscolors-gray-200;
+      background: map-get($grays, "200");
     }
   }
 }

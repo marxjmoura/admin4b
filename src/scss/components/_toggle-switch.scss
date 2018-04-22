@@ -71,7 +71,7 @@ label.switch
 
     + .switch-slider
     {
-      background: $bscolors-gray-400;
+      background: map-get($grays, "400");
       cursor: pointer;
       display: block;
       height: 2rem;
@@ -101,7 +101,7 @@ label.switch
       &:after
       {
         left: 0;
-        background: $bscolors-white;
+        background: map-get($colors, "white");
         @include crossbrowser-border-radius(50%);
         @include crossbrowser-box-shadow(none);
         @include crossbrowser-transition(all .2s ease);
@@ -115,13 +115,13 @@ label.switch
 
     &:disabled + .switch-slider
     {
-      background: lighten($bscolors-gray-400, 5%);
+      background: lighten(map-get($grays, "400"), 5%);
       cursor: not-allowed;
     }
 
     &:focus + .switch-slider
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-gray-400, .25));
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "400"), .25));
     }
   }
 
@@ -156,14 +156,14 @@ label.switch
   }
 }
 
-@include switch-color(danger, $bscolors-red);
-@include switch-color(info, $bscolors-cyan);
-@include switch-color(primary, $bscolors-blue);
-@include switch-color(success, $bscolors-green);
-@include switch-color(warning, $bscolors-yellow);
+@include switch-color(danger, map-get($theme-colors, "danger"));
+@include switch-color(info, map-get($theme-colors, "info"));
+@include switch-color(primary, map-get($theme-colors, "primary"));
+@include switch-color(success, map-get($theme-colors, "success"));
+@include switch-color(warning, map-get($theme-colors, "warning"));
 
-@include switch-to-color(danger, $bscolors-red);
-@include switch-to-color(info, $bscolors-cyan);
-@include switch-to-color(primary, $bscolors-blue);
-@include switch-to-color(success, $bscolors-green);
-@include switch-to-color(warning, $bscolors-yellow);
+@include switch-to-color(danger, map-get($theme-colors, "danger"));
+@include switch-to-color(info, map-get($theme-colors, "info"));
+@include switch-to-color(primary, map-get($theme-colors, "primary"));
+@include switch-to-color(success, map-get($theme-colors, "success"));
+@include switch-to-color(warning, map-get($theme-colors, "warning"));

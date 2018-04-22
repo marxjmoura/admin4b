@@ -1,25 +1,25 @@
 @include sidebar-color("light", (
-  "background": $bscolors-white,
-  "btn-close": darken($bscolors-gray-400, 7%),
+  "background": map-get($colors, "white"),
+  "btn-close": darken(map-get($grays, "400"), 7%),
   "scrollbar": (
-    "color": $bscolors-blue,
-    "background": $bscolors-gray-100
+    "color": map-get($colors, "blue"),
+    "background": map-get($grays, "100")
   ),
   "user": (
-    "img-background": $bscolors-gray-100,
-    "img-border": $bscolors-gray-200,
-    "color": $bscolors-gray-700
+    "img-background": map-get($grays, "100"),
+    "img-border": map-get($grays, "200"),
+    "color": map-get($grays, "700")
   ),
   "nav-link-level-1": (
-    "color": lighten($bscolors-gray-700, 10%),
-    "color-hover":  $bscolors-blue
+    "color": lighten(map-get($grays, "700"), 10%),
+    "color-hover": map-get($colors, "blue")
   ),
   "nav-link-level-2": (
-    "color": lighten($bscolors-gray-700, 10%),
-    "color-hover": $bscolors-blue
+    "color": lighten(map-get($grays, "700"), 10%),
+    "color-hover": map-get($colors, "blue")
   ),
   "nav-footer-link": (
-    "color": $bscolors-gray-500,
-    "color-hover": $bscolors-blue
+    "color": map-get($grays, "500"),
+    "color-hover": map-get($colors, "blue")
   )
 ));

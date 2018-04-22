@@ -43,7 +43,7 @@ body
 
         .app-sidebar
         {
-            background: $bscolors-white;
+            background: map-get($colors, "white");
             float: left;
             font-size: 0.95rem;
             overflow-x: hidden;
@@ -54,13 +54,13 @@ body
 
             &::-webkit-scrollbar
             {
-                background-color: $bscolors-gray-300;
+                background-color: map-get($grays, "300");
                 width: .2rem;
             }
 
             &::-webkit-scrollbar-thumb
             {
-                background-color: $bscolors-blue;
+                background-color: map-get($colors, "blue");
             }
 
             @include bsmedia-down-to-sm

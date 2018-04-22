@@ -55,8 +55,8 @@ label.checkbox
 
     + .check-mark
     {
-      background-color: $bscolors-white;
-      border: .0625rem solid $bscolors-gray-500;
+      background-color: map-get($colors, "white");
+      border: .0625rem solid map-get($grays, "500");
       cursor: pointer;
       height: 1.25rem;
       width: 1.25rem;
@@ -74,7 +74,7 @@ label.checkbox
         top: .1875rem;
         width: .375rem;
         height: .625rem;
-        border: solid $bscolors-white;
+        border: solid map-get($colors, "white");
         border-width: 0 .125rem .125rem 0;
         @include crossbrowser-transform(rotate(45deg));
       }
@@ -82,12 +82,12 @@ label.checkbox
 
     &:focus + .check-mark
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($bscolors-gray-500, .25));
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "500"), .25));
     }
 
     &:checked + .check-mark
     {
-      background: $bscolors-gray-500;
+      background: map-get($grays, "500");
 
       &:after
       {
@@ -141,8 +141,8 @@ label.checkbox
   }
 }
 
-@include checkbox-color(danger, $bscolors-red);
-@include checkbox-color(info, $bscolors-cyan);
-@include checkbox-color(primary, $bscolors-blue);
-@include checkbox-color(success, $bscolors-green);
-@include checkbox-color(warning, $bscolors-yellow);
+@include checkbox-color(danger, map-get($theme-colors, "danger"));
+@include checkbox-color(info, map-get($theme-colors, "info"));
+@include checkbox-color(primary, map-get($theme-colors, "primary"));
+@include checkbox-color(success, map-get($theme-colors, "success"));
+@include checkbox-color(warning, map-get($theme-colors, "warning"));

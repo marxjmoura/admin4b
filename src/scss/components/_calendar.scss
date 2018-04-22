@@ -46,8 +46,8 @@
         .btn.dropdown-toggle
         {
           border: none;
-          background: $bscolors-white;
-          color: $bscolors-gray-700;
+          background: map-get($colors, "white");
+          color: map-get($grays, "700");
           @include crossbrowser-box-shadow(none);
 
           &::after
@@ -79,18 +79,18 @@ table.table-calendar
 
     &:first-child
     {
-      color: $bscolors-red;
+      color: map-get($colors, "red");
     }
   }
 
   td
   {
-    color: $bscolors-gray-500;
+    color: map-get($grays, "500");
     padding: .3125rem;
 
     a
     {
-      color: $bscolors-gray-700;
+      color: map-get($grays, "700");
       display: block;
       position: relative;
       text-align: center;
@@ -99,7 +99,7 @@ table.table-calendar
 
       &::before
       {
-        border: .0625rem solid $bscolors-blue;
+        border: .0625rem solid map-get($colors, "blue");
         content: " ";
         display: none;
         position: absolute;
@@ -114,11 +114,11 @@ table.table-calendar
       &:hover,
       &.active
       {
-        color: $bscolors-white !important;
+        color: map-get($colors, "white") !important;
 
         &::before
         {
-          background: $bscolors-blue;
+          background: map-get($colors, "blue");
           display: block;
         }
       }
@@ -130,7 +130,7 @@ table.table-calendar
 
       &.sunday
       {
-        color: $bscolors-red;
+        color: map-get($colors, "red");
       }
     }
   }
