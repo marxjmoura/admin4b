@@ -22,10 +22,14 @@
     backface-visibility: $visibility;
 }
 
-@mixin crossbrowser-background-gradient($gradient...)
+@mixin crossbrowser-linear-gradient($gradient...)
 {
-    background: -webkit-linear-gradient($gradient);
-    background: linear-gradient($gradient);
+    background: nth($gradient, 1);
+    background-image: -webkit-linear-gradient(top, $gradient);
+    background-image: -moz-linear-gradient(top, $gradient);
+    background-image: -ms-linear-gradient(top, $gradient);
+    background-image: -o-linear-gradient(top, $gradient);
+    background-image: linear-gradient(top, $gradient);
 }
 
 @mixin crossbrowser-border-radius($radius)

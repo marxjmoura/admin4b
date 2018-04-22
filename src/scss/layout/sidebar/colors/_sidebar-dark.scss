@@ -1,16 +1,25 @@
 @include sidebar-color("dark", (
-  "sidebar-bg-color": $flatuicolors-wet-asphalt,
-  "sidebar-btn-close-color": lighten($flatuicolors-wet-asphalt, 40%),
-  "sidebar-scrollbar": $bscolors-cyan,
-  "sidebar-scrollbar-bg": darken($flatuicolors-wet-asphalt, 2.5%),
-  "username-img-bg": darken($flatuicolors-wet-asphalt, 5%),
-  "username-img-border": $bscolors-cyan,
-  "username-text-color": lighten($flatuicolors-wet-asphalt, 50%),
-  "nav-group-active-bg-color": darken($flatuicolors-wet-asphalt, 6%),
-  "nav-link-level-1-color": lighten($flatuicolors-wet-asphalt, 60%),
-  "nav-link-level-1-hover": darken($flatuicolors-wet-asphalt, 6%),
-  "nav-link-level-2-color": lighten($flatuicolors-wet-asphalt, 40%),
-  "nav-link-level-2-hover": $bscolors-cyan,
-  "nav-footer-link-color": lighten($flatuicolors-wet-asphalt, 25%),
-  "nav-footer-link-hover": $bscolors-white
+  "background": $flatuicolors-wet-asphalt,
+  "btn-close": lighten($flatuicolors-wet-asphalt, 40%),
+  "scrollbar": (
+    "color": $bscolors-cyan,
+    "background": darken($flatuicolors-wet-asphalt, 2.5%)
+  ),
+  "user": (
+    "img-background": darken($flatuicolors-wet-asphalt, 5%),
+    "img-border": rgba($bscolors-cyan, .5),
+    "color": lighten($flatuicolors-wet-asphalt, 50%)
+  ),
+  "nav-link-level-1": (
+    "color": lighten($flatuicolors-wet-asphalt, 40%),
+    "color-hover": lighten($flatuicolors-wet-asphalt, 60%)
+  ),
+  "nav-link-level-2": (
+    "color": lighten($flatuicolors-wet-asphalt, 40%),
+    "color-hover": $bscolors-cyan
+  ),
+  "nav-footer-link": (
+    "color": lighten($flatuicolors-wet-asphalt, 25%),
+    "color-hover": $bscolors-white
+  )
 ));

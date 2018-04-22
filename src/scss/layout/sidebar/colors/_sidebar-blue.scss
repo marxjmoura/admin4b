@@ -1,0 +1,25 @@
+@include sidebar-color("blue", (
+  "background": linear-gradient($bscolors-blue, $flatuicolors-peter-river),
+  "btn-close": lighten($flatuicolors-peter-river, 25%),
+  "scrollbar": (
+    "color": lighten($flatuicolors-peter-river, 40%),
+    "background": $flatuicolors-peter-river
+  ),
+  "user": (
+    "img-background": $bscolors-gray-200,
+    "img-border": rgba($bscolors-white, .2),
+    "color": lighten($flatuicolors-peter-river, 35%)
+  ),
+  "nav-link-level-1": (
+    "color": lighten($flatuicolors-peter-river, 35%),
+    "color-hover": $bscolors-white
+  ),
+  "nav-link-level-2": (
+    "color": lighten($flatuicolors-peter-river, 30%),
+    "color-hover": $bscolors-white
+  ),
+  "nav-footer-link": (
+    "color": lighten($flatuicolors-peter-river, 20%),
+    "color-hover": $bscolors-white
+  )
+));

@@ -5,9 +5,9 @@
 
     .user-photo
     {
-        border: 0.125rem solid transparent;
         height: 4.5rem;
-        padding: .125rem;
+        margin: .25rem 0;
+        padding: .2rem;
         width: 4.5rem;
         @include crossbrowser-border-radius(50%);
     }
