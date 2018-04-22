@@ -19,7 +19,9 @@
     "build-sass": "gulp build-sass",
     "build": "gulp build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.1.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

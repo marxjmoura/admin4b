@@ -14,7 +14,7 @@ gulp.task('build-sass', () => {
 });
 
 gulp.task('build-js', () => {
-    gulp.src(['src/js/**/*.js', 'src/js/init.js'])
+    gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'src/js/**/*.js', 'src/js/init.js'])
         .pipe(concat('admin4b.js'))
         .pipe(uglify().on('error', (e) => console.log(e)))
         .pipe(rename({ extname: '.min.js' }))
