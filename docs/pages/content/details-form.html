@@ -63,7 +63,6 @@
       </a>
       <div id="content" class="sidebar-nav-group collapse">
         <a href="../../pages/content/blank-page.html" class="sidebar-nav-link">Blank page</a>
-        <a href="../../pages/content/details-page.html" class="sidebar-nav-link">Details page</a>
         <a href="../../pages/content/error-page.html" class="sidebar-nav-link">Error page</a>
         <a href="../../pages/content/dashboard.html" class="sidebar-nav-link">Dashboard</a>
         <a href="../../pages/content/timeline.html" class="sidebar-nav-link">Timeline</a>
@@ -156,212 +155,98 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Device controls</li>
-    <li class="breadcrumb-item active" aria-current="page">File manager</li>
+    <li class="breadcrumb-item">Forms</li>
+    <li class="breadcrumb-item active" aria-current="page">Basic form</li>
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>File manager</h2>
+  <h2>
+    Basic form
+  </h2>
   <p>
-    The file manager is a component that conect to the device's storage and allow users to select files to submit.
-    See the example below:
+    The template uses the components and validations of the
+    <a href="https://getbootstrap.com/docs/4.0/components/forms/">bootstrap form</a>.
+    Also, the template includes the validation class <code>.has-error</code>.
   </p>
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
-      <i class="fa fa-folder-open-o"></i> Select a file
-    </button>
-    <small class="text-secondary">Only .jpeg and .png and maximum 1MB.</small>
+  <div class="callout callout-info">
+    <p>By design <code>.has-error</code> class is applicable only for <code>.form-group</code>.</p>
   </div>
-  <div class="table-responsive">
-    <table class="table">
-      <tr>
-        <th>Filename</th>
-        <th>Size</th>
-      </tr>
-      <tr id="file-data" class="d-none">
-        <td class="align-middle">
-          <img id="file-preview" class="rounded d-none" width="64">
-          <span id="file-name"></span>
-          <i id="is-invalid" class="fa fa-times-circle text-danger d-none"></i>
-          <i id="is-valid" class="fa fa-check-circle text-success d-none"></i>
-        </td>
-        <td class="align-middle">
-          <span id="file-size"></span>
-        </td>
-      </tr>
-      <tr id="file-empty">
-        <td colspan="2" class="text-secondary">
-          No file selected.
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="source-code">
-    <a href="#file-manager" data-toggle="collapse">
-      <i class="fa fa-code"></i> Source code
-    </a>
-    <div id="file-manager" class="collapse">
-      <div class="nav nav-tabs">
-        <a href="#file-manager-html" class="active" data-toggle="tab">HTML</a>
-        <a href="#file-manager-js" data-toggle="tab">JavaScript</a>
+  <h3>
+    Example
+  </h3>
+  <div class="row">
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="form-group has-error">
+        <label>Name</label>
+        <input type="text" class="form-control">
+        <small class="text-danger">Field name is required.</small>
       </div>
-      <div class="tab-content">
-        <div id="file-manager-html" class="tab-pane active">
-          <pre><code class="html">&lt;div class="form-group"&gt;
-  &lt;button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png"&gt;
-    &lt;i class="fa fa-folder-open-o"&gt;&lt;/i&gt; Select a file
-  &lt;/button&gt;
-  &lt;small class="text-secondary"&gt;Only .jpeg and .png and maximum 1MB.&lt;/small&gt;
-&lt;/div&gt;
-&lt;div class="table-responsive"&gt;
-  &lt;table class="table"&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Filename&lt;/th&gt;
-      &lt;th&gt;Size&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr id="file-data" class="d-none"&gt;
-      &lt;td class="align-middle"&gt;
-        &lt;img id="file-preview" class="rounded d-none" width="64"&gt;
-        &lt;span id="file-name"&gt;&lt;/span&gt;
-        &lt;i id="is-invalid" class="fa fa-times-circle text-danger d-none"&gt;&lt;/i&gt;
-        &lt;i id="is-valid" class="fa fa-check-circle text-success d-none"&gt;&lt;/i&gt;
-      &lt;/td&gt;
-      &lt;td class="align-middle"&gt;
-        &lt;span id="file-size"&gt;&lt;/span&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr id="file-empty"&gt;
-      &lt;td colspan="2" class="text-secondary"&gt;
-        No file selected.
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-</code></pre>
-        </div>
-        <div id="file-manager-js" class="tab-pane">
-          <pre><code class="js">$('[data-toggle="file-manager"]').on('file:change', function (e, file) {
-  $('#file-name').text(file.name);
-  $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
-  $('#is-invalid').toggleClass('d-none', !file.errors.length);
-  $('#is-valid').toggleClass('d-none', !!file.errors.length);
-
-  if (file.type.startsWith('image')) {
-    $('#preview').attr('src', file.dataURL).removeClass('d-none');
-  } else {
-    $('#preview').removeAttr('src').addClass('d-none');
-  }
-
-  $('#file-empty').addClass('d-none');
-  $('#file-data').removeClass('d-none');
-});
-</code></pre>
-        </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="form-group has-error">
+        <label>Email</label>
+        <input type="text" class="form-control">
+        <small class="text-danger">Field email is invalid.</small>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-4">
+      <div class="form-group">
+        <label>
+          Company <small class="text-secondary">(optional)</small>
+        </label>
+        <input type="text" class="form-control">
       </div>
     </div>
   </div>
-  <h3>File validation</h3>
-  <p>
-    The file manager has an built-in validation configured by attribute options:
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Validation</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap">
-            <code>data-maxsize</code>
-          </td>
-          <td>
-            Validates the size of the file. You can also define the size unit e.g., 1024B, 100KB, 2.4MB, 5GB.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-nowrap">
-            <code>data-type</code>
-          </td>
-          <td>
-            Validates the type of the file. You need to use MIME types for validation e.g.,
-            <code>image/png</code>, <code>application/pdf</code>. Use comma for separate multiple MIME types.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="form-group">
+    <label>Message</label>
+    <textarea rows="3" class="form-control"></textarea>
+    <small class="text-secondary">Maximum of 255 characters.</small>
   </div>
-  <div class="callout callout-warning">
-    <h5>Warranties</h5>
-    <p>Wrong values for <code>data-maxsize</code> or <code>data-type</code> will result in invalid file after validation.</p>
-  </div>
-  <h3>Events</h3>
-  <p>
-    Events can be used by developer to interact with the component and write custom logic.
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Who fires</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>file:change</code></td>
-          <td>Component</td>
-          <td>Triggered when the user selects a file.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p>
-    After the file selection a few properties are added to the file by the component:
-  </p>
-  <div class="table-responsive">
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th>Property</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>dataURL</code></td>
-          <td>Base64 data URL.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>errors</code></td>
-          <td>
-            File errors after validation:
-            <ul class="mb-0">
-              <li><code>maxsize</code>: The file exceeded the allowed maximum size.</li>
-              <li><code>type</code>: The selected file type is not allowed.</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="form-group">
+    <button class="btn btn-success">
+      Send message
+    </button>
   </div>
   <div class="source-code">
-    <a href="#css-setup" data-toggle="collapse">
+    <a href="#basic-form" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="css-setup" class="sidebar-nav-group collapse">
-      <pre><code class="js">$('[data-toggle="file-manager"]').on('file:change', function (e, file) {
-  // file.dataURL is loaded by the component
-  console.log('Base64 URL: ', file.dataURL);
-
-  // file.errors is binded by the component after validation
-  if (file.errors.length) {
-    console.log('File errors: ', file.errors);
-  }
-});
+    <div id="basic-form" class="collapse">
+      <pre><code class="html">&lt;div class="row"&gt;
+  &lt;div class="col col-md-4 col-lg-4"&gt;
+    &lt;div class="form-group has-error"&gt;
+      &lt;label&gt;Name&lt;/label&gt;
+      &lt;input type="text" class="form-control"&gt;
+      &lt;small class="text-danger"&gt;Field name is required.&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col col-md-4 col-lg-4"&gt;
+    &lt;div class="form-group has-error"&gt;
+      &lt;label&gt;Email&lt;/label&gt;
+      &lt;input type="text" class="form-control"&gt;
+      &lt;small class="text-danger"&gt;Field email is invalid.&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col col-md-4 col-lg-4"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label&gt;
+        Company &lt;small class="text-secondary"&gt;(optional)&lt;/small&gt;
+      &lt;/label&gt;
+      &lt;input type="text" class="form-control"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label&gt;Message&lt;/label&gt;
+  &lt;textarea rows="3" class="form-control"&gt;&lt;/textarea&gt;
+  &lt;small class="text-secondary"&gt;Maximum of 255 characters.&lt;/small&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;button class="btn btn-success"&gt;
+    Send message
+  &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
   </div>
