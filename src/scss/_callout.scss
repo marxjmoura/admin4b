@@ -1,8 +1,9 @@
 .callout
 {
+  background: map-get($grays, "100");
   padding: 1.25rem;
   margin-bottom: 1rem;
-  border: .0625rem solid #eee;
+  border: .0625rem solid map-get($grays, "400");
   border-left-width: .25rem;
   @include crossbrowser-border-radius(.25rem);
 
@@ -31,31 +32,31 @@
 
   &.callout-info
   {
-    border-left-color: #5bc0de;
+    border-left-color: map-get($theme-colors, "info");
 
     h4
     {
-      color: #5bc0de;
+      color: map-get($theme-colors, "info");
     }
   }
 
   &.callout-warning
   {
-    border-left-color: #f0ad4e;
+    border-left-color: map-get($theme-colors, "warning");
 
     h4
     {
-      color: #f0ad4e;
+      color: map-get($theme-colors, "warning");
     }
   }
 
   &.callout-danger
   {
-    border-left-color: #d9534f;
+    border-left-color: map-get($theme-colors, "danger");
 
     h4
     {
-      color: #d9534f;
+      color: map-get($theme-colors, "danger");
     }
   }
 }
