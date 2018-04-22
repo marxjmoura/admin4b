@@ -3,9 +3,20 @@
     overflow: hidden;
     padding: 0;
 
-    .sidebar-nav-group .sidebar-nav-group .sidebar-nav-link
+    .sidebar-nav-group .sidebar-nav-link
     {
         padding: .375rem 3.75rem .625rem;
+    }
+
+    .sidebar-nav-btn
+    {
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+
+        .btn
+        {
+            @include crossbrowser-box-shadow(none);
+        }
     }
 
     .sidebar-nav-link
