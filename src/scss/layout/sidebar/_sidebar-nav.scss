@@ -44,4 +44,21 @@
             @include crossbrowser-transition(color .25s ease-out);
         }
     }
+
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+        &::after
+        {
+            content: "\f105";
+            font-family: "FontAwesome";
+            float: right;
+            margin-top: .0625rem;
+            @include crossbrowser-transition(transform .25s);
+        }
+
+        &[aria-expanded=true]::after
+        {
+            @include crossbrowser-transform(rotate(90deg));
+        }
+    }
 }
