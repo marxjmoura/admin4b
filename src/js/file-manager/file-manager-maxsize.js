@@ -7,7 +7,7 @@
     return Number(size) * Math.pow(1024, exponentOf[unit]);
   }
 
-  $.fn.fileManager.validate.maxsize = function (file, maxsize) {
+  $.fn.fileManager.maxsize = function (file, maxsize) {
     if (!maxsize) return true;
     if (!maxsize.match(regex)) return false;
 

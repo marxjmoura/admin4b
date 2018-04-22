@@ -1,6 +1,6 @@
 (function ($) {
 
-  $.fn.fileManager.validate.type = function (file, type) {
+  $.fn.fileManager.type = function (file, type) {
     if (!type) return true;
 
     var pattern = '^' + type.replaceAll(',', '|') + '$';

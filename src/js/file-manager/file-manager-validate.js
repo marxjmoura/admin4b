@@ -6,11 +6,11 @@
 
     file.errors = [];
 
-    if (!$.fn.fileManager.validate.maxsize(file, maxsize)) {
+    if (!$.fn.fileManager.maxsize(file, maxsize)) {
       file.errors.push('maxsize');
     }
 
-    if (!$.fn.fileManager.validate.type(file, type)) {
+    if (!$.fn.fileManager.type(file, type)) {
       file.errors.push('type');
     }
   };

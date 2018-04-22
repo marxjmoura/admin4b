@@ -1,4 +1,5 @@
-(function () {
+(function ($) {
+
   var delay = 700;
 
   $.fn.typing = function () {
@@ -15,4 +16,5 @@
       });
     });
   };
-})();
+
+})(jQuery);

@@ -1,4 +1,5 @@
-(function() {
+(function($) {
+
   $.fn.onFocusOut = function(callback) {
     return this.each(function () {
       var $document = $(document);
@@ -20,4 +21,5 @@
       $document.find('a').on('focus', focusOut);
     });
   };
-})();
+
+})(jQuery);
