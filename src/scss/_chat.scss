@@ -16,7 +16,7 @@
   padding: 0;
   width: 100%;
 
-  &.chat-on /* Set by JS after calculate the remaining height */
+  &.chat-on // Set by JS after calculate the remaining height
   {
     display: table;
   }
@@ -84,14 +84,14 @@
 
           p
           {
-            background-color: lighten($flatuicolors-midnight-blue, 15%);
+            background-color: lighten(map-get($flatuicolors, "midnight-blue"), 15%);
             color: map-get($colors, "white");
             transform-origin: top left;
           }
 
           small
           {
-            color: lighten($flatuicolors-midnight-blue, 50%);
+            color: lighten(map-get($flatuicolors, "midnight-blue"), 50%);
           }
         }
 

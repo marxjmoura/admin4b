@@ -4,37 +4,24 @@
  * Licensed under MIT (https://github.com/marxjmoura/admin4b/blob/master/LICENSE)
  */
 
+@import 'variables';
+@import 'mixins';
+
 @import 'node_modules/bootstrap/scss/bootstrap';
 
-@import 'utilities/bs-media';
-@import 'utilities/cross-browser';
-
-@import 'palette/flat-ui-colors';
-
-@import 'layout/app';
-@import 'layout/sidebar/animations/sidebar-fade';
-@import 'layout/sidebar/animations/sidebar-slide-left';
-@import 'layout/sidebar/colors/sidebar-color';
-@import 'layout/sidebar/colors/sidebar-blue';
-@import 'layout/sidebar/colors/sidebar-dark';
-@import 'layout/sidebar/colors/sidebar-light';
-@import 'layout/sidebar/sidebar-toggle';
-@import 'layout/sidebar/sidebar-header';
-@import 'layout/sidebar/sidebar-nav';
-@import 'layout/sidebar/sidebar-footer';
-@import 'layout/sign/form-sign';
-@import 'layout/sign/page-sign';
-
-@import 'components/breadcrumb';
-@import 'components/calendar';
-@import 'components/camera';
-@import 'components/chat';
-@import 'components/label';
-@import 'components/callout';
-@import 'components/checkbox';
-@import 'components/form-group';
-@import 'components/input-group';
-@import 'components/input-suggestion';
-@import 'components/radio-button';
-@import 'components/spinner';
-@import 'components/toggle-switch';
+@import 'app';
+@import 'calendar';
+@import 'camera';
+@import 'chat';
+@import 'label';
+@import 'callout';
+@import 'checkbox';
+@import 'form-group';
+@import 'input-group';
+@import 'input-suggestion';
+@import 'radio-button';
+@import 'sidebar';
+@import 'sign';
+@import 'source-code';
+@import 'spinner';
+@import 'toggle-switch';

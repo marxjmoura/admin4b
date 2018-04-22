@@ -1,0 +1,199 @@
+.app .app-body .app-sidebar
+{
+  .sidebar-header
+  {
+    padding: 0 1.25rem;
+    text-align: center;
+
+    .user-photo
+    {
+      border: 1px solid transparent;
+      height: 4.5rem;
+      margin: .25rem 0;
+      padding: .2rem;
+      width: 4.5rem;
+      @include crossbrowser-border-radius(50%);
+    }
+
+    .username
+    {
+      padding: .625rem 0;
+      white-space: nowrap;
+
+      small
+      {
+        display: block;
+        padding-top: .25rem;
+        @include crossbrowser-opacity(.75);
+      }
+    }
+  }
+
+  .sidebar-nav
+  {
+    overflow: hidden;
+    padding: 0;
+
+    .sidebar-nav-group .sidebar-nav-link
+    {
+      padding: .375rem 3.75rem .625rem;
+    }
+
+    .sidebar-nav-btn
+    {
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+
+      .btn
+      {
+        @include crossbrowser-box-shadow(none);
+      }
+    }
+
+    .sidebar-nav-link
+    {
+      display: block;
+      outline: none;
+      text-decoration: none;
+      white-space: nowrap;
+      @include crossbrowser-transition(color .25s ease-out);
+    }
+
+    > .sidebar-nav-link,
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+      border: none;
+      font-weight: 400;
+      padding: .95rem 1.5rem;
+      white-space: nowrap;
+      @include crossbrowser-transition(background-color .25s ease-out);
+
+      i
+      {
+        font-size: 1rem;
+        padding-right: 1rem;
+        @include crossbrowser-transition(color .25s ease-out);
+      }
+    }
+
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+      &::after
+      {
+        content: "\f105";
+        font-family: "FontAwesome";
+        float: right;
+        margin-top: .0625rem;
+        @include crossbrowser-transition(transform .25s);
+      }
+
+      &[aria-expanded=true]::after
+      {
+        @include crossbrowser-transform(rotate(90deg));
+      }
+    }
+  }
+
+  .sidebar-footer
+  {
+    margin: 1.5rem 0;
+    text-align: center;
+    white-space: nowrap;
+
+    a
+    {
+      font-size: 1.4rem;
+      outline: none;
+      padding: 0 .625rem;
+      text-decoration: none;
+      @include crossbrowser-transition(color .25s ease-out);
+    }
+  }
+
+  &.sidebar-fade
+  {
+    @include crossbrowser-transition(opacity .3s linear, visibility .3s);
+
+    @include breakpoint-down-to-sm
+    {
+      width: 100%;
+      @include crossbrowser-opacity(0);
+      @include crossbrowser-visibility(hidden);
+
+      &.sidebar-open
+      {
+        @include crossbrowser-opacity(1);
+        @include crossbrowser-visibility(visible);
+      }
+    }
+  }
+
+  &.sidebar-slide-left
+  {
+    @include crossbrowser-transition(width .3s);
+  }
+}
+
+.btn-sidebar
+{
+  background: transparent;
+  font-size: 1.4rem;
+  margin-right: .3125rem;
+
+  @include breakpoint-up-to-md
+  {
+    display: none;
+  }
+
+  .x
+  {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+
+    &:before,
+    &:after
+    {
+      background-color: map-get($grays, "400");
+      position: absolute;
+      content: "";
+      height: 2.125rem;
+      width: .125rem;
+    }
+
+    &:before
+    {
+      transform: rotate(45deg);
+    }
+    &:after
+    {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@include sidebar-color("primary", (
+  "background": linear-gradient(map-get($colors, "blue"), map-get($flatuicolors, "peter-river")),
+  "btn-close": lighten(map-get($flatuicolors, "peter-river"), 25%),
+  "scrollbar": (
+    "color": lighten(map-get($flatuicolors, "peter-river"), 40%),
+    "background": map-get($flatuicolors, "peter-river")
+  ),
+  "user": (
+    "img-background": map-get($grays, "200"),
+    "img-border": rgba(map-get($colors, "white"), .2),
+    "color": lighten(map-get($flatuicolors, "peter-river"), 35%)
+  ),
+  "nav-link-level-1": (
+    "color": lighten(map-get($flatuicolors, "peter-river"), 35%),
+    "color-hover": map-get($colors, "white")
+  ),
+  "nav-link-level-2": (
+    "color": lighten(map-get($flatuicolors, "peter-river"), 30%),
+    "color-hover": map-get($colors, "white")
+  ),
+  "nav-footer-link": (
+    "color": lighten(map-get($flatuicolors, "peter-river"), 20%),
+    "color-hover": map-get($colors, "white")
+  )
+));

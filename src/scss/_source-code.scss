@@ -1,0 +1,138 @@
+.source-code
+{
+  margin-bottom: 1rem;
+
+  .nav-tabs a
+  {
+    color: $source-code-link;
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .75rem;
+    padding-bottom: 0;
+    @include crossbrowser-transition(color .2s ease);
+
+    &.active,
+    &:active,
+    &:hover
+    {
+      color: darken($source-code-link, 30%);
+    }
+  }
+
+  pre,
+  .nav-tabs
+  {
+    background: $source-code-bg;
+    border: none;
+  }
+
+  pre
+  {
+    margin: 0;
+    overflow-x: auto;
+    padding: .75rem;
+  }
+
+  .html
+  {
+    .hljs-meta
+    {
+      color: map-get($code-highlight, "namespace");
+    }
+
+    .hljs-section,
+    .hljs-tag
+    {
+      color: map-get($code-highlight, "keyword");
+    }
+
+    .hljs-tag .hljs-attr
+    {
+      color: map-get($code-highlight, "attribute");
+    }
+
+    .hljs-tag .hljs-string
+    {
+      color: map-get($code-highlight, "string");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($code-highlight, "comment");
+    }
+  }
+
+  .css
+  {
+    .hljs-keyword
+    {
+      color: map-get($code-highlight, "keyword");
+    }
+
+    .hljs-selector-class
+    {
+      color: map-get($code-highlight, "class");
+    }
+
+    .hljs-attribute
+    {
+      color: map-get($code-highlight, "attribute");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($code-highlight, "comment");
+    }
+
+    .hljs-number
+    {
+      color: map-get($code-highlight, "number");
+    }
+  }
+
+  .js
+  {
+    .hljs-number
+    {
+      color: map-get($code-highlight, "number");
+    }
+
+    .hljs-string
+    {
+      color: map-get($code-highlight, "string");
+    }
+
+    .hljs-keyword
+    {
+      color: map-get($code-highlight, "keyword");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($code-highlight, "comment");
+    }
+  }
+
+  .json
+  {
+    .hljs-attr
+    {
+      color: map-get($code-highlight, "attribute");
+    }
+
+    .hljs-string
+    {
+      color: map-get($code-highlight, "string");
+    }
+
+    .hljs-literal,
+    {
+      color: map-get($code-highlight, "keyword");
+    }
+
+    .hljs-number
+    {
+      color: map-get($code-highlight, "number");
+    }
+  }
+}

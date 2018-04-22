@@ -1,0 +1,20 @@
+.page-sign
+{
+  justify-content: center;
+  padding-top: 2.45rem;
+  padding-bottom: 2.45rem;
+  @include crossbrowser-align-items(center);
+
+  .form-sign
+  {
+    width: 100%;
+    max-width: 26.25rem;
+    padding: .95rem;
+    margin: 0 auto;
+
+    hr
+    {
+      width: 5rem;
+    }
+  }
+}

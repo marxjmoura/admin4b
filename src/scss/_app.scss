@@ -1,6 +1,5 @@
 html, body
 {
-    background: #e9ecef;
     width: 100%;
     height: 100%;
 }
@@ -63,7 +62,7 @@ body
                 background-color: map-get($colors, "blue");
             }
 
-            @include bsmedia-down-to-sm
+            @include breakpoint-down-to-sm
             {
                 position: absolute;
                 top: 0;
