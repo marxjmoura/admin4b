@@ -42,7 +42,7 @@
         position: relative;
         overflow: auto;
 
-        .container-fluid /* Correct height for IE and Firefox */
+        .container-fluid // Correct height for IE and Firefox
         {
           position: absolute;
           top: 0;
@@ -84,14 +84,14 @@
 
           p
           {
-            background-color: lighten(map-get($flatuicolors, "midnight-blue"), 15%);
+            background-color: map-get($theme-colors, "primary");
             color: map-get($colors, "white");
             transform-origin: top left;
           }
 
           small
           {
-            color: lighten(map-get($flatuicolors, "midnight-blue"), 50%);
+            color: lighten(map-get($theme-colors, "primary"), 35%);
           }
         }
 
@@ -107,7 +107,7 @@
 
           p
           {
-            background-color: map-get($grays, "400");
+            background-color: lighten(map-get($grays, "500"), 15%);
             transform-origin: top right;
           }
 
