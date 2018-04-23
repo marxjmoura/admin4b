@@ -1,5 +1,7 @@
 .app .app-body .app-sidebar
 {
+  @include crossbrowser-linear-gradient($sidebar-background);
+
   .sidebar-header
   {
     padding: 0 1.25rem;
@@ -7,6 +9,8 @@
 
     .user-photo
     {
+      background-color: $sidebar-header-img-bg;
+      box-shadow: 0 0 0 .5rem $sidebar-header-img-border;
       border: 1px solid transparent;
       height: 4.5rem;
       margin: .25rem 0;
@@ -17,6 +21,7 @@
 
     .username
     {
+      color: $sidebar-header-color;
       padding: .625rem 0;
       white-space: nowrap;
 
@@ -34,11 +39,6 @@
     overflow: hidden;
     padding: 0;
 
-    .sidebar-nav-group .sidebar-nav-link
-    {
-      padding: .375rem 3.75rem .625rem;
-    }
-
     .sidebar-nav-btn
     {
       padding: 0 1.5rem;
@@ -52,6 +52,7 @@
 
     .sidebar-nav-link
     {
+      color: $sidebar-nav-link-level-2;
       display: block;
       outline: none;
       text-decoration: none;
@@ -59,14 +60,40 @@
       @include crossbrowser-transition(color .25s ease-out);
     }
 
+    .sidebar-nav-group .sidebar-nav-link
+    {
+      padding: .375rem 3.75rem .625rem;
+
+      &:active,
+      &:focus,
+      &:hover
+      {
+        color: $sidebar-nav-link-level-2-hover;
+      }
+    }
+
     > .sidebar-nav-link,
     > .sidebar-nav-group > .sidebar-nav-link
     {
+      color: $sidebar-nav-link-level-1;
       border: none;
       font-weight: 400;
       padding: .95rem 1.5rem;
       white-space: nowrap;
       @include crossbrowser-transition(background-color .25s ease-out);
+
+      &.collapsed
+      {
+        background-color: $sidebar-background;
+      }
+
+      &:active,
+      &:focus,
+      &:hover,
+      &[aria-expanded=true]
+      {
+        color: $sidebar-nav-link-level-1-hover;
+      }
 
       i
       {
@@ -102,11 +129,19 @@
 
     a
     {
+      color: $sidebar-nav-footer-link;
       font-size: 1.4rem;
       outline: none;
       padding: 0 .625rem;
       text-decoration: none;
       @include crossbrowser-transition(color .25s ease-out);
+
+      &:active,
+      &:focus,
+      &:hover
+      {
+        color: $sidebar-nav-footer-link-hover;
+      }
     }
   }
 
@@ -154,7 +189,7 @@
     &:before,
     &:after
     {
-      background-color: map-get($grays, "400");
+      background-color: $sidebar-btn-close;
       position: absolute;
       content: "";
       height: 2.125rem;
@@ -165,35 +200,10 @@
     {
       transform: rotate(45deg);
     }
+
     &:after
     {
       transform: rotate(-45deg);
     }
   }
 }
-
-@include sidebar-color("primary", (
-  "background": linear-gradient(map-get($colors, "blue"), map-get($flatuicolors, "peter-river")),
-  "btn-close": lighten(map-get($flatuicolors, "peter-river"), 25%),
-  "scrollbar": (
-    "color": lighten(map-get($flatuicolors, "peter-river"), 40%),
-    "background": map-get($flatuicolors, "peter-river")
-  ),
-  "user": (
-    "img-background": map-get($grays, "200"),
-    "img-border": rgba(map-get($colors, "white"), .2),
-    "color": lighten(map-get($flatuicolors, "peter-river"), 35%)
-  ),
-  "nav-link-level-1": (
-    "color": lighten(map-get($flatuicolors, "peter-river"), 35%),
-    "color-hover": map-get($colors, "white")
-  ),
-  "nav-link-level-2": (
-    "color": lighten(map-get($flatuicolors, "peter-river"), 30%),
-    "color-hover": map-get($colors, "white")
-  ),
-  "nav-footer-link": (
-    "color": lighten(map-get($flatuicolors, "peter-river"), 20%),
-    "color-hover": map-get($colors, "white")
-  )
-));

@@ -53,13 +53,13 @@ body
 
             &::-webkit-scrollbar
             {
-                background-color: map-get($grays, "300");
+                background-color: $sidebar-scrollbar;
                 width: .2rem;
             }
 
             &::-webkit-scrollbar-thumb
             {
-                background-color: map-get($colors, "blue");
+                background-color: $sidebar-scrollbar-thumb;
             }
 
             @include breakpoint-down-to-sm

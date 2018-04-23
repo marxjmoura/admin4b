@@ -21,9 +21,9 @@
     width: 3rem;
     height: 3rem;
     border: .25rem solid transparent;
-    border-top-color: map-get($flatuicolors, "belize-hole");
-    border-left-color: map-get($flatuicolors, "belize-hole");
-    border-right-color: map-get($flatuicolors, "belize-hole");
+    border-top-color: map-get($flat-colors, "belize-hole");
+    border-left-color: map-get($flat-colors, "belize-hole");
+    border-right-color: map-get($flat-colors, "belize-hole");
     @include crossbrowser-animation(spinner 1s linear infinite);
     @include crossbrowser-border-radius(50%);
   }
@@ -53,9 +53,9 @@
       top: 50%;
       margin: -2rem 0 0 -2rem;
       border: .25rem solid transparent;
-      border-top-color: map-get($flatuicolors, "belize-hole");
-      border-left-color: map-get($flatuicolors, "belize-hole");
-      border-right-color: map-get($flatuicolors, "belize-hole");
+      border-top-color: map-get($flat-colors, "belize-hole");
+      border-left-color: map-get($flat-colors, "belize-hole");
+      border-right-color: map-get($flat-colors, "belize-hole");
       @include crossbrowser-animation(spinner 1s linear infinite);
       @include crossbrowser-border-radius(50%);
     }
