@@ -39,6 +39,14 @@ $flatuicolors: map-merge((
   "wisteria": #8e44ad
 ), $flatuicolors);
 
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "success": map-get($flatuicolors, "turquoise"),
+  "info": map-get($flatuicolors, "peter-river"),
+  "warning": map-get($flatuicolors, "sun-flower"),
+  "danger": map-get($flatuicolors, "alizarin")
+), $theme-colors);
+
 // Code highlight
 
 $source-code-attribute: #4f9fcf !default;
