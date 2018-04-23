@@ -1,5 +1,6 @@
 $body-bg: #e9ecef !default;
-$breadcrumb-border-radius: 0;
+$breadcrumb-border-radius: 0 !default;
+$table-head-bg: #ced4da !default;
 
 $breakpoints: () !default;
 $breakpoints: map-merge((
