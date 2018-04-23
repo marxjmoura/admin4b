@@ -11,17 +11,17 @@
       <small>Administrator</small>
     </p>
   </div>
-  <div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group">
+  <div id="sidebar" class="sidebar-nav">
     <div class="sidebar-nav-btn">
       <a href="@@webRoot/index.html" class="btn btn-block btn-outline-light">
         Get started
       </a>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#input-controls" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#input-controls" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-note"></i> Input controls
       </a>
-      <div id="input-controls" class="sidebar-nav-group collapse">
+      <div id="input-controls" class="sidebar-nav-group collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/input-controls/checkbox.html" class="sidebar-nav-link">Checkbox</a>
         <a href="@@webRoot/pages/input-controls/input-date.html" class="sidebar-nav-link">Input date</a>
         <a href="@@webRoot/pages/input-controls/input-group.html" class="sidebar-nav-link">Input group</a>
@@ -32,19 +32,19 @@
       </div>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#device-controls" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#device-controls" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-screen-tablet"></i> Device controls
       </a>
-      <div id="device-controls" class="sidebar-nav-group collapse">
+      <div id="device-controls" class="sidebar-nav-group collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/device-controls/camera.html" class="sidebar-nav-link">Camera</a>
         <a href="@@webRoot/pages/device-controls/file-manager.html" class="sidebar-nav-link">File manager</a>
       </div>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#content" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#content" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-doc"></i> Content
       </a>
-      <div id="content" class="sidebar-nav-group collapse">
+      <div id="content" class="collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/content/blank-page.html" class="sidebar-nav-link">Blank page</a>
         <a href="@@webRoot/pages/content/details-page.html" class="sidebar-nav-link">Details page</a>
         <a href="@@webRoot/pages/content/error-page.html" class="sidebar-nav-link">Error page</a>
@@ -53,30 +53,30 @@
       </div>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#forms" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#forms" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-pencil"></i> Forms
       </a>
-      <div id="forms" class="sidebar-nav-group collapse">
+      <div id="forms" class="collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/forms/basic-form.html" class="sidebar-nav-link">Basic form</a>
         <a href="@@webRoot/pages/forms/multi-step-form.html" class="sidebar-nav-link">Multi step form</a>
         <a href="@@webRoot/pages/forms/tabbed-form.html" class="sidebar-nav-link">Tabbed form</a>
       </div>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#layout" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#layout" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-layers"></i> Layout
       </a>
-      <div id="layout" class="sidebar-nav-group collapse">
+      <div id="layout" class="collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/layout/sidebar.html" class="sidebar-nav-link">Sidebar</a>
         <a href="@@webRoot/pages/layout/spinner.html" class="sidebar-nav-link">Spinner</a>
         <a href="@@webRoot/pages/layout/style.html" class="sidebar-nav-link">Style</a>
       </div>
     </div>
     <div class="sidebar-nav-group">
-      <a href="#reference" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav">
+      <a href="#reference" class="sidebar-nav-link" data-toggle="collapse">
         <i class="icon-notebook"></i> Reference
       </a>
-      <div id="reference" class="sidebar-nav-group collapse">
+      <div id="reference" class="collapse" data-parent="#sidebar">
         <a href="@@webRoot/pages/reference/callout.html" class="sidebar-nav-link">Callout</a>
         <a href="@@webRoot/pages/reference/code-highlight.html" class="sidebar-nav-link">Code highlight</a>
       </div>
