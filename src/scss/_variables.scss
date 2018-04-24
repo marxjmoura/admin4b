@@ -102,8 +102,6 @@ $table-head-bg: $gray-400 !default;
 
 $sidebar-background: linear-gradient($blue, $peter-river);
 $sidebar-btn-close: lighten($peter-river, 25%);
-$sidebar-scrollbar: $peter-river;
-$sidebar-scrollbar-thumb: lighten($peter-river, 40%);
 $sidebar-header-img-bg: $gray-200;
 $sidebar-header-img-border: rgba($white, .2);
 $sidebar-header-color: lighten($peter-river, 35%);
@@ -113,6 +111,9 @@ $sidebar-nav-link-level-2: lighten($peter-river, 30%);
 $sidebar-nav-link-level-2-hover: $white;
 $sidebar-nav-footer-link: lighten($peter-river, 20%);
 $sidebar-nav-footer-link-hover: $white;
+$sidebar-scrollbar: $peter-river;
+$sidebar-scrollbar-thumb: lighten($peter-river, 40%);
+$sidebar-width: 15rem;
 
 // Code highlight
 

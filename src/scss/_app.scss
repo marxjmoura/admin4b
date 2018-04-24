@@ -49,7 +49,7 @@ body
             overflow-y: scroll;
             padding: .95rem 0;
             position: relative;
-            width: 15rem;
+            width: $sidebar-width;
 
             &::-webkit-scrollbar
             {
