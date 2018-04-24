@@ -116,25 +116,27 @@ $sidebar-nav-footer-link-hover: $white;
 
 // Code highlight
 
-$source-code-attribute: #4f9fcf !default;
-$source-code-bg: #efefef !default;
-$source-code-class: #0a8 !default;
-$source-code-comment: #999 !default;
-$source-code-keyword: #2f6f9f !default;
-$source-code-link: #868e96 !default;
-$source-code-literal: #212529 !default;
-$source-code-namespace: #099 !default;
-$source-code-number: #f5871f !default;
-$source-code-string: #d44950 !default;
+$source-code-attribute: $blue !default;
+$source-code-background: $gray-300 !default;
+$source-code-class: $indigo !default;
+$source-code-comment: $gray-600 !default;
+$source-code-keyword: $indigo !default;
+$source-code-link: $gray-600 !default;
+$source-code-literal: $gray-700 !default;
+$source-code-namespace: $green-sea !default;
+$source-code-number: $carrot !default;
+$source-code-string: $red !default;
 
-$code-highlight: () !default;
-$code-highlight: map-merge((
+$source-code-colors: () !default;
+$source-code-colors: map-merge((
 "attribute": $source-code-attribute,
+"background": $source-code-background,
 "class": $source-code-class,
 "comment": $source-code-comment,
 "keyword": $source-code-keyword,
+"link": $source-code-link,
 "literal": $source-code-literal,
 "namespace": $source-code-namespace,
 "number": $source-code-number,
 "string": $source-code-string
-), $code-highlight);
+), $source-code-colors);

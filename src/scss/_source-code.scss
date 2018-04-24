@@ -4,7 +4,7 @@
 
   .nav-tabs a
   {
-    color: $source-code-link;
+    color: map-get($source-code-colors, "link");
     font-size: .95rem;
     text-decoration: none;
     padding: .75rem;
@@ -15,14 +15,14 @@
     &:active,
     &:hover
     {
-      color: darken($source-code-link, 30%);
+      color: darken(map-get($source-code-colors, "link"), 30%);
     }
   }
 
   pre,
   .nav-tabs
   {
-    background: $source-code-bg;
+    background: map-get($source-code-colors, "background");
     border: none;
   }
 
@@ -37,28 +37,28 @@
   {
     .hljs-meta
     {
-      color: map-get($code-highlight, "namespace");
+      color: map-get($source-code-colors, "namespace");
     }
 
     .hljs-section,
     .hljs-tag
     {
-      color: map-get($code-highlight, "keyword");
+      color: map-get($source-code-colors, "keyword");
     }
 
     .hljs-tag .hljs-attr
     {
-      color: map-get($code-highlight, "attribute");
+      color: map-get($source-code-colors, "attribute");
     }
 
     .hljs-tag .hljs-string
     {
-      color: map-get($code-highlight, "string");
+      color: map-get($source-code-colors, "string");
     }
 
     .hljs-comment
     {
-      color: map-get($code-highlight, "comment");
+      color: map-get($source-code-colors, "comment");
     }
   }
 
@@ -66,27 +66,27 @@
   {
     .hljs-keyword
     {
-      color: map-get($code-highlight, "keyword");
+      color: map-get($source-code-colors, "keyword");
     }
 
     .hljs-selector-class
     {
-      color: map-get($code-highlight, "class");
+      color: map-get($source-code-colors, "class");
     }
 
     .hljs-attribute
     {
-      color: map-get($code-highlight, "attribute");
+      color: map-get($source-code-colors, "attribute");
     }
 
     .hljs-comment
     {
-      color: map-get($code-highlight, "comment");
+      color: map-get($source-code-colors, "comment");
     }
 
     .hljs-number
     {
-      color: map-get($code-highlight, "number");
+      color: map-get($source-code-colors, "number");
     }
   }
 
@@ -94,22 +94,22 @@
   {
     .hljs-number
     {
-      color: map-get($code-highlight, "number");
+      color: map-get($source-code-colors, "number");
     }
 
     .hljs-string
     {
-      color: map-get($code-highlight, "string");
+      color: map-get($source-code-colors, "string");
     }
 
     .hljs-keyword
     {
-      color: map-get($code-highlight, "keyword");
+      color: map-get($source-code-colors, "keyword");
     }
 
     .hljs-comment
     {
-      color: map-get($code-highlight, "comment");
+      color: map-get($source-code-colors, "comment");
     }
   }
 
@@ -117,22 +117,22 @@
   {
     .hljs-attr
     {
-      color: map-get($code-highlight, "attribute");
+      color: map-get($source-code-colors, "attribute");
     }
 
     .hljs-string
     {
-      color: map-get($code-highlight, "string");
+      color: map-get($source-code-colors, "string");
     }
 
     .hljs-literal,
     {
-      color: map-get($code-highlight, "keyword");
+      color: map-get($source-code-colors, "keyword");
     }
 
     .hljs-number
     {
-      color: map-get($code-highlight, "number");
+      color: map-get($source-code-colors, "number");
     }
   }
 }
