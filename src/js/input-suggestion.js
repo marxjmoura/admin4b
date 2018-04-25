@@ -20,7 +20,7 @@
       init.apply(this);
 
       if (event === 'refresh') {
-        $(this).trigger('suggestion:refresh');
+        $.fn.suggestion.refresh.apply(this);
       }
     });
   };
