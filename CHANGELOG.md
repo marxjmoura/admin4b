@@ -1,9 +1,9 @@
-## v1.0.0 (unreleased)
+## [v1.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.0.0) (2018-04-25)
 ### Breaking changes
 - Removed separate file for code highlight (`.source-code` included in `admim4b.min.css`)
 - Removed themes of code highlight (kept `light` only)
 - Removed themes of sidebar (now is blue by default)
-- Customizations must to be done via code by overriding `variables`
+- Customizations must to be done overriding Sass variables
 - Sidebar accordion:
   - Attribute `[data-parent]` moved from `.sidebar-nav-link` to `.sidebar-nav-group`
   - Removed class `.collapsed` from `.sidebar-nav-link`
