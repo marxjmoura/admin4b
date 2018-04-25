@@ -85,7 +85,7 @@
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;div class="modal-footer"&gt;
-        &lt;button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal"&gt;
+        &lt;button id="btnApply" type="button" class="btn btn-primary" data-dismiss="modal"&gt;
           Apply
         &lt;/button&gt;
         &lt;button type="button" class="btn btn-outline-secondary" data-dismiss="modal"&gt;
@@ -96,19 +96,19 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div><div id="input-date-js" class="tab-pane"><pre><code class="js">var $calendar = $('#calendar');
-var $btnApplyDate = $('#btnApplyDate')
+var $btnApply = $('#btnApply')
 
 $calendar.on('show.bs.modal', function (e) {
   var $formControl = $(e.relatedTarget)
     .closest('.form-group')
     .find('.form-control');
 
-  $btnApplyDate.prop('target', $formControl);
+  $btnApply.prop('target', $formControl);
   $calendar.calendar('date', $formControl.prop('date') || new Date());
 });
 
-$btnApplyDate.on('click', function () {
-  var $target = $btnApplyDate.prop('target');
+$btnApply.on('click', function () {
+  var $target = $btnApply.prop('target');
   var date = $calendar.calendar('date');
   var formattedDate = moment(date).format('dddd, MMMM D, YYYY');
 
