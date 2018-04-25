@@ -1,0 +1,100 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.app, .app-sidebar, .app-content
+{
+    height: 100%;
+}
+
+.app
+{
+    position: relative;
+    width: 100%;
+
+    &:before
+    {
+        content: "";
+        height: 100%;
+        float: left;
+    }
+
+    &:after
+    {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .app-body
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .app-sidebar
+        {
+            background: map-get($colors, "white");
+            float: left;
+            font-size: 0.95rem;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding: .95rem 0;
+            position: relative;
+            width: $sidebar-width;
+
+            &::-webkit-scrollbar
+            {
+                background-color: $sidebar-scrollbar;
+                width: .2rem;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: $sidebar-scrollbar-thumb;
+            }
+
+            @include breakpoint-down-to-sm
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2050;
+                width: 0;
+
+                &.sidebar-open
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+        .app-content
+        {
+            position: relative;
+            overflow: auto;
+        }
+    }
+}
+
+@media print
+{
+    .app .app-body
+    {
+        position: relative;
+        height: auto;
+
+        .app-sidebar
+        {
+            display: none;
+        }
+    }
+}

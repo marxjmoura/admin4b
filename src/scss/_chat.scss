@@ -1,0 +1,139 @@
+@include crossbrowser-keyframes(ballon)
+{
+  0%
+  {
+    @include crossbrowser-transform(scale(0));
+  }
+  100%
+  {
+    @include crossbrowser-transform(scale(1));
+  }
+}
+
+.chat
+{
+  display: none;
+  padding: 0;
+  width: 100%;
+
+  &.chat-on // Set by JS after calculate the remaining height
+  {
+    display: table;
+  }
+
+  .chat-body,
+  .chat-footer
+  {
+    display: table-row;
+  }
+
+  .chat-body
+  {
+    height: 100%;
+
+    .chat-content
+    {
+      display: table-cell;
+      height: 100%;
+
+      .chat-messages
+      {
+        height: 100%;
+        position: relative;
+        overflow: auto;
+
+        .container-fluid // Correct height for IE and Firefox
+        {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+
+        .message-sent,
+        .message-reply
+        {
+          margin-bottom: 1rem;
+
+          img
+          {
+            vertical-align: top;
+            width: 3rem;
+            @include crossbrowser-border-radius(50%);
+          }
+
+          p
+          {
+            display: inline-block;
+            margin: 0;
+            padding: .625rem 1.25rem;
+            text-align: left;
+            max-width: 75%;
+            @include crossbrowser-animation(ballon .2s linear);
+            @include crossbrowser-border-radius(1.25rem);
+          }
+        }
+
+        .message-sent
+        {
+          img
+          {
+            margin-right: .375rem;
+          }
+
+          p
+          {
+            background-color: map-get($theme-colors, "primary");
+            color: map-get($colors, "white");
+            transform-origin: top left;
+          }
+
+          small
+          {
+            color: lighten(map-get($theme-colors, "primary"), 35%);
+          }
+        }
+
+        .message-reply
+        {
+          text-align: right;
+
+          img
+          {
+            float: right;
+            margin-left: .625rem;
+          }
+
+          p
+          {
+            background-color: lighten(map-get($grays, "500"), 15%);
+            transform-origin: top right;
+          }
+
+          small
+          {
+            color: map-get($grays, "600");
+          }
+        }
+      }
+    }
+  }
+
+  .chat-footer
+  {
+    .btn,
+    .form-control
+    {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      @include crossbrowser-border-radius(0);
+    }
+
+    .btn
+    {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+}

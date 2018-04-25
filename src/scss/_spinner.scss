@@ -1,0 +1,104 @@
+@include crossbrowser-keyframes(spinner)
+{
+  0%
+  {
+    @include crossbrowser-transform(rotate(0deg));
+  }
+  100%
+  {
+    @include crossbrowser-transform(rotate(360deg));
+  }
+}
+
+.spinner
+{
+  display: inline-block;
+  text-align: center;
+
+  .spinner-bar
+  {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border: .25rem solid transparent;
+    border-top-color: map-get($flat-colors, "belize-hole");
+    border-left-color: map-get($flat-colors, "belize-hole");
+    border-right-color: map-get($flat-colors, "belize-hole");
+    @include crossbrowser-animation(spinner 1s linear infinite);
+    @include crossbrowser-border-radius(50%);
+  }
+
+  .spinner-text
+  {
+    position: relative;
+    font-size: .875rem;
+  }
+
+  &.spinner-block
+  {
+    position: fixed;
+    background: rgba(map-get($colors, "white"), .85);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3050;
+    @include crossbrowser-opacity(0);
+    @include crossbrowser-visibility(hidden);
+    @include crossbrowser-transition(all 0.3s ease-out);
+
+    .spinner-bar
+    {
+      left: 50%;
+      top: 50%;
+      margin: -2rem 0 0 -2rem;
+      border: .25rem solid transparent;
+      border-top-color: map-get($flat-colors, "belize-hole");
+      border-left-color: map-get($flat-colors, "belize-hole");
+      border-right-color: map-get($flat-colors, "belize-hole");
+      @include crossbrowser-animation(spinner 1s linear infinite);
+      @include crossbrowser-border-radius(50%);
+    }
+
+    .spinner-text
+    {
+      padding: .25rem 0;
+      text-align: center;
+      top: 50%;
+    }
+
+    &.show
+    {
+      @include crossbrowser-opacity(1);
+      @include crossbrowser-visibility(visible);
+    }
+  }
+
+  &.spinner-sm
+  {
+    .spinner-bar
+    {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+
+    .spinner-text
+    {
+      font-size: .8rem;
+    }
+  }
+
+  &.spinner-lg
+  {
+    .spinner-bar
+    {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+
+    .spinner-text
+    {
+      font-size: .95rem;
+    }
+  }
+}

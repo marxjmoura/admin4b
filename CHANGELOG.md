@@ -1,3 +1,19 @@
+## [v1.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.0.0) (2018-04-25)
+### Breaking changes
+- Removed separate file for code highlight (`.source-code` included in `admim4b.min.css`)
+- Removed themes of code highlight (kept `light` only)
+- Removed themes of sidebar (now is blue by default)
+- Customizations must to be done overriding Sass variables
+- Sidebar accordion:
+  - Attribute `[data-parent]` moved from `.sidebar-nav-link` to `.sidebar-nav-group`
+  - Removed class `.collapsed` from `.sidebar-nav-link`
+  - Removed attribute `[data-children]` from `.sidebar-nav`
+- No more need to import Bootstrap (now is included as part of admin4b)
+### Features
+- Upgrade to Bootstrap 4.1
+- Layout improvement
+- Support for buttons in sidebar (wrapped with `.sidebar-nav-btn`)
+
 ## [v0.8.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.8.0) (2018-04-21)
 ### Bug fixes
 - Fix `page-sign` on IE11: forms were not centralized

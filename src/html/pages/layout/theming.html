@@ -1,0 +1,69 @@
+<!-- @@master = /includes/app.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Layout</li>
+    <li class="breadcrumb-item active" aria-current="page">Theming</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Theming
+  </h2>
+  <p>
+    Theming can be done overriding Sass variables and custom CSS as well as in the
+    <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">bootstrap</a>.
+  </p>
+  <h3>
+    Animations
+  </h3>
+  <p>
+    The sidebar comes with two predefined animations:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th>Animation</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td class="text-nowrap"><code>.sidebar-fade</code></td>
+        <td>Fade in and fade out effects.</td>
+      </tr>
+      <tr>
+        <td class="text-nowrap"><code>.sidebar-slide-left</code></td>
+        <td>Slide from left to right.</td>
+      </tr>
+    </table>
+  </div>
+  <div class="source-code">
+    <a href="#sidebar-animations" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-animations" class="collapse">
+      <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-animations.html')</code></pre>
+    </div>
+  </div>
+  <h3>
+    Width
+  </h3>
+  <p>
+    The width of sidebar can be changed overriding the Sass variable.
+    But also can be changed using custom CSS:
+  </p>
+  <div class="source-code">
+    <a href="#sidebar-width" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="sidebar-width" class="collapse">
+      <pre><code class="css">@@include('includes/code-examples/layout/sidebar/sidebar-width.css')</code></pre>
+    </div>
+  </div>
+  <h3>
+    What's next?
+  </h3>
+  <p>
+    The app structure is complete. From here you can decide what you want to see next.
+  </p>
+</div>
+<!-- @@close -->

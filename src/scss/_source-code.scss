@@ -1,0 +1,139 @@
+.source-code
+{
+  margin-bottom: 1rem;
+
+  .nav-tabs a
+  {
+    color: map-get($source-code-colors, "link");
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .75rem;
+    padding-bottom: 0;
+    @include crossbrowser-transition(color .2s ease);
+
+    &.active,
+    &:active,
+    &:hover
+    {
+      color: darken(map-get($source-code-colors, "link"), 30%);
+    }
+  }
+
+  pre,
+  .nav-tabs
+  {
+    background: map-get($source-code-colors, "background");
+    border: none;
+  }
+
+  pre
+  {
+    margin: 0;
+    overflow-x: auto;
+    padding: .75rem;
+  }
+
+  .html
+  {
+    .hljs-meta
+    {
+      color: map-get($source-code-colors, "namespace");
+    }
+
+    .hljs-section,
+    .hljs-tag
+    {
+      color: map-get($source-code-colors, "keyword");
+    }
+
+    .hljs-tag .hljs-attr
+    {
+      color: map-get($source-code-colors, "attribute");
+    }
+
+    .hljs-tag .hljs-string
+    {
+      color: map-get($source-code-colors, "string");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($source-code-colors, "comment");
+    }
+  }
+
+  .css,
+  .scss
+  {
+    .hljs-keyword
+    {
+      color: map-get($source-code-colors, "keyword");
+    }
+
+    .hljs-selector-class
+    {
+      color: map-get($source-code-colors, "class");
+    }
+
+    .hljs-attribute
+    {
+      color: map-get($source-code-colors, "attribute");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($source-code-colors, "comment");
+    }
+
+    .hljs-number
+    {
+      color: map-get($source-code-colors, "number");
+    }
+  }
+
+  .js
+  {
+    .hljs-number
+    {
+      color: map-get($source-code-colors, "number");
+    }
+
+    .hljs-string
+    {
+      color: map-get($source-code-colors, "string");
+    }
+
+    .hljs-keyword
+    {
+      color: map-get($source-code-colors, "keyword");
+    }
+
+    .hljs-comment
+    {
+      color: map-get($source-code-colors, "comment");
+    }
+  }
+
+  .json
+  {
+    .hljs-attr
+    {
+      color: map-get($source-code-colors, "attribute");
+    }
+
+    .hljs-string
+    {
+      color: map-get($source-code-colors, "string");
+    }
+
+    .hljs-literal,
+    {
+      color: map-get($source-code-colors, "keyword");
+    }
+
+    .hljs-number
+    {
+      color: map-get($source-code-colors, "number");
+    }
+  }
+}

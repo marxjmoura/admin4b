@@ -12,7 +12,7 @@
     The <code>.input-suggestion</code> is a simple and flexible autocomplete component.
     You can use simple text or custom template for display the list of items.
     For create the list of items you may use the class <code>.list-group</code>
-    (refer to <a href="https://getbootstrap.com/docs/4.0/components/list-group/">bootstrap documentation</a> for details).
+    (refer to <a href="https://getbootstrap.com/docs/4.1/components/list-group/">bootstrap documentation</a> for details).
   </p>
   <h3>Operation mode</h3>
   <p>
@@ -67,7 +67,7 @@
           <td class="text-nowrap"><code>list-group loading</code></td>
           <td>
             Only for async mode. Displayed when the user start to typing
-            and hidden when <code>suggestion:refresh</code> is triggered.
+            and hidden when invoke the method <code>suggestion('refresh')</code>.
           </td>
         </tr>
         <tr>
@@ -75,6 +75,26 @@
           <td>
             Indicates the <code>.list-group</code> that contains the selectable items.
           </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Methods</h3>
+  <p>
+    One method is available to control the input suggestion:
+  </p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-nowrap"><code>suggestion('refresh')</code></td>
+          <td>Only for async mode. Should be triggered after DOM manipulation.</td>
         </tr>
       </tbody>
     </table>
@@ -88,34 +108,24 @@
       <thead>
         <tr>
           <th>Event</th>
-          <th>Who fires</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="text-nowrap"><code>suggestion:change</code></td>
-          <td>Component</td>
           <td>Triggered when the user select a item in the list.</td>
         </tr>
         <tr>
           <td class="text-nowrap"><code>suggestion:hide</code></td>
-          <td>Component</td>
           <td>Triggered when the user select a item in the list or the <code>input</code> loses the focus.</td>
         </tr>
         <tr>
-          <td class="text-nowrap"><code>suggestion:refresh</code></td>
-          <td>Developer</td>
-          <td>Only for async mode. Should be triggered after DOM manipulation.</td>
-        </tr>
-        <tr>
           <td class="text-nowrap"><code>suggestion:search</code></td>
-          <td>Component</td>
           <td>Triggered when the user end to typing.</td>
         </tr>
         <tr>
           <td><code>suggestion:show</code></td>
-          <td>Component</td>
           <td>Triggered when the user start to typing.</td>
         </tr>
       </tbody>
@@ -255,8 +265,8 @@
   </p>
   <p>
     When the user end to typing the event <code>suggestion:search</code> will be triggered.
-    You will need to listen to this event to write your search logic, manipulate the DOM and then trigger the event
-    <code>suggestion:refresh</code>. See the example below:
+    You will need to listen to this event to write your search logic, manipulate the DOM and then invoke the method
+    <code>suggestion('refresh')</code>. See the example below:
   </p>
   <div class="form-group">
     <label>What juice do you like?</label>

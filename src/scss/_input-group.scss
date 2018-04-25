@@ -1,0 +1,110 @@
+.input-group.as-input
+{
+  cursor: text;
+  @include crossbrowser-border-radius(.25rem);
+  @include crossbrowser-transition(border-color .15s ease-in-out, box-shadow .15s ease-in-out);
+
+  .form-control
+  {
+    @include crossbrowser-box-shadow(none);
+  }
+
+  .input-group-prepend > .input-group-text,
+  .input-group-append > .input-group-text
+  {
+    background-color: map-get($colors, "white");
+  }
+
+  &.prepend
+  {
+    .form-control
+    {
+      border-left: none;
+    }
+
+    .input-group-prepend > .input-group-text
+    {
+      border-right: none;
+    }
+  }
+
+  &.append
+  {
+    .form-control
+    {
+      border-right: none;
+    }
+
+    .input-group-append > .input-group-text
+    {
+      border-left: none;
+    }
+  }
+
+  &.is-invalid
+  {
+    .form-control,
+    .input-group-prepend > .input-group-text,
+    .input-group-append > .input-group-text
+    {
+      border-color: map-get($colors, "red");
+    }
+  }
+
+  &.is-valid
+  {
+    .form-control,
+    .input-group-prepend > .input-group-text,
+    .input-group-append > .input-group-text
+    {
+      border-color: map-get($colors, "green");
+    }
+  }
+
+  &.focus
+  {
+    @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "blue"), .25));
+
+    .form-control,
+    .input-group-prepend > .input-group-text,
+    .input-group-append > .input-group-text
+    {
+      border-color: lighten(map-get($colors, "blue"), 25%);
+    }
+
+    &.is-invalid
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "red"), .25));
+
+      .form-control,
+      .input-group-prepend > .input-group-text,
+      .input-group-append > .input-group-text
+      {
+        border-color: map-get($colors, "red");
+      }
+    }
+
+    &.is-valid
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "green"), .25));
+
+      .form-control,
+      .input-group-prepend > .input-group-text,
+      .input-group-append > .input-group-text
+      {
+        border-color: map-get($colors, "green");
+      }
+    }
+  }
+
+  &.disabled,
+  &.readonly
+  {
+    .form-control,
+    .input-group-prepend > .input-group-text,
+    .input-group-append > .input-group-text
+    {
+      background: map-get($grays, "200");
+    }
+  }
+}

@@ -1,0 +1,209 @@
+.app .app-body .app-sidebar
+{
+  @include crossbrowser-linear-gradient($sidebar-background);
+
+  .sidebar-header
+  {
+    padding: 0 1.25rem;
+    text-align: center;
+
+    .user-photo
+    {
+      background-color: $sidebar-header-img-bg;
+      box-shadow: 0 0 0 .5rem $sidebar-header-img-border;
+      border: 1px solid transparent;
+      height: 4.5rem;
+      margin: .25rem 0;
+      padding: .2rem;
+      width: 4.5rem;
+      @include crossbrowser-border-radius(50%);
+    }
+
+    .username
+    {
+      color: $sidebar-header-color;
+      padding: .625rem 0;
+      white-space: nowrap;
+
+      small
+      {
+        display: block;
+        padding-top: .25rem;
+        @include crossbrowser-opacity(.75);
+      }
+    }
+  }
+
+  .sidebar-nav
+  {
+    overflow: hidden;
+    padding: 0;
+
+    .sidebar-nav-btn
+    {
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+
+      .btn
+      {
+        @include crossbrowser-box-shadow(none);
+      }
+    }
+
+    .sidebar-nav-link
+    {
+      color: $sidebar-nav-link-level-2;
+      display: block;
+      outline: none;
+      text-decoration: none;
+      white-space: nowrap;
+      @include crossbrowser-transition(color .25s ease-out);
+    }
+
+    .sidebar-nav-group .sidebar-nav-link
+    {
+      padding: .375rem 3.75rem .625rem;
+
+      &:active,
+      &:focus,
+      &:hover
+      {
+        color: $sidebar-nav-link-level-2-hover;
+      }
+    }
+
+    > .sidebar-nav-link,
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+      color: $sidebar-nav-link-level-1;
+      border: none;
+      font-weight: 400;
+      padding: .95rem 1.5rem;
+      white-space: nowrap;
+      @include crossbrowser-transition(background-color .25s ease-out);
+
+      &.collapsed
+      {
+        background-color: $sidebar-background;
+      }
+
+      &:active,
+      &:focus,
+      &:hover,
+      &[aria-expanded=true]
+      {
+        color: $sidebar-nav-link-level-1-hover;
+      }
+
+      i
+      {
+        font-size: 1rem;
+        padding-right: 1rem;
+        @include crossbrowser-transition(color .25s ease-out);
+      }
+    }
+
+    > .sidebar-nav-group > .sidebar-nav-link
+    {
+      &::after
+      {
+        content: "\f105";
+        font-family: "FontAwesome";
+        float: right;
+        margin-top: .0625rem;
+        @include crossbrowser-transition(transform .25s);
+      }
+
+      &[aria-expanded=true]::after
+      {
+        @include crossbrowser-transform(rotate(90deg));
+      }
+    }
+  }
+
+  .sidebar-footer
+  {
+    margin: 1.5rem 0;
+    text-align: center;
+    white-space: nowrap;
+
+    a
+    {
+      color: $sidebar-nav-footer-link;
+      font-size: 1.4rem;
+      outline: none;
+      padding: 0 .625rem;
+      text-decoration: none;
+      @include crossbrowser-transition(color .25s ease-out);
+
+      &:active,
+      &:focus,
+      &:hover
+      {
+        color: $sidebar-nav-footer-link-hover;
+      }
+    }
+  }
+
+  &.sidebar-fade
+  {
+    @include crossbrowser-transition(opacity .3s linear, visibility .3s);
+
+    @include breakpoint-down-to-sm
+    {
+      width: 100%;
+      @include crossbrowser-opacity(0);
+      @include crossbrowser-visibility(hidden);
+
+      &.sidebar-open
+      {
+        @include crossbrowser-opacity(1);
+        @include crossbrowser-visibility(visible);
+      }
+    }
+  }
+
+  &.sidebar-slide-left
+  {
+    @include crossbrowser-transition(width .3s);
+  }
+}
+
+.btn-sidebar
+{
+  background: transparent;
+  font-size: 1.4rem;
+  margin-right: .3125rem;
+
+  @include breakpoint-up-to-md
+  {
+    display: none;
+  }
+
+  .x
+  {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+
+    &:before,
+    &:after
+    {
+      background-color: $sidebar-btn-close;
+      position: absolute;
+      content: "";
+      height: 2.125rem;
+      width: .125rem;
+    }
+
+    &:before
+    {
+      transform: rotate(45deg);
+    }
+
+    &:after
+    {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@mixin breakpoint-xs
+{
+  @media (max-width: map-get($breakpoints, "xs-max")) { @content; }
+}
+
+@mixin breakpoint-sm
+{
+  @media (min-width: map-get($breakpoints, "sm-min")) and (max-width: map-get($breakpoints, "sm-max")) { @content; }
+}
+
+@mixin breakpoint-md
+{
+  @media (min-width: map-get($breakpoints, "md-min")) and (max-width: map-get($breakpoints, "md-max")) { @content; }
+}
+
+@mixin breakpoint-lg
+{
+  @media (min-width: map-get($breakpoints, "lg-min")) and (max-width: map-get($breakpoints, "lg-max")) { @content; }
+}
+
+@mixin breakpoint-xl
+{
+  @media (min-width: map-get($breakpoints, "xl-min")) { @content; }
+}
+
+@mixin breakpoint-down-to-sm
+{
+  @media (max-width: map-get($breakpoints, "sm-max")) { @content; }
+}
+
+@mixin breakpoint-down-to-md
+{
+  @media (max-width: map-get($breakpoints, "md-max")) { @content; }
+}
+
+@mixin breakpoint-down-to-lg
+{
+  @media (max-width: map-get($breakpoints, "lg-max")) { @content; }
+}
+
+@mixin breakpoint-up-to-sm
+{
+  @media (min-width: map-get($breakpoints, "sm-min")) { @content; }
+}
+
+@mixin breakpoint-up-to-md
+{
+  @media (min-width: map-get($breakpoints, "md-min")) { @content; }
+}
+@mixin breakpoint-up-to-lg
+{
+  @media (min-width: map-get($breakpoints, "lg-min")) { @content; }
+}

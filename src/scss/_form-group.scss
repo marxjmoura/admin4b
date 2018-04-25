@@ -1,0 +1,17 @@
+.form-group.has-error
+{
+  label
+  {
+    color: map-get($colors, "red");
+  }
+
+  .form-control
+  {
+    border: .0625rem solid map-get($colors, "red");
+
+    &:focus
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "red"), .25));
+    }
+  }
+}

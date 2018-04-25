@@ -1,0 +1,137 @@
+.modal.modal-calendar .modal-dialog
+{
+  max-width: 20rem;
+
+  .modal-content
+  {
+    .modal-header,
+    .modal-body,
+    .modal-footer
+    {
+      border-width: 0;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .modal-header
+    {
+      .input-group
+      {
+        height: auto;
+        width: auto;
+
+        .btn,
+        .form-control
+        {
+          font-size: 14pt;
+          padding: .9375rem .3125rem 0 .3125rem;
+
+          &.btn-link
+          {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+
+        .form-control
+        {
+          border: none;
+          display: inline-block;
+          text-align: center;
+          width: 3.75rem;
+          @include crossbrowser-box-shadow(none);
+          @include crossbrowser-flex(0 1 auto);
+        }
+
+        .btn.dropdown-toggle
+        {
+          border: none;
+          background: map-get($colors, "white");
+          color: map-get($grays, "700");
+          @include crossbrowser-box-shadow(none);
+
+          &::after
+          {
+            display:none
+          }
+        }
+      }
+    }
+
+    .modal-footer
+    {
+      justify-content: center;
+      @include crossbrowser-align-items(center);
+    }
+  }
+}
+
+table.table-calendar
+{
+  margin-bottom: .5rem;
+  text-align: center;
+  width: 100%;
+
+  th
+  {
+    font-weight: normal;
+    padding-bottom: .9375rem;
+
+    &:first-child
+    {
+      color: map-get($colors, "red");
+    }
+  }
+
+  td
+  {
+    color: map-get($grays, "500");
+    padding: .3125rem;
+
+    a
+    {
+      color: map-get($grays, "700");
+      display: block;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      z-index: 1;
+
+      &::before
+      {
+        border: .0625rem solid map-get($colors, "blue");
+        content: " ";
+        display: none;
+        position: absolute;
+        top: -.25rem;
+        left: -.0625rem;
+        width: 2rem;
+        height: 2rem;
+        z-index: -1;
+        @include crossbrowser-border-radius(50%);
+      }
+
+      &:hover,
+      &.active
+      {
+        color: map-get($colors, "white") !important;
+
+        &::before
+        {
+          background: map-get($colors, "blue");
+          display: block;
+        }
+      }
+
+      &.today::before
+      {
+        display: block;
+      }
+
+      &.sunday
+      {
+        color: map-get($colors, "red");
+      }
+    }
+  }
+}

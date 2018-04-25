@@ -1,12 +1,17 @@
-&lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
+&lt;div id="sidebar" class="sidebar"&gt;
+  &lt;div class="sidebar-nav-btn"&gt;
+    &lt;a href="page.html" class="btn btn-block btn-outline-light"&gt;
+      Button link
+    &lt;/a&gt;
+  &lt;/div&gt;
   &lt;a href="page.html" class="sidebar-nav-link"&gt;
     Go to page
   &lt;/a&gt;
   &lt;div class="sidebar-nav-group"&gt;
-    &lt;a href="#first-group" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav"&gt;
+    &lt;a href="#first-group" class="sidebar-nav-link" data-toggle="collapse"&gt;
       Open first group
     &lt;/a&gt;
-    &lt;div id="first-group" class="sidebar-nav-group collapse"&gt;
+    &lt;div id="first-group" class="sidebar-nav-group collapse" data-parent="#sidebar"&gt;
       &lt;a href="page.html" class="sidebar-nav-link"&gt;
         Fisrt group page 1
       &lt;/a&gt;
@@ -16,10 +21,10 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="sidebar-nav-group"&gt;
-    &lt;a href="#second-group" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav"&gt;
+    &lt;a href="#second-group" class="sidebar-nav-link" data-toggle="collapse"&gt;
       Open second group
     &lt;/a&gt;
-    &lt;div id="second-group" class="sidebar-nav-group collapse"&gt;
+    &lt;div id="second-group" class="sidebar-nav-group collapse" data-parent="#sidebar"&gt;
       &lt;a href="page.html" class="sidebar-nav-link"&gt;
         Second group page 1
       &lt;/a&gt;

@@ -1,0 +1,82 @@
+label
+{
+  margin-bottom: .25rem;
+}
+
+.label-infield,
+.label-floating
+{
+  position: relative;
+
+  label
+  {
+    cursor: text;
+  }
+}
+
+.label-infield
+{
+  > input
+  {
+    padding-top: 1.75rem;
+  }
+
+  > label
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: map-get($grays, "600");
+    display: block;
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: .5rem .75rem;
+    width: 100%;
+  }
+}
+
+.label-floating
+{
+  $input-padding-x: .75rem;
+  $input-padding-y: .75rem;
+
+  > input,
+  > label
+  {
+    padding: $input-padding-y $input-padding-x;
+  }
+
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: map-get($grays, "600");
+    border: .0625rem solid transparent;
+    transition: all .1s ease-in-out;
+    @include crossbrowser-border-radius(.25rem);
+  }
+
+  input
+  {
+    @include crossbrowser-input-placeholder(transparent);
+
+    &:not(:placeholder-shown)
+    {
+      padding-top: calc(#{$input-padding-y} + #{$input-padding-y} * (2 / 3));
+      padding-bottom: calc(#{$input-padding-y} / 3);
+    }
+
+    &:not(:placeholder-shown) ~ label
+    {
+      padding-top: calc(#{$input-padding-y} / 3);
+      padding-bottom: calc(#{$input-padding-y} / 3);
+      font-size: .75rem;
+      color: map-get($grays, "600");
+    }
+  }
+}

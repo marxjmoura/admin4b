@@ -1,0 +1,148 @@
+@mixin checkbox-color($name, $color)
+{
+  label.checkbox-#{$name} input[type=checkbox]
+  {
+    + .check-mark
+    {
+      border-color: $color;
+    }
+
+    &:checked + .check-mark
+    {
+      background: $color;
+    }
+
+    &:checked:disabled + .check-mark
+    {
+      background: lighten($color, 20%);
+      border-color: lighten($color, 20%);
+    }
+
+    &:focus + .check-mark
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
+  }
+}
+
+label.checkbox
+{
+  margin-bottom: 0;
+  @include crossbrowser-align-items(center);
+  @include crossbrowser-display-inline-flex();
+  @include crossbrowser-user-select(none);
+
+  input[type=checkbox]
+  {
+    position: absolute;
+    @include crossbrowser-opacity(0);
+
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + span
+    {
+      box-sizing: border-box;
+
+      &::selection
+      {
+        background: none;
+      }
+    }
+
+    + .check-mark
+    {
+      background-color: map-get($colors, "white");
+      border: .0625rem solid map-get($grays, "500");
+      cursor: pointer;
+      height: 1.25rem;
+      width: 1.25rem;
+      margin-right: .625rem;
+      position: relative;
+      @include crossbrowser-border-radius(.3125rem);
+      @include crossbrowser-transition(all 0.2s ease);
+
+      &:after
+      {
+        content: "";
+        position: absolute;
+        display: none;
+        left: .375rem;
+        top: .1875rem;
+        width: .375rem;
+        height: .625rem;
+        border: solid map-get($colors, "white");
+        border-width: 0 .125rem .125rem 0;
+        @include crossbrowser-transform(rotate(45deg));
+      }
+    }
+
+    &:focus + .check-mark
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "500"), .25));
+    }
+
+    &:checked + .check-mark
+    {
+      background: map-get($grays, "500");
+
+      &:after
+      {
+        display: block;
+      }
+    }
+
+    &:disabled + .check-mark
+    {
+      cursor: not-allowed;
+    }
+  }
+
+  &.checkbox-sm
+  {
+    font-size: .8rem;
+
+    input[type=checkbox] + .check-mark
+    {
+      height: 1.05rem;
+      width: 1.05rem;
+
+      &:after
+      {
+        left: .3125rem;
+        top: .125rem;
+        width: .3125rem;
+        height: .55rem;
+      }
+    }
+  }
+
+  &.checkbox-lg
+  {
+    font-size: 1.05rem;
+
+    input[type=checkbox] + .check-mark
+    {
+      height: 1.6rem;
+      width: 1.6rem;
+
+      &:after
+      {
+        left: .57rem;
+        top: .3rem;
+        width: .4375rem;
+        height: .75rem;
+        border-width: 0 .1875rem .1875rem 0;
+      }
+    }
+  }
+}
+
+@include checkbox-color(danger, map-get($theme-colors, "danger"));
+@include checkbox-color(info, map-get($theme-colors, "info"));
+@include checkbox-color(primary, map-get($theme-colors, "primary"));
+@include checkbox-color(success, map-get($theme-colors, "success"));
+@include checkbox-color(warning, map-get($theme-colors, "warning"));

@@ -1,0 +1,211 @@
+@mixin crossbrowser-align-items($align-items)
+{
+    -ms-flex-align: $align-items;
+    -ms-flex-pack: $align-items;
+    -webkit-box-align: $align-items;
+    -webkit-box-pack: $align-items;
+    align-items: $align-items;
+}
+
+@mixin crossbrowser-animation($animation)
+{
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin crossbrowser-backface-visibility($visibility)
+{
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    backface-visibility: $visibility;
+}
+
+@mixin crossbrowser-linear-gradient($gradient...)
+{
+    background: nth($gradient, 1);
+    background-image: -webkit-linear-gradient(top, $gradient);
+    background-image: -moz-linear-gradient(top, $gradient);
+    background-image: -ms-linear-gradient(top, $gradient);
+    background-image: -o-linear-gradient(top, $gradient);
+    background-image: linear-gradient(top, $gradient);
+}
+
+@mixin crossbrowser-border-radius($radius)
+{
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin crossbrowser-border-bottom-radius($radius)
+{
+    -webkit-border-bottom-left-radius: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin crossbrowser-border-top-radius($radius)
+{
+    -webkit-border-top-left-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin crossbrowser-box-shadow($box-shadow...)
+{
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+@mixin crossbrowser-box-sizing($box-sizing)
+{
+    -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+
+@mixin crossbrowser-calc($property, $calc)
+{
+    #{$property}: expression(#{$calc});
+    #{$property}: -moz-calc(#{$calc});
+    #{$property}: -webkit-calc(#{$calc});
+    #{$property}: -o-calc(#{$calc});
+    #{$property}: calc(#{$calc});
+}
+
+@mixin crossbrowser-display-flex()
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin crossbrowser-display-inline-flex()
+{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+@mixin crossbrowser-filter($filter)
+{
+    -ms-filter: "#{$filter}";
+    filter: $filter;
+}
+
+@mixin crossbrowser-flex($flex...)
+{
+    -webkit-box-flex: $flex;
+    -moz-box-flex: $flex;
+    -webkit-flex: $flex;
+    -ms-flex: $flex;
+    flex: $flex;
+}
+
+@mixin crossbrowser-input-placeholder($color)
+{
+    &::-webkit-input-placeholder
+    {
+        color: $color;
+    }
+
+    &:-moz-placeholder
+    {
+        color: $color;
+        @include crossbrowser-opacity(1);
+    }
+
+    &::-moz-placeholder
+    {
+        color: $color;
+        @include crossbrowser-opacity(1);
+    }
+
+    &:-ms-input-placeholder
+    {
+        color: $color;
+    }
+
+    &::-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@mixin crossbrowser-keyframes($name)
+{
+    @keyframes #{$name}
+    {
+        @content;
+    }
+
+    @-webkit-keyframes #{$name}
+    {
+        @content;
+    }
+
+    @-moz-keyframes #{$name}
+    {
+        @content;
+    }
+
+    @-o-keyframes #{$name}
+    {
+        @content;
+    }
+}
+
+@mixin crossbrowser-opacity($opacity)
+{
+    filter: alpha(opacity = $opacity * 100);
+    opacity: $opacity;
+}
+
+@mixin crossbrowser-touch-action($touch-action)
+{
+    -ms-touch-action: $touch-action;
+    touch-action: $touch-action;
+}
+
+@mixin crossbrowser-transform($transform)
+{
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
+@mixin crossbrowser-transition($transition...)
+{
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin crossbrowser-user-select($user-select)
+{
+    -webkit-user-select: $user-select;
+    -moz-user-select: $user-select;
+    -ms-user-select: $user-select;
+    user-select: $user-select;
+}
+
+@mixin crossbrowser-visibility($visibility)
+{
+    -webkit-backface-visibility: $visibility;
+    -moz-backface-visibility: $visibility;
+    visibility: $visibility;
+}

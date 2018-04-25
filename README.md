@@ -1,6 +1,16 @@
-# Admin 4B
-
-[Admin 4B](https://marxjmoura.github.io/admin4b/) is an open source admin template built on top of [Bootstrap 4](http://getbootstrap.com).
+<p align="center">
+  <a href="https://marxjmoura.github.io/admin4b">
+    <img src="https://marxjmoura.github.io/admin4b/docs/assets/brand/admin4b.png" alt="admin4b" width="72" height="72">
+  </a>
+  <h3 align="center">
+    Admin 4B
+  </h3>
+  <p align="center">
+    Admin template built on top of <a href="http://getbootstrap.com">Bootstrap 4</a>
+    <br>
+    <a href="https://marxjmoura.github.io/admin4b"><strong>Explore Admin 4B docs</strong></a>
+  </p>
+</p>
 
 ## Quick start
 

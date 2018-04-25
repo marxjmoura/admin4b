@@ -1,0 +1,169 @@
+@mixin switch-color($name, $color)
+{
+  label.switch-#{$name} input[type=checkbox]
+  {
+    + .switch-slider
+    {
+      background: $color;
+    }
+
+    &:disabled + .switch-slider
+    {
+      background: lighten($color, 20%);
+    }
+
+    &:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
+  }
+}
+
+@mixin switch-to-color($name, $color)
+{
+  label.switch-to-#{$name} input[type=checkbox]
+  {
+    &:checked + .switch-slider
+    {
+      background: $color;
+    }
+
+    &:checked:disabled + .switch-slider
+    {
+      background: lighten($color, 20%);
+    }
+
+    &:checked:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+    }
+  }
+}
+
+label.switch
+{
+  margin-bottom: 0;
+  position: relative;
+  @include crossbrowser-align-items(center);
+  @include crossbrowser-display-inline-flex();
+  @include crossbrowser-border-radius(2rem);
+
+  input[type=checkbox]
+  {
+    position: absolute;
+    @include crossbrowser-opacity(0);
+
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + span
+    {
+      box-sizing: border-box;
+
+      &::selection
+      {
+        background: none;
+      }
+    }
+
+    + .switch-slider
+    {
+      background: map-get($grays, "400");
+      cursor: pointer;
+      display: block;
+      height: 2rem;
+      outline: 0;
+      padding: .125rem;
+      position: relative;
+      width: 4rem;
+      @include crossbrowser-border-radius(2rem);
+      @include crossbrowser-transition(all .4s ease);
+      @include crossbrowser-user-select(none);
+
+      &:before,
+      &:after
+      {
+        position: relative;
+        display: block;
+        content: "";
+        width: 50%;
+        height: 100%;
+      }
+
+      &:before
+      {
+        display: none;
+      }
+
+      &:after
+      {
+        left: 0;
+        background: map-get($colors, "white");
+        @include crossbrowser-border-radius(50%);
+        @include crossbrowser-box-shadow(none);
+        @include crossbrowser-transition(all .2s ease);
+      }
+    }
+
+    &:checked + .switch-slider:after
+    {
+      left: 50%;
+    }
+
+    &:disabled + .switch-slider
+    {
+      background: lighten(map-get($grays, "400"), 5%);
+      cursor: not-allowed;
+    }
+
+    &:focus + .switch-slider
+    {
+      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "400"), .25));
+    }
+  }
+
+  &.switch-sm
+  {
+    font-size: .875rem;
+
+    input[type=checkbox]
+    {
+      + .switch-slider
+      {
+        height: 1.5rem;
+        width: 2.75rem;
+        @include crossbrowser-border-radius(1.5rem);
+      }
+    }
+  }
+
+  &.switch-lg
+  {
+    font-size: 1.125rem;
+
+    input[type=checkbox]
+    {
+      + .switch-slider
+      {
+        height: 2.5rem;
+        width: 5rem;
+        @include crossbrowser-border-radius(2.5rem);
+      }
+    }
+  }
+}
+
+@include switch-color(danger, map-get($theme-colors, "danger"));
+@include switch-color(info, map-get($theme-colors, "info"));
+@include switch-color(primary, map-get($theme-colors, "primary"));
+@include switch-color(success, map-get($theme-colors, "success"));
+@include switch-color(warning, map-get($theme-colors, "warning"));
+
+@include switch-to-color(danger, map-get($theme-colors, "danger"));
+@include switch-to-color(info, map-get($theme-colors, "info"));
+@include switch-to-color(primary, map-get($theme-colors, "primary"));
+@include switch-to-color(success, map-get($theme-colors, "success"));
+@include switch-to-color(warning, map-get($theme-colors, "warning"));

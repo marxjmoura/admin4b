@@ -1,0 +1,143 @@
+// Color system
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:  #000 !default;
+
+$blue: #007bff !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+// Reference: https://flatuicolors.com/
+$asbestos: #7f8c8d;
+$alizarin: #e74c3c;
+$amethyst: #9b59b6;
+$belize-hole: #2980b9;
+$carrot: #e67e22;
+$clouds: #ecf0f1;
+$concrete: #95a5a6;
+$emerald: #2ecc71;
+$green-sea: #16a085;
+$midnight-blue: #2c3e50;
+$nephritis: #27ae60;
+$orange: #f39c12;
+$peter-river: #3498db;
+$pomegranate: #c0392b;
+$pumpkin: #d35400;
+$silver: #bdc3c7;
+$sun-flower: #f1c40f;
+$turquoise: #1abc9c;
+$wet-asphalt: #34495e;
+$wisteria: #8e44ad;
+
+$flat-colors: () !default;
+$flat-colors: map-merge((
+  "asbestos": $asbestos,
+  "alizarin": $alizarin,
+  "amethyst": $amethyst,
+  "belize-hole": $belize-hole,
+  "carrot": $carrot,
+  "clouds": $clouds,
+  "concrete": $concrete,
+  "emerald": $emerald,
+  "green-sea": $green-sea,
+  "midnight-blue": $midnight-blue,
+  "nephritis": $nephritis,
+  "orange": $orange,
+  "peter-river": $peter-river,
+  "pomegranate": $pomegranate,
+  "pumpkin": $pumpkin,
+  "silver": $silver,
+  "sun-flower": $sun-flower,
+  "turquoise": $turquoise,
+  "wet-asphalt": $wet-asphalt,
+  "wisteria": $wisteria
+), $flat-colors);
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "success": $turquoise,
+  "info": $peter-river,
+  "warning": $sun-flower,
+  "danger": $alizarin
+), $theme-colors);
+
+// Responsive breakpoints
+
+$breakpoints: () !default;
+$breakpoints: map-merge((
+  "xs-max": 575.99px,
+  "sm-min": 576px,
+  "sm-max": 767.99px,
+  "md-min": 768px,
+  "md-max": 991.99px,
+  "lg-min": 992px,
+  "lg-max": 1199.99px,
+  "xl-min": 1200px
+), $breakpoints);
+
+// Layout
+
+$body-bg: $gray-200 !default;
+$breadcrumb-bg: $gray-300 !default;
+$breadcrumb-border-radius: 0 !default;
+$table-head-bg: $gray-400 !default;
+
+// Sidebar
+
+$sidebar-background: linear-gradient($blue, $peter-river);
+$sidebar-btn-close: lighten($peter-river, 25%);
+$sidebar-header-img-bg: $gray-200;
+$sidebar-header-img-border: rgba($white, .2);
+$sidebar-header-color: lighten($peter-river, 35%);
+$sidebar-nav-link-level-1: lighten($peter-river, 35%);
+$sidebar-nav-link-level-1-hover: $white;
+$sidebar-nav-link-level-2: lighten($peter-river, 30%);
+$sidebar-nav-link-level-2-hover: $white;
+$sidebar-nav-footer-link: lighten($peter-river, 20%);
+$sidebar-nav-footer-link-hover: $white;
+$sidebar-scrollbar: $peter-river;
+$sidebar-scrollbar-thumb: lighten($peter-river, 40%);
+$sidebar-width: 15rem;
+
+// Code highlight
+
+$source-code-attribute: $blue !default;
+$source-code-background: $gray-300 !default;
+$source-code-class: $indigo !default;
+$source-code-comment: $gray-600 !default;
+$source-code-keyword: $indigo !default;
+$source-code-link: $gray-600 !default;
+$source-code-literal: $gray-700 !default;
+$source-code-namespace: $green-sea !default;
+$source-code-number: $carrot !default;
+$source-code-string: $red !default;
+
+$source-code-colors: () !default;
+$source-code-colors: map-merge((
+"attribute": $source-code-attribute,
+"background": $source-code-background,
+"class": $source-code-class,
+"comment": $source-code-comment,
+"keyword": $source-code-keyword,
+"link": $source-code-link,
+"literal": $source-code-literal,
+"namespace": $source-code-namespace,
+"number": $source-code-number,
+"string": $source-code-string
+), $source-code-colors);

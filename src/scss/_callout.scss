@@ -1,0 +1,62 @@
+.callout
+{
+  background: map-get($grays, "100");
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: .0625rem solid map-get($grays, "400");
+  border-left-width: .25rem;
+  @include crossbrowser-border-radius(.25rem);
+
+  h4
+  {
+    margin-top: 0;
+    margin-bottom: .25rem;
+  }
+
+  ul:last-child,
+  ol:last-child,
+  p:last-child
+  {
+    margin-bottom: 0;
+  }
+
+  code
+  {
+    @include crossbrowser-border-radius(.25rem);
+  }
+
+  & + .callout
+  {
+    margin-top: -.25rem;
+  }
+
+  &.callout-info
+  {
+    border-left-color: map-get($theme-colors, "info");
+
+    h4
+    {
+      color: map-get($theme-colors, "info");
+    }
+  }
+
+  &.callout-warning
+  {
+    border-left-color: map-get($theme-colors, "warning");
+
+    h4
+    {
+      color: map-get($theme-colors, "warning");
+    }
+  }
+
+  &.callout-danger
+  {
+    border-left-color: map-get($theme-colors, "danger");
+
+    h4
+    {
+      color: map-get($theme-colors, "danger");
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "admin4b",
   "title": "Admin 4B",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "homepage": "https://marxjmoura.github.io/admin4b",
   "author": "Marx JMoura",
   "license": "MIT",
@@ -19,12 +19,15 @@
     "build-sass": "gulp build-sass",
     "build": "gulp build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.1.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.0.1",
     "gulp-html-extend": "^1.1.6",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0"
