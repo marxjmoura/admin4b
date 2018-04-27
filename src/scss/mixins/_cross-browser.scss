@@ -59,6 +59,20 @@
     border-top-right-radius: $radius;
 }
 
+@mixin crossbrowser-border-top-left-radius($radius)
+{
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin crossbrowser-border-top-right-radius($radius)
+{
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
 @mixin crossbrowser-box-shadow($box-shadow...)
 {
     -webkit-box-shadow: $box-shadow;
@@ -157,6 +171,11 @@
     }
 
     @-moz-keyframes #{$name}
+    {
+        @content;
+    }
+
+    @-ms-keyframes #{$name}
     {
         @content;
     }
