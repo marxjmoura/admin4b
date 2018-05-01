@@ -25,11 +25,11 @@
 @mixin crossbrowser-linear-gradient($gradient...)
 {
     background: nth($gradient, 1);
-    background-image: -webkit-linear-gradient(top, $gradient);
-    background-image: -moz-linear-gradient(top, $gradient);
-    background-image: -ms-linear-gradient(top, $gradient);
-    background-image: -o-linear-gradient(top, $gradient);
-    background-image: linear-gradient(top, $gradient);
+    background-image: -webkit-linear-gradient(to top, $gradient);
+    background-image: -moz-linear-gradient(to top, $gradient);
+    background-image: -ms-linear-gradient(to top, $gradient);
+    background-image: -o-linear-gradient(to top, $gradient);
+    background-image: linear-gradient(to top, $gradient);
 }
 
 @mixin crossbrowser-border-radius($radius)
