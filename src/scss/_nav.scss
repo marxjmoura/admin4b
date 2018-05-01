@@ -1,7 +1,6 @@
 .nav
 {
-  $menu-items: 5;
-  $width: (100 / $menu-items) * 1%;
+  $max-tabs: 6;
 
   border-bottom: 1px solid map-get($grays, "400");
 
@@ -13,8 +12,8 @@
 
     .nav-item
     {
-      text-align: center;
-      width: $width;
+      padding-bottom: .625rem;
+      @include crossbrowser-transition(opacity .5s ease);
 
       &:last-child:after
       {
@@ -25,45 +24,26 @@
         border-bottom: 2px solid map-get($colors, "blue");
         left: 0;
         bottom: -1px;
-        width: $width;
         z-index: 1;
+      }
+
+      &.complete
+      {
+        @include crossbrowser-opacity(.5);
+
+        &:hover
+        {
+          @include crossbrowser-opacity(1);
+        }
       }
     }
   }
 
   &.nav-slide
   {
-    .nav-item:last-child
+    .nav-item:last-child:after
     {
-      &:after
-      {
-        @include crossbrowser-transition(left .5s ease);
-      }
-
-      &:hover,
-      &.active
-      {
-        &:after
-        {
-          left: 100% - $width !important;
-        }
-      }
-    }
-
-    @for $i from 1 through ($menu-items - 1)
-    {
-      .nav-item:nth-child(#{$i})
-      {
-        &:hover ~ .nav-item:last-child:after
-        {
-          left: ($width * $i) - $width !important;
-        }
-
-        &.active ~ .nav-item:last-child:after
-        {
-          left: ($width * $i) - $width;
-        }
-      }
+      @include crossbrowser-transition(left .5s ease);
     }
   }
 
@@ -71,33 +51,139 @@
   {
     .nav-item:last-child
     {
+      &:before
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $body-bg;
+        border: 2px solid map-get($colors, "blue");
+        width: .5rem;
+        height: .5rem;
+        bottom: -.25rem;
+        @include crossbrowser-border-radius(50%);
+        @include crossbrowser-transition(left .5s ease);
+      }
+
       &:after
       {
         @include crossbrowser-transition(width .5s ease);
       }
+    }
+  }
 
-      &:hover,
-      &.active
+  &.nav-slide
+  {
+    @for $i from 1 through $max-tabs
+    {
+      $width: (100 / $i) * 1%;
+
+      &.nav-tabs-#{$i}
       {
-        &:after
+        .nav-item,
+        .nav-item:last-child:after
         {
-          width: 100%;
+          width: $width;
+        }
+
+        @for $j from 1 through $i
+        {
+          .nav-item:nth-child(#{$j})
+          {
+            &:hover ~ .nav-item:last-child:after
+            {
+              left: $width * $j - $width !important;
+            }
+
+            &.complete ~ .nav-item:last-child:after
+            {
+              left: $width * $j - $width;
+            }
+          }
+        }
+
+        .nav-item:last-child
+        {
+          &:hover:after,
+          &.complete:after
+          {
+            left: $width * $i - $width !important;
+          }
         }
       }
     }
+  }
 
-    @for $i from 1 through ($menu-items - 1)
+  &.nav-progress
+  {
+    @for $i from 1 through $max-tabs
     {
-      .nav-item:nth-child(#{$i})
+      $width: (100 / $i) * 1%;
+
+      &.nav-tabs-#{$i}
       {
-        &:hover ~ .nav-item:last-child:after
+        .nav-item
         {
-          width: $width * $i !important;
+          width: $width;
         }
 
-        &.active ~ .nav-item:last-child:after
+        .nav-item:last-child:after
         {
-          width: $width * $i;
+          width: $width / 2;
+        }
+
+        .nav-item:last-child:before
+        {
+          left: $width / 2;
+        }
+
+        @for $j from 1 through $i
+        {
+          .nav-item:nth-child(#{$j})
+          {
+            &:hover ~ .nav-item:last-child:before
+            {
+              left: $width * $j - $width / 2 !important;
+            }
+
+            &:hover ~ .nav-item:last-child:after
+            {
+              width: $width * $j - $width / 2 !important;
+            }
+
+            &.complete ~ .nav-item:last-child:before
+            {
+              left: $width * ($j + 1) - $width / 2;
+            }
+
+            &.complete ~ .nav-item:last-child:after
+            {
+              width: $width * ($j + 1) - $width / 2;
+            }
+          }
+        }
+
+        .nav-item:last-child
+        {
+          &:hover:before
+          {
+            left: 100% - $width / 2 !important;
+          }
+
+          &:hover:after
+          {
+            width: 100% - $width / 2 !important;
+          }
+
+          &.complete:before
+          {
+            left: 100% !important;
+          }
+
+          &.complete:after
+          {
+            width: 100% !important;
+          }
         }
       }
     }

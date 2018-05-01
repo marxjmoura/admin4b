@@ -60,20 +60,20 @@ $table-head-bg: $gray-400 !default;
 
 // Sidebar
 
-$sidebar-background: $peter-river;
-$sidebar-btn-close: lighten($peter-river, 25%);
-$sidebar-header-color: lighten($peter-river, 35%);
-$sidebar-header-img-bg: $gray-200;
-$sidebar-header-img-border: rgba($white, .15);
-$sidebar-nav-link-level-1: rgba($white, .75);
-$sidebar-nav-link-level-1-hover: $white;
-$sidebar-nav-link-level-2: rgba($white, .75);
-$sidebar-nav-link-level-2-hover: $white;
-$sidebar-nav-footer-link: rgba($white, .5);
-$sidebar-nav-footer-link-hover: rgba($white, .75);
-$sidebar-scrollbar: $belize-hole;
-$sidebar-scrollbar-thumb: rgba($white, .75);
-$sidebar-width: 15rem;
+$sidebar-background: $peter-river !default;
+$sidebar-btn-close: rgba($white, .5) !default;
+$sidebar-header-color: rgba($white, .75) !default;
+$sidebar-header-img-bg: $gray-200 !default;
+$sidebar-header-img-border: rgba($white, .15) !default;
+$sidebar-nav-link-level-1: rgba($white, .75) !default;
+$sidebar-nav-link-level-1-hover: $white !default;
+$sidebar-nav-link-level-2: rgba($white, .75) !default;
+$sidebar-nav-link-level-2-hover: $white !default;
+$sidebar-nav-footer-link: rgba($white, .5) !default;
+$sidebar-nav-footer-link-hover: rgba($white, .75) !default;
+$sidebar-scrollbar: $belize-hole !default;
+$sidebar-scrollbar-thumb: rgba($white, .75) !default;
+$sidebar-width: 15rem !default;
 
 // Code highlight
 
