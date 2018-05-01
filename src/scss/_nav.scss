@@ -1,0 +1,105 @@
+.nav
+{
+  $menu-items: 5;
+  $width: (100 / $menu-items) * 1%;
+
+  border-bottom: 1px solid map-get($grays, "400");
+
+  &.nav-slide,
+  &.nav.nav-progress
+  {
+    position: relative;
+    z-index: 0;
+
+    .nav-item
+    {
+      text-align: center;
+      width: $width;
+
+      &:last-child:after
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        border-bottom: 2px solid map-get($colors, "blue");
+        left: 0;
+        bottom: -1px;
+        width: $width;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.nav-slide
+  {
+    .nav-item:last-child
+    {
+      &:after
+      {
+        @include crossbrowser-transition(left .5s ease);
+      }
+
+      &:hover,
+      &.active
+      {
+        &:after
+        {
+          left: 100% - $width !important;
+        }
+      }
+    }
+
+    @for $i from 1 through ($menu-items - 1)
+    {
+      .nav-item:nth-child(#{$i})
+      {
+        &:hover ~ .nav-item:last-child:after
+        {
+          left: ($width * $i) - $width !important;
+        }
+
+        &.active ~ .nav-item:last-child:after
+        {
+          left: ($width * $i) - $width;
+        }
+      }
+    }
+  }
+
+  &.nav-progress
+  {
+    .nav-item:last-child
+    {
+      &:after
+      {
+        @include crossbrowser-transition(width .5s ease);
+      }
+
+      &:hover,
+      &.active
+      {
+        &:after
+        {
+          width: 100%;
+        }
+      }
+    }
+
+    @for $i from 1 through ($menu-items - 1)
+    {
+      .nav-item:nth-child(#{$i})
+      {
+        &:hover ~ .nav-item:last-child:after
+        {
+          width: $width * $i !important;
+        }
+
+        &.active ~ .nav-item:last-child:after
+        {
+          width: $width * $i;
+        }
+      }
+    }
+  }
+}
