@@ -26,18 +26,16 @@
     $input
       .on('input', show)
       .on('keyup', function (e) {
-        var key = e.keyCode || e.which;
-        var keyPressed = keyboard(key);
+        var key = keyboard(e);
 
-        if (keyPressed.isEscape) {
+        if (key.isEscape) {
           hide();
         }
       })
       .on('keydown', function (e) {
-        var key = e.keyCode || e.which;
-        var keyPressed = keyboard(key);
+        var key = keyboard(e);
 
-        if (keyPressed.isArrowUp || keyPressed.isArrowDown) {
+        if (key.isArrowUp || key.isArrowDown) {
           e.preventDefault();
 
           if (!$suggestion.is('.open')) {
@@ -47,7 +45,7 @@
 
           var $currentItem = $items.children('.active');
 
-          if (keyPressed.isArrowDown) {
+          if (key.isArrowDown) {
             if ($currentItem.is(':last-child')) {
               return;
             }
@@ -60,7 +58,7 @@
             }
           }
 
-          if (keyPressed.isArrowUp) {
+          if (key.isArrowUp) {
             if ($currentItem.is(':first-child')) {
               return;
             }
