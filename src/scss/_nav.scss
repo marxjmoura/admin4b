@@ -4,7 +4,6 @@
 
   border-bottom: 1px solid map-get($grays, "400");
 
-  &.nav-slide,
   &.nav.nav-tabs-progress
   {
     position: relative;
@@ -34,44 +33,6 @@
         &:hover
         {
           @include crossbrowser-opacity(1);
-        }
-      }
-    }
-  }
-
-  &.nav-slide
-  {
-    .nav-item:last-child:after
-    {
-      @include crossbrowser-transition(left .5s ease);
-    }
-  }
-
-  &.nav-slide
-  {
-    @for $i from 1 through $max-tabs
-    {
-      $width: (100 / $i) * 1%;
-
-      &.nav-tabs-#{$i}
-      {
-        .nav-item,
-        .nav-item:last-child:after
-        {
-          width: $width;
-        }
-
-        @for $j from 1 through $i
-        {
-          .nav-item:nth-child(#{$j}).complete ~ .nav-item:last-child:after
-          {
-            left: $width * $j - $width;
-          }
-        }
-
-        .nav-item:last-child.complete:after
-        {
-          left: $width * $i - $width !important;
         }
       }
     }

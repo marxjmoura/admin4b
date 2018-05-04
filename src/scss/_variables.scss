@@ -58,6 +58,9 @@ $breadcrumb-border-radius: 0 !default;
 $font-family-base: 'Open Sans', sans-serif !default;
 $link-color: $blue !default;
 $table-head-bg: $gray-400 !default;
+$nav-tabs-border-color: $gray-400 !default;
+$nav-tabs-link-active-border-color: $gray-400 $gray-400 $body-bg !default;
+$nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !default;
 
 // Sidebar
 
