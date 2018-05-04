@@ -12,14 +12,14 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
-$belize-hole: #3ca2e0;
+$belize-hole: #3ca2e0 !default;
 $blue: #007bff !default;
 $carrot: #e67e22 !default;
 $cyan: #17a2b8 !default;
 $green: #16a085 !default;
 $indigo: #6610f2 !default;
 $orange: #e98925 !default;
-$peter-river: #2e8cc2;
+$peter-river: #2e8cc2 !default;
 $pink: #e83e8c !default;
 $purple: #6f42c1 !default;
 $red: #e95644 !default;
@@ -55,6 +55,7 @@ $breakpoints: map-merge((
 $body-bg: $gray-200 !default;
 $breadcrumb-bg: $gray-300 !default;
 $breadcrumb-border-radius: 0 !default;
+$font-family-base: 'Open Sans', sans-serif !default;
 $link-color: $blue !default;
 $table-head-bg: $gray-400 !default;
 
