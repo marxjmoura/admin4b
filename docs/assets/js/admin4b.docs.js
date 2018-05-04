@@ -134,7 +134,7 @@ $(function () {
     });
 
     $('#formOrder').on('submit', function(e) {
-        $('.nav-progress').find('.nav-item').last().addClass('complete');
+        $('.nav-tabs-progress').find('.nav-item').last().addClass('complete');
         e.preventDefault();
     });
 });

@@ -7,307 +7,374 @@
   </ol>
 </nav>
 <div class="container-fluid">
-  <ul class="nav nav-progress nav-tabs-4 mb-4">
-    <li class="nav-item">
-      <a href="#account" class="nav-link active" data-toggle="tab">
-        <span class="font-lg">1.</span> Account information
-        <div class="text-secondary" style="line-height: 1rem;">
-          <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
-        </div>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#personal" class="nav-link" data-toggle="tab">
-        <span class="font-lg">2.</span> Personal information
-        <div class="text-secondary" style="line-height: 1rem;">
-          <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
-        </div>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#payment" class="nav-link" data-toggle="tab">
-        <span class="font-lg">3.</span> Payment information
-        <div class="text-secondary" style="line-height: 1rem;">
-          <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
-        </div>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#confirmation" class="nav-link" data-toggle="tab">
-        <span class="font-lg">4.</span> Confirm your details
-        <div class="text-secondary" style="line-height: 1rem;">
-          <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <form id="formOrder" class="tab-content">
-    <div id="account" class="tab-pane active">
-      <div class="d-flex text-secondary">
-        <h5>Account information</h5>
-        <p class="ml-auto">Setp 1 of 4</p>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control">
+  <div class="nav-tabs-responsive">
+    <ul class="nav nav-tabs-progress nav-tabs-4 mb-4">
+      <li class="nav-item">
+        <a href="#account" class="nav-link active" data-toggle="tab">
+          <span class="font-lg">1.</span> Account information
+          <div class="text-secondary" style="line-height: 1rem;">
+            <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>E-mail</label>
-            <input type="text" class="form-control">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#personal" class="nav-link" data-toggle="tab">
+          <span class="font-lg">2.</span> Personal information
+          <div class="text-secondary" style="line-height: 1rem;">
+            <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#payment" class="nav-link" data-toggle="tab">
+          <span class="font-lg">3.</span> Payment information
+          <div class="text-secondary" style="line-height: 1rem;">
+            <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>Confirm password</label>
-            <input type="password" class="form-control">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#confirmation" class="nav-link" data-toggle="tab">
+          <span class="font-lg">4.</span> Confirm your details
+          <div class="text-secondary" style="line-height: 1rem;">
+            <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
           </div>
+        </a>
+      </li>
+    </ul>
+    <form id="formOrder" class="tab-content">
+      <div id="account" class="tab-pane show active">
+        <div class="mb-3">
+          <a href="#account-collapse" data-toggle="collapse">
+            <span class="font-lg">1.</span> Account information
+            <div class="text-secondary" style="line-height: 1rem;">
+              <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
+            </div>
+          </a>
         </div>
-      </div>
-      <hr>
-      <div class="d-flex mb-3">
-        <button type="button" class="btn btn-success ml-auto" data-form-step="#personal">
-          Personal information &nbsp;
-          <i class="fa fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-    <div id="personal" class="tab-pane">
-      <div class="d-flex text-secondary">
-        <h5>Personal information</h5>
-        <p class="ml-auto">Setp 2 of 4</p>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class="form-group">
-            <label>Full name</label>
-            <input type="text" class="form-control">
+        <div id="account-collapse" class="collapse show" data-parent="#formOrder">
+          <div class="text-secondary mb-3">
+            <small>Step 1 of 4</small>
           </div>
-        </div>
-        <div class="col-12 col-lg-6">
           <div class="row">
             <div class="col-12 col-md-6 col-lg-6">
               <div class="form-group">
-                <label>Gender</label>
-                <select class="form-control">
-                  <option></option>
-                  <option>Female</option>
-                  <option>Male</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="form-group">
-                <label>Date of birth</label>
-                <input type="text" class="form-control">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label>Phone number</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="form-group">
-                <label>Zip code</label>
+                <label>Username</label>
                 <input type="text" class="form-control">
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
               <div class="form-group">
-                <label>State</label>
+                <label>E-mail</label>
                 <input type="text" class="form-control">
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="form-group">
-            <label>Home address</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="d-flex mb-3">
-        <button type="button" class="btn btn-outline-success" data-form-step="#account">
-          <i class="fa fa-angle-left"></i>
-          &nbsp; Account information
-        </button>
-        <button type="button" class="btn btn-success ml-auto" data-form-step="#payment">
-          Payment information &nbsp;
-          <i class="fa fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-    <div id="payment" class="tab-pane">
-      <div class="d-flex text-secondary">
-        <h5>Payment information</h5>
-        <p class="ml-auto">Setp 3 of 4</p>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-8 col-lg-8">
-          <div class="form-group">
-            <label>Card number</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="col-12 col-md-4 col-lg-4">
-          <div class="form-group">
-            <label>CVC</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-8">
-          <div class="form-group">
-            <label>Card holder name</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="col-12 col-lg-4">
           <div class="row">
-            <div class="col-12 col-md-4 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6">
               <div class="form-group">
-                <label>Expiry month</label>
-                <input type="text" class="form-control">
+                <label>Password</label>
+                <input type="password" class="form-control">
               </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6">
               <div class="form-group">
-                <label>Expiry year</label>
+                <label>Confirm password</label>
+                <input type="password" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block">
+            <hr>
+            <div class="d-flex mb-3">
+              <button type="button" class="btn btn-success ml-auto" data-form-step="#personal">
+                Personal information &nbsp;
+                <i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="personal" class="tab-pane">
+        <div class="mb-3">
+          <a href="#personal-collapse" data-toggle="collapse">
+            <span class="font-lg">2.</span> Personal information
+            <div class="text-secondary" style="line-height: 1rem;">
+              <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
+            </div>
+          </a>
+        </div>
+        <div id="personal-collapse" class="collapse" data-parent="#formOrder">
+          <div class="text-secondary mb-3">
+            <small>Step 2 of 4</small>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="form-group">
+                <label>Full name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label>Gender</label>
+                    <select class="form-control">
+                      <option></option>
+                      <option>Female</option>
+                      <option>Male</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label>Date of birth</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <div class="form-group">
+                <label>Phone number</label>
                 <input type="text" class="form-control">
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <hr>
-      <div class="d-flex mb-3">
-        <button type="button" class="btn btn-outline-success" data-form-step="#personal">
-          <i class="fa fa-angle-left"></i>
-          &nbsp; Personal information
-        </button>
-        <button type="button" class="btn btn-success ml-auto" data-form-step="#confirmation">
-          Confirm your details &nbsp;
-          <i class="fa fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-    <div id="confirmation" class="tab-pane">
-      <div class="d-flex text-secondary">
-        <h5>Confirm your details</h5>
-        <p class="ml-auto">Setp 4 of 4</p>
-      </div>
-      <div class="card">
-        <div class="card-body">
           <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Username</label>
+            <div class="col-12 col-lg-6">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label>Zip code</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="form-group">
+                    <label>State</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col">john_doe</div>
+            <div class="col-12 col-lg-6">
+              <div class="form-group">
+                <label>Home address</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Email ID</label>
+          <div class="d-none d-md-block">
+            <hr>
+            <div class="d-flex mb-3">
+              <button type="button" class="btn btn-outline-success" data-form-step="#account">
+                <i class="fa fa-angle-left"></i>
+                &nbsp; Account information
+              </button>
+              <button type="button" class="btn btn-success ml-auto" data-form-step="#payment">
+                Payment information &nbsp;
+                <i class="fa fa-angle-right"></i>
+              </button>
             </div>
-            <div class="col">john_doe@email.com</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Full name</label>
-            </div>
-            <div class="col">John Doe</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Gender</label>
-            </div>
-            <div class="col">Male</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Date of birth</label>
-            </div>
-            <div class="col">January 10, 1980</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Phone number</label>
-            </div>
-            <div class="col">John Doe</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Address</label>
-            </div>
-            <div class="col">111 W.App Ave. Suite 123, Sunway, CA</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">ZIP Code</label>
-            </div>
-            <div class="col">94086</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Country</label>
-            </div>
-            <div class="col">USA</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Card type</label>
-            </div>
-            <div class="col">VISA</div>
-          </div>
-          <div class="row">
-            <div class="col-4 col-md-3 col-lg-2">
-              <label class="text-secondary mb-2">Card number</label>
-            </div>
-            <div class="col">**** 2086</div>
           </div>
         </div>
       </div>
-      <hr>
-      <div class="d-flex mb-3">
-        <button type="button" class="btn btn-outline-success" data-form-step="#payment">
-          <i class="fa fa-angle-left"></i>
-          &nbsp; Payment information
-        </button>
-        <button type="submit" class="btn btn-success ml-auto">
-          Complete order &nbsp;
-          <i class="fa fa-check"></i>
-        </button>
+      <div id="payment" class="tab-pane">
+        <div class="mb-3">
+          <a href="#payment-collapse" data-toggle="collapse">
+            <span class="font-lg">3.</span> Payment information
+            <div class="text-secondary" style="line-height: 1rem;">
+              <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
+            </div>
+          </a>
+        </div>
+        <div id="payment-collapse" class="collapse" data-parent="#formOrder">
+          <div class="text-secondary mb-3">
+            <small>Step 3 of 4</small>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-8 col-lg-8">
+              <div class="form-group">
+                <label>Card number</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="form-group">
+                <label>CVC</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="form-group">
+                <label>Card holder name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="row">
+                <div class="col-12 col-md-4 col-lg-6">
+                  <div class="form-group">
+                    <label>Expiry month</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-6">
+                  <div class="form-group">
+                    <label>Expiry year</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block">
+            <hr>
+            <div class="d-flex mb-3">
+              <button type="button" class="btn btn-outline-success" data-form-step="#personal">
+                <i class="fa fa-angle-left"></i>
+                &nbsp; Personal information
+              </button>
+              <button type="button" class="btn btn-success ml-auto" data-form-step="#confirmation">
+                Confirm your details &nbsp;
+                <i class="fa fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </form>
+      <div id="confirmation" class="tab-pane">
+        <div class="mb-3">
+          <a href="#confirmation-collapse" data-toggle="collapse">
+            <span class="font-lg">4.</span> Confirm your details
+            <div class="text-secondary" style="line-height: 1rem;">
+              <small>Lorem ipsum dolor sit amet, venenatis adipiscing</small>
+            </div>
+          </a>
+        </div>
+        <div id="confirmation-collapse" class="collapse" data-parent="#formOrder">
+          <div class="text-secondary mb-3">
+            <small>Step 4 of 4</small>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Username</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">john_doe</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Email ID</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">john_doe@email.com</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Full name</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">John Doe</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Gender</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">Male</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Date of birth</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">January 10, 1980</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Phone number</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">John Doe</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Address</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">111 W.App Ave. Suite 123, Sunway, CA</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">ZIP Code</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">94086</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Country</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">USA</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Card number</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">**** 2086</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-lg-2">
+                  <label class="text-secondary">Card type</label>
+                </div>
+                <div class="col-12 col-md-9 col-lg-10">
+                  <div class="mb-2">VISA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="d-block d-md-flex">
+            <button type="button" class="btn btn-outline-success d-none d-md-inline mb-3" data-form-step="#payment">
+              <i class="fa fa-angle-left"></i>
+              &nbsp; Payment information
+            </button>
+            <div class="d-block d-md-inline ml-auto mb-3">
+              <button type="submit" class="btn btn-success btn-block">
+                Complete order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 <!-- @@close -->

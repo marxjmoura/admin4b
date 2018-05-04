@@ -5,7 +5,7 @@
   border-bottom: 1px solid map-get($grays, "400");
 
   &.nav-slide,
-  &.nav.nav-progress
+  &.nav.nav-tabs-progress
   {
     position: relative;
     z-index: 0;
@@ -44,31 +44,6 @@
     .nav-item:last-child:after
     {
       @include crossbrowser-transition(left .5s ease);
-    }
-  }
-
-  &.nav-progress
-  {
-    .nav-item:last-child
-    {
-      &:before
-      {
-        content: "";
-        display: block;
-        position: absolute;
-        background: $body-bg;
-        border: 2px solid map-get($colors, "blue");
-        width: .5rem;
-        height: .5rem;
-        bottom: -.25rem;
-        @include crossbrowser-border-radius(50%);
-        @include crossbrowser-transition(left .5s ease);
-      }
-
-      &:after
-      {
-        @include crossbrowser-transition(width .5s ease);
-      }
     }
   }
 
@@ -114,7 +89,32 @@
     }
   }
 
-  &.nav-progress
+  &.nav-tabs-progress
+  {
+    .nav-item:last-child
+    {
+      &:before
+      {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $body-bg;
+        border: 2px solid map-get($colors, "blue");
+        width: .5rem;
+        height: .5rem;
+        bottom: -.25rem;
+        @include crossbrowser-border-radius(50%);
+        @include crossbrowser-transition(left .5s ease);
+      }
+
+      &:after
+      {
+        @include crossbrowser-transition(width .5s ease);
+      }
+    }
+  }
+
+  &.nav-tabs-progress
   {
     @for $i from 1 through $max-tabs
     {
@@ -186,6 +186,47 @@
           }
         }
       }
+    }
+  }
+}
+
+.nav-tabs-responsive
+{
+  .nav-tabs,
+  .nav-tabs-progress
+  {
+    display: none;
+  }
+
+  a[data-toggle=collapse]
+  {
+    text-decoration: none;
+  }
+
+  @include breakpoint-down-to-sm
+  {
+    .tab-pane
+    {
+      display: block !important;
+    }
+  }
+
+  @include breakpoint-up-to-md
+  {
+    .nav-tabs,
+    .nav-tabs-progress
+    {
+      display: flex;
+    }
+
+    [data-toggle=collapse]
+    {
+      display: none;
+    }
+
+    .tab-pane .collapse
+    {
+      display: block;
     }
   }
 }
