@@ -5,6 +5,7 @@
 - Calendar modal not centralizing on small screens
 ### Features
 - Upgrade bootstrap to version 4.1.1
+- Add js to npm package
 - Improve template palette
 - Multi-step form, tabbed form and details page
 - Extend `.nav-tabs`:
