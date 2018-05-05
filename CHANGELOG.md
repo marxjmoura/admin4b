@@ -7,7 +7,7 @@
 - Upgrade bootstrap to version 4.1.1
 - Add js to npm package
 - Improve template palette
-- Multi-step form, tabbed form and details page
+- Multi-step form and tabbed form
 - Extend `.nav-tabs`:
   - Progress navigation (`.nav-tabs-progress`)
   - Responsive capabilities (turning into accordion on small screens)
