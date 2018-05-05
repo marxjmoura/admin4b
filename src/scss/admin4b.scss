@@ -1,5 +1,5 @@
 /*!
- * Admin 4B v1.0.0 (marxjmoura.github.io/admin4b)
+ * Admin 4B v1.1.0 (marxjmoura.github.io/admin4b)
  * Copyright 2018 Marx JMoura
  * Licensed under MIT (https://github.com/marxjmoura/admin4b/blob/master/LICENSE)
  */
@@ -11,14 +11,16 @@
 
 @import 'app';
 @import 'calendar';
+@import 'callout';
 @import 'camera';
 @import 'chat';
-@import 'label';
-@import 'callout';
 @import 'checkbox';
 @import 'form-group';
+@import 'input';
 @import 'input-group';
 @import 'input-suggestion';
+@import 'label';
+@import 'nav';
 @import 'radio-button';
 @import 'sidebar';
 @import 'sign';
@@ -26,3 +28,4 @@
 @import 'spinner';
 @import 'table';
 @import 'toggle-switch';
+@import 'typography';

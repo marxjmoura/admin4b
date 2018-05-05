@@ -18,10 +18,9 @@
 
     $input
       .on('keypress', function (e) {
-        var key = e.keyCode || e.which;
-        var keyPressed = keyboard(key);
+        var key = keyboard(e);
 
-        if (keyPressed.isEnter) {
+        if (key.isEnter) {
           var $ativeItem = $items.filter('.active');
 
           if ($ativeItem.length) {

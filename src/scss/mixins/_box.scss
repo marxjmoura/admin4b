@@ -1,0 +1,13 @@
+@mixin crossbrowser-box-shadow($box-shadow...)
+{
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+@mixin crossbrowser-box-sizing($box-sizing)
+{
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}

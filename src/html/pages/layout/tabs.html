@@ -1,0 +1,187 @@
+<!-- @@master = /includes/app.html-->
+<!-- @@block = content -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Layout</li>
+    <li class="breadcrumb-item active" aria-current="page">Tabs</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <h2>
+    Tabs
+  </h2>
+  <p>
+    Tabs can help create a more organized look and make forms easier to use.
+    Tabbed interface is already present in the bootstrap library.
+    This template adds progressive and responsive features for this type of navigation.
+  </p>
+  <p>
+    Refer to <a href="https://getbootstrap.com/docs/4.1/components/navs/#tabs">bootstrap documentation</a>
+    to learn how to use the tabs.
+  </p>
+  <h3>
+    Responsive
+  </h3>
+  <p>
+    To create responsive tabs you need to combine
+    <a href="https://getbootstrap.com/docs/4.1/components/navs/#tabs">tabs</a> and
+    <a href="https://getbootstrap.com/docs/4.1/components/collapse/">collapse</a>.
+    Also, you need wrap both with <code>.nav-tabs-responsive</code>.
+  </p>
+  <div class="nav-tabs-responsive">
+    <ul class="nav nav-tabs mb-2">
+      <li class="nav-item">
+        <a href="#account" class="nav-link active" data-toggle="tab">
+          <i class="icon-lock"></i> Account
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#personal" class="nav-link" data-toggle="tab">
+          <i class="icon-user"></i> Personal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#payment" class="nav-link" data-toggle="tab">
+          <i class="icon-credit-card"></i> Payment
+        </a>
+      </li>
+    </ul>
+    <div id="tab-contents" class="tab-content">
+      <div id="account" class="tab-pane show active">
+        <div class="mb-3">
+          <a href="#account-collapse" data-toggle="collapse">
+            <i class="icon-lock"></i> Account
+          </a>
+        </div>
+        <div id="account-collapse" class="collapse show" data-parent="#tab-contents">
+          <div class="mb-3">Account information</div>
+        </div>
+      </div>
+      <div id="personal" class="tab-pane">
+        <div class="mb-3">
+          <a href="#personal-collapse" data-toggle="collapse">
+            <i class="icon-user"></i> Personal
+          </a>
+        </div>
+        <div id="personal-collapse" class="collapse" data-parent="#tab-contents">
+          <div class="mb-3">Personal information</div>
+        </div>
+      </div>
+      <div id="payment" class="tab-pane">
+        <div class="mb-3">
+          <a href="#payment-collapse" data-toggle="collapse">
+            <i class="icon-credit-card"></i> Payment
+          </a>
+        </div>
+        <div id="payment-collapse" class="collapse" data-parent="#tab-contents">
+          <div class="mb-3">Payment information</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="source-code">
+    <a href="#tabs-responsive" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="tabs-responsive" class="collapse">
+      <pre><code class="html">@@include('includes/code-examples/layout/tabs/tabs-responsive.html')</code></pre>
+    </div>
+  </div>
+  <div class="callout callout-warning">
+    <p>
+      The implementation of responsive behavior has the inconvenience of duplicate the trigger,
+      one for the tab and one for the collapse.
+    </p>
+  </div>
+  <h3>
+    Progressive
+  </h3>
+  <p>
+    You must combine class <code>.nav-tabs-progress</code> and class <code>nav-tabs-*</code>
+    to configure the progress of the tabs and the number of steps. A maximum of six steps is supported.
+    Setting the number of steps is required to calculate the progress bar animation.
+  </p>
+  <div class="nav-tabs-responsive">
+    <ul class="nav nav-tabs-progress nav-tabs-4 mb-4">
+      <li class="nav-item">
+        <a href="#step-1" class="nav-link active" data-toggle="tab">
+          <span class="font-lg">1.</span> Let's begin
+          <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#step-2" class="nav-link" data-toggle="tab">
+          <span class="font-lg">2.</span> Two more steps
+          <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#step-3" class="nav-link" data-toggle="tab">
+          <span class="font-lg">3.</span> Almost there
+          <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#step-4" class="nav-link" data-toggle="tab">
+          <span class="font-lg">4.</span> The last one
+          <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+        </a>
+      </li>
+    </ul>
+    <form id="tab-progress-contents" class="tab-content">
+      <div id="step-1" class="tab-pane show active">
+        <div class="mb-2">
+          <a href="#step-1-collapse" data-toggle="collapse">
+            <span class="font-lg">1.</span> Let's begin
+            <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+          </a>
+        </div>
+        <div id="step-1-collapse" class="collapse show" data-parent="#tab-progress-contents">
+          <div class="mb-3">Content of step one</div>
+        </div>
+      </div>
+      <div id="step-2" class="tab-pane">
+        <div class="mb-2">
+          <a href="#step-2-collapse" data-toggle="collapse">
+            <span class="font-lg">2.</span> Two more steps
+            <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+          </a>
+        </div>
+        <div id="step-2-collapse" class="collapse" data-parent="#tab-progress-contents">
+          <div class="mb-3">Content of step two</div>
+        </div>
+      </div>
+      <div id="step-3" class="tab-pane">
+        <div class="mb-2">
+          <a href="#step-3-collapse" data-toggle="collapse">
+            <span class="font-lg">3.</span> Payment information
+            <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+          </a>
+        </div>
+        <div id="step-3-collapse" class="collapse" data-parent="#tab-progress-contents">
+          <div class="mb-3">Content of step three</div>
+        </div>
+      </div>
+      <div id="step-4" class="tab-pane">
+        <div class="mb-2">
+          <a href="#step-4-collapse" data-toggle="collapse">
+            <span class="font-lg">4.</span> Confirm your details
+            <small class="d-block text-secondary">Lorem ipsum dolor sit amet</small>
+          </a>
+        </div>
+        <div id="step-4-collapse" class="collapse" data-parent="#tab-progress-contents">
+          <div class="mb-3">Content of step four</div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="source-code">
+    <a href="#tabs-progress" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="tabs-progress" class="collapse">
+      <pre><code class="html">@@include('includes/code-examples/layout/tabs/tabs-progress.html')</code></pre>
+    </div>
+  </div>
+</div>
+<!-- @@close -->

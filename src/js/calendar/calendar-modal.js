@@ -59,22 +59,18 @@
 
     $year
       .on('keydown', function (e) {
-        var keyCode = e.keyCode || e.which;
-        var keyPressed = keyboard(keyCode);
+        var key = keyboard(e);
 
-        if (keyPressed.isArrowUp) {
-          $modalCalendar.calendar('query:nextYear');
+        if (key.isNavigation || key.isCommand || key.isSpecial || key.isFunction) {
+          return;
         }
 
-        if (keyPressed.isArrowDown) {
-          $modalCalendar.calendar('query:previousYear');
+        if (!key.isNumber && !key.isCtrlHeld) {
+          e.preventDefault();
         }
-      })
-      .on('keypress', function (e) {
-        var keyCode = e.keyCode || e.which;
-        var keyPressed = keyboard(keyCode);
 
-        if (!keyPressed.isNumber) {
+        // maxlength not working for input[type=number] in Chrome or Firefox
+        if (key.isNumber && $year.val().length >= 4) {
           e.preventDefault();
         }
       })

@@ -1,3 +1,17 @@
+## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
+### Bug fixes
+- Fix position of caret in sidebar link on Firefox
+- Fix `Object.keys` error on IE
+- Fix centralization of modal calendar on small screens
+### Features
+- Upgrade bootstrap to version 4.1.1
+- Add js to npm package
+- Improve template palette
+- Multi-step form and tabbed form
+- Extend `.nav-tabs`:
+  - Progress navigation (`.nav-tabs-progress`)
+  - Responsive capabilities (turning into accordion on small screens)
+
 ## [v1.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.0.0) (2018-04-25)
 ### Breaking changes
 - Removed separate file for code highlight (`.source-code` included in `admim4b.min.css`)

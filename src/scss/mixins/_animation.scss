@@ -1,0 +1,35 @@
+@mixin crossbrowser-animation($animation)
+{
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin crossbrowser-keyframes($name)
+{
+  @keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-webkit-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-moz-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-ms-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-o-keyframes #{$name}
+  {
+    @content;
+  }
+}

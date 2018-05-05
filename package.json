@@ -1,7 +1,7 @@
 {
   "name": "admin4b",
   "title": "Admin 4B",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://marxjmoura.github.io/admin4b",
   "author": "Marx JMoura",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "build": "gulp build"
   },
   "dependencies": {
-    "bootstrap": "^4.1.0"
+    "bootstrap": "^4.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

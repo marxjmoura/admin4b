@@ -75,6 +75,16 @@
           }
         }
 
+        .message-sent p
+        {
+          @include crossbrowser-border-top-left-radius(.5rem);
+        }
+
+        .message-reply p
+        {
+          @include crossbrowser-border-top-right-radius(.5rem);
+        }
+
         .message-sent
         {
           img

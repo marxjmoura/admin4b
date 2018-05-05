@@ -1,6 +1,12 @@
 .modal.modal-calendar .modal-dialog
 {
   max-width: 20rem;
+  margin: $modal-dialog-margin-y-sm-up auto;
+
+  @media (max-width: 21rem)
+  {
+    margin: $modal-dialog-margin;
+  }
 
   .modal-content
   {
