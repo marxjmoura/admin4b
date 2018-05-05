@@ -1,0 +1,7 @@
+@mixin crossbrowser-user-select($user-select)
+{
+  -webkit-user-select: $user-select;
+  -moz-user-select: $user-select;
+  -ms-user-select: $user-select;
+  user-select: $user-select;
+}

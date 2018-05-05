@@ -2,7 +2,7 @@
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox
 - Fix `Object.keys` error on IE
-- Calendar modal not centralizing on small screens
+- Fix centralization of modal calendar on small screens
 ### Features
 - Upgrade bootstrap to version 4.1.1
 - Add js to npm package

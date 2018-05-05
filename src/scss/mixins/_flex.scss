@@ -1,0 +1,35 @@
+@mixin crossbrowser-align-items($align-items)
+{
+  -ms-flex-align: $align-items;
+  -ms-flex-pack: $align-items;
+  -webkit-box-align: $align-items;
+  -webkit-box-pack: $align-items;
+  align-items: $align-items;
+}
+
+@mixin crossbrowser-display-flex()
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin crossbrowser-display-inline-flex()
+{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+@mixin crossbrowser-flex($flex...)
+{
+  -webkit-box-flex: $flex;
+  -moz-box-flex: $flex;
+  -webkit-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
+}

@@ -1,0 +1,5 @@
+@mixin crossbrowser-opacity($opacity)
+{
+  filter: alpha(opacity = $opacity * 100);
+  opacity: $opacity;
+}

@@ -1,0 +1,8 @@
+@mixin crossbrowser-calc($property, $calc)
+{
+  #{$property}: expression(#{$calc});
+  #{$property}: -moz-calc(#{$calc});
+  #{$property}: -webkit-calc(#{$calc});
+  #{$property}: -o-calc(#{$calc});
+  #{$property}: calc(#{$calc});
+}

@@ -1,0 +1,13 @@
+@mixin crossbrowser-backface-visibility($visibility)
+{
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  backface-visibility: $visibility;
+}
+
+@mixin crossbrowser-visibility($visibility)
+{
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  visibility: $visibility;
+}
