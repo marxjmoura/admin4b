@@ -1,4 +1,4 @@
-## v1.1.0 (unreleased)
+## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox
 - Fix `Object.keys` error on IE
