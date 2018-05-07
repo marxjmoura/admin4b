@@ -1,6 +1,6 @@
 .app .app-body .app-sidebar
 {
-  @include crossbrowser-linear-gradient($sidebar-background);
+  @include crossbrowser-linear-gradient(to top, $sidebar-background);
 
   .sidebar-header
   {

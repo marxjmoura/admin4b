@@ -1,9 +1,9 @@
-@mixin crossbrowser-linear-gradient($gradient...)
+@mixin crossbrowser-linear-gradient($direction, $gradient...)
 {
   background: nth($gradient, 1);
-  background-image: -webkit-linear-gradient(to top, $gradient);
-  background-image: -moz-linear-gradient(to top, $gradient);
-  background-image: -ms-linear-gradient(to top, $gradient);
-  background-image: -o-linear-gradient(to top, $gradient);
-  background-image: linear-gradient(to top, $gradient);
+  background-image: -webkit-linear-gradient($direction, $gradient);
+  background-image: -moz-linear-gradient($direction, $gradient);
+  background-image: -ms-linear-gradient($direction, $gradient);
+  background-image: -o-linear-gradient($direction, $gradient);
+  background-image: linear-gradient($direction, $gradient);
 }
