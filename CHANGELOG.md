@@ -1,3 +1,6 @@
+## v1.2.0 (unreleased)
+### Features
+- A domain for the template [getadmin4b.com](http://getadmin4b.com) :)
 ## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox

@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://marxjmoura.github.io/admin4b">
-    <img src="https://marxjmoura.github.io/admin4b/docs/assets/brand/admin4b.png" alt="admin4b" width="72" height="72">
+  <a href="http://getadmin4b.com">
+    <img src="http://getadmin4b.com/docs/assets/brand/admin4b.png" alt="admin4b" width="72" height="72">
   </a>
   <h3 align="center">
     Admin 4B
@@ -8,7 +8,7 @@
   <p align="center">
     Admin template built on top of <a href="http://getbootstrap.com">Bootstrap 4</a>
     <br>
-    <a href="https://marxjmoura.github.io/admin4b"><strong>Explore Admin 4B docs</strong></a>
+    <a href="http://getadmin4b.com"><strong>Explore Admin 4B docs</strong></a>
   </p>
 </p>
 
@@ -22,7 +22,7 @@ Some options are available:
 
 ## Documentation
 
-The documentation is hosted on [GitHub pages](https://marxjmoura.github.io/admin4b/).
+The documentation is hosted on [GitHub pages](http://getadmin4b.com).
 
 ### Running documentation locally
 
