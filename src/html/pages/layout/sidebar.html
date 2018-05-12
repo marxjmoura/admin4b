@@ -11,9 +11,9 @@
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>
+  <h1>
     Layout
-  </h2>
+  </h1>
   <p>
     The layout structure consists of two columns. The first column is the sidebar and the second is the app content
     that takes the remaining width. The basic code of the layout structure can be seen below.
@@ -26,16 +26,16 @@
       <pre><code class="html">@@include('includes/code-examples/layout/basic-structure.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     Sidebar
-  </h3>
+  </h2>
   <p>
     The sidebar is the left column of the layout structure and has a header, a navigation and a footer.
     The template was designed using a sidebar with a maximum of two level of navigation.
   </p>
-  <h4>
+  <h3>
     Header
-  </h4>
+  </h3>
   <p>
     The header of the sidebar comes first. It contains the user informations like photo and name.
   </p>
@@ -47,9 +47,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-header.html')</code></pre>
     </div>
   </div>
-  <h4>
+  <h3>
     Navigation
-  </h4>
+  </h3>
   <p>
     The single level of navigation is defined by class <code>.sidebar-nav-link</code> and takes the user to desired page.
     You also can add buttons to sidebar wrapped with <code>.sidebar-nav-btn</code>.
@@ -65,9 +65,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-nav.html')</code></pre>
     </div>
   </div>
-  <h4>
+  <h3>
     Footer
-  </h4>
+  </h3>
   <p>
     The sidebar footer contains a set of other buttons like a small toolbar.
   </p>
@@ -79,9 +79,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-footer.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     Content
-  </h3>
+  </h2>
   <p>
     The content is the right column of the layout structure and contains the page content that the user navigated to.
     The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
@@ -94,9 +94,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/app-content.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     Responsive
-  </h3>
+  </h2>
   <p>
     The template uses the bootstrap breakpoints to define the minimum width to show the sidebar.
     When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
@@ -110,9 +110,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-triggers.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     Example
-  </h3>
+  </h2>
   <p>
     An example code for the full setup of the sidebar can be seen below.
   </p>
@@ -124,9 +124,9 @@
       <pre><code class="html">@@include('includes/code-examples/layout/starter-template.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     What's next?
-  </h3>
+  </h2>
   <p>
     <a href="@@webRoot/pages/layout/theming.html">Customize the sidebar navigation</a>
   </p>
