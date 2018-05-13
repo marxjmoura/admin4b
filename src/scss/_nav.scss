@@ -14,7 +14,7 @@
       padding-bottom: .625rem;
       @include crossbrowser-transition(opacity .5s ease);
 
-      &:last-child:after
+      &:last-child::after
       {
         content: "";
         display: block;
@@ -56,7 +56,7 @@
         @include crossbrowser-transition(left .5s ease);
       }
 
-      &:after
+      &::after
       {
         @include crossbrowser-transition(width .5s ease);
       }
@@ -76,7 +76,7 @@
           width: $width;
         }
 
-        .nav-item:last-child:after
+        .nav-item:last-child::after
         {
           width: $width / 2;
         }
@@ -95,7 +95,7 @@
               left: $width * ($j + 1) - $width / 2;
             }
 
-            &.complete ~ .nav-item:last-child:after
+            &.complete ~ .nav-item:last-child::after
             {
               width: $width * ($j + 1) - $width / 2;
             }
@@ -109,7 +109,7 @@
             left: 100% !important;
           }
 
-          &.complete:after
+          &.complete::after
           {
             width: 100% !important;
           }

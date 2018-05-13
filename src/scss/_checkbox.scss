@@ -38,11 +38,11 @@ label.checkbox
     @include crossbrowser-opacity(0);
 
     &,
-    &:after,
-    &:before,
+    &::after,
+    &::before,
     & *,
-    & *:after,
-    & *:before,
+    & *::after,
+    & *::before,
     & + span
     {
       box-sizing: border-box;
@@ -65,7 +65,7 @@ label.checkbox
       @include crossbrowser-border-radius(.3125rem);
       @include crossbrowser-transition(all 0.2s ease);
 
-      &:after
+      &::after
       {
         content: "";
         position: absolute;
@@ -89,7 +89,7 @@ label.checkbox
     {
       background: map-get($grays, "500");
 
-      &:after
+      &::after
       {
         display: block;
       }
@@ -110,7 +110,7 @@ label.checkbox
       height: 1.05rem;
       width: 1.05rem;
 
-      &:after
+      &::after
       {
         left: .3125rem;
         top: .125rem;
@@ -129,7 +129,7 @@ label.checkbox
       height: 1.6rem;
       width: 1.6rem;
 
-      &:after
+      &::after
       {
         left: .57rem;
         top: .3rem;

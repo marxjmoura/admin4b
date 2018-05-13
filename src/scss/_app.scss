@@ -20,14 +20,14 @@ body
     position: relative;
     width: 100%;
 
-    &:before
+    &::before
     {
         content: "";
         height: 100%;
         float: left;
     }
 
-    &:after
+    &::after
     {
         content: "";
         clear: both;

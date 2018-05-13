@@ -186,8 +186,8 @@
     width: 2rem;
     height: 2rem;
 
-    &:before,
-    &:after
+    &::before,
+    &::after
     {
       background-color: $sidebar-btn-close;
       position: absolute;
@@ -196,12 +196,12 @@
       width: .125rem;
     }
 
-    &:before
+    &::before
     {
       @include crossbrowser-transform(rotate(45deg));
     }
 
-    &:after
+    &::after
     {
       @include crossbrowser-transform(rotate(-45deg));
     }
