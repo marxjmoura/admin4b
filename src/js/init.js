@@ -1,5 +1,6 @@
 $(function () {
   $('input').typing();
+  $('.app-sidebar').sidebar();
   $('.as-input').asInput();
   $('.chat').chat();
   $('.modal-calendar').calendar();
