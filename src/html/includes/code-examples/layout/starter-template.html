@@ -8,42 +8,52 @@
         &lt;img src="john-doe.png" class="user-photo"&gt;
         &lt;p class="username"&gt;John Doe&lt;/p&gt;
       &lt;/div&gt;
-      &lt;div id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
-        &lt;div class="sidebar-nav-btn"&gt;
+      &lt;ul id="sidebar-nav" class="sidebar-nav" data-children=".sidebar-nav-group"&gt;
+        &lt;li class="sidebar-nav-btn"&gt;
           &lt;a href="page.html" class="btn btn-block btn-outline-light"&gt;
             Button link
           &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;a href="page.html" class="sidebar-nav-link"&gt;
-          Go to page
-        &lt;/a&gt;
-        &lt;div class="sidebar-nav-group"&gt;
-          &lt;a href="#first-group" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav"&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="page.html" class="sidebar-nav-link"&gt;
+            Go to page
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="sidebar-nav-group"&gt;
+          &lt;a href="#first-group" class="sidebar-nav-link collapsed" data-toggle="collapse"&gt;
             Open first group
           &lt;/a&gt;
-          &lt;div id="first-group" class="sidebar-nav-group collapse"&gt;
-            &lt;a href="page.html" class="sidebar-nav-link"&gt;
-              Fisrt group page 1
-            &lt;/a&gt;
-            &lt;a href="page.html" class="sidebar-nav-link"&gt;
-              Fisrt group page 2
-            &lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="sidebar-nav-group"&gt;
-          &lt;a href="#second-group" class="sidebar-nav-link collapsed" data-toggle="collapse" data-parent="#sidebar-nav"&gt;
+          &lt;ul id="first-group" class="collapse" data-parent="#sidebar-nav"&gt;
+            &lt;li&gt;
+              &lt;a href="page.html" class="sidebar-nav-link"&gt;
+                Fisrt group page 1
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="page.html" class="sidebar-nav-link"&gt;
+                Fisrt group page 2
+              &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="sidebar-nav-group"&gt;
+          &lt;a href="#second-group" class="sidebar-nav-link collapsed" data-toggle="collapse"&gt;
             Open second group
           &lt;/a&gt;
-          &lt;div id="second-group" class="sidebar-nav-group collapse"&gt;
-            &lt;a href="page.html" class="sidebar-nav-link"&gt;
-              Second group page 1
-            &lt;/a&gt;
-            &lt;a href="page.html" class="sidebar-nav-link"&gt;
-              Second group page 2
-            &lt;/a&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+          &lt;ul id="second-group" class="collapse" data-parent="#sidebar-nav"&gt;
+            &lt;li&gt;
+              &lt;a href="page.html" class="sidebar-nav-link"&gt;
+                Second group page 1
+              &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="page.html" class="sidebar-nav-link"&gt;
+                Second group page 2
+              &lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
       &lt;div class="sidebar-footer"&gt;
         &lt;a href="#" data-toggle="tooltip" title="GitHub"&gt;
           &lt;i class="fa fa-github"&gt;&lt;/i&gt;

@@ -27,8 +27,6 @@
 
       small
       {
-        display: block;
-        padding-top: .25rem;
         @include crossbrowser-opacity(.75);
       }
     }
@@ -38,6 +36,13 @@
   {
     overflow: hidden;
     padding: 0;
+
+    ul
+    {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
     .sidebar-nav-btn
     {
@@ -73,6 +78,7 @@
     }
 
     > .sidebar-nav-link,
+    > li > .sidebar-nav-link,
     > .sidebar-nav-group > .sidebar-nav-link
     {
       color: $sidebar-nav-link-level-1;
