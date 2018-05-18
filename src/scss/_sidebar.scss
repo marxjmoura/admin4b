@@ -161,7 +161,7 @@
       @include crossbrowser-opacity(0);
       @include crossbrowser-visibility(hidden);
 
-      &.sidebar-open
+      &.show
       {
         @include crossbrowser-opacity(1);
         @include crossbrowser-visibility(visible);
