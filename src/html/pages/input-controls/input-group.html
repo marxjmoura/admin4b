@@ -1,5 +1,9 @@
 <!-- @@master = /includes/app.html-->
-<!-- @@block = content -->
+<!-- @@block = head -->
+<meta name="description" content="Easily prepend and append text or buttons to the text-based inputs." />
+<title>Admin 4B · Input group</title>
+<!-- @@close -->
+<!-- @@block = body -->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Input controls</li>
@@ -7,9 +11,9 @@
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>
+  <h1>
     Input group
-  </h2>
+  </h1>
   <p>
     The <code>.input-group</code> is a
     <a href="https://getbootstrap.com/docs/4.1/components/input-group/">bootstrap component</a>
@@ -42,7 +46,7 @@
     </div>
   </div>
   <div class="callout callout-warning">
-    <h5>Component limitations</h5>
+    <h4>Component limitations</h4>
     <ol>
       <li>
         Only works with <code>input-group-text</code>.
@@ -64,16 +68,16 @@
       <pre><code class="html">@@include('includes/code-examples/input-controls/input-group/input-group-basic.html')</code></pre>
     </div>
   </div>
-  <h3>
+  <h2>
     Input states
-  </h3>
+  </h2>
   <p>
     The component automatically respond to the <code>input</code> attributes states <code>readonly</code> and <code>disabled</code>.
     For validation you will need to add <code>.is-valid</code> or <code>.is-invalid</code> classes.
   </p>
-  <h4>
+  <h3>
     Examples
-  </h4>
+  </h3>
   <div class="form-group">
     <label>Append with default state</label>
     <div class="input-group as-input append">

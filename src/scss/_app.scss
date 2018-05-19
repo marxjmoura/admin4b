@@ -7,7 +7,7 @@ html, body
 body
 {
     font-family: $font-family-base;
-    font-size: 1rem;
+    font-size: $font-size-base;
 }
 
 .app, .app-sidebar, .app-content
@@ -20,14 +20,14 @@ body
     position: relative;
     width: 100%;
 
-    &:before
+    &::before
     {
         content: "";
         height: 100%;
         float: left;
     }
 
-    &:after
+    &::after
     {
         content: "";
         clear: both;
@@ -44,17 +44,17 @@ body
         {
             background: map-get($colors, "white");
             float: left;
-            font-size: 0.95rem;
+            font-size: $sidebar-font-size;
             overflow-x: hidden;
             overflow-y: scroll;
-            padding: .95rem 0;
+            padding: $sidebar-padding;
             position: relative;
             width: $sidebar-width;
 
             &::-webkit-scrollbar
             {
                 background-color: $sidebar-scrollbar;
-                width: .2rem;
+                width: $sidebar-scrollbar-width;
             }
 
             &::-webkit-scrollbar-thumb
@@ -70,7 +70,7 @@ body
                 z-index: 2050;
                 width: 0;
 
-                &.sidebar-open
+                &.show
                 {
                     width: 100%;
                 }

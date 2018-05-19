@@ -1,6 +1,6 @@
 .app .app-body .app-sidebar
 {
-  @include crossbrowser-linear-gradient($sidebar-background);
+  @include crossbrowser-linear-gradient(to top, $sidebar-background);
 
   .sidebar-header
   {
@@ -13,7 +13,7 @@
       box-shadow: 0 0 0 .5rem $sidebar-header-img-border;
       border: 1px solid transparent;
       height: 4.5rem;
-      margin: .25rem 0;
+      margin: .5rem 0;
       padding: .2rem;
       width: 4.5rem;
       @include crossbrowser-border-radius(50%);
@@ -27,8 +27,6 @@
 
       small
       {
-        display: block;
-        padding-top: .25rem;
         @include crossbrowser-opacity(.75);
       }
     }
@@ -38,6 +36,13 @@
   {
     overflow: hidden;
     padding: 0;
+
+    ul
+    {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
     .sidebar-nav-btn
     {
@@ -73,6 +78,7 @@
     }
 
     > .sidebar-nav-link,
+    > li > .sidebar-nav-link,
     > .sidebar-nav-group > .sidebar-nav-link
     {
       color: $sidebar-nav-link-level-1;
@@ -155,7 +161,7 @@
       @include crossbrowser-opacity(0);
       @include crossbrowser-visibility(hidden);
 
-      &.sidebar-open
+      &.show
       {
         @include crossbrowser-opacity(1);
         @include crossbrowser-visibility(visible);
@@ -186,8 +192,8 @@
     width: 2rem;
     height: 2rem;
 
-    &:before,
-    &:after
+    &::before,
+    &::after
     {
       background-color: $sidebar-btn-close;
       position: absolute;
@@ -196,14 +202,14 @@
       width: .125rem;
     }
 
-    &:before
+    &::before
     {
-      transform: rotate(45deg);
+      @include crossbrowser-transform(rotate(45deg));
     }
 
-    &:after
+    &::after
     {
-      transform: rotate(-45deg);
+      @include crossbrowser-transform(rotate(-45deg));
     }
   }
 }

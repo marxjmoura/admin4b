@@ -1,5 +1,9 @@
 <!-- @@master = /includes/app.html-->
-<!-- @@block = content -->
+<!-- @@block = head -->
+<meta name="description" content="Create input controls that let the user easily select a date using a calendar." />
+<title>Admin 4B · Input date</title>
+<!-- @@close -->
+<!-- @@block = body -->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Input controls</li>
@@ -7,7 +11,7 @@
   </ol>
 </nav>
 <div class="container-fluid">
-  <h2>Input date</h2>
+  <h1>Input date</h1>
   <p>
     Input date is a set of bootstrap components (mainly <a href="https://getbootstrap.com/docs/4.1/components/input-group/">input-group</a>
     and <a href="https://getbootstrap.com/docs/4.1/components/modal/">modal</a>) to build a control that allows users to navigate in the
@@ -68,7 +72,7 @@
                 <a href="#" class="dropdown-item" data-calendar-month="11">December</a>
               </div>
             </div>
-            <input type="number" class="form-control" maxlength="4">
+            <input type="number" class="form-control" pattern="[0-9]*" maxlength="4">
             <div class="input-group-append">
               <button type="button" class="btn btn-link" data-calendar-month="next">
                 <i class="fa fa-angle-right"></i>
@@ -132,7 +136,7 @@
   <div class="callout callout-info">
     <p>It is possible have only one calendar for the entire application if you want to.</p>
   </div>
-  <h3>Calendar</h3>
+  <h2>Calendar</h2>
   <p>
     The calendar is displayed in a <a href="https://getbootstrap.com/docs/4.1/components/modal/">bootstrap modal</a>
     and defined by the class <code>.modal-calendar</code>.
@@ -150,7 +154,7 @@
       <pre><code class="html">@@include('includes/code-examples/input-controls/input-date/calendar-modal-empty.html')</code></pre>
     </div>
   </div>
-  <h4>Calendar header</h4>
+  <h3>Calendar header</h3>
   <p>
     The calendar header contains the navigation that allows the user to go to the next pages or to the previous pages of the calendar.
     Also, the user can select a month in the dropdown or type the desired year. See the example below:
@@ -163,7 +167,7 @@
       <pre><code class="html">@@include('includes/code-examples/input-controls/input-date/calendar-modal-header.html')</code></pre>
     </div>
   </div>
-  <h4>Calendar body</h4>
+  <h3>Calendar body</h3>
   <p>
     The calendar body contains the current page and allows the user to select the desired date.
     In addition, the body contains the links to today's date and to the selected date.
@@ -176,7 +180,7 @@
       <pre><code class="html">@@include('includes/code-examples/input-controls/input-date/calendar-modal-body.html')</code></pre>
     </div>
   </div>
-  <h4>Calendar footer</h4>
+  <h3>Calendar footer</h3>
   <p>
     The calendar footer contains the buttons to confirm or cancel the selected date. See the example below:
   </p>
@@ -188,7 +192,7 @@
       <pre><code class="html">@@include('includes/code-examples/input-controls/input-date/calendar-modal-footer.html')</code></pre>
     </div>
   </div>
-  <h3>Options</h3>
+  <h2>Options</h2>
   <p>
     Options can be passed via data attributes:
   </p>
@@ -218,7 +222,7 @@
   <div class="callout callout-warning">
     <p>By design these attribute options only work for children of a <code>.modal-calendar</code>.</p>
   </div>
-  <h3>Methods</h3>
+  <h2>Methods</h2>
   <p>
     A few methods are available to control the calendar:
   </p>
@@ -272,7 +276,7 @@
       </tbody>
     </table>
   </div>
-  <h3>Events</h3>
+  <h2>Events</h2>
   <p>
     Events triggered from the calendar can be listened to write custom logic:
   </p>

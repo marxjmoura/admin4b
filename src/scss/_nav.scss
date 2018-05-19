@@ -14,7 +14,7 @@
       padding-bottom: .625rem;
       @include crossbrowser-transition(opacity .5s ease);
 
-      &:last-child:after
+      &:last-child::after
       {
         content: "";
         display: block;
@@ -42,7 +42,7 @@
   {
     .nav-item:last-child
     {
-      &:before
+      &::before
       {
         content: "";
         display: block;
@@ -56,7 +56,7 @@
         @include crossbrowser-transition(left .5s ease);
       }
 
-      &:after
+      &::after
       {
         @include crossbrowser-transition(width .5s ease);
       }
@@ -76,12 +76,12 @@
           width: $width;
         }
 
-        .nav-item:last-child:after
+        .nav-item:last-child::after
         {
           width: $width / 2;
         }
 
-        .nav-item:last-child:before
+        .nav-item:last-child::before
         {
           left: $width / 2;
         }
@@ -90,12 +90,12 @@
         {
           .nav-item:nth-child(#{$j})
           {
-            &.complete ~ .nav-item:last-child:before
+            &.complete ~ .nav-item:last-child::before
             {
               left: $width * ($j + 1) - $width / 2;
             }
 
-            &.complete ~ .nav-item:last-child:after
+            &.complete ~ .nav-item:last-child::after
             {
               width: $width * ($j + 1) - $width / 2;
             }
@@ -104,12 +104,12 @@
 
         .nav-item:last-child
         {
-          &.complete:before
+          &.complete::before
           {
             left: 100% !important;
           }
 
-          &.complete:after
+          &.complete::after
           {
             width: 100% !important;
           }

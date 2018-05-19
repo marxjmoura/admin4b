@@ -12,6 +12,19 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
 $belize-hole: #3ca2e0 !default;
 $blue: #007bff !default;
 $carrot: #e67e22 !default;
@@ -36,6 +49,23 @@ $theme-colors: map-merge((
   "danger": $red
 ), $theme-colors);
 
+// Fonts
+
+$font-family-base: 'Open Sans', sans-serif, arial !default;
+
+$font-size-base: 1rem !default;
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * .875) !default;
+
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: $font-size-base * 1.55 !default;
+$h4-font-size: $font-size-base * 1.35 !default;
+$h5-font-size: $font-size-base * 1.15 !default;
+$h6-font-size: $font-size-base !default;
+
+$headings-margin-bottom: 1rem !default;
+
 // Responsive breakpoints
 
 $breakpoints: () !default;
@@ -55,7 +85,6 @@ $breakpoints: map-merge((
 $body-bg: $gray-200 !default;
 $breadcrumb-bg: $gray-300 !default;
 $breadcrumb-border-radius: 0 !default;
-$font-family-base: 'Open Sans', sans-serif !default;
 $link-color: $blue !default;
 $table-head-bg: $gray-400 !default;
 $nav-tabs-border-color: $gray-400 !default;
@@ -66,6 +95,7 @@ $nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !
 
 $sidebar-background: $peter-river !default;
 $sidebar-btn-close: rgba($white, .5) !default;
+$sidebar-font-size: 0.95rem !default;
 $sidebar-header-color: rgba($white, .75) !default;
 $sidebar-header-img-bg: $gray-200 !default;
 $sidebar-header-img-border: rgba($white, .15) !default;
@@ -75,8 +105,10 @@ $sidebar-nav-link-level-2: rgba($white, .75) !default;
 $sidebar-nav-link-level-2-hover: $white !default;
 $sidebar-nav-footer-link: rgba($white, .5) !default;
 $sidebar-nav-footer-link-hover: rgba($white, .75) !default;
+$sidebar-padding: .95rem 0 !default;
 $sidebar-scrollbar: $belize-hole !default;
 $sidebar-scrollbar-thumb: rgba($white, .75) !default;
+$sidebar-scrollbar-width: .2rem !default;
 $sidebar-width: 15rem !default;
 
 // Code highlight

@@ -9,7 +9,7 @@
       {
         border-color: $color;
 
-        &:after
+        &::after
         {
           background: $color;
         }
@@ -19,7 +19,7 @@
       {
         border-color: lighten($color, 20%);
 
-        &:after
+        &::after
         {
           background: lighten($color, 20%);
         }
@@ -48,11 +48,11 @@ label.radio
     @include crossbrowser-opacity(0);
 
     &,
-    &:after,
-    &:before,
+    &::after,
+    &::before,
     & *,
-    & *:after,
-    & *:before,
+    & *::after,
+    & *::before,
     & + span
     {
       box-sizing: border-box;
@@ -75,7 +75,7 @@ label.radio
       @include crossbrowser-border-radius(100%);
       @include crossbrowser-transition(all .2s ease);
 
-      &:after
+      &::after
       {
         background: map-get($grays, "600");
         border: .125rem solid map-get($colors, "white");
@@ -93,12 +93,12 @@ label.radio
       @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "500"), .25));
     }
 
-    &:checked + .check-mark:after
+    &:checked + .check-mark::after
     {
       @include crossbrowser-transform(scale(1));
     }
 
-    &:not(:checked) + .check-mark:after
+    &:not(:checked) + .check-mark::after
     {
       @include crossbrowser-transform(scale(0));
     }
@@ -110,12 +110,12 @@ label.radio
         color: map-get($grays, "600");
         cursor: not-allowed;
 
-        &:before
+        &::before
         {
           border-color: map-get($grays, "500");
         }
 
-        &:after
+        &::after
         {
           background: map-get($grays, "600");
         }
@@ -135,7 +135,7 @@ label.radio
         width: 1rem;
         height: 1rem;
 
-        &:after
+        &::after
         {
           border-width: .1rem;
           width: .875rem;
@@ -157,7 +157,7 @@ label.radio
         width: 1.4rem;
         height: 1.4rem;
 
-        &:after
+        &::after
         {
           border-width: .175rem;
           width: 1.275rem;

@@ -1,3 +1,12 @@
+## [v1.1.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.1) (2018-05-19)
+### Bug fixes:
+- Fix polyfill for `Object.keys`
+- Hover color of links in dropdown for notifications
+### Features:
+- Support for `ul > li` in sidebar
+- Improve typography:
+  - Header sizing and margins
+  - Add gray text colors (`text-gray-*`)
 ## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox

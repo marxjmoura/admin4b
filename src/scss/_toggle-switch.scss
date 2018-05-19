@@ -54,11 +54,11 @@ label.switch
     @include crossbrowser-opacity(0);
 
     &,
-    &:after,
-    &:before,
+    &::after,
+    &::before,
     & *,
-    & *:after,
-    & *:before,
+    & *::after,
+    & *::before,
     & + span
     {
       box-sizing: border-box;
@@ -83,8 +83,8 @@ label.switch
       @include crossbrowser-transition(all .4s ease);
       @include crossbrowser-user-select(none);
 
-      &:before,
-      &:after
+      &::before,
+      &::after
       {
         position: relative;
         display: block;
@@ -93,12 +93,12 @@ label.switch
         height: 100%;
       }
 
-      &:before
+      &::before
       {
         display: none;
       }
 
-      &:after
+      &::after
       {
         left: 0;
         background: map-get($colors, "white");
@@ -108,7 +108,7 @@ label.switch
       }
     }
 
-    &:checked + .switch-slider:after
+    &:checked + .switch-slider::after
     {
       left: 50%;
     }
