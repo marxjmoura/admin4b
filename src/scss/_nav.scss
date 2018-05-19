@@ -42,7 +42,7 @@
   {
     .nav-item:last-child
     {
-      &:before
+      &::before
       {
         content: "";
         display: block;
@@ -81,7 +81,7 @@
           width: $width / 2;
         }
 
-        .nav-item:last-child:before
+        .nav-item:last-child::before
         {
           left: $width / 2;
         }
@@ -90,7 +90,7 @@
         {
           .nav-item:nth-child(#{$j})
           {
-            &.complete ~ .nav-item:last-child:before
+            &.complete ~ .nav-item:last-child::before
             {
               left: $width * ($j + 1) - $width / 2;
             }
@@ -104,7 +104,7 @@
 
         .nav-item:last-child
         {
-          &.complete:before
+          &.complete::before
           {
             left: 100% !important;
           }
