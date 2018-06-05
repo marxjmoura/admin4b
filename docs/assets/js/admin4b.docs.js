@@ -1,140 +1,140 @@
 $(function () {
-    /*
-     * Code highlight
-     */
-    $('pre code').each(function (i, code) {
-        hljs.highlightBlock(code);
+  /*
+   * Code highlight
+   */
+  $('pre code').each(function (i, code) {
+    hljs.highlightBlock(code);
+  });
+
+  /*
+   * Spinner
+   */
+  $('#spinner-toggle').on('click', function () {
+    $('#spinner').addClass('show');
+
+    setTimeout(function () {
+      $('#spinner').removeClass('show');
+    }, 3000);
+  });
+
+  /*
+   * Input suggestion async
+   */
+  var juices = [
+    'Apple, carrot, and orange',
+    'Beet, carrot, ginger, and turmeric',
+    'Homemade tomato juice',
+    'Orange and grapefruit',
+    'Pumpkin seed',
+    'Spinach, lettuce, and kale',
+    'Strawberry and mango',
+    'Strawberry-kiwi mint'
+  ];
+
+  $('[data-toggle="suggestion"][data-async]').on('suggestion:search', function () {
+    var $input = $(this);
+    var $uggestion = $input.closest('.input-suggestion');
+    var $list = $uggestion.find('.list-group.items');
+
+    var filteredJuices = juices.filter(function (juice) {
+      return juice.contains($input.val());
     });
 
-    /*
-     * Spinner
-     */
-    $('#spinner-toggle').on('click', function () {
-        $('#spinner').addClass('show');
-
-        setTimeout(function () {
-            $('#spinner').removeClass('show');
-        }, 3000);
+    var $result = filteredJuices.map(function (juice) {
+      return $('<a>')
+        .attr('href', '#')
+        .attr('tabindex', '-1')
+        .addClass('list-group-item list-group-item-action')
+        .text(juice);
     });
 
-    /*
-     * Input suggestion async
-     */
-    var juices = [
-        'Apple, carrot, and orange',
-        'Beet, carrot, ginger, and turmeric',
-        'Homemade tomato juice',
-        'Orange and grapefruit',
-        'Pumpkin seed',
-        'Spinach, lettuce, and kale',
-        'Strawberry and mango',
-        'Strawberry-kiwi mint'
-    ];
+    $list.empty();
+    $list.append($result);
 
-    $('[data-toggle="suggestion"][data-async]').on('suggestion:search', function () {
-        var $input = $(this);
-        var $uggestion = $input.closest('.input-suggestion');
-        var $list = $uggestion.find('.list-group.items');
+    $input.suggestion('refresh');
+  });
 
-        var filteredJuices = juices.filter(function (juice) {
-            return juice.contains($input.val());
-        });
+  /*
+   * File manager
+   */
+  $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
+    $('#file-name').text(file.name);
+    $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
+    $('#is-invalid').toggleClass('d-none', !file.errors.length);
+    $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
-        var $result = filteredJuices.map(function (juice) {
-            return $('<a>')
-                .attr('href', '#')
-                .attr('tabindex', '-1')
-                .addClass('list-group-item list-group-item-action')
-                .text(juice);
-        });
+    if (file.type.startsWith('image')) {
+      $('#file-preview').attr('src', file.dataURL).removeClass('d-none');
+    } else {
+      $('#file-preview').removeAttr('src').addClass('d-none');
+    }
 
-        $list.empty();
-        $list.append($result);
+    $('#file-empty').addClass('d-none');
+    $('#file-data').removeClass('d-none');
+  });
 
-        $input.suggestion('refresh');
+  /*
+   * Camera
+   */
+  var $modalCamera = $('#modal-camera');
+  var $camera = $('#camera');
+  var $btnSnapshot = $('#button-snapshot');
+  var $snapshotPreview = $('#snapshot-preview');
+
+  $modalCamera
+    .on('shown.bs.modal', function () {
+      $camera.camera('play');
+    })
+    .on('hidden.bs.modal', function () {
+      $camera.camera('stop');
     });
 
-    /*
-     * File manager
-     */
-    $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
-        $('#file-name').text(file.name);
-        $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
-        $('#is-invalid').toggleClass('d-none', !file.errors.length);
-        $('#is-valid').toggleClass('d-none', !!file.errors.length);
+  $btnSnapshot.on('click', function () {
+    $camera.camera('snapshot', { width: 320, height: 240 });
+  });
 
-        if (file.type.startsWith('image')) {
-            $('#file-preview').attr('src', file.dataURL).removeClass('d-none');
-        } else {
-            $('#file-preview').removeAttr('src').addClass('d-none');
-        }
-
-        $('#file-empty').addClass('d-none');
-        $('#file-data').removeClass('d-none');
+  $camera
+    .on('camera:snapshot', function (e, blob) {
+      $snapshotPreview.attr('src', blob.dataURL);
+      $modalCamera.modal('hide');
+    })
+    .on('camera:notSupported', function () {
+      $modalCamera.find('.modal-body').find('p').removeClass('d-none');
     });
 
-    /*
-     * Camera
-     */
-    var $modalCamera = $('#modal-camera');
-    var $camera = $('#camera');
-    var $btnSnapshot = $('#button-snapshot');
-    var $snapshotPreview = $('#snapshot-preview');
+  /*
+   * Input date (displays calendar)
+   */
+  var $calendar = $('#calendar');
+  var $btnApplyDate = $('#btnApplyDate')
 
-    $modalCamera
-        .on('shown.bs.modal', function () {
-            $camera.camera('play');
-        })
-        .on('hidden.bs.modal', function () {
-            $camera.camera('stop');
-        });
+  $calendar.on('show.bs.modal', function (e) {
+    var $formControl = $(e.relatedTarget)
+      .closest('.form-group')
+      .find('.form-control');
 
-    $btnSnapshot.on('click', function () {
-        $camera.camera('snapshot', { width: 320, height: 240 });
-    });
+    $btnApplyDate.prop('target', $formControl);
+    $calendar.calendar('date', $formControl.prop('date') || new Date());
+  });
 
-    $camera
-        .on('camera:snapshot', function (e, blob) {
-            $snapshotPreview.attr('src', blob.dataURL);
-            $modalCamera.modal('hide');
-        })
-        .on('camera:notSupported', function () {
-            $modalCamera.find('.modal-body').find('p').removeClass('d-none');
-        });
+  $btnApplyDate.on('click', function () {
+    var $target = $btnApplyDate.prop('target');
+    var date = $calendar.calendar('date');
+    var formattedDate = moment(date).format('dddd, MMMM D, YYYY');
 
-    /*
-     * Input date (displays calendar)
-     */
-    var $calendar = $('#calendar');
-    var $btnApplyDate = $('#btnApplyDate')
+    $target.prop('date', date).text(formattedDate);
+  });
 
-    $calendar.on('show.bs.modal', function (e) {
-        var $formControl = $(e.relatedTarget)
-            .closest('.form-group')
-            .find('.form-control');
+  /*
+   * Nav tabs
+   */
+  $('[data-form-step]').on('click', function () {
+    var tabId = $(this).attr('data-form-step');
+    $('[href="' + tabId + '"]').tab('show');
+  });
 
-        $btnApplyDate.prop('target', $formControl);
-        $calendar.calendar('date', $formControl.prop('date') || new Date());
-    });
-
-    $btnApplyDate.on('click', function () {
-        var $target = $btnApplyDate.prop('target');
-        var date = $calendar.calendar('date');
-        var formattedDate = moment(date).format('dddd, MMMM D, YYYY');
-
-        $target.prop('date', date).text(formattedDate);
-    });
-
-    /*
-     * Nav tabs
-     */
-    $('[data-form-step]').on('click', function () {
-        var tabId = $(this).attr('data-form-step');
-        $('[href="' + tabId + '"]').tab('show');
-    });
-
-    $('#formOrder').on('submit', function(e) {
-        $('.nav-tabs-progress').find('.nav-item').last().addClass('complete');
-        e.preventDefault();
-    });
+  $('#formOrder').on('submit', function (e) {
+    $('.nav-tabs-progress').find('.nav-item').last().addClass('complete');
+    e.preventDefault();
+  });
 });

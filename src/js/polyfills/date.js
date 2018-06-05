@@ -1,32 +1,28 @@
-(function () {
+Date.prototype.addDays = function (days) {
+  const date = new Date(this.getTime())
+  date.setDate(this.getDate() + days)
 
-  Date.prototype.addDays = function (days) {
-    var date = new Date(this.getTime());
-    date.setDate(this.getDate() + days);
+  return date
+}
 
-    return date;
-  };
+Date.prototype.addMonths = function (months) {
+  const year = this.getFullYear()
+  const month = this.getMonth() + months
+  const date = new Date(year, month, 1)
+  const lastDate = new Date(year, month + 1, 0)
 
-  Date.prototype.addMonths = function (months) {
-    var year = this.getFullYear();
-    var month = this.getMonth() + months;
-    var date = new Date(year, month, 1);
-    var lastDate = new Date(year, month + 1, 0);
+  if (this.getDate() > lastDate.getDate()) {
+    date.setDate(lastDate.getDate())
+  } else {
+    date.setDate(this.getDate())
+  }
 
-    if (this.getDate() > lastDate.getDate()) {
-      date.setDate(lastDate.getDate());
-    } else {
-      date.setDate(this.getDate());
-    }
+  return date
+}
 
-    return date;
-  };
+Date.prototype.addYears = function (years) {
+  const date = new Date(this.getTime())
+  date.setFullYear(this.getFullYear() + years)
 
-  Date.prototype.addYears = function (years) {
-    var date = new Date(this.getTime());
-    date.setFullYear(this.getFullYear() + years);
-
-    return date;
-  };
-
-})();
+  return date
+}

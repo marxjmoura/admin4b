@@ -1,25 +1,19 @@
-(function () {
+import browser from 'src/js/util/browser'
 
-  var userAgent = window.navigator.userAgent;
-  var isIE10 = userAgent.indexOf("MSIE ") > 0;
-  var isIE11 = userAgent.indexOf('Trident/') > 0;
+if (browser.isIE10 || browser.isIE11) {
+  Object.keys = function (obj) {
+    const keys = []
 
-  if (isIE10 || isIE11) {
-    Object.keys = function (obj) {
-      var keys = [];
+    if (!obj) {
+      return keys
+    }
 
-      if (!obj) {
-        return keys;
+    for (const p in obj) {
+      if (obj.hasOwnProperty(p)) {
+        keys.push(p)
       }
+    }
 
-      for (var p in obj) {
-        if (obj.hasOwnProperty(p)) {
-          keys.push(p);
-        }
-      }
-
-      return keys;
-    };
+    return keys
   }
-
-})();
+}

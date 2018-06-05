@@ -1,43 +1,49 @@
-(function ($) {
+import $ from 'node_modules/jquery'
+import CameraBlob from './camera-blob'
+import { DataAttribute, Event, Prop } from './camera-constants'
 
-  var regex = /^(\d+)x(\d+)$/gi;
+const sizeRegex = /^(\d+)x(\d+)$/gi
 
-  function getSize(size) {
-    if (!size || !size.match(regex)) {
-      return { width: 320, height: 240 };
-    }
-
-    var matches = regex.exec(size);
-
-    return { width: matches[1], height: matches[2] };
+class SnapshotCommand {
+  constructor(element) {
+    this._element = element
   }
 
-  $.fn.camera.snapshot = function () {
-    var $video = $(this);
-
-    if (!$video.prop('playing')) {
-      return;
+  _getSize(size) {
+    if (!size || !size.match(sizeRegex)) {
+      return { width: 320, height: 240 }
     }
 
-    var video = $video.get(0);
+    const matches = sizeRegex.exec(size)
 
-    var size = getSize($video.attr('data-size'));
+    return { width: matches[1], height: matches[2] }
+  }
 
-    var canvas = document.createElement('canvas');
-    canvas.width = size.width;
-    canvas.height = size.height;
+  execute() {
+    const $video = $(this._element)
 
-    var context = canvas.getContext('2d');
-    context.translate(size.width, 0); // 'translate' and 'scale' to flip horizontally
-    context.scale(-1, 1);
-    context.drawImage(video, 0, 0, size.width, size.height);
+    if (!$video.prop(Prop.PLAYING)) {
+      return
+    }
 
-    var dataURL = canvas.toDataURL();
-    var blob = $.fn.camera.toBlob(dataURL);
+    const video = $video.get(0)
+    const size = this._getSize($video.attr(DataAttribute.DATA_SIZE))
 
-    blob.dataURL = dataURL;
+    const canvas = document.createElement('canvas')
+    canvas.width = size.width
+    canvas.height = size.height
 
-    $video.trigger('camera:snapshot', blob);
-  };
+    const context = canvas.getContext('2d')
+    context.translate(size.width, 0) // 'translate' and 'scale' to flip horizontally
+    context.scale(-1, 1)
+    context.drawImage(video, 0, 0, size.width, size.height)
 
-})(jQuery);
+    const dataURL = canvas.toDataURL()
+    const blob = new CameraBlob(dataURL).toBlob()
+    blob.dataURL = dataURL
+
+    $video.trigger(Event.TRIGGER_SNAPSHOT, blob)
+  }
+}
+
+export default SnapshotCommand
