@@ -1,4 +1,3 @@
-const numberRegex = /\d/
 const letterRegex = /[a-zA-Z]/
 
 const keyboard = function (e) {
@@ -35,7 +34,7 @@ const keyboard = function (e) {
     isHome: code === 36,
     isInsert: code === 45,
     isLetter: letterRegex.test(char),
-    isNumber: numberRegex.test(char),
+    isNumber: code >= 48 && code <= 57 || code >= 96 && code <= 105,
     isPageDown: code === 34,
     isPageUp: code === 33,
     isPauseBreak: code === 19,
@@ -54,7 +53,6 @@ const keyboard = function (e) {
     key.isF8 || key.isF9 || key.isF10 || key.isF11 || key.isF12
 
   return key
-
 }
 
 export default keyboard
