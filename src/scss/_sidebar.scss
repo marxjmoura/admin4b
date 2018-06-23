@@ -1,19 +1,23 @@
 .app .app-body .app-sidebar
 {
-  background: $sidebar-background;
+  & > *
+  {
+    position: relative;
+    z-index: 2050;
+  }
 
   .sidebar-header
   {
-    padding: 0 1.25rem;
+    padding: 1rem 1.25rem;
     text-align: center;
 
     .user-photo
     {
       background-color: $sidebar-header-img-bg;
-      box-shadow: 0 0 0 .5rem $sidebar-header-img-border;
+      box-shadow: 0 0 0 .75rem $sidebar-header-img-border;
       border: 1px solid transparent;
       height: 4.5rem;
-      margin: .5rem 0;
+      margin: 1rem 0;
       padding: .2rem;
       width: 4.5rem;
       border-radius: 50%;
@@ -23,6 +27,7 @@
     {
       color: $sidebar-header-color;
       padding: .625rem 0;
+      margin: 0;
       white-space: nowrap;
 
       small
@@ -35,7 +40,8 @@
   .sidebar-nav
   {
     overflow: hidden;
-    padding: 0;
+    padding: 0 0 1rem 0;
+    margin: 0;
 
     ul
     {
@@ -129,7 +135,7 @@
 
   .sidebar-footer
   {
-    margin: 1.5rem 0;
+    padding: 0 0 1rem 0;
     text-align: center;
     white-space: nowrap;
 
@@ -151,24 +157,6 @@
     }
   }
 
-  &.sidebar-fade
-  {
-    transition: opacity .3s linear, visibility .3s;
-
-    @include breakpoint-down-to-sm
-    {
-      width: 100%;
-      opacity: 0;
-      visibility: hidden;
-
-      &.show
-      {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-
   &.sidebar-slide-left
   {
     transition: width .3s;
@@ -179,7 +167,6 @@
 {
   background: transparent;
   font-size: 1.4rem;
-  margin-right: .3125rem;
 
   @include breakpoint-up-to-md
   {
@@ -189,8 +176,10 @@
   .x
   {
     display: block;
+    position: relative;
     width: 2rem;
     height: 2rem;
+    z-index: 2050;
 
     &::before,
     &::after

@@ -42,14 +42,15 @@ body
 
     .app-sidebar
     {
-      background: map-get($colors, "white");
+      background: $sidebar-background;
       float: left;
       font-size: $sidebar-font-size;
       overflow-x: hidden;
       overflow-y: scroll;
-      padding: $sidebar-padding;
       position: relative;
       width: $sidebar-width;
+      max-width: $sidebar-width;
+      z-index: 2050;
 
       &::-webkit-scrollbar
       {
@@ -62,17 +63,36 @@ body
         background-color: $sidebar-scrollbar-thumb;
       }
 
+      &::before
+      {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .2s linear, visibility .2s;
+      }
+
       @include breakpoint-down-to-sm
       {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2050;
         width: 0;
 
         &.show
         {
+          box-shadow: $sidebar-box-shadow;
           width: 100%;
+
+          &::before
+          {
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
     }
