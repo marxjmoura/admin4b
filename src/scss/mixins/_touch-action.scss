@@ -1,5 +1,0 @@
-@mixin crossbrowser-touch-action($touch-action)
-{
-  -ms-touch-action: $touch-action;
-  touch-action: $touch-action;
-}

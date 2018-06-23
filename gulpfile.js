@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const autoprefixer = require('gulp-autoprefixer')
 const babelify = require('babelify')
 const browserify = require('browserify')
 const buffer = require('vinyl-buffer')
@@ -13,6 +14,7 @@ const uglify = require('gulp-uglify')
 gulp.task('build-sass', () => {
   gulp.src('src/scss/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
+    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('dist'))
 })

@@ -45,8 +45,8 @@
           display: inline-block;
           text-align: center;
           width: 3.75rem;
-          @include crossbrowser-box-shadow(none);
-          @include crossbrowser-flex(0 1 auto);
+          box-shadow: none;
+          flex: 0 1 auto;
         }
 
         .btn.dropdown-toggle
@@ -54,7 +54,7 @@
           border: none;
           background: map-get($colors, "white");
           color: map-get($grays, "700");
-          @include crossbrowser-box-shadow(none);
+          box-shadow: none;
 
           &::after
           {
@@ -67,7 +67,7 @@
     .modal-footer
     {
       justify-content: center;
-      @include crossbrowser-align-items(center);
+      align-items: center;
     }
   }
 }
@@ -114,7 +114,7 @@ table.table-calendar
         width: 2rem;
         height: 2rem;
         z-index: -1;
-        @include crossbrowser-border-radius(50%);
+        border-radius: 50%;
       }
 
       &:hover,

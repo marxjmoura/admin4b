@@ -1,4 +1,4 @@
-@mixin crossbrowser-input-placeholder($color)
+@mixin input-placeholder($color)
 {
   &::-webkit-input-placeholder
   {
@@ -8,13 +8,13 @@
   &:-moz-placeholder
   {
     color: $color;
-    @include crossbrowser-opacity(1);
+    opacity: 1;
   }
 
   &::-moz-placeholder
   {
     color: $color;
-    @include crossbrowser-opacity(1);
+    opacity: 1;
   }
 
   &:-ms-input-placeholder
@@ -22,7 +22,8 @@
     color: $color;
   }
 
-  &::-ms-input-placeholder {
+  &::-ms-input-placeholder
+  {
     color: $color;
   }
 }

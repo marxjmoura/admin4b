@@ -1,12 +1,12 @@
 .input-group.as-input
 {
   cursor: text;
-  @include crossbrowser-border-radius(.25rem);
-  @include crossbrowser-transition(border-color .15s ease-in-out, box-shadow .15s ease-in-out);
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
   .form-control
   {
-    @include crossbrowser-box-shadow(none);
+    box-shadow: none;
   }
 
   .input-group-prepend > .input-group-text,
@@ -63,7 +63,7 @@
 
   &.focus
   {
-    @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "blue"), .25));
+    box-shadow: 0 0 0 .2rem rgba(map-get($colors, "blue"), .25);
 
     .form-control,
     .input-group-prepend > .input-group-text,
@@ -74,7 +74,7 @@
 
     &.is-invalid
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "red"), .25));
+      box-shadow: 0 0 0 .2rem rgba(map-get($colors, "red"), .25);
 
       .form-control,
       .input-group-prepend > .input-group-text,
@@ -86,7 +86,7 @@
 
     &.is-valid
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "green"), .25));
+      box-shadow: 0 0 0 .2rem rgba(map-get($colors, "green"), .25);
 
       .form-control,
       .input-group-prepend > .input-group-text,

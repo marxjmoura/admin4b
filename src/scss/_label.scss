@@ -58,12 +58,12 @@ label
     color: map-get($grays, "600");
     border: .0625rem solid transparent;
     transition: all .1s ease-in-out;
-    @include crossbrowser-border-radius(.25rem);
+    border-radius: .25rem;
   }
 
   input
   {
-    @include crossbrowser-input-placeholder(transparent);
+    @include input-placeholder(transparent);
 
     &:not(:placeholder-shown)
     {

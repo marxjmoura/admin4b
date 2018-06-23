@@ -1,5 +1,0 @@
-@mixin crossbrowser-filter($filter)
-{
-  -ms-filter: "#{$filter}";
-  filter: $filter;
-}

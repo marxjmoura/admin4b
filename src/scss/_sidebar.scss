@@ -1,6 +1,6 @@
 .app .app-body .app-sidebar
 {
-  @include crossbrowser-linear-gradient(to top, $sidebar-background);
+  background: $sidebar-background;
 
   .sidebar-header
   {
@@ -16,7 +16,7 @@
       margin: .5rem 0;
       padding: .2rem;
       width: 4.5rem;
-      @include crossbrowser-border-radius(50%);
+      border-radius: 50%;
     }
 
     .username
@@ -27,7 +27,7 @@
 
       small
       {
-        @include crossbrowser-opacity(.75);
+        opacity: .75;
       }
     }
   }
@@ -51,7 +51,7 @@
 
       .btn
       {
-        @include crossbrowser-box-shadow(none);
+        box-shadow: none;
       }
     }
 
@@ -62,7 +62,7 @@
       outline: none;
       text-decoration: none;
       white-space: nowrap;
-      @include crossbrowser-transition(color .25s ease-out);
+      transition: color .25s ease-out;
     }
 
     .sidebar-nav-group .sidebar-nav-link
@@ -86,7 +86,7 @@
       font-weight: 400;
       padding: .95rem 1.5rem;
       white-space: nowrap;
-      @include crossbrowser-transition(background-color .25s ease-out);
+      transition: background-color .25s ease-out;
 
       &.collapsed
       {
@@ -105,7 +105,7 @@
       {
         font-size: 1rem;
         padding-right: 1rem;
-        @include crossbrowser-transition(color .25s ease-out);
+        transition: color .25s ease-out;
       }
     }
 
@@ -117,12 +117,12 @@
         font-family: "FontAwesome";
         float: right;
         margin-top: .0625rem;
-        @include crossbrowser-transition(transform .25s);
+        transition: transform .25s;
       }
 
       &[aria-expanded=true]::before
       {
-        @include crossbrowser-transform(rotate(90deg));
+        transform: rotate(90deg);
       }
     }
   }
@@ -140,7 +140,7 @@
       outline: none;
       padding: 0 .625rem;
       text-decoration: none;
-      @include crossbrowser-transition(color .25s ease-out);
+      transition: color .25s ease-out;
 
       &:active,
       &:focus,
@@ -153,25 +153,25 @@
 
   &.sidebar-fade
   {
-    @include crossbrowser-transition(opacity .3s linear, visibility .3s);
+    transition: opacity .3s linear, visibility .3s;
 
     @include breakpoint-down-to-sm
     {
       width: 100%;
-      @include crossbrowser-opacity(0);
-      @include crossbrowser-visibility(hidden);
+      opacity: 0;
+      visibility: hidden;
 
       &.show
       {
-        @include crossbrowser-opacity(1);
-        @include crossbrowser-visibility(visible);
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
 
   &.sidebar-slide-left
   {
-    @include crossbrowser-transition(width .3s);
+    transition: width .3s;
   }
 }
 
@@ -204,12 +204,12 @@
 
     &::before
     {
-      @include crossbrowser-transform(rotate(45deg));
+      transform: rotate(45deg);
     }
 
     &::after
     {
-      @include crossbrowser-transform(rotate(-45deg));
+      transform: rotate(-45deg);
     }
   }
 }
