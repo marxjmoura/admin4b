@@ -2,6 +2,7 @@ import $ from 'node_modules/jquery'
 import popperjs from 'node_modules/popper.js'
 import bootstrap from 'node_modules/bootstrap'
 
+import 'src/js/bootstrap'
 import 'src/js/polyfills'
 import 'src/js/events'
 
