@@ -94,7 +94,7 @@ $nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !
 // Sidebar
 
 $sidebar-background: $peter-river !default;
-$sidebar-box-shadow: 0 .25rem 1rem $black !default;
+$sidebar-box-shadow: 0 .25rem 5rem rgba($black, .75) !default;
 $sidebar-btn-close: rgba($white, .5) !default;
 $sidebar-font-size: 0.95rem !default;
 $sidebar-header-color: rgba($white, .75) !default;

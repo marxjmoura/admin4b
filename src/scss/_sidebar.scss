@@ -3,7 +3,7 @@
   & > *
   {
     position: relative;
-    z-index: 2050;
+    z-index: $zindex-fixed;
   }
 
   .sidebar-header
@@ -179,7 +179,7 @@
     position: relative;
     width: 2rem;
     height: 2rem;
-    z-index: 2050;
+    z-index: $zindex-fixed;
 
     &::before,
     &::after

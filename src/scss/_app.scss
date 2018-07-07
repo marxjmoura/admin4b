@@ -50,7 +50,7 @@ body
       position: relative;
       width: $sidebar-width;
       max-width: $sidebar-width;
-      z-index: 2050;
+      z-index: $zindex-fixed;
 
       &::-webkit-scrollbar
       {
