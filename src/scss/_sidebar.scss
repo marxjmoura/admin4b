@@ -119,16 +119,19 @@
     {
       &::before
       {
-        content: "\f105";
-        font-family: "FontAwesome";
+        border: solid $sidebar-nav-link-level-1;
+        border-width: 0 1px 1px 0;
+        content: "";
         float: right;
-        margin-top: .0625rem;
+        margin-top: .5rem;
+        padding: 3px;
+        transform: rotate(-45deg);
         transition: transform .25s;
       }
 
       &[aria-expanded=true]::before
       {
-        transform: rotate(90deg);
+        transform: rotate(45deg);
       }
     }
   }
