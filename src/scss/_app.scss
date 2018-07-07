@@ -43,6 +43,9 @@ body
     .app-sidebar
     {
       background: $sidebar-background;
+      display: flex;
+      flex-flow: row wrap;
+      flex-shrink: 0;
       float: left;
       font-size: $sidebar-font-size;
       overflow-x: hidden;

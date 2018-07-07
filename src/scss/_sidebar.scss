@@ -3,6 +3,7 @@
   & > *
   {
     position: relative;
+    width: 100%;
     z-index: $zindex-fixed;
   }
 
@@ -138,7 +139,9 @@
 
   .sidebar-footer
   {
-    padding: 0 0 1rem 0;
+    background: darken($sidebar-background, 5%);
+    padding: .5rem 0;
+    margin-top: auto;
     text-align: center;
     white-space: nowrap;
 
