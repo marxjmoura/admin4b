@@ -5,7 +5,7 @@
   margin-bottom: 1rem;
   border: .0625rem solid map-get($grays, "400");
   border-left-width: .25rem;
-  @include crossbrowser-border-radius(.25rem);
+  border-radius: .25rem;
 
   h4
   {
@@ -22,7 +22,7 @@
 
   code
   {
-    @include crossbrowser-border-radius(.25rem);
+    border-radius: .25rem;
   }
 
   & + .callout

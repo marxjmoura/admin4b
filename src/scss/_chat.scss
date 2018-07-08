@@ -1,12 +1,12 @@
-@include crossbrowser-keyframes(ballon)
+@keyframes ballon
 {
   0%
   {
-    @include crossbrowser-transform(scale(0));
+    transform: scale(0);
   }
   100%
   {
-    @include crossbrowser-transform(scale(1));
+    transform: scale(1);
   }
 }
 
@@ -60,7 +60,7 @@
           {
             vertical-align: top;
             width: 3rem;
-            @include crossbrowser-border-radius(50%);
+            border-radius: 50%;
           }
 
           p
@@ -70,19 +70,19 @@
             padding: .625rem 1.25rem;
             text-align: left;
             max-width: 75%;
-            @include crossbrowser-animation(ballon .2s linear);
-            @include crossbrowser-border-radius(1.25rem);
+            animation: ballon .2s linear;
+            border-radius: 1.25rem;
           }
         }
 
         .message-sent p
         {
-          @include crossbrowser-border-top-left-radius(.5rem);
+          border-top-left-radius: .5rem;
         }
 
         .message-reply p
         {
-          @include crossbrowser-border-top-right-radius(.5rem);
+          border-top-right-radius: .5rem;
         }
 
         .message-sent
@@ -135,9 +135,9 @@
     .btn,
     .form-control
     {
+      border-radius: 0;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      @include crossbrowser-border-radius(0);
     }
 
     .btn

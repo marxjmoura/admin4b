@@ -1,28 +1,72 @@
-(function ($) {
+import $ from 'node_modules/jquery'
 
-  $.fn.chat = function () {
+/*
+ * Constants
+ */
+
+const NAME = 'chat'
+const NAMESPACE = `admin4b.${NAME}`
+
+const ClassName = {
+  APP_CONTENT: 'app-content',
+  CHAT: 'chat',
+  CHAT_MESSAGES: 'chat-messages',
+  CHAT_ON: 'chat-on',
+}
+
+const Event = {
+  ON_RESIZE: `resize.${NAMESPACE}`,
+  TRIGGER_RESIZE: 'resize'
+}
+
+const Selector = {
+  APP_CONTENT: `.${ClassName.APP_CONTENT}`,
+  CHAT: `.${ClassName.CHAT}`,
+  CHAT_MESSAGES: `.${ClassName.CHAT_MESSAGES}`
+}
+
+/*
+ * Class Definition
+ */
+
+class Chat {
+  constructor(element) {
+    this._element = element
+  }
+
+  fillContent() {
+    let usedHeight = 0
+
+    $(Selector.APP_CONTENT).children().each((index, element) => {
+      if ($(element).is(Selector.CHAT)) return
+      usedHeight += $(element).outerHeight(true) // true = include margins
+    })
+
+    $(this._element).height($(Selector.APP_CONTENT).height() - usedHeight)
+    $(this._element).addClass(ClassName.CHAT_ON)
+    $(this._element).find(Selector.CHAT_MESSAGES).scrollTo('bottom')
+  }
+
+  static jQueryPlugin() {
     return this.each(function () {
-      var $window = $(window);
-      var $appContent = $('.app-content');
-      var $chat = $(this);
-      var $chatMessages = $chat.find('.chat-messages');
+      const chat = new Chat(this)
+      $(window).on(Event.ON_RESIZE, () => chat.fillContent()).trigger(Event.TRIGGER_RESIZE)
+    })
+  }
+}
 
-      $window.on('resize', function () {
-        var usedHeight = 0;
+/*
+ * jQuery Plugin
+ */
 
-        $appContent.children().each(function () {
-          if ($(this).is('.chat')) return;
-          usedHeight += $(this).outerHeight(true); // true = include margins
-        });
+$.fn[NAME] = Chat.jQueryPlugin
+$.fn[NAME].Constructor = Chat
+$.fn[NAME].noConflict = () => $.fn[NAME] = Chat.jQueryPlugin
 
-        $chat.height($appContent.height() - usedHeight);
-        $chat.addClass('chat-on');
+/*
+ * Auto Initialize
+ */
 
-        $chatMessages.scrollToBottom();
-      });
+$(Selector.CHAT).chat()
 
-      $window.trigger('resize');
-    });
-  };
-
-})(jQuery);
+export default Chat

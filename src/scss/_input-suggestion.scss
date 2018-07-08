@@ -1,7 +1,7 @@
 .input-suggestion
 {
   position: relative;
-  @include crossbrowser-border-radius(.25rem);
+  border-radius: .25rem;
 
   .input-suggestion-list
   {
@@ -9,27 +9,30 @@
     border-bottom: .0625rem solid map-get($colors, "blue");
     border-left: .0625rem solid map-get($colors, "blue");
     border-right: .0625rem solid map-get($colors, "blue");
+    border-bottom-left-radius: .31rem;
+    border-bottom-right-radius: .31rem;
     display: none;
     position: absolute;
     width: 100%;
     z-index: 1050;
-    @include crossbrowser-border-bottom-radius(.31rem);
 
     .list-group .list-group-item
     {
       border: none;
-      @include crossbrowser-border-top-radius(0);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
   }
 
   &.open
   {
-    @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($colors, "blue"), .25));
+    box-shadow: 0 0 0 .2rem rgba(map-get($colors, "blue"), .25);
 
     input
     {
-      @include crossbrowser-border-bottom-radius(0);
-      @include crossbrowser-box-shadow(none);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: none;
     }
 
     input,
@@ -39,7 +42,7 @@
       border-color: lighten(map-get($colors, "blue"), 25%);
       color: map-get($grays, "700");
       display: block;
-      @include crossbrowser-transition(border-color .15s ease-in-out, box-shadow .15s ease-in-out);
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
   }
 }

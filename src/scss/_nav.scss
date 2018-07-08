@@ -12,7 +12,7 @@
     .nav-item
     {
       padding-bottom: .625rem;
-      @include crossbrowser-transition(opacity .5s ease);
+      transition: opacity .5s ease;
 
       &:last-child::after
       {
@@ -28,11 +28,11 @@
 
       &.complete
       {
-        @include crossbrowser-opacity(.5);
+        opacity: .5;
 
         &:hover
         {
-          @include crossbrowser-opacity(1);
+          opacity: 1;
         }
       }
     }
@@ -52,13 +52,13 @@
         width: .5rem;
         height: .5rem;
         bottom: -.25rem;
-        @include crossbrowser-border-radius(50%);
-        @include crossbrowser-transition(left .5s ease);
+        border-radius: 50%;
+        transition: left .5s ease;
       }
 
       &::after
       {
-        @include crossbrowser-transition(width .5s ease);
+        transition: width .5s ease;
       }
     }
   }

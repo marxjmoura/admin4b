@@ -27,7 +27,7 @@
 
       &:focus + .check-mark
       {
-        @include crossbrowser-box-shadow(0 0 0 .2rem rgba($color, .25));
+        box-shadow: 0 0 0 .2rem rgba($color, .25);
       }
     }
   }
@@ -37,15 +37,15 @@ label.radio
 {
   margin-bottom: 0;
   text-align: left;
-  @include crossbrowser-align-items(center);
-  @include crossbrowser-display-inline-flex();
-  @include crossbrowser-user-select(none);
+  align-items: center;
+  display: inline-flex;
+  user-select: none;
 
   input[type=radio],
   input[type=checkbox]
   {
     position: absolute;
-    @include crossbrowser-opacity(0);
+    opacity: 0;
 
     &,
     &::after,
@@ -72,8 +72,8 @@ label.radio
       width: 1.125rem;
       margin-right: .625rem;
       position: relative;
-      @include crossbrowser-border-radius(100%);
-      @include crossbrowser-transition(all .2s ease);
+      border-radius: 100%;
+      transition: all .2s ease;
 
       &::after
       {
@@ -83,24 +83,24 @@ label.radio
         position: absolute;
         width: 1rem;
         height: 1rem;
-        @include crossbrowser-border-radius(100%);
-        @include crossbrowser-transition(all .2s ease);
+        border-radius: 100%;
+        transition: all .2s ease;
       }
     }
 
     &:focus + .check-mark
     {
-      @include crossbrowser-box-shadow(0 0 0 .2rem rgba(map-get($grays, "500"), .25));
+      box-shadow: 0 0 0 .2rem rgba(map-get($grays, "500"), .25);
     }
 
     &:checked + .check-mark::after
     {
-      @include crossbrowser-transform(scale(1));
+      transform: scale(1);
     }
 
     &:not(:checked) + .check-mark::after
     {
-      @include crossbrowser-transform(scale(0));
+      transform: scale(0);
     }
 
     &:disabled

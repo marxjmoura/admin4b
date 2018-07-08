@@ -3,7 +3,7 @@
   justify-content: center;
   padding-top: 2.45rem;
   padding-bottom: 2.45rem;
-  @include crossbrowser-align-items(center);
+  align-items: center;
 
   .form-sign
   {

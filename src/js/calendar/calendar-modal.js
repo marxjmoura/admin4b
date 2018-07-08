@@ -1,89 +1,110 @@
-(function ($) {
+import $ from 'node_modules/jquery'
+import keyboard from 'src/js/util/keyboard'
+import { ClassName, DataAttribute, Event, Prop, Selector } from './calendar-constants'
 
-  $.fn.calendar.modal = function (date) {
-    var $modalCalendar = $(this);
-    var $modalHeader = $modalCalendar.find('.modal-header');
-    var $modalBody = $modalCalendar.find('.modal-body');
-    var $dropdownMonths = $modalHeader.find('.dropdown-toggle');
-    var $months = $modalHeader.find('.dropdown-menu');
-    var $previousMonth = $modalHeader.find('[data-calendar-month=previous]');
-    var $nextMonth = $modalHeader.find('[data-calendar-month=next]');
-    var $year = $modalHeader.find('.form-control');
-    var $goToToday = $modalBody.find('[data-calendar-link=today]');
-    var $goToSelected = $modalBody.find('[data-calendar-link=selected]');
+const yearRegex = /^\d{4}$/
 
-    $modalCalendar.on('calendar:each', function (e, date) {
-      var selectedDate = $modalCalendar.calendar('date');
-      var today = new Date();
-      today.setHours(0, 0, 0, 0);
+class CalendarModal {
+  constructor(element) {
+    this._element = element
+  }
+
+  isInitialized() {
+    return $(this._element).prop(Prop.INITIALIZED)
+  }
+
+  render() {
+    const $modalCalendar = $(this._element)
+    const $modalHeader = $modalCalendar.find(Selector.HEADER)
+    const $modalBody = $modalCalendar.find(Selector.BODY)
+    const $monthDropdown = $modalHeader.find(Selector.MONTH_DROPDOWN)
+    const $monthDropdownOptions = $modalHeader.find(Selector.MONTH_DROPDOWN_OPTIONS)
+    const $inputYear = $modalHeader.find(Selector.INPUT_YEAR)
+    const $linkPreviousMonth = $modalHeader.find(Selector.LINK_PREVIOUS_MONTH)
+    const $linkNextMonth = $modalHeader.find(Selector.LINK_NEXT_MONTH)
+    const $linkToday = $modalBody.find(Selector.LINK_TODAY)
+    const $linkSelectedDate = $modalBody.find(Selector.LINK_SELECTED_DATE)
+
+    $modalCalendar.prop(Prop.INITIALIZED, true)
+
+    $modalCalendar.on(Event.TRIGGER_EACH_DATE, (e, date) => {
+      const selectedDate = $modalCalendar.calendar(Event.DATE)
+      const today = new Date()
+
+      today.setHours(0, 0, 0, 0)
 
       $(e.relatedTarget)
-        .toggleClass('active', !!selectedDate && date.getTime() === selectedDate.getTime())
-        .toggleClass('today', date.getTime() === today.getTime())
-        .toggleClass('sunday', date.getDay() === 0);
-    });
+        .toggleClass(ClassName.ACTIVE, !!selectedDate && date.getTime() === selectedDate.getTime())
+        .toggleClass(ClassName.TODAY, date.getTime() === today.getTime())
+        .toggleClass(ClassName.SUNDAY, date.getDay() === 0)
+    })
 
-    $modalCalendar.on('calendar:query', function (e, date) {
-      var month = date.getMonth();
-      var $month = $($months.find('a').get(month));
+    $modalCalendar.on(Event.TRIGGER_QUERY, (e, date) => {
+      const month = date.getMonth()
+      const $month = $($monthDropdownOptions.find(Selector.MONTH_DROPDOWN_OPTION).get(month))
 
-      $dropdownMonths.prop('month', date.getMonth()).text($month.text());
-      $year.val(date.getFullYear());
-    });
+      $monthDropdown.prop(Prop.MONTH, date.getMonth()).text($month.text())
+      $inputYear.val(date.getFullYear())
+    })
 
-    $months.find('a').on('click', function (e) {
-      var year = Number($year.val());
-      var month = Number($(this).attr('data-calendar-month'));
+    $monthDropdownOptions.find(Selector.MONTH_DROPDOWN_OPTION).on(Event.ON_CLICK, (e) => {
+      const year = Number($inputYear.val())
+      const month = Number($(e.target).attr(DataAttribute.DATA_MONTH))
 
-      $modalCalendar.calendar('query:date', new Date(year, month, 1));
+      $modalCalendar.calendar(Event.QUERY_DATE, new Date(year, month, 1))
 
-      e.preventDefault();
-    });
+      e.preventDefault()
+    })
 
-    $nextMonth.on('click', function () {
-      $modalCalendar.calendar('query:nextMonth');
-    });
+    $linkNextMonth.on(Event.ON_CLICK, () => {
+      $modalCalendar.calendar(Event.QUERY_NEXT_MONTH)
+    })
 
-    $previousMonth.on('click', function () {
-      $modalCalendar.calendar('query:previousMonth');
-    });
+    $linkPreviousMonth.on(Event.ON_CLICK, () => {
+      $modalCalendar.calendar(Event.QUERY_PREVIOUS_MONTH)
+    })
 
-    $goToToday.on('click', function () {
-      $modalCalendar.calendar('query:date', new Date());
-    });
+    $linkToday.on(Event.ON_CLICK, () => {
+      $modalCalendar.calendar(Event.QUERY_DATE, new Date())
+    })
 
-    $goToSelected.on('click', function () {
-      var date = $modalCalendar.calendar('date');
-      $modalCalendar.calendar('query:date', date);
-    });
+    $linkToday.on(Event.ON_CLICK, () => {
+      $modalCalendar.calendar(Event.QUERY_DATE, new Date())
+    })
 
-    $year
-      .on('keydown', function (e) {
-        var key = keyboard(e);
+    $linkSelectedDate.on(Event.ON_CLICK, () => {
+      const date = $modalCalendar.calendar(Event.DATE)
+      $modalCalendar.calendar(Event.QUERY_DATE, date)
+    })
+
+    $inputYear
+      .on(Event.ON_KEYDOWN, (e) => {
+        const key = keyboard(e)
 
         if (key.isNavigation || key.isCommand || key.isSpecial || key.isFunction) {
-          return;
+          return
         }
 
         if (!key.isNumber && !key.isCtrlHeld) {
-          e.preventDefault();
+          e.preventDefault()
         }
 
         // maxlength not working for input[type=number] in Chrome or Firefox
-        if (key.isNumber && $year.val().length >= 4) {
-          e.preventDefault();
+        if (key.isNumber && $inputYear.val().length >= 4) {
+          e.preventDefault()
         }
       })
-      .on('input', function () {
-        var val = $year.val();
+      .on(Event.ON_INPUT, () => {
+        const val = $inputYear.val()
 
-        if (/^\d{4}$/.test(val)) {
-          var year = Number(val);
-          var month = Number($dropdownMonths.prop('month'));
+        if (yearRegex.test(val)) {
+          const year = Number(val)
+          const month = Number($monthDropdown.prop(Prop.MONTH))
 
-          $modalCalendar.calendar('query:date', new Date(year, month, 1));
+          $modalCalendar.calendar(Event.QUERY_DATE, new Date(year, month, 1))
         }
-      });
-  };
+      })
+  }
+}
 
-})(jQuery);
+export default CalendarModal

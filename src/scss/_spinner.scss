@@ -1,12 +1,12 @@
-@include crossbrowser-keyframes(spinner)
+@keyframes spinner
 {
   0%
   {
-    @include crossbrowser-transform(rotate(0deg));
+    transform: rotate(0deg);
   }
   100%
   {
-    @include crossbrowser-transform(rotate(360deg));
+    transform: rotate(360deg);
   }
 }
 
@@ -24,8 +24,8 @@
     border-top-color: map-get($theme-colors, "primary");
     border-left-color: map-get($theme-colors, "primary");
     border-right-color: map-get($theme-colors, "primary");
-    @include crossbrowser-animation(spinner 1s linear infinite);
-    @include crossbrowser-border-radius(50%);
+    animation: spinner 1s linear infinite;
+    border-radius: 50%;
   }
 
   .spinner-text
@@ -43,9 +43,9 @@
     width: 100%;
     height: 100%;
     z-index: 3050;
-    @include crossbrowser-opacity(0);
-    @include crossbrowser-visibility(hidden);
-    @include crossbrowser-transition(all 0.3s ease-out);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
 
     .spinner-bar
     {
@@ -56,8 +56,8 @@
       border-top-color: map-get($theme-colors, "primary");
       border-left-color: map-get($theme-colors, "primary");
       border-right-color: map-get($theme-colors, "primary");
-      @include crossbrowser-animation(spinner 1s linear infinite);
-      @include crossbrowser-border-radius(50%);
+      animation: spinner 1s linear infinite;
+      border-radius: 50%;
     }
 
     .spinner-text
@@ -69,8 +69,8 @@
 
     &.show
     {
-      @include crossbrowser-opacity(1);
-      @include crossbrowser-visibility(visible);
+      opacity: 1;
+      visibility: visible;
     }
   }
 

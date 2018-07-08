@@ -1,22 +1,28 @@
-(function ($) {
+import $ from 'node_modules/jquery'
 
-  $.fn.camera.toBlob = function (dataURL) {
-    var byteString;
+class CameraBlob {
+  constructor(dataURL) {
+    this._dataURL = dataURL
+  }
 
-    if (dataURL.split(',')[0].indexOf('base64') >= 0) {
-      byteString = atob(dataURL.split(',')[1]);
+  toBlob() {
+    let byteString
+
+    if (this._dataURL.split(',')[0].indexOf('base64') >= 0) {
+      byteString = atob(this._dataURL.split(',')[1])
     } else {
-      byteString = unescape(dataURL.split(',')[1]);
+      byteString = unescape(this._dataURL.split(',')[1])
     }
 
-    var mimeType = dataURL.split(',')[0].split(':')[1].split(';')[0];
-    var uintArray = new Uint8Array(byteString.length);
+    const mimeType = this._dataURL.split(',')[0].split(':')[1].split('')[0]
+    const uintArray = new Uint8Array(byteString.length)
 
-    for (var i = 0; i < byteString.length; i++) {
-      uintArray[i] = byteString.charCodeAt(i);
+    for (let i = 0; i < byteString.length; i++) {
+      uintArray[i] = byteString.charCodeAt(i)
     }
 
-    return new Blob([uintArray], { type: mimeType });
-  };
+    return new Blob([uintArray], { type: mimeType })
+  }
+}
 
-})(jQuery);
+export default CameraBlob

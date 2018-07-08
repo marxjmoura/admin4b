@@ -2,6 +2,6 @@
 {
   display: block;
   width: 100%;
-  @include crossbrowser-transform(scale(-1, 1));
-  @include crossbrowser-filter(FlipH);
+  transform: scale(-1, 1);
+  filter: FlipH;
 }

@@ -1,0 +1,13 @@
+@media print
+{
+  .app .app-body
+  {
+    position: relative;
+    height: auto;
+
+    .app-sidebar
+    {
+      display: none;
+    }
+  }
+}

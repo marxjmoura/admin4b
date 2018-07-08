@@ -1,21 +1,25 @@
-(function ($) {
+const sizeRegex = /^(\d*\.?\d+)(B|KB|MB|GB)?$/gi
+const exponentOf = { B: 0, KB: 1, MB: 2, GB: 3 }
 
-  var regex = /^(\d*\.?\d+)(B|KB|MB|GB)?$/gi;
-  var exponentOf = { B: 0, KB: 1, MB: 2, GB: 3 };
-
-  function toBytes(size, unit) {
-    return Number(size) * Math.pow(1024, exponentOf[unit]);
+class MaxsizeValidation {
+  constructor(file) {
+    this._file = file
   }
 
-  $.fn.fileManager.maxsize = function (file, maxsize) {
-    if (!maxsize) return true;
-    if (!maxsize.match(regex)) return false;
+  _toBytes(size, unit) {
+    return Number(size) * Math.pow(1024, exponentOf[unit])
+  }
 
-    var matches = regex.exec(maxsize);
-    var size = matches[1];
-    var unit = matches[2];
+  isValid(maxsize) {
+    if (!maxsize) return true
+    if (!maxsize.match(sizeRegex)) return false
 
-    return file.size <= toBytes(size, unit);
-  };
+    const matches = sizeRegex.exec(maxsize)
+    const size = matches[1]
+    const unit = matches[2]
 
-})(jQuery);
+    return this._file.size <= this._toBytes(size, unit)
+  }
+}
+
+export default MaxsizeValidation
