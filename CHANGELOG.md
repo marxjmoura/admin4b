@@ -1,3 +1,14 @@
+## [v1.2.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.0) (2018-07-08)
+### Breaking changes:
+- Plugins rewritten in ES6
+- Bootstrap, jQuery and Popper are now included as part of `admin4b.min.*` bundle (no more need to import)
+- Simple Line Icons as default (optionally, add Font Awesome)
+- Sidebar fade effect removed
+### Features:
+- Sidebar respect max-width on small screens
+### Bug fixes:
+- Calendar input year when using numeric keypad
+
 ## [v1.1.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.1) (2018-05-19)
 ### Bug fixes:
 - Fix polyfill for `Object.keys`
@@ -7,6 +18,7 @@
 - Improve typography:
   - Header sizing and margins
   - Add gray text colors (`text-gray-*`)
+
 ## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox
