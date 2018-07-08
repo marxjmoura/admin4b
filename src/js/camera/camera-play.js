@@ -12,7 +12,7 @@ class PlayCommand {
     this._element = element
   }
 
-  _link(stream) {
+  _play(stream) {
     const video = $(this._element).get(0)
 
     if ('srcObject' in video) {
@@ -23,22 +23,21 @@ class PlayCommand {
       const windowURL = window.URL || window.webkitURL || window.mozURL || window.msURL
       video.src = windowURL.createObjectURL(stream)
     }
+
+    video.onloadedmetadata = () => video.play()
   }
 
   _onSuccess(stream) {
-    const $video = $(this._element)
+    this._play(stream)
 
-    this._link(stream)
-
-    $video.get(0).play()
-    $video.prop(Prop.STREAM, stream)
-    $video.prop(Prop.PLAYING, true)
-    $video.trigger(Event.TRIGGER_PLAY)
+    $(this._element)
+      .prop(Prop.STREAM, stream)
+      .prop(Prop.PLAYING, true)
+      .trigger(Event.TRIGGER_PLAY)
   }
 
   _onFailure(error) {
-    const $video = $(this._element)
-    $video.trigger(Event.TRIGGER_ERROR, error)
+    $(this._element).trigger(Event.TRIGGER_ERROR, error)
   }
 
   execute() {
@@ -48,16 +47,19 @@ class PlayCommand {
       return
     }
 
-    if (!navigator.getSupportedUserMedia) {
-      $video.trigger(Event.TRIGGER_NOT_SUPPORTED)
-      return
-    }
-
     const mediaConstraint = { video: true, audio: false }
 
-    navigator.getSupportedUserMedia(mediaConstraint,
-      (stream) => this._onSuccess(stream),
-      (error) => this._onFailure(error))
+    if (navigator.mediaDevices) {
+      navigator.mediaDevices.getUserMedia(mediaConstraint)
+        .then((stream) => this._onSuccess(stream))
+        .catch((error) => this._onFailure(error))
+    } else if (navigator.getSupportedUserMedia) {
+      navigator.getSupportedUserMedia(mediaConstraint,
+        (stream) => this._onSuccess(stream),
+        (error) => this._onFailure(error))
+    } else {
+      $video.trigger(Event.TRIGGER_NOT_SUPPORTED)
+    }
   }
 }
 
