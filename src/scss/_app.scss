@@ -48,11 +48,12 @@ body
       float: left;
       font-size: $sidebar-font-size;
       overflow-x: hidden;
-      overflow-y: auto;
+      overflow-y: scroll;
       position: relative;
       width: $sidebar-width;
       max-width: $sidebar-width;
       z-index: $zindex-fixed;
+      transition: width .3s;
 
       &::-webkit-scrollbar
       {
