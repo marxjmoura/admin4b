@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import PlayCommand from './camera-play'
 import StopCommand from './camera-stop'
 import SnapshotCommand from './camera-snapshot'

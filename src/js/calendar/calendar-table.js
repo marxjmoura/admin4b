@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import calendarPeriod from './calendar-period'
 import { Event, Prop, Selector } from './calendar-constants'
 

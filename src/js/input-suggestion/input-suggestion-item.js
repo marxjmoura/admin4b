@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import { DataAttribute, Selector } from './input-suggestion-constants'
 
 /*

@@ -1,5 +1,3 @@
-import $ from 'node_modules/jquery'
-
 class CameraBlob {
   constructor(dataURL) {
     this._dataURL = dataURL

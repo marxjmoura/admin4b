@@ -12,7 +12,7 @@ const source = require('vinyl-source-stream')
 const uglify = require('gulp-uglify')
 
 gulp.task('build-sass', () => {
-  gulp.src('src/scss/*.scss')
+  gulp.src('src/scss/admin4b.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(rename({ extname: '.min.css' }))
@@ -22,7 +22,6 @@ gulp.task('build-sass', () => {
 gulp.task('build-js', () => {
   return browserify({
     entries: ['src/js/index.js'],
-    paths: ['./'],
     fullPaths: false,
     transform: [babelify.configure({ presets: ['env'] })]
   })

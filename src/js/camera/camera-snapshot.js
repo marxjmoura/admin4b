@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import CameraBlob from './camera-blob'
 import { DataAttribute, Event, Prop } from './camera-constants'
 

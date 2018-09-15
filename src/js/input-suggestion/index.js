@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import { NAME, Event, Prop, Selector } from './input-suggestion-constants'
 import InputSuggestionMode from './input-suggestion-mode'
 import InputSuggestionList from './input-suggestion-list'
