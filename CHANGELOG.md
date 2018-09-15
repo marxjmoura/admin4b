@@ -1,3 +1,10 @@
+## v1.2.1 (unreleased)
+### Features:
+- Small improvements on shadows
+### Bug fixes:
+- Fix JavaScript reference error on NPM
+- Other minor bug fixes
+
 ## [v1.2.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.0) (2018-07-08)
 ### Breaking changes:
 - Plugins rewritten in ES6
