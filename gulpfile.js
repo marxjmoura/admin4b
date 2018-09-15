@@ -12,7 +12,7 @@ const source = require('vinyl-source-stream')
 const uglify = require('gulp-uglify')
 
 gulp.task('build-sass', () => {
-  gulp.src('src/scss/admin4b.scss')
+  return gulp.src('src/scss/admin4b.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(rename({ extname: '.min.css' }))
@@ -32,9 +32,8 @@ gulp.task('build-js', () => {
     .pipe(gulp.dest('dist'))
 })
 
-
 gulp.task('build-html', () => {
-  gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'])
+  return gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'])
     .pipe(htmlextend({
       annotations: false,
       verbose: false,
@@ -48,10 +47,12 @@ gulp.task('build-html', () => {
     .pipe(gulp.dest('docs/'))
 })
 
-gulp.task('build', ['build-html', 'build-sass', 'build-js'])
+gulp.task('build', gulp.parallel('build-html', 'build-sass', 'build-js'))
 
-gulp.task('start', ['build'], () => {
-  gulp.watch('src/html/**/*.html', ['build-html'])
-  gulp.watch('src/scss/**/*.scss', ['build-sass'])
-  gulp.watch('src/js/**/*.js', ['build-js'])
+gulp.task('build-watching', () => {
+  gulp.watch('src/html/**/*.html', gulp.series('build-html'))
+  gulp.watch('src/scss/**/*.scss', gulp.series('build-sass'))
+  gulp.watch('src/js/**/*.js', gulp.series('build-js'))
 })
+
+gulp.task('start', gulp.series('build', 'build-watching'))
