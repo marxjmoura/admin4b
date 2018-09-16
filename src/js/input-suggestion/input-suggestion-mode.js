@@ -1,5 +1,5 @@
-import $ from 'node_modules/jquery'
-import { NAME, ClassName, DataAttribute, Event, Prop, Selector } from './input-suggestion-constants'
+import $ from 'jquery'
+import { ClassName, Event, Prop, Selector } from './input-suggestion-constants'
 import InputSuggestionItem from './input-suggestion-item'
 
 /*

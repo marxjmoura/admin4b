@@ -40,7 +40,6 @@
 
   .sidebar-nav
   {
-    overflow: hidden;
     padding: 0 0 1rem 0;
     margin: 0;
 
@@ -93,7 +92,6 @@
       font-weight: 400;
       padding: .95rem 1.5rem;
       white-space: nowrap;
-      transition: background-color .25s ease-out;
 
       &.collapsed
       {
@@ -161,11 +159,6 @@
         color: $sidebar-nav-footer-link-hover;
       }
     }
-  }
-
-  &.sidebar-slide-left
-  {
-    transition: width .3s;
   }
 }
 

@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import CalendarTable from './calendar-table'
 import CalendarModal from './calendar-modal'
 import { NAME, Event, Selector } from './calendar-constants'

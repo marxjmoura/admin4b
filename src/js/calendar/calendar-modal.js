@@ -1,5 +1,5 @@
-import $ from 'node_modules/jquery'
-import keyboard from 'src/js/util/keyboard'
+import $ from 'jquery'
+import keyboard from '../util/keyboard'
 import { ClassName, DataAttribute, Event, Prop, Selector } from './calendar-constants'
 
 const yearRegex = /^\d{4}$/

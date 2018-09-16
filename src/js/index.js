@@ -1,19 +1,19 @@
-import $ from 'node_modules/jquery'
-import popperjs from 'node_modules/popper.js'
-import bootstrap from 'node_modules/bootstrap'
+import $ from 'jquery'
+import 'popper.js'
+import 'bootstrap'
 
-import 'src/js/bootstrap'
-import 'src/js/polyfills'
-import 'src/js/events'
+import './bootstrap'
+import './polyfills'
+import './events'
 
-import Calendar from 'src/js/calendar'
-import Chat from 'src/js/chat'
-import Camera from 'src/js/camera'
-import FileManager from 'src/js/file-manager'
-import InputGroup from 'src/js/input-group'
-import InputSuggestion from 'src/js/input-suggestion'
-import Nav from 'src/js/nav'
-import Sidebar from 'src/js/sidebar'
+import Calendar from './calendar'
+import Chat from './chat'
+import Camera from './camera'
+import FileManager from './file-manager'
+import InputGroup from './input-group'
+import InputSuggestion from './input-suggestion'
+import Nav from './nav'
+import Sidebar from './sidebar'
 
 window.$ = $
 window.jQuery = $

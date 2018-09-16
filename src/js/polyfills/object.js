@@ -1,4 +1,4 @@
-import browser from 'src/js/util/browser'
+import browser from '../util/browser'
 
 if (browser.isIE10 || browser.isIE11) {
   Object.keys = function (obj) {

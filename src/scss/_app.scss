@@ -44,8 +44,7 @@ body
     {
       background: $sidebar-background;
       display: flex;
-      flex-flow: row wrap;
-      flex-shrink: 0;
+      flex-flow: column nowrap;
       float: left;
       font-size: $sidebar-font-size;
       overflow-x: hidden;
@@ -54,6 +53,7 @@ body
       width: $sidebar-width;
       max-width: $sidebar-width;
       z-index: $zindex-fixed;
+      transition: width .3s;
 
       &::-webkit-scrollbar
       {
@@ -76,7 +76,6 @@ body
         bottom: 0;
         visibility: hidden;
         opacity: 0;
-        transition: opacity .2s linear, visibility .2s;
       }
 
       @include breakpoint-down-to-sm

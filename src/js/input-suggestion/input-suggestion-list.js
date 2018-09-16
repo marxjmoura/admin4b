@@ -1,6 +1,6 @@
-import $ from 'node_modules/jquery'
-import keyboard from 'src/js/util/keyboard'
-import { ClassName, DataAttribute, Event, Selector } from './input-suggestion-constants'
+import $ from 'jquery'
+import keyboard from '../util/keyboard'
+import { ClassName, Event, Selector } from './input-suggestion-constants'
 import InputSuggestionItem from './input-suggestion-item'
 
 /*

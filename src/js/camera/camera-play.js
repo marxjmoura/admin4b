@@ -1,4 +1,4 @@
-import $ from 'node_modules/jquery'
+import $ from 'jquery'
 import { Event, Prop } from './camera-constants'
 
 navigator.getSupportedUserMedia =

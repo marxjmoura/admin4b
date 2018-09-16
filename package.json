@@ -1,7 +1,7 @@
 {
   "name": "admin4b",
   "title": "Admin 4B",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "http://getadmin4b.com",
   "author": "Marx JMoura",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "babel-preset-env": "^1.7.0",
     "babelify": "^8.0.0",
     "browserify": "^16.2.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-file-include": "^2.0.1",
     "gulp-html-extend": "^1.1.6",
