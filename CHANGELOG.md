@@ -1,4 +1,4 @@
-## v1.2.1 (unreleased)
+## [v1.2.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.1) (2018-09-16)
 ### Features:
 - Small improvements on shadows
 ### Bug fixes:
