@@ -6,10 +6,6 @@ class MaxsizeValidation {
     this._file = file
   }
 
-  _toBytes(size, unit) {
-    return Number(size) * Math.pow(1024, exponentOf[unit])
-  }
-
   isValid(maxsize) {
     if (!maxsize) return true
     if (!maxsize.match(sizeRegex)) return false
@@ -19,6 +15,10 @@ class MaxsizeValidation {
     const unit = matches[2]
 
     return this._file.size <= this._toBytes(size, unit)
+  }
+
+  _toBytes(size, unit) {
+    return Number(size) * Math.pow(1024, exponentOf[unit])
   }
 }
 

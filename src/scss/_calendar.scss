@@ -107,6 +107,7 @@ table.table-calendar
       &::before
       {
         border: .0625rem solid map-get($theme-colors, "primary");
+        border-radius: 50%;
         content: " ";
         display: none;
         position: absolute;
@@ -115,7 +116,6 @@ table.table-calendar
         width: 2rem;
         height: 2rem;
         z-index: -1;
-        border-radius: 50%;
       }
 
       &:hover,
