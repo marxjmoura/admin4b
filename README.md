@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://getadmin4b.com">
-    <img src="http://getadmin4b.com/docs/assets/brand/admin4b.svg" alt="admin4b" width="72">
+    <img src="http://getadmin4b.com/docs/assets/brand/admin4b.svg" alt="admin4b" width="64">
   </a>
   <h3 align="center">
     Admin 4B
