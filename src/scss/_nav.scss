@@ -20,7 +20,7 @@
         display: block;
         position: absolute;
         pointer-events: none;
-        border-bottom: 2px solid map-get($colors, "blue");
+        border-bottom: 2px solid map-get($theme-colors, "primary");
         left: 0;
         bottom: -1px;
         z-index: 1;
@@ -48,7 +48,7 @@
         display: block;
         position: absolute;
         background: $body-bg;
-        border: 2px solid map-get($colors, "blue");
+        border: 2px solid map-get($theme-colors, "primary");
         width: .5rem;
         height: .5rem;
         bottom: -.25rem;

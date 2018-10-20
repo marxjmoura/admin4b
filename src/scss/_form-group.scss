@@ -2,16 +2,16 @@
 {
   label
   {
-    color: map-get($colors, "red");
+    color: map-get($theme-colors, "danger");
   }
 
   .form-control
   {
-    border: .0625rem solid map-get($colors, "red");
+    border: .0625rem solid map-get($theme-colors, "danger");
 
     &:focus
     {
-      box-shadow: 0 0 0 .2rem rgba(map-get($colors, "red"), .25);
+      box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "danger"), .25);
     }
   }
 }

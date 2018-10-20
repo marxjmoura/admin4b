@@ -1,3 +1,7 @@
+## [v1.2.2](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.2) (2018-10-20)
+### Bug fixes:
+- Fix components to reference to the theme colors
+
 ## [v1.2.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.1) (2018-09-16)
 ### Features:
 - Small improvements on shadows

@@ -6,9 +6,9 @@
   .input-suggestion-list
   {
     background-color: map-get($colors, "white");
-    border-bottom: .0625rem solid map-get($colors, "blue");
-    border-left: .0625rem solid map-get($colors, "blue");
-    border-right: .0625rem solid map-get($colors, "blue");
+    border-bottom: .0625rem solid map-get($theme-colors, "primary");
+    border-left: .0625rem solid map-get($theme-colors, "primary");
+    border-right: .0625rem solid map-get($theme-colors, "primary");
     border-bottom-left-radius: .31rem;
     border-bottom-right-radius: .31rem;
     display: none;
@@ -26,7 +26,7 @@
 
   &.open
   {
-    box-shadow: 0 0 0 .2rem rgba(map-get($colors, "blue"), .25);
+    box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "primary"), .25);
 
     input
     {
@@ -39,7 +39,7 @@
     .input-suggestion-list
     {
       background-color: map-get($colors, "white");
-      border-color: lighten(map-get($colors, "blue"), 25%);
+      border-color: lighten(map-get($theme-colors, "primary"), 25%);
       color: map-get($grays, "700");
       display: block;
       transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
