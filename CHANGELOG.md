@@ -1,4 +1,6 @@
-## [v1.2.2](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.2) (2018-10-20)
+## v1.2.2 (UNRELEASED)
+### Features:
+- New table style
 ### Bug fixes:
 - Fix components to reference to the theme colors
 

@@ -1,7 +1,42 @@
 .table
 {
-  th
+  border-collapse: separate;
+  border-spacing: 0 .5rem;
+
+  thead tr th
   {
-    background: $table-head-bg;
+    background: transparent;
+    border: none;
+    border-bottom: $table-border-width solid map-get($grays, "400");
+    color: map-get($theme-colors, "secondary");
+    font-weight: normal;
+  }
+
+  tbody
+  {
+    &:before
+    {
+      content: " ";
+      display: block;
+      line-height: 5rem;
+    }
+
+    tr td
+    {
+      background: map-get($colors, "white");
+      border: none;
+
+      &:first-child
+      {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      &:last-child
+      {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
   }
 }
