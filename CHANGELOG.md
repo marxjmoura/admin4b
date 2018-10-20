@@ -1,9 +1,15 @@
-## [v1.2.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.1) (2018-09-16)
+## [v1.2.2](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.2) (2018-10-20)
+### Bug fixes:
+- Fix components to reference to the theme colors
 ### Features:
-- Small improvements on shadows
+- New table style
+
+## [v1.2.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.1) (2018-09-16)
 ### Bug fixes:
 - Fix JavaScript reference error on NPM
 - Other minor bug fixes
+### Features:
+- Small improvements on shadows
 
 ## [v1.2.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.0) (2018-07-08)
 ### Breaking changes:
@@ -11,10 +17,10 @@
 - Bootstrap, jQuery and Popper are now included as part of `admin4b.min.*` bundle (no more need to import)
 - Simple Line Icons as default (optionally, add Font Awesome)
 - Sidebar fade effect removed
-### Features:
-- Sidebar respect max-width on small screens
 ### Bug fixes:
 - Calendar input year when using numeric keypad
+### Features:
+- Sidebar respect max-width on small screens
 
 ## [v1.1.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.1) (2018-05-19)
 ### Bug fixes:

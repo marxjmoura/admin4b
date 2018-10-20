@@ -22,8 +22,7 @@ class StopCommand {
         tracks[0].stop()
       }
     } else if (stream.stop) {
-      // Deprecated, may be removed in the near future
-      stream.stop()
+      stream.stop() // Deprecated, may be removed in the near future
     }
 
     $video.prop(Prop.PLAYING, false)

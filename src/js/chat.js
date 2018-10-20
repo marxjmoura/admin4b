@@ -39,7 +39,8 @@ class Chat {
 
     $(Selector.APP_CONTENT).children().each((index, element) => {
       if ($(element).is(Selector.CHAT)) return
-      usedHeight += $(element).outerHeight(true) // true = include margins
+      const includeMargins = true
+      usedHeight += $(element).outerHeight(includeMargins)
     })
 
     $(this._element).height($(Selector.APP_CONTENT).height() - usedHeight)

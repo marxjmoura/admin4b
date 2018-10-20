@@ -17,24 +17,21 @@ class InputSuggestionList {
     this.$itemList = this.$suggestionList.find(Selector.LIST_GROUP_ITEMS)
   }
 
-  _changeSelectedItem(selectedItem) {
-    this.$input.val(new InputSuggestionItem(selectedItem).text())
-    this.$input.trigger(Event.TRIGGER_CHANGE, selectedItem)
+  bindEvents() {
+    this._bindInputEvents()
+    this._bindItemEvents()
   }
 
-  _hide() {
-    if (!this.$suggestion.is(Selector.OPEN)) return
+  refresh() {
+    this._bindItemEvents()
 
-    this.$suggestion.removeClass(ClassName.OPEN)
-    this.$input.trigger(Event.TRIGGER_HIDE)
-  }
+    if (this.$itemList.children().length) {
+      this.$itemList.show()
+    } else {
+      this.$emptyList.show()
+    }
 
-  _show() {
-    if (this.$suggestion.is(Selector.OPEN)) return
-
-    this.$itemList.children().removeClass(ClassName.ACTIVE)
-    this.$suggestion.addClass(ClassName.OPEN)
-    this.$input.trigger(Event.TRIGGER_SHOW)
+    this.$loadingList.hide()
   }
 
   _bindItemEvents() {
@@ -105,21 +102,24 @@ class InputSuggestionList {
       .on(Event.TRIGGER_CHANGE, () => this._hide())
   }
 
-  bindEvents() {
-    this._bindInputEvents()
-    this._bindItemEvents()
+  _changeSelectedItem(selectedItem) {
+    this.$input.val(new InputSuggestionItem(selectedItem).text())
+    this.$input.trigger(Event.TRIGGER_CHANGE, selectedItem)
   }
 
-  refresh() {
-    this._bindItemEvents()
+  _hide() {
+    if (!this.$suggestion.is(Selector.OPEN)) return
 
-    if (this.$itemList.children().length) {
-      this.$itemList.show()
-    } else {
-      this.$emptyList.show()
-    }
+    this.$suggestion.removeClass(ClassName.OPEN)
+    this.$input.trigger(Event.TRIGGER_HIDE)
+  }
 
-    this.$loadingList.hide()
+  _show() {
+    if (this.$suggestion.is(Selector.OPEN)) return
+
+    this.$itemList.children().removeClass(ClassName.ACTIVE)
+    this.$suggestion.addClass(ClassName.OPEN)
+    this.$input.trigger(Event.TRIGGER_SHOW)
   }
 }
 

@@ -9,16 +9,6 @@ class SnapshotCommand {
     this._element = element
   }
 
-  _getSize(size) {
-    if (!size || !size.match(sizeRegex)) {
-      return { width: 320, height: 240 }
-    }
-
-    const matches = sizeRegex.exec(size)
-
-    return { width: matches[1], height: matches[2] }
-  }
-
   execute() {
     const $video = $(this._element)
 
@@ -43,6 +33,16 @@ class SnapshotCommand {
     blob.dataURL = dataURL
 
     $video.trigger(Event.TRIGGER_SNAPSHOT, blob)
+  }
+
+  _getSize(size) {
+    if (!size || !size.match(sizeRegex)) {
+      return { width: 320, height: 240 }
+    }
+
+    const matches = sizeRegex.exec(size)
+
+    return { width: matches[1], height: matches[2] }
   }
 }
 

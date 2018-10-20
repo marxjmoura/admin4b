@@ -12,6 +12,28 @@ class PlayCommand {
     this._element = element
   }
 
+  execute() {
+    const $video = $(this._element)
+
+    if ($video.prop(Prop.PLAYING)) {
+      return
+    }
+
+    const mediaConstraint = { video: true, audio: false }
+
+    if (navigator.mediaDevices) {
+      navigator.mediaDevices.getUserMedia(mediaConstraint)
+        .then((stream) => this._onSuccess(stream))
+        .catch((error) => this._onFailure(error))
+    } else if (navigator.getSupportedUserMedia) {
+      navigator.getSupportedUserMedia(mediaConstraint,
+        (stream) => this._onSuccess(stream),
+        (error) => this._onFailure(error))
+    } else {
+      $video.trigger(Event.TRIGGER_NOT_SUPPORTED)
+    }
+  }
+
   _play(stream) {
     const video = $(this._element).get(0)
 
@@ -38,28 +60,6 @@ class PlayCommand {
 
   _onFailure(error) {
     $(this._element).trigger(Event.TRIGGER_ERROR, error)
-  }
-
-  execute() {
-    const $video = $(this._element)
-
-    if ($video.prop(Prop.PLAYING)) {
-      return
-    }
-
-    const mediaConstraint = { video: true, audio: false }
-
-    if (navigator.mediaDevices) {
-      navigator.mediaDevices.getUserMedia(mediaConstraint)
-        .then((stream) => this._onSuccess(stream))
-        .catch((error) => this._onFailure(error))
-    } else if (navigator.getSupportedUserMedia) {
-      navigator.getSupportedUserMedia(mediaConstraint,
-        (stream) => this._onSuccess(stream),
-        (error) => this._onFailure(error))
-    } else {
-      $video.trigger(Event.TRIGGER_NOT_SUPPORTED)
-    }
   }
 }
 

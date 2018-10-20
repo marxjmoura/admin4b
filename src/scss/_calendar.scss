@@ -86,7 +86,7 @@ table.table-calendar
 
     &:first-child
     {
-      color: map-get($colors, "red");
+      color: map-get($theme-colors, "danger");
     }
   }
 
@@ -106,7 +106,8 @@ table.table-calendar
 
       &::before
       {
-        border: .0625rem solid map-get($colors, "blue");
+        border: .0625rem solid map-get($theme-colors, "primary");
+        border-radius: 50%;
         content: " ";
         display: none;
         position: absolute;
@@ -115,7 +116,6 @@ table.table-calendar
         width: 2rem;
         height: 2rem;
         z-index: -1;
-        border-radius: 50%;
       }
 
       &:hover,
@@ -125,7 +125,7 @@ table.table-calendar
 
         &::before
         {
-          background: map-get($colors, "blue");
+          background: map-get($theme-colors, "primary");
           display: block;
         }
       }
@@ -137,7 +137,7 @@ table.table-calendar
 
       &.sunday
       {
-        color: map-get($colors, "red");
+        color: map-get($theme-colors, "danger");
       }
     }
   }

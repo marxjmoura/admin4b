@@ -5,7 +5,6 @@ import $ from 'jquery'
  */
 
 const NAME = 'navProgress'
-const NAMESPACE = `admin4b.${NAME}`
 
 const ClassName = {
   ITEM: 'nav-item',
