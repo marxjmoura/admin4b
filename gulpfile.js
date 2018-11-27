@@ -23,7 +23,7 @@ gulp.task('build-js', () => {
   return browserify({
     entries: ['src/js/index.js'],
     fullPaths: false,
-    transform: [babelify.configure({ presets: ['env'] })]
+    transform: [babelify.configure({ presets: ['@babel/preset-env'] })]
   })
     .bundle().on('error', (e) => console.log(e))
     .pipe(source('admin4b.min.js'))

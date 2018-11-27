@@ -1,3 +1,7 @@
+## v1.3.0 (UNRELEASED)
+### Features:
+- Upgrade bootstrap to version 4.1.3 (and other NPM packages)
+
 ## [v1.2.2](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.2) (2018-10-20)
 ### Bug fixes:
 - Fix components to reference to the theme colors
