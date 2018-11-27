@@ -12,6 +12,15 @@
   </p>
 </p>
 
+## Status
+
+[![NPM version](https://img.shields.io/npm/v/admin4b.svg)](https://npmjs.org/package/admin4b)
+[![NPM downloads](https://img.shields.io/npm/dm/admin4b.svg)](https://npmjs.org/package/admin4b)
+[![Dependency Status](https://img.shields.io/david/marxjmoura/admin4b.svg)](https://david-dm.org/marxjmoura/admin4b)
+[![devDependency Status](https://img.shields.io/david/dev/marxjmoura/admin4b.svg)](https://david-dm.org/marxjmoura/admin4b?type=dev)
+[![CSS gzip size](https://img.badgesize.io/marxjmoura/admin4b/master/dist/admin4b.min.css?compression=gzip&label=CSS+gzip+size)](https://github.com/marxjmoura/admin4b/blob/master/dist/admin4b.min.css)
+[![JS gzip size](https://img.badgesize.io/marxjmoura/admin4b/master/dist/admin4b.min.js?compression=gzip&label=JS+gzip+size)](https://github.com/marxjmoura/admin4b/blob/master/dist/admin4b.min.js)
+
 ## Quick start
 
 Some options are available:
