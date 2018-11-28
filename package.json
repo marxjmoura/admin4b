@@ -31,13 +31,12 @@
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-bro": "^1.0.3",
     "gulp-file-include": "^2.0.1",
     "gulp-html-extend": "^1.1.6",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "uglifyify": "^5.0.1"
   }
 }
