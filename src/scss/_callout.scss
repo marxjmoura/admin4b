@@ -1,11 +1,11 @@
 .callout
 {
-  background: map-get($grays, "100");
+  background: $callout-bg;
   padding: 1.25rem;
-  margin-bottom: 1rem;
-  border: .0625rem solid map-get($grays, "400");
-  border-left-width: .25rem;
-  border-radius: .25rem;
+  margin-bottom: $callout-margin-bottom;
+  border-left: $callout-border-width solid map-get($grays, "400");
+  border-radius: $callout-border-radius;
+  box-shadow: $callout-box-shadow;
 
   h4
   {

@@ -3,13 +3,24 @@
   border-collapse: separate;
   border-spacing: 0 .5rem;
 
+  thead tr th,
+  tbody tr td,
+  tfoot tr td
+  {
+    border: none;
+  }
+
   thead tr th
   {
     background: transparent;
-    border: none;
-    border-bottom: $table-border-width solid map-get($grays, "400");
     color: map-get($theme-colors, "secondary");
     font-weight: normal;
+    padding: 0 $table-cell-padding;
+
+    &[class*=col],
+    {
+      padding: .25rem $table-cell-padding;
+    }
   }
 
   tbody
@@ -24,7 +35,6 @@
     tr td
     {
       background: map-get($colors, "white");
-      border: none;
 
       &:first-child
       {
@@ -37,6 +47,21 @@
         border-top-right-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
       }
+
+      &[class*=col],
+      {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  tfoot tr td
+  {
+    padding: 0;
+
+    .pagination
+    {
+      margin-bottom: 0;
     }
   }
 }

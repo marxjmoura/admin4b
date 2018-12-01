@@ -86,18 +86,42 @@ $breakpoints: map-merge((
 
 // Layout
 
-$body-bg: $gray-200 !default;
-$breadcrumb-bg: $gray-300 !default;
+$box-shadow-base: 0 2px 6px 0 hsla(0, 0%, 0%, .1) !default;
+
+$body-bg: #f1f4f5 !default;
+
+$breadcrumb-bg: $white !default;
 $breadcrumb-border-radius: 0 !default;
+$breadcrumb-box-shadow: $box-shadow-base !default;
+$breadcrumb-font-size: 11pt !default;
+$breadcrumb-margin-bottom: 1.5rem !default;
+
+$card-border-width: 0 !default;
+$card-box-shadow: $box-shadow-base !default;
+
 $link-color: $blue !default;
-$table-head-bg: $gray-400 !default;
+
+$list-group-border-width: 0 !default;
+$list-group-box-shadow: $box-shadow-base !default;
+$list-group-item-border-color: rgba($black, .075) !default;
+
 $nav-tabs-border-color: $gray-400 !default;
 $nav-tabs-link-active-border-color: $gray-400 $gray-400 $body-bg !default;
 $nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !default;
 
+$callout-bg: $white !default;
+$callout-border-radius: .25rem !default;
+$callout-border-width: .25rem !default;
+$callout-margin-bottom: 1rem !default;
+$callout-box-shadow: $box-shadow-base !default;
+
+$badge-font-weight: normal !default;
+
+$pagination-border-width: 0 !default;
+
 // Sidebar
 
-$sidebar-background: $peter-river !default;
+$sidebar-bg: $peter-river !default;
 $sidebar-box-shadow: 0 0 1.25rem rgba($black, 0.5) !default;
 $sidebar-btn-close: rgba($white, .5) !default;
 $sidebar-font-size: 0.95rem !default;
@@ -118,7 +142,7 @@ $sidebar-width: 16.25rem !default;
 // Code highlight
 
 $source-code-attribute: $blue !default;
-$source-code-background: $gray-300 !default;
+$source-code-background: $gray-200 !default;
 $source-code-class: $indigo !default;
 $source-code-comment: $gray-600 !default;
 $source-code-keyword: $indigo !default;

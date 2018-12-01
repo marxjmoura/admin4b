@@ -95,7 +95,7 @@
 
       &.collapsed
       {
-        background-color: $sidebar-background;
+        background-color: $sidebar-bg;
       }
 
       &:active,
@@ -137,7 +137,7 @@
 
   .sidebar-footer
   {
-    background: darken($sidebar-background, 5%);
+    background: darken($sidebar-bg, 5%);
     padding: .5rem 0;
     margin-top: auto;
     text-align: center;
