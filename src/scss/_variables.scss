@@ -98,6 +98,7 @@ $breadcrumb-margin-bottom: 1.5rem !default;
 
 $card-border-width: 0 !default;
 $card-box-shadow: $box-shadow-base !default;
+$card-margin-bottom: 1rem !default;
 
 $link-color: $blue !default;
 
@@ -154,14 +155,14 @@ $source-code-string: $red !default;
 
 $source-code-colors: () !default;
 $source-code-colors: map-merge((
-"attribute": $source-code-attribute,
-"background": $source-code-background,
-"class": $source-code-class,
-"comment": $source-code-comment,
-"keyword": $source-code-keyword,
-"link": $source-code-link,
-"literal": $source-code-literal,
-"namespace": $source-code-namespace,
-"number": $source-code-number,
-"string": $source-code-string
+  "attribute": $source-code-attribute,
+  "background": $source-code-background,
+  "class": $source-code-class,
+  "comment": $source-code-comment,
+  "keyword": $source-code-keyword,
+  "link": $source-code-link,
+  "literal": $source-code-literal,
+  "namespace": $source-code-namespace,
+  "number": $source-code-number,
+  "string": $source-code-string
 ), $source-code-colors);

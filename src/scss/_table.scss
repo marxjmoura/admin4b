@@ -3,6 +3,19 @@
   border-collapse: separate;
   border-spacing: 0 .5rem;
 
+  &.table-sm
+  {
+    thead tr th
+    {
+      padding: 0 $table-cell-padding-sm;
+
+      &[class*=col],
+      {
+        padding: 0 $table-cell-padding-sm;
+      }
+    }
+  }
+
   thead tr th,
   tbody tr td,
   tfoot tr td

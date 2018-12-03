@@ -112,6 +112,11 @@
     {
       color: map-get($source-code-colors, "comment");
     }
+
+    a .hljs-comment
+    {
+      color: $blue;
+    }
   }
 
   .json

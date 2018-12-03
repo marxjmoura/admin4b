@@ -3,6 +3,7 @@
 - Upgrade bootstrap to version 4.1.3 (and other NPM packages)
 - Add line icons
 - Add table paging component
+- Dashboard page
 - Style changes for tables, breadcrumb and callout
 ### Breaking changes:
 - Rename variable from `$sidebar-background` to `$sidebar-bg` for brevity
