@@ -6,11 +6,11 @@
   "author": "Marx JMoura",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marxjmoura/admin4b/issues"
+    "url": "https://github.com/logiqsystem/admin4b/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/marxjmoura/admin4b.git"
+    "url": "git://github.com/logiqsystem/admin4b.git"
   },
   "scripts": {
     "start": "gulp start",
