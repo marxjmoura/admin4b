@@ -6,7 +6,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -66,10 +66,6 @@ $h6-font-size: $font-size-base !default;
 
 $headings-margin-bottom: 1rem !default;
 
-$line-icons-font-path: "fonts/" !default;
-$line-icons-font-family: "line-icons" !default;
-$line-icons-prefix: "icon-" !default;
-
 // Responsive breakpoints
 
 $breakpoints: () !default;
@@ -94,7 +90,7 @@ $breadcrumb-bg: $white !default;
 $breadcrumb-border-radius: 0 !default;
 $breadcrumb-box-shadow: $box-shadow-base !default;
 $breadcrumb-font-size: 11pt !default;
-$breadcrumb-margin-bottom: 1.5rem !default;
+$breadcrumb-margin-bottom: 0 !default;
 
 $card-border-width: 0 !default;
 $card-box-shadow: $box-shadow-base !default;
@@ -120,24 +116,7 @@ $badge-font-weight: normal !default;
 
 $pagination-border-width: 0 !default;
 
-// Sidebar
-
-$sidebar-bg: $peter-river !default;
-$sidebar-box-shadow: 0 0 1.25rem rgba($black, 0.5) !default;
-$sidebar-btn-close: rgba($white, .5) !default;
-$sidebar-font-size: 0.95rem !default;
-$sidebar-header-color: rgba($white, .75) !default;
-$sidebar-header-img-bg: $gray-200 !default;
-$sidebar-header-img-border: rgba($white, .15) !default;
-$sidebar-nav-link-level-1: rgba($white, .75) !default;
-$sidebar-nav-link-level-1-hover: $white !default;
-$sidebar-nav-link-level-2: rgba($white, .75) !default;
-$sidebar-nav-link-level-2-hover: $white !default;
-$sidebar-nav-footer-link: rgba($white, .5) !default;
-$sidebar-nav-footer-link-hover: rgba($white, .75) !default;
-$sidebar-scrollbar: $peter-river !default;
-$sidebar-scrollbar-thumb: darken($peter-river, 7%) !default;
-$sidebar-scrollbar-width: .2rem !default;
+$sidebar-header-bg: map-get($theme-colors, "primary") url("/assets/img/sidebar-header.svg") no-repeat !default;
 $sidebar-width: 16.25rem !default;
 
 // Code highlight

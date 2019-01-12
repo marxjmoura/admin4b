@@ -3,13 +3,14 @@
 <!-- @@placeholder = head -->
 <!-- @@close -->
 <!-- @@block = body -->
-<div class="app">
-  <div class="app-body">
-    @@include('includes/sidebar.html')
-    <div class="app-content">
-      @@include('includes/navbar.html')
-      <!-- @@placeholder = body -->
-    </div>
+@@include('includes/sidebar.html')
+<div class="app-content">
+  <div class="content-header">
+    @@include('includes/navbar.html')
+    <!-- @@placeholder = breadcrumb -->
+  </div>
+  <div class="content-body">
+    <!-- @@placeholder = body -->
   </div>
 </div>
 <!-- @@close -->

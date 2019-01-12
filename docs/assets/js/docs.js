@@ -1,14 +1,12 @@
 $(function () {
-  /*
-   * Code highlight
-   */
+  // Code highlight
+
   $('pre code').each(function (i, code) {
     hljs.highlightBlock(code);
   });
 
-  /*
-   * Spinner
-   */
+  // Spinner
+
   $('#spinner-toggle').on('click', function () {
     $('#spinner').addClass('show');
 
@@ -17,9 +15,8 @@ $(function () {
     }, 3000);
   });
 
-  /*
-   * Input suggestion async
-   */
+  // Input suggestion async
+
   var juices = [
     'Apple, carrot, and orange',
     'Beet, carrot, ginger, and turmeric',
@@ -54,9 +51,7 @@ $(function () {
     $input.suggestion('refresh');
   });
 
-  /*
-   * File manager
-   */
+  // File manager
   $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
     $('#file-name').text(file.name);
     $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
@@ -73,9 +68,8 @@ $(function () {
     $('#file-data').removeClass('d-none');
   });
 
-  /*
-   * Camera
-   */
+  // Camera
+
   var $modalCamera = $('#modal-camera');
   var $camera = $('#camera');
   var $btnSnapshot = $('#button-snapshot');
@@ -102,9 +96,8 @@ $(function () {
       $modalCamera.find('.modal-body').find('p').removeClass('d-none');
     });
 
-  /*
-   * Input date (displays calendar)
-   */
+  // Input date (displays calendar)
+
   var $calendar = $('#calendar');
   var $btnApplyDate = $('#btnApplyDate')
 
@@ -125,9 +118,8 @@ $(function () {
     $target.prop('date', date).text(formattedDate);
   });
 
-  /*
-   * Nav tabs
-   */
+  // Nav tabs
+
   $('[data-form-step]').on('click', function () {
     var tabId = $(this).attr('data-form-step');
     $('[href="' + tabId + '"]').tab('show');

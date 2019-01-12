@@ -6,103 +6,67 @@ html, body
 
 body
 {
+  background: $body-bg;
+  box-sizing: border-box;
+  display: flex;
   font-family: $font-family-base;
   font-size: $font-size-base;
+  margin: 0;
+  overflow: hidden;
 }
 
-.app, .app-sidebar, .app-content
-{
+.app-sidebar,
+.app-content {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
-.app
-{
-  position: relative;
-  width: 100%;
+.app-sidebar {
+  flex-shrink: 0;
+  box-shadow: $box-shadow-base;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: $sidebar-width;
+  transition: width .3s;
+  z-index: $zindex-fixed;
 
-  &::before
-  {
-    content: "";
-    height: 100%;
-    float: left;
-  }
-
-  &::after
-  {
-    content: "";
-    clear: both;
-    display: block;
-  }
-
-  .app-body
+  @include breakpoint-down-to-sm
   {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 0;
 
-    .app-sidebar
+    &.show
     {
-      background: $sidebar-bg;
-      display: flex;
-      flex-flow: column nowrap;
-      float: left;
-      font-size: $sidebar-font-size;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      position: relative;
+      box-shadow: $box-shadow-base;
       width: $sidebar-width;
-      max-width: $sidebar-width;
-      z-index: $zindex-fixed;
-      transition: width .3s;
-
-      &::-webkit-scrollbar
-      {
-        background-color: $sidebar-scrollbar;
-        width: $sidebar-scrollbar-width;
-      }
-
-      &::-webkit-scrollbar-thumb
-      {
-        background-color: $sidebar-scrollbar-thumb;
-      }
 
       &::before
       {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        visibility: hidden;
-        opacity: 0;
+        visibility: visible;
+        opacity: 1;
       }
-
-      @include breakpoint-down-to-sm
-      {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-
-        &.show
-        {
-          box-shadow: $sidebar-box-shadow;
-          width: 100%;
-
-          &::before
-          {
-            visibility: visible;
-            opacity: 1;
-          }
-        }
-      }
-    }
-
-    .app-content
-    {
-      position: relative;
-      overflow: auto;
     }
   }
+}
+
+.app-content {
+  flex: 1;
+}
+
+.app-sidebar .sidebar-header,
+.app-content .content-header {
+  flex-shrink: 0;
+}
+
+.app-sidebar .sidebar-nav,
+.app-content .content-body {
+  flex-grow: 1;
+}
+
+.app-content .content-body {
+  overflow-y: auto;
+  padding: 1rem 0;
 }

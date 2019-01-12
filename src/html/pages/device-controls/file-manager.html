@@ -3,13 +3,15 @@
 <meta name="description" content="Validate, preview and upload selected files from device's file manager." />
 <title>Admin 4B · File manager</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Device controls</li>
-    <li class="breadcrumb-item" aria-current="page">File manager</li>
+    <li class="breadcrumb-item">File manager</li>
   </ol>
 </nav>
+<!-- @@close -->
+<!-- @@block = body -->
 <div class="container-fluid">
   <h1>File manager</h1>
   <p>
@@ -18,7 +20,7 @@
   </p>
   <div class="form-group">
     <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
-      <i class="icon-folder"></i> Select a file
+      <i class="fa fa-folder-open"></i> Select a file
     </button>
     <small class="text-secondary">Only .jpeg and .png and maximum 1MB.</small>
   </div>
@@ -35,8 +37,8 @@
           <td class="align-middle">
             <img id="file-preview" class="rounded d-none" width="64">
             <span id="file-name"></span>
-            <i id="is-invalid" class="icon-close text-danger d-none"></i>
-            <i id="is-valid" class="icon-check text-success d-none"></i>
+            <i id="is-invalid" class="fa fa-times-circle-o text-danger d-none"></i>
+            <i id="is-valid" class="fa fa-check-circle-o text-success d-none"></i>
           </td>
           <td class="align-middle">
             <span id="file-size"></span>
@@ -52,7 +54,7 @@
   </div>
   <div class="source-code">
     <a href="#file-manager" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="file-manager" class="collapse">
       <div class="nav nav-tabs">
@@ -157,7 +159,7 @@
   </div>
   <div class="source-code">
     <a href="#css-setup" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="css-setup" class="sidebar-nav-group collapse">
       <pre><code class="js">@@include('includes/code-examples/device-controls/file-manager/file-manager-change.js')</code></pre>

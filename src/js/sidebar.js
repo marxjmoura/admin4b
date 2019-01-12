@@ -75,5 +75,12 @@ $(document)
   .on(Event.ON_CLICK, Selector.DATA_DISMISS, () => {
     Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.HIDE)
   })
+  .on(Event.ON_CLICK, event => {
+    if (!$(event.target).closest(Selector.DATA_TOGGLE).length) {
+      if (!$(event.target).closest(Selector.SIDEBAR).length) {
+        Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.HIDE)
+      }
+    }
+  })
 
 export default Sidebar

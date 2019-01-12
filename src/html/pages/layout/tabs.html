@@ -3,13 +3,15 @@
 <meta name="description" content="Tabs can help create a more organized look and make forms easier to use." />
 <title>Admin 4B · Tabs</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Layout</li>
     <li class="breadcrumb-item" aria-current="page">Tabs</li>
   </ol>
 </nav>
+<!-- @@close -->
+<!-- @@block = body -->
 <div class="container-fluid">
   <h1>
     Tabs
@@ -36,17 +38,17 @@
     <ul class="nav nav-tabs mb-2">
       <li class="nav-item">
         <a href="#account" class="nav-link active" data-toggle="tab">
-          <i class="icon-lock"></i> Account
+          <i class="fa fa-lock"></i> Account
         </a>
       </li>
       <li class="nav-item">
         <a href="#personal" class="nav-link" data-toggle="tab">
-          <i class="icon-user"></i> Personal
+          <i class="fa fa-user-circle-o"></i> Personal
         </a>
       </li>
       <li class="nav-item">
         <a href="#payment" class="nav-link" data-toggle="tab">
-          <i class="icon-credit-card"></i> Payment
+          <i class="fa fa-credit-card"></i> Payment
         </a>
       </li>
     </ul>
@@ -54,7 +56,7 @@
       <div id="account" class="tab-pane show active">
         <div class="mb-3">
           <a href="#account-collapse" data-toggle="collapse">
-            <i class="icon-lock"></i> Account
+            <i class="fa fa-lock"></i> Account
           </a>
         </div>
         <div id="account-collapse" class="collapse show" data-parent="#tab-contents">
@@ -64,7 +66,7 @@
       <div id="personal" class="tab-pane">
         <div class="mb-3">
           <a href="#personal-collapse" data-toggle="collapse">
-            <i class="icon-user"></i> Personal
+            <i class="fa fa-user-circle-o"></i> Personal
           </a>
         </div>
         <div id="personal-collapse" class="collapse" data-parent="#tab-contents">
@@ -74,7 +76,7 @@
       <div id="payment" class="tab-pane">
         <div class="mb-3">
           <a href="#payment-collapse" data-toggle="collapse">
-            <i class="icon-credit-card"></i> Payment
+            <i class="fa fa-credit-card"></i> Payment
           </a>
         </div>
         <div id="payment-collapse" class="collapse" data-parent="#tab-contents">
@@ -85,7 +87,7 @@
   </div>
   <div class="source-code">
     <a href="#tabs-responsive" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="tabs-responsive" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/tabs/tabs-responsive.html')</code></pre>
@@ -181,7 +183,7 @@
   </div>
   <div class="source-code">
     <a href="#tabs-progress" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="tabs-progress" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/tabs/tabs-progress.html')</code></pre>

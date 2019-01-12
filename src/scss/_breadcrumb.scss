@@ -1,5 +1,6 @@
 .breadcrumb
 {
   box-shadow: $breadcrumb-box-shadow;
+  color: map-get($grays, "700");
   font-size: $breadcrumb-font-size;
 }

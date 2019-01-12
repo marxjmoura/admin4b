@@ -3,17 +3,19 @@
 <meta name="description" content="Create more organized forms and making it even easier to navigate using tabs." />
 <title>Admin 4B · Tabbed form</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Forms</li>
     <li class="breadcrumb-item" aria-current="page">Tabbed form</li>
   </ol>
 </nav>
+<!-- @@close -->
+<!-- @@block = body -->
 <div class="container-fluid">
   <div class="source-code">
     <a href="#tabbed-form" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="tabbed-form" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/forms/tabbed-form.html')</code></pre>
@@ -26,17 +28,17 @@
     <ul class="nav nav-tabs mb-4">
       <li class="nav-item">
         <a href="#account" class="nav-link active" data-toggle="tab">
-          <i class="icon-lock"></i> Account
+          <i class="fa fa-lock"></i> Account
         </a>
       </li>
       <li class="nav-item">
         <a href="#personal" class="nav-link" data-toggle="tab">
-          <i class="icon-user"></i> Personal
+          <i class="fa fa-user-circle-o"></i> Personal
         </a>
       </li>
       <li class="nav-item">
         <a href="#payment" class="nav-link" data-toggle="tab">
-          <i class="icon-credit-card"></i> Payment
+          <i class="fa fa-credit-card"></i> Payment
         </a>
       </li>
     </ul>
@@ -44,7 +46,7 @@
       <div id="account" class="tab-pane show active">
         <div class="mb-3">
           <a href="#account-collapse" data-toggle="collapse">
-            <i class="icon-lock"></i> Account
+            <i class="fa fa-lock"></i> Account
           </a>
         </div>
         <div id="account-collapse" class="collapse show" data-parent="#formOrder">
@@ -81,7 +83,7 @@
       <div id="personal" class="tab-pane">
         <div class="mb-3">
           <a href="#personal-collapse" data-toggle="collapse">
-            <i class="icon-user"></i> Personal
+            <i class="fa fa-user-circle-o"></i> Personal
           </a>
         </div>
         <div id="personal-collapse" class="collapse" data-parent="#formOrder">
@@ -156,7 +158,7 @@
       <div id="payment" class="tab-pane">
         <div class="mb-3">
           <a href="#payment-collapse" data-toggle="collapse">
-            <i class="icon-credit-card"></i> Payment
+            <i class="fa fa-credit-card"></i> Payment
           </a>
         </div>
         <div id="payment-collapse" class="collapse" data-parent="#formOrder">
