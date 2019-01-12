@@ -9,11 +9,6 @@ const htmlmin = require('gulp-htmlmin')
 const rename = require("gulp-rename")
 const sass = require('gulp-sass')
 
-gulp.task('copy-fonts', () => {
-  return gulp.src('src/fonts/**/*.{eot,svg,ttf,woff,woff2}')
-    .pipe(gulp.dest('dist/fonts'))
-})
-
 gulp.task('build-sass', () => {
   return gulp.src('src/scss/compile.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
@@ -51,7 +46,7 @@ gulp.task('build-html', () => {
     .pipe(gulp.dest('docs'))
 })
 
-gulp.task('build', gulp.parallel('build-html', 'build-sass', 'build-js', 'copy-fonts'))
+gulp.task('build', gulp.parallel('build-html', 'build-sass', 'build-js'))
 
 gulp.task('build-watching', done => {
   gulp.watch('src/html/**/*.html', gulp.series('build-html'))
