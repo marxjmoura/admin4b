@@ -19,7 +19,6 @@ const Event = {
 
 const Selector = {
   DATA_TOGGLE: '[data-toggle="sidebar"]',
-  DATA_DISMISS: '[data-dismiss="sidebar"]',
   SIDEBAR: '.app-sidebar'
 }
 
@@ -71,9 +70,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = Sidebar.jQueryPlugin
 $(document)
   .on(Event.ON_CLICK, Selector.DATA_TOGGLE, () => {
     Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.SHOW)
-  })
-  .on(Event.ON_CLICK, Selector.DATA_DISMISS, () => {
-    Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.HIDE)
   })
   .on(Event.ON_CLICK, event => {
     if (!$(event.target).closest(Selector.DATA_TOGGLE).length) {
