@@ -1,12 +1,13 @@
-## v1.3.0 (UNRELEASED)
-### Features:
-- Upgrade bootstrap to version 4.1.3 (and other NPM packages)
-- Add line icons
-- Add table paging component
-- Dashboard page
-- Style changes for tables, breadcrumb and callout
+## v2.0.0 (UNRELEASED)
 ### Breaking changes:
-- Rename variable from `$sidebar-background` to `$sidebar-bg` for brevity
+- Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
+- The theme was all rewritten using Flexbox
+### Features:
+- Upgrade bootstrap to version 4.2.1
+- Table paging component
+- Dashboard page
+- Style changes for sidebar, tables, breadcrumb and callout
+- Navbar now is static (does not scroll with content)
 
 ## [v1.2.2](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.2) (2018-10-20)
 ### Bug fixes:
