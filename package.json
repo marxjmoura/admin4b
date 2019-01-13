@@ -14,6 +14,7 @@
   },
   "scripts": {
     "start": "gulp start",
+    "serve": "gulp serve",
     "build-js": "gulp build-js",
     "build-html": "gulp build-html",
     "build-sass": "gulp build-sass",

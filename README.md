@@ -37,8 +37,7 @@ The documentation is hosted on [GitHub pages](http://getadmin4b.com).
 
 1. Install [Node.js](https://nodejs.org/)
 2. Run `npm install` to install node dependencies
-3. Run `npm run build` to rebuild CSS, JavaScript and HTML files
-4. Open the `index.html`
+3. Run `npm run serve` to start the server at `http://localhost:8888`
 
 ## Bugs and features
 
