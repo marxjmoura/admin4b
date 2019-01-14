@@ -35,9 +35,14 @@
   $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
   if (file.type.startsWith('image')) {
-    $('#preview').attr('src', file.dataURL).removeClass('d-none');
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function() {
+      var url = URL.createObjectURL(file);
+      $('#file-preview').attr('src', url).removeClass('d-none');
+    };
   } else {
-    $('#preview').removeAttr('src').addClass('d-none');
+    $('#file-preview').removeAttr('src').addClass('d-none');
   }
 
   $('#file-empty').addClass('d-none');
