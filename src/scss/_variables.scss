@@ -82,9 +82,14 @@ $breakpoints: map-merge((
 
 // Layout
 
-$box-shadow-base: 0 2px 6px 0 hsla(0, 0%, 0%, .1) !default;
+$box-shadow-base: 0 .0625rem .125rem 0 hsla(0, 0%, 0%, .1) !default;
 
 $body-bg: #f1f4f5 !default;
+$body-color: $gray-800 !default;
+
+$border-radius: .15rem !default;
+$border-radius-lg: .2rem !default;
+$border-radius-sm: .1rem !default;
 
 $breadcrumb-bg: $white !default;
 $breadcrumb-border-radius: 0 !default;
@@ -108,7 +113,7 @@ $nav-tabs-link-active-border-color: $gray-400 $gray-400 $body-bg !default;
 $nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !default;
 
 $callout-bg: $white !default;
-$callout-border-radius: .25rem !default;
+$callout-border-radius: $border-radius !default;
 $callout-border-width: .25rem !default;
 $callout-margin-bottom: 1rem !default;
 $callout-box-shadow: $box-shadow-base !default;
