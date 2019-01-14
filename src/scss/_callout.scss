@@ -1,7 +1,7 @@
 .callout
 {
   background: $callout-bg;
-  padding: 1.25rem;
+  padding: $callout-padding-y $callout-padding-x;
   margin-bottom: $callout-margin-bottom;
   border-left: $callout-border-width solid map-get($grays, "400");
   border-radius: $callout-border-radius;
