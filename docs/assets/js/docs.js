@@ -52,6 +52,7 @@ $(function () {
   });
 
   // File manager
+
   $('[data-toggle="file-manager"]').on('file:change', function (e, file) {
     $('#file-name').text(file.name);
     $('#file-size').text((file.size / 1024).toFixed(2) + ' KB');
@@ -59,7 +60,7 @@ $(function () {
     $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
     if (file.type.startsWith('image')) {
-      $('#file-preview').attr('src', file.dataURL).removeClass('d-none');
+      $('#file-preview').attr('src', URL.createObjectURL(file)).removeClass('d-none');
     } else {
       $('#file-preview').removeAttr('src').addClass('d-none');
     }

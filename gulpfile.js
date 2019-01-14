@@ -14,7 +14,6 @@ gulp.task('build-sass', () => {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(rename({ basename: 'admin4b', extname: '.min.css' }))
-    .pipe(gulp.dest('docs/assets/css'))
     .pipe(gulp.dest('dist'))
 })
 
@@ -27,7 +26,6 @@ gulp.task('build-js', () => {
       ]
     }))
     .pipe(rename({ basename: 'admin4b', extname: '.min.js' }))
-    .pipe(gulp.dest('docs/assets/js'))
     .pipe(gulp.dest('dist'))
 })
 
@@ -57,7 +55,7 @@ gulp.task('build-watching', done => {
 })
 
 gulp.task('serve', done => {
-  connect.server({ root: 'docs', port: 8888 })
+  connect.server({ root: '.', port: 8888 })
   connect.serverClose()
 
   done()
