@@ -1,128 +1,6 @@
-.nav
-{
-  $max-tabs: 6;
-
-  border-bottom: 1px solid map-get($grays, "400");
-
-  &.nav.nav-tabs-progress
-  {
-    position: relative;
-    z-index: 0;
-
-    .nav-item
-    {
-      padding-bottom: .625rem;
-      transition: opacity .5s ease;
-
-      &:last-child::after
-      {
-        content: "";
-        display: block;
-        position: absolute;
-        pointer-events: none;
-        border-bottom: 2px solid map-get($theme-colors, "primary");
-        left: 0;
-        bottom: -1px;
-        z-index: 1;
-      }
-
-      &.complete
-      {
-        opacity: .5;
-
-        &:hover
-        {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  &.nav-tabs-progress
-  {
-    .nav-item:last-child
-    {
-      &::before
-      {
-        content: "";
-        display: block;
-        position: absolute;
-        background: $body-bg;
-        border: 2px solid map-get($theme-colors, "primary");
-        width: .5rem;
-        height: .5rem;
-        bottom: -.25rem;
-        border-radius: 50%;
-        transition: left .5s ease;
-      }
-
-      &::after
-      {
-        transition: width .5s ease;
-      }
-    }
-  }
-
-  &.nav-tabs-progress
-  {
-    @for $i from 1 through $max-tabs
-    {
-      $width: (100 / $i) * 1%;
-
-      &.nav-tabs-#{$i}
-      {
-        .nav-item
-        {
-          width: $width;
-        }
-
-        .nav-item:last-child::after
-        {
-          width: $width / 2;
-        }
-
-        .nav-item:last-child::before
-        {
-          left: $width / 2;
-        }
-
-        @for $j from 1 through $i
-        {
-          .nav-item:nth-child(#{$j})
-          {
-            &.complete ~ .nav-item:last-child::before
-            {
-              left: $width * ($j + 1) - $width / 2;
-            }
-
-            &.complete ~ .nav-item:last-child::after
-            {
-              width: $width * ($j + 1) - $width / 2;
-            }
-          }
-        }
-
-        .nav-item:last-child
-        {
-          &.complete::before
-          {
-            left: 100% !important;
-          }
-
-          &.complete::after
-          {
-            width: 100% !important;
-          }
-        }
-      }
-    }
-  }
-}
-
 .nav-tabs-responsive
 {
-  .nav-tabs,
-  .nav-tabs-progress
+  .nav-tabs
   {
     display: none;
   }
@@ -142,8 +20,7 @@
 
   @include breakpoint-up-to-md
   {
-    .nav-tabs,
-    .nav-tabs-progress
+    .nav-tabs
     {
       display: flex;
     }

@@ -2,7 +2,9 @@
 ### Breaking changes:
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
 - The theme was all rewritten using Flexbox
-- **FileManager**: `dataURL` property removed
+### Deprecated:
+- **FileManager**: property `dataURL` was removed
+- Multi step form
 ### Features:
 - Upgrade bootstrap to version 4.2.1
 - Table paging component
