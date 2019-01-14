@@ -54,6 +54,10 @@ class Chat {
       $(window).on(Event.ON_RESIZE, () => chat.fillContent()).trigger(Event.TRIGGER_RESIZE)
     })
   }
+
+  static initialize() {
+    $(Selector.CHAT).chat()
+  }
 }
 
 /*
@@ -68,6 +72,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = Chat.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.CHAT).chat()
+Chat.initialize()
 
 export default Chat

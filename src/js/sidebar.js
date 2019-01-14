@@ -53,6 +53,20 @@ class Sidebar {
       }
     })
   }
+
+  static initialize() {
+    $(document)
+      .on(Event.ON_CLICK, Selector.DATA_TOGGLE, () => {
+        Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.SHOW)
+      })
+      .on(Event.ON_CLICK, event => {
+        if (!$(event.target).closest(Selector.DATA_TOGGLE).length) {
+          if (!$(event.target).closest(Selector.SIDEBAR).length) {
+            Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.HIDE)
+          }
+        }
+      })
+  }
 }
 
 /*
@@ -67,16 +81,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = Sidebar.jQueryPlugin
  * Auto Initialize
  */
 
-$(document)
-  .on(Event.ON_CLICK, Selector.DATA_TOGGLE, () => {
-    Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.SHOW)
-  })
-  .on(Event.ON_CLICK, event => {
-    if (!$(event.target).closest(Selector.DATA_TOGGLE).length) {
-      if (!$(event.target).closest(Selector.SIDEBAR).length) {
-        Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.HIDE)
-      }
-    }
-  })
+Sidebar.initialize()
 
 export default Sidebar

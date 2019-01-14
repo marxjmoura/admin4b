@@ -51,6 +51,10 @@ class InputSuggestion {
       }
     })
   }
+
+  static initialize() {
+    $(Selector.DATA_TOGGLE).suggestion()
+  }
 }
 
 /*
@@ -65,6 +69,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = InputSuggestion.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.DATA_TOGGLE).suggestion()
+InputSuggestion.initialize()
 
 export default InputSuggestion

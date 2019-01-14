@@ -49,6 +49,10 @@ class Nav {
       new Nav(this).bindEvents()
     })
   }
+
+  static initialize() {
+    $(Selector.TAB_PROGRESS).navProgress()
+  }
 }
 
 /*
@@ -63,6 +67,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = Nav.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.TAB_PROGRESS).navProgress()
+Nav.initialize()
 
 export default Nav

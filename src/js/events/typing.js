@@ -40,6 +40,10 @@ class TypingEvent {
       $(this).on(Event.ON_INPUT, () => typingEvent.watchAndTrigger())
     })
   }
+
+  static initialize() {
+    $(Selector.INPUT).typing()
+  }
 }
 
 /*
@@ -54,6 +58,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = TypingEvent.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.INPUT).typing()
+TypingEvent.initialize()
 
 export default TypingEvent

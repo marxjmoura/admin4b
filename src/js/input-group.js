@@ -66,6 +66,10 @@ class InputGroup {
       inputGroup.updateState()
     })
   }
+
+  static initialize() {
+    $(Selector.INPUT_GROUP).asInput()
+  }
 }
 
 /*
@@ -80,6 +84,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = InputGroup.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.INPUT_GROUP).asInput()
+InputGroup.initialize()
 
 export default InputGroup

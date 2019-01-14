@@ -72,6 +72,10 @@ class FileManager {
       $element.on(Event.ON_CLICK, () => $input.trigger(Event.TRIGGER_CLICK))
     })
   }
+
+  static initialize() {
+    $(Selector.DATA_TOGGLE).fileManager()
+  }
 }
 
 /*
@@ -86,6 +90,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = FileManager.jQueryPlugin
  * Auto Initialize
  */
 
-$(Selector.DATA_TOGGLE).fileManager()
+FileManager.initialize()
 
 export default FileManager
