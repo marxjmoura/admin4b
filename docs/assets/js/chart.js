@@ -1,10 +1,6 @@
 (function () {
 
-  var el = document.getElementById('sales');
-
-  if (!el) return;
-
-  var ctx = el.getContext('2d');
+  var ctx = document.getElementById('sales').getContext('2d');
 
   new Chart(ctx, {
     type: 'bar',
