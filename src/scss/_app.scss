@@ -24,7 +24,7 @@ body
 
 .app-sidebar {
   flex-shrink: 0;
-  box-shadow: $box-shadow-base;
+  box-shadow: $sidebar-box-shadow;
   overflow-x: hidden;
   overflow-y: auto;
   width: $sidebar-width;
@@ -40,7 +40,7 @@ body
 
     &.show
     {
-      box-shadow: $box-shadow-base;
+      box-shadow: $sidebar-box-shadow-sm;
       width: $sidebar-width;
 
       &::before

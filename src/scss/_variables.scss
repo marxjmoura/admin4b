@@ -125,6 +125,8 @@ $badge-font-weight: normal !default;
 $pagination-border-width: 0 !default;
 
 $sidebar-header-bg: map-get($theme-colors, "primary") url("/docs/assets/img/sidebar-header.svg") no-repeat !default;
+$sidebar-box-shadow: 0 0 .25rem hsla(0, 0%, 0%, .25) !default;
+$sidebar-box-shadow-sm: 0 0 .5rem hsla(0, 0%, 0%, .25) !default;
 $sidebar-width: 16.25rem !default;
 
 // Code highlight
