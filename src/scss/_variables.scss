@@ -43,6 +43,7 @@ $yellow: #f3ca0c !default;
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary": $peter-river,
+  "secondary": lighten($gray-600, 10%),
   "success": $turquoise,
   "info": $belize-hole,
   "warning": $yellow,
