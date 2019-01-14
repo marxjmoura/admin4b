@@ -60,7 +60,12 @@ $(function () {
     $('#is-valid').toggleClass('d-none', !!file.errors.length);
 
     if (file.type.startsWith('image')) {
-      $('#file-preview').attr('src', URL.createObjectURL(file)).removeClass('d-none');
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function() {
+        var url = URL.createObjectURL(file);
+        $('#file-preview').attr('src', url).removeClass('d-none');
+      };
     } else {
       $('#file-preview').removeAttr('src').addClass('d-none');
     }

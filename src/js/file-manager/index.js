@@ -54,17 +54,6 @@ class FileManager {
     }
   }
 
-  read(file, callback) {
-    const reader = new FileReader()
-
-    reader.readAsDataURL(file)
-
-    reader.onload = (e) => {
-      file.dataURL = e.target.result
-      callback()
-    }
-  }
-
   static jQueryPlugin() {
     return this.each(function () {
       const fileManager = new FileManager(this)
@@ -74,13 +63,10 @@ class FileManager {
       $input.on(Event.ON_CHANGE, () => {
         const file = $input.get(0).files[0]
 
-        if (!file) return
-
-        fileManager.validate(file)
-
-        fileManager.read(file, () => {
+        if (file) {
+          fileManager.validate(file)
           $element.trigger(Event.TRIGGER_CHANGE, file)
-        })
+        }
       })
 
       $element.on(Event.ON_CLICK, () => $input.trigger(Event.TRIGGER_CLICK))
