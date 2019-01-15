@@ -27,7 +27,8 @@
     To create responsive tabs you need to combine
     <a href="https://getbootstrap.com/docs/4.1/components/navs/#tabs">tabs</a> and
     <a href="https://getbootstrap.com/docs/4.1/components/collapse/">collapse</a>.
-    Also, you need to use the <code>.nav-tabs-responsive</code> wrapper.
+    Also, you need to use the <code>.nav-tabs-responsive</code> wrapper and
+    <code>.nav-link-collapse</code> for collapse trigger.
   </p>
   <div class="callout callout-warning">
     <p>
@@ -56,11 +57,9 @@
       </ul>
       <div id="tabContent" class="tab-content">
         <div id="account" class="tab-pane show active">
-          <div class="nav-link-collapse">
-            <a href="#account-collapse" data-toggle="collapse">
-              <i class="fa fa-lock mr-2"></i> Account
-            </a>
-          </div>
+          <a href="#account-collapse" class="nav-link-collapse" data-toggle="collapse">
+            <i class="fa fa-lock mr-2"></i> Account
+          </a>
           <div id="account-collapse" class="collapse show" data-parent="#tabContent">
             <div class="card-body">
               <div class="row">
@@ -95,11 +94,9 @@
           </div>
         </div>
         <div id="personal" class="tab-pane">
-          <div class="nav-link-collapse">
-            <a href="#personal-collapse" data-toggle="collapse">
-              <i class="fa fa-user-circle-o mr-2"></i> Personal
-            </a>
-          </div>
+          <a href="#personal-collapse" class="nav-link-collapse" data-toggle="collapse">
+            <i class="fa fa-user-circle-o mr-2"></i> Personal
+          </a>
           <div id="personal-collapse" class="collapse" data-parent="#tabContent">
             <div class="card-body">
               <div class="row">
@@ -172,11 +169,9 @@
           </div>
         </div>
         <div id="payment" class="tab-pane">
-          <div class="nav-link-collapse">
-            <a href="#payment-collapse" data-toggle="collapse">
-              <i class="fa fa-credit-card mr-2"></i> Payment
-            </a>
-          </div>
+          <a href="#payment-collapse" class="nav-link-collapse" data-toggle="collapse">
+            <i class="fa fa-credit-card mr-2"></i> Payment
+          </a>
           <div id="payment-collapse" class="collapse" data-parent="#tabContent">
             <div class="card-body">
               <div class="row">

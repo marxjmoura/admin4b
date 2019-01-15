@@ -23,12 +23,10 @@
 
     .nav-link-collapse {
       border-bottom: $nav-link-collapse-border-bottom;
+      color: $nav-tabs-link-color;
+      display: block;
       padding: $nav-link-collapse-padding-y $card-spacer-x;
-
-      a {
-        color: $nav-tabs-link-color;
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
 
     .card .card-body {
