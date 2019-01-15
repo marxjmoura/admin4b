@@ -37,61 +37,44 @@ label.switch {
   display: inline-flex;
   border-radius: 2rem;
 
+  input[type=radio],
   input[type=checkbox] {
+    cursor: pointer;
     position: absolute;
     opacity: 0;
-
-    &,
-    &::after,
-    &::before,
-    & *,
-    & *::after,
-    & *::before,
-    & + span {
-      box-sizing: border-box;
-
-      &::selection {
-        background: none;
-      }
-    }
+    height: 0;
+    width: 0;
 
     + .switch-slider {
-      background: map-get($grays, "400");
+      background: $secondary;
       cursor: pointer;
       display: block;
-      height: 2rem;
       outline: 0;
       padding: .125rem;
       position: relative;
-      width: 4rem;
+      height: 1rem;
+      width: 3rem;
       border-radius: 2rem;
       transition: all .4s ease;
       user-select: none;
 
-      &::before,
       &::after {
-        position: relative;
+        background: $white;
+        border-radius: 50%;
+        box-shadow: 0 0 .125rem .0625rem rgba($black, .2);
         display: block;
         content: "";
-        width: 50%;
-        height: 100%;
-      }
-
-      &::before {
-        display: none;
-      }
-
-      &::after {
+        position: absolute;
+        top: -.5rem;
         left: 0;
-        background: map-get($colors, "white");
-        border-radius: 50%;
-        box-shadow: none;
+        width: 2rem;
+        height: 2rem;
         transition: all .2s ease;
       }
     }
 
     &:checked + .switch-slider::after {
-      left: 50%;
+      left: 1rem;
     }
 
     &:disabled + .switch-slider {
@@ -101,30 +84,6 @@ label.switch {
 
     &:focus + .switch-slider {
       box-shadow: 0 0 0 .2rem rgba(map-get($grays, "400"), .25);
-    }
-  }
-
-  &.switch-sm {
-    font-size: .875rem;
-
-    input[type=checkbox] {
-      + .switch-slider {
-        height: 1.5rem;
-        width: 2.75rem;
-        border-radius: 1.5rem;
-      }
-    }
-  }
-
-  &.switch-lg {
-    font-size: 1.125rem;
-
-    input[type=checkbox] {
-      + .switch-slider {
-        height: 2.5rem;
-        width: 5rem;
-        border-radius: 2.5rem;
-      }
     }
   }
 }
