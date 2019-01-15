@@ -12,7 +12,6 @@ import Camera from './camera'
 import FileManager from './file-manager'
 import InputGroup from './input-group'
 import InputSuggestion from './input-suggestion'
-import Nav from './nav'
 import Sidebar from './sidebar'
 
 window.$ = $
@@ -25,6 +24,5 @@ export {
   FileManager,
   InputGroup,
   InputSuggestion,
-  Nav,
   Sidebar
 }
