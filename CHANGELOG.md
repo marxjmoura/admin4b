@@ -3,14 +3,16 @@
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
 - The theme was all rewritten using Flexbox
 ### Deprecated:
-- **FileManager**: property `dataURL` was removed
 - Multi step form
+- Checkbox sizes (`.checkbox-sm` and `.checkbox-lg`)
 - Radio button sizes (`.radio-sm` and `.radio-lg`)
+- Toggle switch sizes (`.switch-sm` and `.switch-lg`)
+- Property `dataURL` was removed from file manager
 ### Features:
 - Upgrade bootstrap to version 4.2.1
+- Entire theme improvements
 - Table paging component
 - Dashboard page
-- Style changes for sidebar, tables, breadcrumb and callout
 - Navbar now is static (does not scroll with content)
 
 ## [v1.2.2](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.2) (2018-10-20)
