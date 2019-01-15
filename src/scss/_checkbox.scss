@@ -23,43 +23,33 @@ label.checkbox {
   margin-bottom: 0;
   align-items: center;
   display: inline-flex;
+  position: relative;
   user-select: none;
 
+  input[type=radio],
   input[type=checkbox] {
     position: absolute;
     opacity: 0;
-
-    &,
-    &::after,
-    &::before,
-    & *,
-    & *::after,
-    & *::before,
-    & + span {
-      box-sizing: border-box;
-
-      &::selection {
-        background: none;
-      }
-    }
+    height: 0;
+    width: 0;
 
     + .check-mark {
       background-color: $white;
-      border: .0625rem solid $gray-500;
+      border: .125rem solid $secondary;
       cursor: pointer;
       height: 1.25rem;
       width: 1.25rem;
       margin-right: .625rem;
       position: relative;
-      border-radius: .3125rem;
+      border-radius: .125rem;
       transition: all 0.2s ease;
 
       &::after {
         content: "";
         position: absolute;
         display: none;
-        left: .375rem;
-        top: .1875rem;
+        left: .3125rem;
+        top: .125rem;
         width: .375rem;
         height: .625rem;
         border: solid $white;
@@ -69,11 +59,11 @@ label.checkbox {
     }
 
     &:focus + .check-mark {
-      box-shadow: 0 0 0 .2rem rgba($gray-500, .25);
+      box-shadow: 0 0 0 .2rem rgba($secondary, .25);
     }
 
     &:checked + .check-mark {
-      background: $gray-500;
+      background: $secondary;
 
       &::after {
         display: block;
