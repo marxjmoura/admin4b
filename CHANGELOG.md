@@ -5,6 +5,7 @@
 ### Deprecated:
 - **FileManager**: property `dataURL` was removed
 - Multi step form
+- Radio button sizes (`.radio-sm` and `.radio-lg`)
 ### Features:
 - Upgrade bootstrap to version 4.2.1
 - Table paging component
