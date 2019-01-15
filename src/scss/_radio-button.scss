@@ -13,7 +13,6 @@
 }
 
 .radio {
-  cursor: pointer;
   display: inline-block;
   position: relative;
   padding-left: 2rem;
@@ -22,7 +21,6 @@
 
   input[type=radio],
   input[type=checkbox] {
-    cursor: pointer;
     position: absolute;
     opacity: 0;
     height: 0;
@@ -72,9 +70,12 @@
       transform: scale(1);
     }
 
-    &:disabled + .check-mark,
-    &:disabled + .check-mark:after {
-      opacity: .5;
+    &:disabled + .check-mark {
+      cursor: not-allowed;
+
+      &:after {
+        opacity: .5;
+      }
     }
   }
 }
