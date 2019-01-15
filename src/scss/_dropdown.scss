@@ -1,20 +1,20 @@
 .dropdown-item {
   .dropdown-item-title {
-    color: map-get($grays, "600");
+    color: $gray-600;
   }
 
   &.dropdown-link {
-    color: map-get($colors, "blue");
+    color: $blue;
   }
 
   &.active,
   &:active {
     .dropdown-item-title {
-      color: rgba(map-get($colors, "white"), .75);
+      color: rgba($white, .75);
     }
 
     &.dropdown-link {
-      color: map-get($colors, "white");
+      color: $white;
     }
   }
 }

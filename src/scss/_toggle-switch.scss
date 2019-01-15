@@ -78,24 +78,24 @@ label.switch {
     }
 
     &:disabled + .switch-slider {
-      background: lighten(map-get($grays, "400"), 5%);
+      background: lighten($gray-400, 5%);
       cursor: not-allowed;
     }
 
     &:focus + .switch-slider {
-      box-shadow: 0 0 0 .2rem rgba(map-get($grays, "400"), .25);
+      box-shadow: 0 0 0 .2rem rgba($gray-400, .25);
     }
   }
 }
 
-@include switch-color(danger, map-get($theme-colors, "danger"));
-@include switch-color(info, map-get($theme-colors, "info"));
-@include switch-color(primary, map-get($theme-colors, "primary"));
-@include switch-color(success, map-get($theme-colors, "success"));
-@include switch-color(warning, map-get($theme-colors, "warning"));
+@include switch-color(danger, $danger);
+@include switch-color(info, $info);
+@include switch-color(primary, $primary);
+@include switch-color(success, $success);
+@include switch-color(warning, $warning);
 
-@include switch-to-color(danger, map-get($theme-colors, "danger"));
-@include switch-to-color(info, map-get($theme-colors, "info"));
-@include switch-to-color(primary, map-get($theme-colors, "primary"));
-@include switch-to-color(success, map-get($theme-colors, "success"));
-@include switch-to-color(warning, map-get($theme-colors, "warning"));
+@include switch-to-color(danger, $danger);
+@include switch-to-color(info, $info);
+@include switch-to-color(primary, $primary);
+@include switch-to-color(success, $success);
+@include switch-to-color(warning, $warning);

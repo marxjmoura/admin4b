@@ -20,7 +20,7 @@
 
   thead tr th {
     background: transparent;
-    color: map-get($theme-colors, "secondary");
+    color: $secondary;
     font-weight: normal;
     padding: 0 $table-cell-padding;
 
@@ -37,7 +37,7 @@
     }
 
     tr td {
-      background: map-get($colors, "white");
+      background: $white;
 
       &:first-child {
         border-top-left-radius: $border-radius;

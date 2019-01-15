@@ -76,13 +76,13 @@
           }
 
           p {
-            background-color: map-get($theme-colors, "primary");
-            color: map-get($colors, "white");
+            background-color: $primary;
+            color: $white;
             transform-origin: top left;
           }
 
           small {
-            color: lighten(map-get($theme-colors, "primary"), 35%);
+            color: lighten($primary, 35%);
           }
         }
 
@@ -95,12 +95,12 @@
           }
 
           p {
-            background-color: lighten(map-get($grays, "500"), 15%);
+            background-color: lighten($gray-500, 15%);
             transform-origin: top right;
           }
 
           small {
-            color: map-get($grays, "600");
+            color: $gray-600;
           }
         }
       }

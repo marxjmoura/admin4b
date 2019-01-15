@@ -9,7 +9,7 @@
 
   .input-group-prepend > .input-group-text,
   .input-group-append > .input-group-text {
-    background-color: map-get($colors, "white");
+    background-color: $white;
   }
 
   &.prepend {
@@ -36,7 +36,7 @@
     .form-control,
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text {
-      border-color: map-get($theme-colors, "danger");
+      border-color: $danger;
     }
   }
 
@@ -44,36 +44,36 @@
     .form-control,
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text {
-      border-color: map-get($theme-colors, "success");
+      border-color: $success;
     }
   }
 
   &.focus {
-    box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "primary"), .25);
+    box-shadow: 0 0 0 .2rem rgba($primary, .25);
 
     .form-control,
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text {
-      border-color: lighten(map-get($theme-colors, "primary"), 25%);
+      border-color: lighten($primary, 25%);
     }
 
     &.is-invalid {
-      box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "danger"), .25);
+      box-shadow: 0 0 0 .2rem rgba($danger, .25);
 
       .form-control,
       .input-group-prepend > .input-group-text,
       .input-group-append > .input-group-text {
-        border-color: map-get($theme-colors, "danger");
+        border-color: $danger;
       }
     }
 
     &.is-valid {
-      box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "success"), .25);
+      box-shadow: 0 0 0 .2rem rgba($success, .25);
 
       .form-control,
       .input-group-prepend > .input-group-text,
       .input-group-append > .input-group-text {
-        border-color: map-get($theme-colors, "success");
+        border-color: $success;
       }
     }
   }
@@ -83,7 +83,7 @@
     .form-control,
     .input-group-prepend > .input-group-text,
     .input-group-append > .input-group-text {
-      background: map-get($grays, "200");
+      background: $gray-200;
     }
   }
 }

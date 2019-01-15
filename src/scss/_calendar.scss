@@ -44,8 +44,8 @@
 
         .btn.dropdown-toggle {
           border: none;
-          background: map-get($colors, "white");
-          color: map-get($grays, "700");
+          background: $white;
+          color: $gray-700;
           box-shadow: none;
 
           &::after {
@@ -72,16 +72,16 @@ table.table-calendar {
     padding-bottom: .9375rem;
 
     &:first-child {
-      color: map-get($theme-colors, "danger");
+      color: $danger;
     }
   }
 
   td {
-    color: map-get($grays, "500");
+    color: $gray-500;
     padding: .3125rem;
 
     a {
-      color: map-get($grays, "700");
+      color: $gray-700;
       display: block;
       position: relative;
       text-align: center;
@@ -89,7 +89,7 @@ table.table-calendar {
       z-index: 1;
 
       &::before {
-        border: .0625rem solid map-get($theme-colors, "primary");
+        border: .0625rem solid $primary;
         border-radius: 50%;
         content: " ";
         display: none;
@@ -103,10 +103,10 @@ table.table-calendar {
 
       &:hover,
       &.active {
-        color: map-get($colors, "white") !important;
+        color: $white !important;
 
         &::before {
-          background: map-get($theme-colors, "primary");
+          background: $primary;
           display: block;
         }
       }
@@ -116,7 +116,7 @@ table.table-calendar {
       }
 
       &.sunday {
-        color: map-get($theme-colors, "danger");
+        color: $danger;
       }
     }
   }

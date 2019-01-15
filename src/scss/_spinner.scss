@@ -16,9 +16,9 @@
     width: 3rem;
     height: 3rem;
     border: .25rem solid transparent;
-    border-top-color: map-get($theme-colors, "primary");
-    border-left-color: map-get($theme-colors, "primary");
-    border-right-color: map-get($theme-colors, "primary");
+    border-top-color: $primary;
+    border-left-color: $primary;
+    border-right-color: $primary;
     animation: spinner 1s linear infinite;
     border-radius: 50%;
   }
@@ -31,7 +31,7 @@
 
   &.spinner-block {
     position: fixed;
-    background: rgba(map-get($colors, "white"), .85);
+    background: rgba($white, .85);
     top: 0;
     left: 0;
     width: 100%;
@@ -46,9 +46,9 @@
       top: 50%;
       margin: -2rem 0 0 -2rem;
       border: .25rem solid transparent;
-      border-top-color: map-get($theme-colors, "primary");
-      border-left-color: map-get($theme-colors, "primary");
-      border-right-color: map-get($theme-colors, "primary");
+      border-top-color: $primary;
+      border-left-color: $primary;
+      border-right-color: $primary;
       animation: spinner 1s linear infinite;
       border-radius: 50%;
     }

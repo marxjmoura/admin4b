@@ -20,7 +20,7 @@ label {
     position: absolute;
     top: 0;
     left: 0;
-    color: map-get($grays, "600");
+    color: $gray-600;
     display: block;
     font-size: .95rem;
     line-height: 1.5;
@@ -47,7 +47,7 @@ label {
     width: 100%;
     margin-bottom: 0;
     line-height: 1.5;
-    color: map-get($grays, "600");
+    color: $gray-600;
     border: .0625rem solid transparent;
     transition: all .1s ease-in-out;
     border-radius: .25rem;
@@ -65,7 +65,7 @@ label {
       padding-top: calc(#{$input-padding-y} / 3);
       padding-bottom: calc(#{$input-padding-y} / 3);
       font-size: .75rem;
-      color: map-get($grays, "600");
+      color: $gray-600;
     }
   }
 }

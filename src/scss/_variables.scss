@@ -12,19 +12,6 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
-$grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
-
 $belize-hole: #3ca2e0 !default;
 $blue: #007bff !default;
 $carrot: #e67e22 !default;
@@ -47,16 +34,6 @@ $info: $belize-hole;
 $warning: $yellow;
 $danger: $red;
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-), $theme-colors);
-
 // Fonts
 
 $font-family-base: 'Open Sans', sans-serif, arial !default;
@@ -76,17 +53,14 @@ $headings-margin-bottom: 1rem !default;
 
 // Responsive breakpoints
 
-$breakpoints: () !default;
-$breakpoints: map-merge((
-  "xs-max": 575.99px,
-  "sm-min": 576px,
-  "sm-max": 767.99px,
-  "md-min": 768px,
-  "md-max": 991.99px,
-  "lg-min": 992px,
-  "lg-max": 1199.99px,
-  "xl-min": 1200px
-), $breakpoints);
+$breakpoint-xs-max: 575.99px;
+$breakpoint-sm-min: 576px;
+$breakpoint-sm-max: 767.99px;
+$breakpoint-md-min: 768px;
+$breakpoint-md-max: 991.99px;
+$breakpoint-lg-min: 992px;
+$breakpoint-lg-max: 1199.99px;
+$breakpoint-xl-min: 1200p;
 
 // Layout
 
@@ -162,17 +136,3 @@ $source-code-literal: $gray-700 !default;
 $source-code-namespace: $green !default;
 $source-code-number: $carrot !default;
 $source-code-string: $red !default;
-
-$source-code-colors: () !default;
-$source-code-colors: map-merge((
-  "attribute": $source-code-attribute,
-  "background": $source-code-background,
-  "class": $source-code-class,
-  "comment": $source-code-comment,
-  "keyword": $source-code-keyword,
-  "link": $source-code-link,
-  "literal": $source-code-literal,
-  "namespace": $source-code-namespace,
-  "number": $source-code-number,
-  "string": $source-code-string
-), $source-code-colors);

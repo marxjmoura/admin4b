@@ -2,7 +2,7 @@
   background: $callout-bg;
   padding: $callout-padding-y $callout-padding-x;
   margin-bottom: $callout-margin-bottom;
-  border-left: $callout-border-width solid map-get($grays, "400");
+  border-left: $callout-border-width solid $gray-400;
   border-radius: $callout-border-radius;
   box-shadow: $callout-box-shadow;
 
@@ -28,26 +28,26 @@
   }
 
   &.callout-info {
-    border-left-color: map-get($theme-colors, "info");
+    border-left-color: $info;
 
     h4 {
-      color: map-get($theme-colors, "info");
+      color: $info;
     }
   }
 
   &.callout-warning {
-    border-left-color: map-get($theme-colors, "warning");
+    border-left-color: $warning;
 
     h4 {
-      color: map-get($theme-colors, "warning");
+      color: $warning;
     }
   }
 
   &.callout-danger {
-    border-left-color: map-get($theme-colors, "danger");
+    border-left-color: $danger;
 
     h4 {
-      color: map-get($theme-colors, "danger");
+      color: $danger;
     }
   }
 }

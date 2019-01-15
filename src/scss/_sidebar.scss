@@ -6,7 +6,7 @@
     padding: 1.5rem 1rem;
 
     .avatar {
-      background: map-get($grays, "200");
+      background: $gray-200;
       border-radius: 50%;
       margin-bottom: 1.5rem;
       height: 48px;
@@ -64,7 +64,7 @@
       }
 
       > ul {
-        background: darken(map-get($grays, "100"), 2%);
+        background: darken($gray-100, 2%);
 
         li {
           padding-left: 3rem;
@@ -82,7 +82,7 @@
     }
 
     .sidebar-nav-header {
-      color: map-get($grays, "600");
+      color: $gray-600;
       display: inline-block;
       font-size: 11pt;
       font-weight: 700;
