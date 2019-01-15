@@ -39,7 +39,7 @@
 
     li {
       a {
-        color: map-get($grays, "700");
+        color: $sidebar-link-color;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -49,8 +49,8 @@
 
         &:hover,
         &[aria-expanded=true] {
-          background: darken(map-get($grays, "100"), 2%);
-          color: map-get($theme-colors, "primary");
+          background: $sidebar-link-hover-bg;
+          color: $sidebar-link-hover-color;
         }
 
         .sidebar-nav-icon {
