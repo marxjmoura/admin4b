@@ -1,28 +1,22 @@
-label
-{
+label {
   margin-bottom: .25rem;
 }
 
 .label-infield,
-.label-floating
-{
+.label-floating {
   position: relative;
 
-  label
-  {
+  label {
     cursor: text;
   }
 }
 
-.label-infield
-{
-  > input
-  {
+.label-infield {
+  > input {
     padding-top: 1.75rem;
   }
 
-  > label
-  {
+  > label {
     position: absolute;
     top: 0;
     left: 0;
@@ -36,14 +30,12 @@ label
   }
 }
 
-.label-floating
-{
+.label-floating {
   $input-padding-x: .75rem;
   $input-padding-y: .75rem;
 
   > input,
-  > label
-  {
+  > label {
     padding: $input-padding-y $input-padding-x;
   }
 
@@ -61,18 +53,15 @@ label
     border-radius: .25rem;
   }
 
-  input
-  {
+  input {
     @include input-placeholder(transparent);
 
-    &:not(:placeholder-shown)
-    {
+    &:not(:placeholder-shown) {
       padding-top: calc(#{$input-padding-y} + #{$input-padding-y} * (2 / 3));
       padding-bottom: calc(#{$input-padding-y} / 3);
     }
 
-    &:not(:placeholder-shown) ~ label
-    {
+    &:not(:placeholder-shown) ~ label {
       padding-top: calc(#{$input-padding-y} / 3);
       padding-bottom: calc(#{$input-padding-y} / 3);
       font-size: .75rem;

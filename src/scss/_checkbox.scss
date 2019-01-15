@@ -1,39 +1,31 @@
-@mixin checkbox-color($name, $color)
-{
-  label.checkbox-#{$name} input[type=checkbox]
-  {
-    + .check-mark
-    {
+@mixin checkbox-color($name, $color) {
+  label.checkbox-#{$name} input[type=checkbox] {
+    + .check-mark {
       border-color: $color;
     }
 
-    &:checked + .check-mark
-    {
+    &:checked + .check-mark {
       background: $color;
     }
 
-    &:checked:disabled + .check-mark
-    {
+    &:checked:disabled + .check-mark {
       background: lighten($color, 20%);
       border-color: lighten($color, 20%);
     }
 
-    &:focus + .check-mark
-    {
+    &:focus + .check-mark {
       box-shadow: 0 0 0 .2rem rgba($color, .25);
     }
   }
 }
 
-label.checkbox
-{
+label.checkbox {
   margin-bottom: 0;
   align-items: center;
   display: inline-flex;
   user-select: none;
 
-  input[type=checkbox]
-  {
+  input[type=checkbox] {
     position: absolute;
     opacity: 0;
 
@@ -43,18 +35,15 @@ label.checkbox
     & *,
     & *::after,
     & *::before,
-    & + span
-    {
+    & + span {
       box-sizing: border-box;
 
-      &::selection
-      {
+      &::selection {
         background: none;
       }
     }
 
-    + .check-mark
-    {
+    + .check-mark {
       background-color: map-get($colors, "white");
       border: .0625rem solid map-get($grays, "500");
       cursor: pointer;
@@ -65,8 +54,7 @@ label.checkbox
       border-radius: .3125rem;
       transition: all 0.2s ease;
 
-      &::after
-      {
+      &::after {
         content: "";
         position: absolute;
         display: none;
@@ -80,38 +68,31 @@ label.checkbox
       }
     }
 
-    &:focus + .check-mark
-    {
+    &:focus + .check-mark {
       box-shadow: 0 0 0 .2rem rgba(map-get($grays, "500"), .25);
     }
 
-    &:checked + .check-mark
-    {
+    &:checked + .check-mark {
       background: map-get($grays, "500");
 
-      &::after
-      {
+      &::after {
         display: block;
       }
     }
 
-    &:disabled + .check-mark
-    {
+    &:disabled + .check-mark {
       cursor: not-allowed;
     }
   }
 
-  &.checkbox-sm
-  {
+  &.checkbox-sm {
     font-size: .8rem;
 
-    input[type=checkbox] + .check-mark
-    {
+    input[type=checkbox] + .check-mark {
       height: 1.05rem;
       width: 1.05rem;
 
-      &::after
-      {
+      &::after {
         left: .3125rem;
         top: .125rem;
         width: .3125rem;
@@ -120,17 +101,14 @@ label.checkbox
     }
   }
 
-  &.checkbox-lg
-  {
+  &.checkbox-lg {
     font-size: 1.05rem;
 
-    input[type=checkbox] + .check-mark
-    {
+    input[type=checkbox] + .check-mark {
       height: 1.6rem;
       width: 1.6rem;
 
-      &::after
-      {
+      &::after {
         left: .57rem;
         top: .3rem;
         width: .4375rem;

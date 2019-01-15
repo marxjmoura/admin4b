@@ -1,16 +1,12 @@
-.table
-{
+.table {
   border-collapse: separate;
   border-spacing: 0 .5rem;
 
-  &.table-sm
-  {
-    thead tr th
-    {
+  &.table-sm {
+    thead tr th {
       padding: 0 $table-cell-padding-sm;
 
-      &[class*=col],
-      {
+      &[class*=col] {
         padding: 0 $table-cell-padding-sm;
       }
     }
@@ -18,62 +14,51 @@
 
   thead tr th,
   tbody tr td,
-  tfoot tr td
-  {
+  tfoot tr td {
     border: none;
   }
 
-  thead tr th
-  {
+  thead tr th {
     background: transparent;
     color: map-get($theme-colors, "secondary");
     font-weight: normal;
     padding: 0 $table-cell-padding;
 
-    &[class*=col],
-    {
+    &[class*=col], {
       padding: .25rem $table-cell-padding;
     }
   }
 
-  tbody
-  {
-    &:before
-    {
+  tbody {
+    &:before {
       content: " ";
       display: block;
       line-height: 5rem;
     }
 
-    tr td
-    {
+    tr td {
       background: map-get($colors, "white");
 
-      &:first-child
-      {
+      &:first-child {
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
       }
 
-      &:last-child
-      {
+      &:last-child {
         border-top-right-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
       }
 
-      &[class*=col],
-      {
+      &[class*=col], {
         margin-bottom: .5rem;
       }
     }
   }
 
-  tfoot tr td
-  {
+  tfoot tr td {
     padding: 0;
 
-    .pagination
-    {
+    .pagination {
       margin-bottom: 0;
     }
   }

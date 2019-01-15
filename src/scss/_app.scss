@@ -1,11 +1,9 @@
-html, body
-{
+html, body {
   width: 100%;
   height: 100%;
 }
 
-body
-{
+body {
   background: $body-bg;
   box-sizing: border-box;
   display: flex;
@@ -31,20 +29,17 @@ body
   transition: width .3s;
   z-index: $zindex-fixed;
 
-  @include breakpoint-down-to-sm
-  {
+  @include breakpoint-down-to-sm {
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
 
-    &.show
-    {
+    &.show {
       box-shadow: $sidebar-box-shadow-sm;
       width: $sidebar-width;
 
-      &::before
-      {
+      &::before {
         visibility: visible;
         opacity: 1;
       }

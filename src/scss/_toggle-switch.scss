@@ -1,55 +1,43 @@
-@mixin switch-color($name, $color)
-{
-  label.switch-#{$name} input[type=checkbox]
-  {
-    + .switch-slider
-    {
+@mixin switch-color($name, $color) {
+  label.switch-#{$name} input[type=checkbox] {
+    + .switch-slider {
       background: $color;
     }
 
-    &:disabled + .switch-slider
-    {
+    &:disabled + .switch-slider {
       background: lighten($color, 20%);
     }
 
-    &:focus + .switch-slider
-    {
+    &:focus + .switch-slider {
       box-shadow: 0 0 0 .2rem rgba($color, .25);
     }
   }
 }
 
-@mixin switch-to-color($name, $color)
-{
-  label.switch-to-#{$name} input[type=checkbox]
-  {
-    &:checked + .switch-slider
-    {
+@mixin switch-to-color($name, $color) {
+  label.switch-to-#{$name} input[type=checkbox] {
+    &:checked + .switch-slider {
       background: $color;
     }
 
-    &:checked:disabled + .switch-slider
-    {
+    &:checked:disabled + .switch-slider {
       background: lighten($color, 20%);
     }
 
-    &:checked:focus + .switch-slider
-    {
+    &:checked:focus + .switch-slider {
       box-shadow: 0 0 0 .2rem rgba($color, .25);
     }
   }
 }
 
-label.switch
-{
+label.switch {
   margin-bottom: 0;
   position: relative;
   align-items: center;
   display: inline-flex;
   border-radius: 2rem;
 
-  input[type=checkbox]
-  {
+  input[type=checkbox] {
     position: absolute;
     opacity: 0;
 
@@ -59,18 +47,15 @@ label.switch
     & *,
     & *::after,
     & *::before,
-    & + span
-    {
+    & + span {
       box-sizing: border-box;
 
-      &::selection
-      {
+      &::selection {
         background: none;
       }
     }
 
-    + .switch-slider
-    {
+    + .switch-slider {
       background: map-get($grays, "400");
       cursor: pointer;
       display: block;
@@ -84,8 +69,7 @@ label.switch
       user-select: none;
 
       &::before,
-      &::after
-      {
+      &::after {
         position: relative;
         display: block;
         content: "";
@@ -93,13 +77,11 @@ label.switch
         height: 100%;
       }
 
-      &::before
-      {
+      &::before {
         display: none;
       }
 
-      &::after
-      {
+      &::after {
         left: 0;
         background: map-get($colors, "white");
         border-radius: 50%;
@@ -108,31 +90,25 @@ label.switch
       }
     }
 
-    &:checked + .switch-slider::after
-    {
+    &:checked + .switch-slider::after {
       left: 50%;
     }
 
-    &:disabled + .switch-slider
-    {
+    &:disabled + .switch-slider {
       background: lighten(map-get($grays, "400"), 5%);
       cursor: not-allowed;
     }
 
-    &:focus + .switch-slider
-    {
+    &:focus + .switch-slider {
       box-shadow: 0 0 0 .2rem rgba(map-get($grays, "400"), .25);
     }
   }
 
-  &.switch-sm
-  {
+  &.switch-sm {
     font-size: .875rem;
 
-    input[type=checkbox]
-    {
-      + .switch-slider
-      {
+    input[type=checkbox] {
+      + .switch-slider {
         height: 1.5rem;
         width: 2.75rem;
         border-radius: 1.5rem;
@@ -140,14 +116,11 @@ label.switch
     }
   }
 
-  &.switch-lg
-  {
+  &.switch-lg {
     font-size: 1.125rem;
 
-    input[type=checkbox]
-    {
-      + .switch-slider
-      {
+    input[type=checkbox] {
+      + .switch-slider {
         height: 2.5rem;
         width: 5rem;
         border-radius: 2.5rem;

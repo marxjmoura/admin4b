@@ -1,10 +1,8 @@
-.input-suggestion
-{
+.input-suggestion {
   position: relative;
   border-radius: .25rem;
 
-  .input-suggestion-list
-  {
+  .input-suggestion-list {
     background-color: map-get($colors, "white");
     border-bottom: .0625rem solid map-get($theme-colors, "primary");
     border-left: .0625rem solid map-get($theme-colors, "primary");
@@ -16,28 +14,24 @@
     width: 100%;
     z-index: 1050;
 
-    .list-group .list-group-item
-    {
+    .list-group .list-group-item {
       border: none;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
   }
 
-  &.open
-  {
+  &.open {
     box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "primary"), .25);
 
-    input
-    {
+    input {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       box-shadow: none;
     }
 
     input,
-    .input-suggestion-list
-    {
+    .input-suggestion-list {
       background-color: map-get($colors, "white");
       border-color: lighten(map-get($theme-colors, "primary"), 25%);
       color: map-get($grays, "700");

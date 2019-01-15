@@ -1,9 +1,7 @@
-.source-code
-{
+.source-code {
   margin-bottom: 1rem;
 
-  .nav-tabs a
-  {
+  .nav-tabs a {
     color: map-get($source-code-colors, "link");
     font-size: .95rem;
     text-decoration: none;
@@ -13,131 +11,105 @@
 
     &.active,
     &:active,
-    &:hover
-    {
+    &:hover {
       color: darken(map-get($source-code-colors, "link"), 30%);
     }
   }
 
   pre,
-  .nav-tabs
-  {
+  .nav-tabs {
     background: map-get($source-code-colors, "background");
     border: none;
   }
 
-  pre
-  {
+  pre {
     margin: 0;
     overflow-x: auto;
     padding: .75rem;
   }
 
-  .html
-  {
-    .hljs-meta
-    {
+  .html {
+    .hljs-meta {
       color: map-get($source-code-colors, "namespace");
     }
 
     .hljs-section,
-    .hljs-tag
-    {
+    .hljs-tag {
       color: map-get($source-code-colors, "keyword");
     }
 
-    .hljs-tag .hljs-attr
-    {
+    .hljs-tag .hljs-attr {
       color: map-get($source-code-colors, "attribute");
     }
 
-    .hljs-tag .hljs-string
-    {
+    .hljs-tag .hljs-string {
       color: map-get($source-code-colors, "string");
     }
 
-    .hljs-comment
-    {
+    .hljs-comment {
       color: map-get($source-code-colors, "comment");
     }
   }
 
   .css,
-  .scss
-  {
-    .hljs-keyword
-    {
+  .scss {
+    .hljs-keyword {
       color: map-get($source-code-colors, "keyword");
     }
 
-    .hljs-selector-class
-    {
+    .hljs-selector-class {
       color: map-get($source-code-colors, "class");
     }
 
-    .hljs-attribute
-    {
+    .hljs-attribute {
       color: map-get($source-code-colors, "attribute");
     }
 
-    .hljs-comment
-    {
+    .hljs-comment {
       color: map-get($source-code-colors, "comment");
     }
 
-    .hljs-number
-    {
+    .hljs-number {
       color: map-get($source-code-colors, "number");
     }
   }
 
-  .js
-  {
-    .hljs-number
-    {
+  .js {
+    .hljs-number {
       color: map-get($source-code-colors, "number");
     }
 
-    .hljs-string
-    {
+    .hljs-string {
       color: map-get($source-code-colors, "string");
     }
 
-    .hljs-keyword
-    {
+    .hljs-keyword {
       color: map-get($source-code-colors, "keyword");
     }
 
-    .hljs-comment
-    {
+    .hljs-comment {
       color: map-get($source-code-colors, "comment");
     }
 
-    a .hljs-comment
-    {
+    a .hljs-comment {
       color: $blue;
     }
   }
 
-  .json
-  {
-    .hljs-attr
-    {
+  .json {
+    .hljs-attr {
       color: map-get($source-code-colors, "attribute");
     }
 
-    .hljs-string
-    {
+    .hljs-string {
       color: map-get($source-code-colors, "string");
     }
 
-    .hljs-literal,
-    {
+    .hljs-literal, {
       color: map-get($source-code-colors, "keyword");
     }
 
-    .hljs-number
-    {
+    .hljs-number {
       color: map-get($source-code-colors, "number");
     }
   }

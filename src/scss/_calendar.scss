@@ -1,48 +1,39 @@
-.modal.modal-calendar .modal-dialog
-{
+.modal.modal-calendar .modal-dialog {
   max-width: 20rem;
   margin: $modal-dialog-margin-y-sm-up auto;
 
-  @media (max-width: 21rem)
-  {
+  @media (max-width: 21rem) {
     margin: $modal-dialog-margin;
   }
 
-  .modal-content
-  {
+  .modal-content {
     .modal-header,
     .modal-body,
-    .modal-footer
-    {
+    .modal-footer {
       border-width: 0;
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
 
-    .modal-header
-    {
-      .input-group
-      {
+    .modal-header {
+      .input-group {
         height: auto;
         width: auto;
 
         .btn,
-        .form-control
-        {
+        .form-control {
           font-size: 14pt;
           height: 3.125rem;
           padding: .9375rem .3125rem 0 .3125rem;
 
-          &.btn-link
-          {
+          &.btn-link {
             padding-left: .75rem;
             padding-right: .75rem;
             text-decoration:  none;
           }
         }
 
-        .form-control
-        {
+        .form-control {
           border: none;
           display: inline-block;
           text-align: center;
@@ -51,53 +42,45 @@
           flex: 0 1 auto;
         }
 
-        .btn.dropdown-toggle
-        {
+        .btn.dropdown-toggle {
           border: none;
           background: map-get($colors, "white");
           color: map-get($grays, "700");
           box-shadow: none;
 
-          &::after
-          {
+          &::after {
             display:none
           }
         }
       }
     }
 
-    .modal-footer
-    {
+    .modal-footer {
       justify-content: center;
       align-items: center;
     }
   }
 }
 
-table.table-calendar
-{
+table.table-calendar {
   margin-bottom: .5rem;
   text-align: center;
   width: 100%;
 
-  th
-  {
+  th {
     font-weight: normal;
     padding-bottom: .9375rem;
 
-    &:first-child
-    {
+    &:first-child {
       color: map-get($theme-colors, "danger");
     }
   }
 
-  td
-  {
+  td {
     color: map-get($grays, "500");
     padding: .3125rem;
 
-    a
-    {
+    a {
       color: map-get($grays, "700");
       display: block;
       position: relative;
@@ -105,8 +88,7 @@ table.table-calendar
       text-decoration: none;
       z-index: 1;
 
-      &::before
-      {
+      &::before {
         border: .0625rem solid map-get($theme-colors, "primary");
         border-radius: 50%;
         content: " ";
@@ -120,24 +102,20 @@ table.table-calendar
       }
 
       &:hover,
-      &.active
-      {
+      &.active {
         color: map-get($colors, "white") !important;
 
-        &::before
-        {
+        &::before {
           background: map-get($theme-colors, "primary");
           display: block;
         }
       }
 
-      &.today::before
-      {
+      &.today::before {
         display: block;
       }
 
-      &.sunday
-      {
+      &.sunday {
         color: map-get($theme-colors, "danger");
       }
     }

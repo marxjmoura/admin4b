@@ -1,9 +1,7 @@
-.list-group
-{
+.list-group {
   box-shadow: $list-group-box-shadow;
 
-  .list-group-item:not(:last-child)
-  {
+  .list-group-item:not(:last-child) {
     border-bottom: $border-width solid $list-group-item-border-color;
   }
 }

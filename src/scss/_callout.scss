@@ -1,5 +1,4 @@
-.callout
-{
+.callout {
   background: $callout-bg;
   padding: $callout-padding-y $callout-padding-x;
   margin-bottom: $callout-margin-bottom;
@@ -9,55 +8,45 @@
 
   @include make-container-sm-full-width();
 
-  h4
-  {
+  h4 {
     margin-top: 0;
     margin-bottom: .25rem;
   }
 
   ul:last-child,
   ol:last-child,
-  p:last-child
-  {
+  p:last-child {
     margin-bottom: 0;
   }
 
-  code
-  {
+  code {
     border-radius: .25rem;
   }
 
-  & + .callout
-  {
+  & + .callout {
     margin-top: -.25rem;
   }
 
-  &.callout-info
-  {
+  &.callout-info {
     border-left-color: map-get($theme-colors, "info");
 
-    h4
-    {
+    h4 {
       color: map-get($theme-colors, "info");
     }
   }
 
-  &.callout-warning
-  {
+  &.callout-warning {
     border-left-color: map-get($theme-colors, "warning");
 
-    h4
-    {
+    h4 {
       color: map-get($theme-colors, "warning");
     }
   }
 
-  &.callout-danger
-  {
+  &.callout-danger {
     border-left-color: map-get($theme-colors, "danger");
 
-    h4
-    {
+    h4 {
       color: map-get($theme-colors, "danger");
     }
   }

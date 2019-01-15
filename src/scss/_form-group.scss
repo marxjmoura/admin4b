@@ -1,16 +1,12 @@
-.form-group.has-error
-{
-  label
-  {
+.form-group.has-error {
+  label {
     color: map-get($theme-colors, "danger");
   }
 
-  .form-control
-  {
+  .form-control {
     border: .0625rem solid map-get($theme-colors, "danger");
 
-    &:focus
-    {
+    &:focus {
       box-shadow: 0 0 0 .2rem rgba(map-get($theme-colors, "danger"), .25);
     }
   }

@@ -1,40 +1,31 @@
-@mixin radio-color($name, $color)
-{
-  label.radio-#{$name}
-  {
+@mixin radio-color($name, $color) {
+  label.radio-#{$name} {
     input[type=radio],
-    input[type=checkbox]
-    {
-      + .check-mark
-      {
+    input[type=checkbox] {
+      + .check-mark {
         border-color: $color;
 
-        &::after
-        {
+        &::after {
           background: $color;
         }
       }
 
-      &:disabled + .check-mark
-      {
+      &:disabled + .check-mark {
         border-color: lighten($color, 20%);
 
-        &::after
-        {
+        &::after {
           background: lighten($color, 20%);
         }
       }
 
-      &:focus + .check-mark
-      {
+      &:focus + .check-mark {
         box-shadow: 0 0 0 .2rem rgba($color, .25);
       }
     }
   }
 }
 
-label.radio
-{
+label.radio {
   margin-bottom: 0;
   text-align: left;
   align-items: center;
@@ -42,8 +33,7 @@ label.radio
   user-select: none;
 
   input[type=radio],
-  input[type=checkbox]
-  {
+  input[type=checkbox] {
     position: absolute;
     opacity: 0;
 
@@ -53,18 +43,15 @@ label.radio
     & *,
     & *::after,
     & *::before,
-    & + span
-    {
+    & + span {
       box-sizing: border-box;
 
-      &::selection
-      {
+      &::selection {
         background: none;
       }
     }
 
-    + .check-mark
-    {
+    + .check-mark {
       background-color: map-get($colors, "white");
       border: .0625rem solid map-get($grays, "500");
       cursor: pointer;
@@ -75,8 +62,7 @@ label.radio
       border-radius: 100%;
       transition: all .2s ease;
 
-      &::after
-      {
+      &::after {
         background: map-get($grays, "600");
         border: .125rem solid map-get($colors, "white");
         content: "";
@@ -88,55 +74,44 @@ label.radio
       }
     }
 
-    &:focus + .check-mark
-    {
+    &:focus + .check-mark {
       box-shadow: 0 0 0 .2rem rgba(map-get($grays, "500"), .25);
     }
 
-    &:checked + .check-mark::after
-    {
+    &:checked + .check-mark::after {
       transform: scale(1);
     }
 
-    &:not(:checked) + .check-mark::after
-    {
+    &:not(:checked) + .check-mark::after {
       transform: scale(0);
     }
 
-    &:disabled
-    {
-      + .check-mark
-      {
+    &:disabled {
+      + .check-mark {
         color: map-get($grays, "600");
         cursor: not-allowed;
 
-        &::before
-        {
+        &::before {
           border-color: map-get($grays, "500");
         }
 
-        &::after
-        {
+        &::after {
           background: map-get($grays, "600");
         }
       }
     }
   }
 
-  &.radio-sm
-  {
+  &.radio-sm {
     font-size: .875rem;
 
     input[type=radio],
-    input[type=checkbox]
-    {
-      + .check-mark
-      {
+    input[type=checkbox] {
+      + .check-mark {
         width: 1rem;
         height: 1rem;
 
-        &::after
-        {
+        &::after {
           border-width: .1rem;
           width: .875rem;
           height: .875rem;
@@ -145,20 +120,16 @@ label.radio
     }
   }
 
-  &.radio-lg
-  {
+  &.radio-lg {
     font-size: 1.125rem;
 
     input[type=radio],
-    input[type=checkbox]
-    {
-      + .check-mark
-      {
+    input[type=checkbox] {
+      + .check-mark {
         width: 1.4rem;
         height: 1.4rem;
 
-        &::after
-        {
+        &::after {
           border-width: .175rem;
           width: 1.275rem;
           height: 1.275rem;

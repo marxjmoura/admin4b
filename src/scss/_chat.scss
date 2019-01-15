@@ -1,49 +1,39 @@
-@keyframes ballon
-{
-  0%
-  {
+@keyframes ballon {
+  0% {
     transform: scale(0);
   }
-  100%
-  {
+  100% {
     transform: scale(1);
   }
 }
 
-.chat
-{
+.chat {
   display: none;
   padding: 0;
   width: 100%;
 
-  &.chat-on // Set by JS after calculate the remaining height
-  {
+  &.chat-on { // Set by JS after calculate the remaining height
     display: table;
   }
 
   .chat-body,
-  .chat-footer
-  {
+  .chat-footer {
     display: table-row;
   }
 
-  .chat-body
-  {
+  .chat-body {
     height: 100%;
 
-    .chat-content
-    {
+    .chat-content {
       display: table-cell;
       height: 100%;
 
-      .chat-messages
-      {
+      .chat-messages {
         height: 100%;
         position: relative;
         overflow: auto;
 
-        .container-fluid // Correct height for IE and Firefox
-        {
+        .container-fluid { // Correct height for IE and Firefox
           position: absolute;
           top: 0;
           bottom: 0;
@@ -52,19 +42,16 @@
         }
 
         .message-sent,
-        .message-reply
-        {
+        .message-reply {
           margin-bottom: 1rem;
 
-          img
-          {
+          img {
             vertical-align: top;
             width: 3rem;
             border-radius: 50%;
           }
 
-          p
-          {
+          p {
             display: inline-block;
             margin: 0;
             padding: .625rem 1.25rem;
@@ -75,54 +62,44 @@
           }
         }
 
-        .message-sent p
-        {
+        .message-sent p {
           border-top-left-radius: .5rem;
         }
 
-        .message-reply p
-        {
+        .message-reply p {
           border-top-right-radius: .5rem;
         }
 
-        .message-sent
-        {
-          img
-          {
+        .message-sent {
+          img {
             margin-right: .375rem;
           }
 
-          p
-          {
+          p {
             background-color: map-get($theme-colors, "primary");
             color: map-get($colors, "white");
             transform-origin: top left;
           }
 
-          small
-          {
+          small {
             color: lighten(map-get($theme-colors, "primary"), 35%);
           }
         }
 
-        .message-reply
-        {
+        .message-reply {
           text-align: right;
 
-          img
-          {
+          img {
             float: right;
             margin-left: .625rem;
           }
 
-          p
-          {
+          p {
             background-color: lighten(map-get($grays, "500"), 15%);
             transform-origin: top right;
           }
 
-          small
-          {
+          small {
             color: map-get($grays, "600");
           }
         }
@@ -130,24 +107,20 @@
     }
   }
 
-  .chat-footer
-  {
+  .chat-footer {
     .btn,
-    .form-control
-    {
+    .form-control {
       border-radius: 0;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
-    .btn
-    {
+    .btn {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
 
-    .form-control
-    {
+    .form-control {
       height: auto;
     }
   }
