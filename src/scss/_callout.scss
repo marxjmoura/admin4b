@@ -7,6 +7,8 @@
   border-radius: $callout-border-radius;
   box-shadow: $callout-box-shadow;
 
+  @include make-container-sm-full-width();
+
   h4
   {
     margin-top: 0;

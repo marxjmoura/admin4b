@@ -2,4 +2,6 @@
 {
   box-shadow: $card-box-shadow;
   margin-bottom: $card-margin-bottom;
+
+  @include make-container-sm-full-width();
 }
