@@ -52,7 +52,7 @@ label.switch {
       padding: .125rem;
       position: relative;
       height: 1rem;
-      width: 3rem;
+      width: 2.5rem;
       border-radius: 2rem;
       transition: all .4s ease;
       user-select: none;
@@ -64,16 +64,16 @@ label.switch {
         display: block;
         content: "";
         position: absolute;
-        top: -.5rem;
+        top: -.25rem;
         left: 0;
-        width: 2rem;
-        height: 2rem;
+        height: 1.5625rem;
+        width: 1.5625rem;
         transition: all .2s ease;
       }
     }
 
     &:checked + .switch-slider::after {
-      left: 1rem;
+      left: .9375rem;
     }
 
     &:disabled + .switch-slider {
