@@ -87,8 +87,6 @@ $card-border-width: 0 !default;
 $card-box-shadow: $box-shadow-base !default;
 $card-margin-bottom: 1rem !default;
 
-$link-color: $blue !default;
-
 $list-group-border-width: 0 !default;
 $list-group-box-shadow: $box-shadow-base !default;
 $list-group-item-border-color: rgba($black, .075) !default;
@@ -121,6 +119,8 @@ $sidebar-link-color: $gray-700 !default;
 $sidebar-link-hover-bg: darken($gray-100, 2%) !default;
 $sidebar-link-hover-color: $primary !default;
 $sidebar-width: 16.25rem !default;
+
+$page-sign-bg: linear-gradient(160deg, rgba($info, .25) 50%, rgba($body-bg, .9) 50%), url("/docs/assets/img/rocky-mountain.jpg");
 
 $zindex-nav: 800 !default;
 
