@@ -124,13 +124,19 @@ $sidebar-link-hover-color: $primary !default;
 $sidebar-width: 16.25rem !default;
 
 $modal-backdrop-bg: $white !default;
-$modal-backdrop-opacity: .75 !default;
+$modal-backdrop-opacity: .85 !default;
 $modal-content-box-shadow: 0 0 .125rem 0 rgba(0, 0, 0, .5) !default;
 $modal-content-border-width: 0 !default;
 $modal-header-border-width: .0625rem !default;
 $modal-footer-border-width: .0625rem !default;
 $modal-fade-transform: scale(.9) !default;
 $modal-transition: transform .2s ease-out !default;
+
+$spinner-size: 3rem;
+$spinner-size-sm: 2.25rem;
+$spinner-size-lg: 3.75rem;
+$spinner-speed: .7s;
+$spinner-block-font-size: 11pt;
 
 $zindex-nav: 800 !default;
 

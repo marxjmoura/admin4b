@@ -2,6 +2,7 @@
 ### Breaking changes:
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
 - Calendar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/input-controls/input-date.html))
+- Do not need `.spinner-text` to add text to a blocker spinner
 - The theme was all rewritten using Flexbox
 ### Deprecated:
 - Multi step form
