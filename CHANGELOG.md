@@ -9,6 +9,7 @@
 - Toggle switch sizes (`.switch-sm` and `.switch-lg`)
 - Property `dataURL` was removed from file manager
 - Floating label and infield label
+- Input group (`.as-input`)
 ### Features:
 - Upgrade bootstrap to version 4.2.1
 - Entire theme improvements
