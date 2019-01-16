@@ -8,9 +8,20 @@
 
   .modal-content {
     .modal-header {
+      .btn:hover,
+      .btn:focus,
+      .form-control:hover,
+      .form-control:focus {
+        box-shadow: 0 0 .125rem 0 rgba(0, 0, 0, .25);
+      }
+
       .form-control {
         border: none;
         text-align: center;
+      }
+
+      .dropdown {
+        width: 8.75rem;
       }
 
       input.form-control {
@@ -66,7 +77,7 @@ table.table-calendar {
 
       &:hover,
       &.active {
-        color: $white !important;
+        color: $white;
 
         &::before {
           background: $primary;
