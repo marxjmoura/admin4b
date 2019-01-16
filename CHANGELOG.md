@@ -8,6 +8,7 @@
 - Radio button sizes (`.radio-sm` and `.radio-lg`)
 - Toggle switch sizes (`.switch-sm` and `.switch-lg`)
 - Property `dataURL` was removed from file manager
+- Floating label and infield label
 ### Features:
 - Upgrade bootstrap to version 4.2.1
 - Entire theme improvements
