@@ -59,11 +59,11 @@
 
     + .check-mark,
     + .check-mark:after {
-      background: $secondary;
+      background: darken($gray-500, 20%);
     }
 
     &:focus + .check-mark {
-      box-shadow: 0 0 0 .2rem rgba($secondary, .25);
+      box-shadow: 0 0 0 .2rem rgba(darken($gray-500, 20%), .25);
     }
 
     &:checked + .check-mark:after {
