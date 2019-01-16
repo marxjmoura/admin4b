@@ -28,11 +28,12 @@ $turquoise: #1abc9c !default;
 $yellow: #f3ca0c !default;
 
 $primary: $peter-river;
-$secondary: lighten($gray-600, 10%);
+$secondary: $gray-100;
 $success: $turquoise;
 $info: $belize-hole;
 $warning: $yellow;
 $danger: $red;
+$light: $white;
 
 // Fonts
 
@@ -64,7 +65,7 @@ $breakpoint-xl-min: 1200p;
 
 // Layout
 
-$box-shadow-base: 0 .0625rem .125rem 0 hsla(0, 0%, 0%, .1) !default;
+$box-shadow-base: 0 .0625rem .125rem 0 rgba(0, 0, 0, .1) !default;
 
 $body-bg: #f1f4f5 !default;
 $body-color: $gray-800 !default;
@@ -113,12 +114,18 @@ $badge-font-weight: normal !default;
 $pagination-border-width: 0 !default;
 
 $sidebar-header-bg: $primary url("/docs/assets/img/sidebar-header.svg") no-repeat !default;
-$sidebar-box-shadow: 0 0 .25rem hsla(0, 0%, 0%, .25) !default;
-$sidebar-box-shadow-sm: 0 0 .5rem hsla(0, 0%, 0%, .25) !default;
+$sidebar-box-shadow: 0 0 .25rem rgba(0, 0%, 0%, .25) !default;
+$sidebar-box-shadow-sm: 0 0 .5rem rgba(0, 0%, 0%, .25) !default;
 $sidebar-link-color: $gray-700 !default;
 $sidebar-link-hover-bg: darken($gray-100, 2%) !default;
 $sidebar-link-hover-color: $primary !default;
 $sidebar-width: 16.25rem !default;
+
+$modal-backdrop-bg: $white !default;
+$modal-backdrop-opacity: .75 !default;
+$modal-content-border-width: 0 !default;
+$modal-fade-transform: scale(.9) !default;
+$modal-transition: transform .2s ease-out !default;
 
 $zindex-nav: 800 !default;
 

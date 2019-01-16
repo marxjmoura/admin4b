@@ -1,6 +1,7 @@
 ## v2.0.0 (UNRELEASED)
 ### Breaking changes:
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
+- Calendar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/input-controls/input-date.html))
 - The theme was all rewritten using Flexbox
 ### Deprecated:
 - Multi step form

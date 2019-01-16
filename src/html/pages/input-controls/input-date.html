@@ -19,29 +19,33 @@
     and <a href="https://getbootstrap.com/docs/4.1/components/modal/">modal</a>) to build a control that allows users to navigate in the
     calendar and select a date. See the example below:
   </p>
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="form-group">
-        <label>From</label>
-        <div class="input-group">
-          <div class="form-control"></div>
-          <div class="input-group-append">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
-              <i class="fa fa-calendar-check-o"></i>
-            </button>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label>From</label>
+            <div class="input-group">
+              <div class="form-control"></div>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+                  <i class="fa fa-calendar-check-o"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-6">
-      <div class="form-group">
-        <label>Until</label>
-        <div class="input-group">
-          <div class="form-control"></div>
-          <div class="input-group-append">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
-              <i class="fa fa-calendar-check-o"></i>
-            </button>
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label>Until</label>
+            <div class="input-group">
+              <div class="form-control"></div>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+                  <i class="fa fa-calendar-check-o"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -51,36 +55,30 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <div class="input-group mx-auto">
-            <div class="input-group-prepend">
-              <button type="button" class="btn btn-link" data-calendar-month="previous">
-                <i class="fa fa-angle-left"></i>
-              </button>
-            </div>
-            <div class="input-group-prepend">
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"></button>
-              <div class="dropdown-menu">
-                <a href="#" class="dropdown-item" data-calendar-month="0">January</a>
-                <a href="#" class="dropdown-item" data-calendar-month="1">February</a>
-                <a href="#" class="dropdown-item" data-calendar-month="2">March</a>
-                <a href="#" class="dropdown-item" data-calendar-month="3">April</a>
-                <a href="#" class="dropdown-item" data-calendar-month="4">May</a>
-                <a href="#" class="dropdown-item" data-calendar-month="5">June</a>
-                <a href="#" class="dropdown-item" data-calendar-month="6">July</a>
-                <a href="#" class="dropdown-item" data-calendar-month="7">August</a>
-                <a href="#" class="dropdown-item" data-calendar-month="8">September</a>
-                <a href="#" class="dropdown-item" data-calendar-month="9">October</a>
-                <a href="#" class="dropdown-item" data-calendar-month="10">November</a>
-                <a href="#" class="dropdown-item" data-calendar-month="11">December</a>
-              </div>
-            </div>
-            <input type="number" class="form-control" pattern="[0-9]*" maxlength="4">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-link" data-calendar-month="next">
-                <i class="fa fa-angle-right"></i>
-              </button>
+          <button type="button" class="btn btn-shadow text-primary" data-calendar-month="previous">
+            <i class="fa fa-angle-left"></i>
+          </button>
+          <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"></button>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item" data-calendar-month="0">January</a>
+              <a href="#" class="dropdown-item" data-calendar-month="1">February</a>
+              <a href="#" class="dropdown-item" data-calendar-month="2">March</a>
+              <a href="#" class="dropdown-item" data-calendar-month="3">April</a>
+              <a href="#" class="dropdown-item" data-calendar-month="4">May</a>
+              <a href="#" class="dropdown-item" data-calendar-month="5">June</a>
+              <a href="#" class="dropdown-item" data-calendar-month="6">July</a>
+              <a href="#" class="dropdown-item" data-calendar-month="7">August</a>
+              <a href="#" class="dropdown-item" data-calendar-month="8">September</a>
+              <a href="#" class="dropdown-item" data-calendar-month="9">October</a>
+              <a href="#" class="dropdown-item" data-calendar-month="10">November</a>
+              <a href="#" class="dropdown-item" data-calendar-month="11">December</a>
             </div>
           </div>
+          <input type="number" class="form-control" pattern="[0-9]*" maxlength="4">
+          <button type="button" class="btn btn-shadow text-primary" data-calendar-month="next">
+            <i class="fa fa-angle-right"></i>
+          </button>
         </div>
         <div class="modal-body">
           <table class="table-calendar">
@@ -109,7 +107,7 @@
           <button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal">
             Apply
           </button>
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Cancel
           </button>
         </div>

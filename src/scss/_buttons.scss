@@ -1,3 +1,14 @@
-.btn {
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-light,
+.btn-shadow {
   box-shadow: $btn-box-shadow;
+}
+
+.btn-shadow:hover {
+  box-shadow: 0 0 .125rem 0 rgba(0, 0, 0, .5);
 }

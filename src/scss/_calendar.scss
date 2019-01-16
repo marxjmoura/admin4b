@@ -7,51 +7,14 @@
   }
 
   .modal-content {
-    .modal-header,
-    .modal-body,
-    .modal-footer {
-      border-width: 0;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-
     .modal-header {
-      .input-group {
-        height: auto;
-        width: auto;
+      .form-control {
+        border: none;
+        text-align: center;
+      }
 
-        .btn,
-        .form-control {
-          font-size: 14pt;
-          height: 3.125rem;
-          padding: .9375rem .3125rem 0 .3125rem;
-
-          &.btn-link {
-            padding-left: .75rem;
-            padding-right: .75rem;
-            text-decoration:  none;
-          }
-        }
-
-        .form-control {
-          border: none;
-          display: inline-block;
-          text-align: center;
-          width: 3.75rem;
-          box-shadow: none;
-          flex: 0 1 auto;
-        }
-
-        .btn.dropdown-toggle {
-          border: none;
-          background: $white;
-          color: $gray-700;
-          box-shadow: none;
-
-          &::after {
-            display:none
-          }
-        }
+      input.form-control {
+        width: 4.375rem;
       }
     }
 

@@ -38,7 +38,7 @@ const Selector = {
   HEADER: '.modal-header',
   BODY: '.modal-body',
   INPUT_YEAR: '.form-control',
-  MONTH_DROPDOWN: '.dropdown-toggle',
+  MONTH_DROPDOWN: '.dropdown .btn',
   MONTH_DROPDOWN_OPTIONS: '.dropdown-menu',
   MONTH_DROPDOWN_OPTION: 'a',
   LINK_PREVIOUS_MONTH: '[data-calendar-month=previous]',
