@@ -68,6 +68,15 @@
           margin-bottom: 0;
         }
       }
+
+      @include breakpoint-xs {
+        .card-header,
+        .card-body,
+        .card-footer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
     }
   }
 }
