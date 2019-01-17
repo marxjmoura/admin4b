@@ -24,118 +24,138 @@
   <p>
     The component has two modes of operation: static and async.
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Mode</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>static</td>
-          <td>
-            Default mode. Used for static items and has a built-in DOM search for items in the list.
-          </td>
-        </tr>
-        <tr>
-          <td>async</td>
-          <td>
-            Used for dynamic items that requires DOM manipulation.
-            This mode disable the built-in DOM search.
-            It is setted by the attribute <code>data-async</code>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Operation modes
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>static</td>
+            <td>
+              Default mode. Used for static items and has a built-in DOM search for items in the list.
+            </td>
+          </tr>
+          <tr>
+            <td>async</td>
+            <td>
+              Used for dynamic items that requires DOM manipulation.
+              This mode disable the built-in DOM search.
+              It is setted by the attribute <code>data-async</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <h2>Utility classes</h2>
   <p>
     There are some utility classes that can be combined with <code>.list-group</code> to automate the component behavior.
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>list-group empty</code></td>
-          <td>
-            It will be automatically toggled if the list has or does not have items to display.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>list-group loading</code></td>
-          <td>
-            Only for async mode. Displayed when the user start to typing
-            and hidden when invoke the method <code>suggestion('refresh')</code>.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>list-group items</code></td>
-          <td>
-            Indicates the <code>.list-group</code> that contains the selectable items.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Utility classes
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>list-group empty</code></td>
+            <td>
+              It will be automatically toggled if the list has or does not have items to display.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>list-group loading</code></td>
+            <td>
+              Only for async mode. Displayed when the user start to typing
+              and hidden when invoke the method <code>suggestion('refresh')</code>.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>list-group items</code></td>
+            <td>
+              Indicates the <code>.list-group</code> that contains the selectable items.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <h2>Methods</h2>
   <p>
     One method is available to control the input suggestion:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Method</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>suggestion('refresh')</code></td>
-          <td>Only for async mode. Should be triggered after DOM manipulation.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Methods
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>suggestion('refresh')</code></td>
+            <td>Only for async mode. Should be triggered after DOM manipulation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <h2>Events</h2>
   <p>
     Events can be used by developer to interact with the component and write custom logic.
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>suggestion:change</code></td>
-          <td>Triggered when the user select a item in the list.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>suggestion:hide</code></td>
-          <td>Triggered when the user select a item in the list or the <code>input</code> loses the focus.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>suggestion:search</code></td>
-          <td>Triggered when the user end to typing.</td>
-        </tr>
-        <tr>
-          <td><code>suggestion:show</code></td>
-          <td>Triggered when the user start to typing.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Events
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>suggestion:change</code></td>
+            <td>Triggered when the user select a item in the list.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>suggestion:hide</code></td>
+            <td>Triggered when the user select a item in the list or the <code>input</code> loses the focus.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>suggestion:search</code></td>
+            <td>Triggered when the user end to typing.</td>
+          </tr>
+          <tr>
+            <td><code>suggestion:show</code></td>
+            <td>Triggered when the user start to typing.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <h2>Examples</h2>
   <p>

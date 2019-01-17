@@ -10,8 +10,8 @@ import Calendar from './calendar'
 import Chat from './chat'
 import Camera from './camera'
 import FileManager from './file-manager'
-import InputGroup from './input-group'
 import InputSuggestion from './input-suggestion'
+import Pagination from './pagination'
 import Sidebar from './sidebar'
 
 window.$ = $
@@ -22,7 +22,7 @@ export {
   Chat,
   Camera,
   FileManager,
-  InputGroup,
   InputSuggestion,
+  Pagination,
   Sidebar
 }

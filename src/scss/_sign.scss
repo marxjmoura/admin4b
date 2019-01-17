@@ -16,6 +16,7 @@
 
       .card-header {
         background: $white;
+        border: none;
         color: lighten($gray-700, 10%);
         font-weight: 300;
         padding: $card-spacer-y 2rem;
@@ -60,6 +61,7 @@
       }
 
       .card-footer {
+        border: none;
         font-size: 11pt;
         padding: 1.25rem 2rem;
         text-align: center;

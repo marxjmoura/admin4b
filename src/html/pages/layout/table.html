@@ -1,6 +1,6 @@
 <!-- @@master = /includes/app.html-->
 <!-- @@block = head -->
-<meta name="description" content="Table.........." />
+<meta name="description" content="Table is the most common way to present tabular data and which users are most familiar with. The tables are responsive and displayed as cards." />
 <title>Admin 4B · Table</title>
 <!-- @@close -->
 <!-- @@block = breadcrumb -->
@@ -17,129 +17,173 @@
     Table
   </h1>
   <p>
-    Table..........
-    See a basic example below:
+    Table is the most common way to present tabular data and which users are most familiar with.
+    The tables are responsive and displayed as cards. See a basic example below:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr class="d-flex">
-          <th class="col-1"></th>
-          <th class="col">Order ID</th>
-          <th class="col">Username</th>
-          <th class="col">Payment</th>
-          <th class="col">Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="d-flex">
-          <td class="col-1">
-            <label class="checkbox checkbox-success">
-              <input type="checkbox"/>
-              <span class="check-mark"></span>
-            </label>
-          </td>
-          <td class="col">2194</td>
-          <td class="col">carla.leach</td>
-          <td class="col">
-            <span class="badge badge-primary">paypal</span>
-          </td>
-          <td class="col">$59.85</td>
-        </tr>
-        <tr class="d-flex">
-          <td class="col-1">
-            <label class="checkbox checkbox-success">
-              <input type="checkbox"/>
-              <span class="check-mark"></span>
-            </label>
-          </td>
-          <td class="col">2442</td>
-          <td class="col">kameron.burks</td>
-          <td class="col">
-            <span class="badge badge-secondary">credit card</span>
-          </td>
-          <td class="col">$32.50</td>
-        </tr>
-        <tr class="d-flex">
-          <td class="col-1">
-            <label class="checkbox checkbox-success">
-              <input type="checkbox"/>
-              <span class="check-mark"></span>
-            </label>
-          </td>
-          <td class="col">4640</td>
-          <td class="col">jake.reese</td>
-          <td class="col">
-            <span class="badge badge-primary">paypal</span>
-          </td>
-          <td class="col">$105.60</td>
-        </tr>
-        <tr class="d-flex">
-          <td class="col-1">
-            <label class="checkbox checkbox-success">
-              <input type="checkbox"/>
-              <span class="check-mark"></span>
-            </label>
-          </td>
-          <td class="col">9390</td>
-          <td class="col">bryce.sellers</td>
-          <td class="col">
-            <span class="badge badge-success">cash</span>
-          </td>
-          <td class="col">$12.25</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="5">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a href="#" class="page-link">1</a>
-              </li>
-              <li class="page-item disabled">
-                  <span class="page-link">...</span>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">8</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">9</a>
-              </li>
-              <li class="page-item active">
-                <a href="#" class="page-link">10</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">11</a>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">12</a>
-              </li>
-              <li class="page-item disabled">
-                  <span class="page-link">...</span>
-              </li>
-              <li class="page-item">
-                <a href="#" class="page-link">20</a>
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Purchases
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>
+              <div class="d-flex">
+                <label class="checkbox mr-2">
+                  <input type="checkbox"/>
+                  <span class="check-mark"></span>
+                </label>
+                Order
+              </div>
+            </th>
+            <th>Buyer</th>
+            <th>Payment</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex">
+                <label class="checkbox mr-2">
+                  <input type="checkbox"/>
+                  <span class="check-mark"></span>
+                </label>
+                2194
+              </div>
+            </td>
+            <td>Carla Leach</td>
+            <td>
+              <span class="badge badge-primary">paypal</span>
+            </td>
+            <td>$59.85</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex">
+                <label class="checkbox mr-2">
+                  <input type="checkbox"/>
+                  <span class="check-mark"></span>
+                </label>
+                2442
+              </div>
+            </td>
+            <td>Kameron Burks</td>
+            <td>
+              <span class="badge badge-info">credit card</span>
+            </td>
+            <td>$32.50</td>
+          </tr>
+          <tr>
+          <td>
+            <div class="d-flex">
+                <label class="checkbox mr-2">
+                  <input type="checkbox"/>
+                  <span class="check-mark"></span>
+                </label>
+                4640
+              </div>
+            </td>
+            <td>Jake Reese</td>
+            <td>
+              <span class="badge badge-primary">paypal</span>
+            </td>
+            <td>$105.60</td>
+          </tr>
+          <tr>
+          <td>
+            <div class="d-flex">
+                <label class="checkbox mr-2">
+                  <input type="checkbox"/>
+                  <span class="check-mark"></span>
+                </label>
+                9390
+              </div>
+            </td>
+            <td>Bryce Sellers</td>
+            <td>
+              <span class="badge badge-success">cash</span>
+            </td>
+            <td>$12.25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer">
+      <ul class="pagination justify-content-center"></ul>
+    </div>
   </div>
-  <p class="callout callout-info">
-    The use of the utility classes <code>d-flex</code> and <code>col-*</code> is not mandatory.
-    You can use it if you need to resize the table columns.
+  <p class="callout callout-warning">
+    For the table to work properly follow this hierarchy <code>.card > .table-responsive > table</code>.
   </p>
   <div class="source-code">
-    <a href="#spinner-basic" data-toggle="collapse">
+    <a href="#table" data-toggle="collapse">
       <i class="fa fa-code"></i> Source code
     </a>
-    <div id="spinner-basic" class="collapse">
-      <pre><code class="html">@@include('includes/code-examples/layout/spinner/spinner-basic.html')</code></pre>
+    <div id="table" class="collapse">
+      <pre><code class="html">@@include('includes/code-examples/layout/table/table.html')</code></pre>
     </div>
   </div>
   <h2>
     Paging
   </h2>
+  <p>
+    The theme has a simple pagination plugin with links to first, last, previous and next pages.
+  </p>
+  <p>
+    To update the page links you need to call the function <code>pagination()</code> passing the options as parameter.
+    The following table shows the option parameters.
+  </p>
+  <div class="card">
+    <div class="card-header">
+      Options
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>current</code></td>
+            <td>number</td>
+            <td>1</td>
+            <td>Selected page.</td>
+          </tr>
+          <tr>
+            <td><code>count</code></td>
+            <td>number</td>
+            <td>1</td>
+            <td>Number of records in the database.</td>
+          </tr>
+          <tr>
+            <td><code>length</code></td>
+            <td>number</td>
+            <td>10</td>
+            <td>Number of records per page.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="callout callout-warning">
+    <p>
+      The pagination plugin assumes that the element is an <code>ul</code>.
+    </p>
+  </div>
+  <div class="source-code">
+    <a href="#pagination" data-toggle="collapse">
+      <i class="fa fa-code"></i> Source code
+    </a>
+    <div id="pagination" class="collapse">
+      <pre><code class="js">@@include('includes/code-examples/layout/table/pagination.js')</code></pre>
+    </div>
+  </div>
 </div>
 <!-- @@close -->

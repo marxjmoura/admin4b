@@ -12,7 +12,7 @@
 </nav>
 <!-- @@close -->
 <!-- @@block = body -->
-<div class="container">
+<div class="container-fluid">
   <h1>Camera</h1>
   <p>
     This session introduces methods and events to control and interact with the camera of the device enabling users to take pictures.
@@ -60,25 +60,30 @@
   <p>
     Options can be passed via data attributes:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Option</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>data-size</code></td>
-          <td>string</td>
-          <td>320x240</td>
-          <td>The size of the picture. Invalid size will be converted to default size.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Options
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>data-size</code></td>
+            <td>string</td>
+            <td>320x240</td>
+            <td>The size of the picture. Invalid size will be converted to default size.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="source-code">
     <a href="#camera-options" data-toggle="collapse">
@@ -92,29 +97,34 @@
   <p>
     A few methods are available to control the camera:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Method</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>camera('play')</code></td>
-          <td>Starts the camera. Triggers the event <code>camera:play</code> or <code>camera:error</code>.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera('stop')</code></td>
-          <td>Stop the camera. Triggers the event <code>camera:stop</code>.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera('snapshot')</code></td>
-          <td>Take a picture from the camera. Triggers the event <code>camera:snapshot</code>.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Methods
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>camera('play')</code></td>
+            <td>Starts the camera. Triggers the event <code>camera:play</code> or <code>camera:error</code>.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera('stop')</code></td>
+            <td>Stop the camera. Triggers the event <code>camera:stop</code>.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera('snapshot')</code></td>
+            <td>Take a picture from the camera. Triggers the event <code>camera:snapshot</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="source-code">
     <a href="#camera-methods" data-toggle="collapse">
@@ -128,37 +138,42 @@
   <p>
     Events triggered from the camera can be listened to write custom logic:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>camera:play</code></td>
-          <td>Triggered after the camera starts to play.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera:error</code></td>
-          <td>Triggered if any error occur during the start of the camera.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera:notSupported</code></td>
-          <td>Triggered if the browser does not support camera.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera:stop</code></td>
-          <td>Triggered after the camera stop.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>camera:snapshot</code></td>
-          <td>Triggered after a picture is taken. Blob and data URL are ready.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Events
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>camera:play</code></td>
+            <td>Triggered after the camera starts to play.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera:error</code></td>
+            <td>Triggered if any error occur during the start of the camera.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera:notSupported</code></td>
+            <td>Triggered if the browser does not support camera.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera:stop</code></td>
+            <td>Triggered after the camera stop.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>camera:snapshot</code></td>
+            <td>Triggered after a picture is taken. Blob and data URL are ready.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="source-code">
     <a href="#camera-events" data-toggle="collapse">
