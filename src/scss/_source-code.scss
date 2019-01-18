@@ -1,6 +1,15 @@
 .source-code {
   margin-bottom: 1rem;
 
+  @include make-container-sm-full-width();
+
+  > a {
+    @include breakpoint-down-to-sm {
+      margin-right: $grid-gutter-width / 2;
+      margin-left: $grid-gutter-width / 2;
+    }
+  }
+
   .nav-tabs a {
     color: $source-code-link;
     font-size: .95rem;
