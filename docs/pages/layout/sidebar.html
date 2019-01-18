@@ -63,13 +63,15 @@
   &lt;/nav&gt;
 &lt;/div&gt;
 &lt;div class="content-body"&gt;
-  Hello World!
+  &lt;div class="container"&gt;
+    Hello World!
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre></div></div><h2>Responsive</h2><p>The template uses the bootstrap breakpoints to define the minimum width to show the sidebar. When hidden the attribute <code>data-toggle="sidebar"</code> can be used to show the sidebar. The sidebar will be hidden whenever the user click outside of the sidebar area.</p><div class="source-code"><a href="#sidebar-triggers" data-toggle="collapse"><i class="fa fa-code"></i> Source code</a><div id="sidebar-triggers" class="collapse"><pre><code class="html">&lt;!-- Shows sidebar --&gt;
 &lt;button type="button" class="btn btn-sidebar" data-toggle="sidebar"&gt;
   &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
 &lt;/button&gt;
-</code></pre></div></div><h3>Methods</h3><p>A few methods are available for toggle the sidebar via JavaScript:</p><div class="table-responsive"><table class="table"><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody><tr><td class="text-nowrap"><code>sidebar('show')</code></td><td>Shows the sidebar.</td></tr><tr><td class="text-nowrap"><code>sidebar('hide')</code></td><td>Hides the sidebar.</td></tr></tbody></table></div><h2>Theming</h2><p>Theming can be done overriding Sass variables and custom CSS as well as in the <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">bootstrap</a>.</p><h2>Example</h2><p>An example code for the full setup of the sidebar can be seen below.</p><div class="source-code"><a href="#starter-template" data-toggle="collapse"><i class="fa fa-code"></i> Source code</a><div id="starter-template" class="collapse"><pre><code class="html">&lt;body&gt;
+</code></pre></div></div><h3>Methods</h3><p>A few methods are available for toggle the sidebar via JavaScript:</p><div class="card"><div class="card-header">Methods</div><div class="table-responsive"><table class="table table-hover"><thead><tr><th>Method</th><th>Description</th></tr></thead><tbody><tr><td class="text-nowrap"><code>sidebar('show')</code></td><td>Shows the sidebar.</td></tr><tr><td class="text-nowrap"><code>sidebar('hide')</code></td><td>Hides the sidebar.</td></tr></tbody></table></div></div><h2>Theming</h2><p>Theming can be done overriding Sass variables and custom CSS as well as in the <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">bootstrap</a>.</p><h2>Example</h2><p>An example code for the full setup of the sidebar can be seen below.</p><div class="source-code"><a href="#starter-template" data-toggle="collapse"><i class="fa fa-code"></i> Source code</a><div id="starter-template" class="collapse"><pre><code class="html">&lt;body&gt;
   &lt;div class="app-sidebar"&gt;
     &lt;div class="sidebar-header"&gt;
       &lt;img src="john-doe.png" class="avatar"&gt;
@@ -128,7 +130,9 @@
       &lt;/nav&gt;
     &lt;/div&gt;
     &lt;div class="content-body"&gt;
-      Hello World!
+      &lt;div class="container"&gt;
+        Hello World!
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
