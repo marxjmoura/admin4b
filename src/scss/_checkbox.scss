@@ -74,39 +74,6 @@ label.checkbox {
       cursor: not-allowed;
     }
   }
-
-  &.checkbox-sm {
-    font-size: .8rem;
-
-    input[type=checkbox] + .check-mark {
-      height: 1.05rem;
-      width: 1.05rem;
-
-      &::after {
-        left: .3125rem;
-        top: .125rem;
-        width: .3125rem;
-        height: .55rem;
-      }
-    }
-  }
-
-  &.checkbox-lg {
-    font-size: 1.05rem;
-
-    input[type=checkbox] + .check-mark {
-      height: 1.6rem;
-      width: 1.6rem;
-
-      &::after {
-        left: .57rem;
-        top: .3rem;
-        width: .4375rem;
-        height: .75rem;
-        border-width: 0 .1875rem .1875rem 0;
-      }
-    }
-  }
 }
 
 @include checkbox-color(danger, $danger);
