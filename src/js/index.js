@@ -7,7 +7,6 @@ import './polyfills'
 import './events'
 
 import Calendar from './calendar'
-import Chat from './chat'
 import Camera from './camera'
 import FileManager from './file-manager'
 import InputSuggestion from './input-suggestion'
@@ -19,7 +18,6 @@ window.jQuery = $
 
 export {
   Calendar,
-  Chat,
   Camera,
   FileManager,
   InputSuggestion,

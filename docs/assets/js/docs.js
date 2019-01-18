@@ -131,4 +131,8 @@ $(function () {
     count: 200,
     length: 10
   });
+
+  // Chat
+
+  $('.chat').find('.chat-messages').scrollTo('bottom');
 });

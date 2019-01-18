@@ -8,101 +8,75 @@
 }
 
 .chat {
-  display: none;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
   padding: 0;
-  width: 100%;
 
-  &.chat-on { // Set by JS after calculate the remaining height
-    display: table;
-  }
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
 
-  .chat-body,
-  .chat-footer {
-    display: table-row;
-  }
+    .message-sent,
+    .message-reply {
+      margin-bottom: 1rem;
 
-  .chat-body {
-    height: 100%;
+      img {
+        vertical-align: top;
+        width: 3rem;
+        border-radius: 50%;
+      }
 
-    .chat-content {
-      display: table-cell;
-      height: 100%;
+      p {
+        display: inline-block;
+        margin: 0;
+        padding: .625rem 1.25rem;
+        text-align: left;
+        max-width: 75%;
+        animation: ballon .2s linear;
+        border-radius: 1.25rem;
+      }
+    }
 
-      .chat-messages {
-        height: 100%;
-        position: relative;
-        overflow: auto;
+    .message-sent p {
+      border-top-left-radius: .5rem;
+    }
 
-        .container-fluid { // Correct height for IE and Firefox
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-        }
+    .message-reply p {
+      border-top-right-radius: .5rem;
+    }
 
-        .message-sent,
-        .message-reply {
-          margin-bottom: 1rem;
+    .message-sent {
+      img {
+        margin-right: .375rem;
+      }
 
-          img {
-            vertical-align: top;
-            width: 3rem;
-            border-radius: 50%;
-          }
+      p {
+        background-color: $primary;
+        color: $white;
+        transform-origin: top left;
+      }
 
-          p {
-            display: inline-block;
-            margin: 0;
-            padding: .625rem 1.25rem;
-            text-align: left;
-            max-width: 75%;
-            animation: ballon .2s linear;
-            border-radius: 1.25rem;
-          }
-        }
+      small {
+        color: lighten($primary, 35%);
+      }
+    }
 
-        .message-sent p {
-          border-top-left-radius: .5rem;
-        }
+    .message-reply {
+      text-align: right;
 
-        .message-reply p {
-          border-top-right-radius: .5rem;
-        }
+      img {
+        float: right;
+        margin-left: .625rem;
+      }
 
-        .message-sent {
-          img {
-            margin-right: .375rem;
-          }
+      p {
+        background-color: lighten($gray-500, 15%);
+        transform-origin: top right;
+      }
 
-          p {
-            background-color: $primary;
-            color: $white;
-            transform-origin: top left;
-          }
-
-          small {
-            color: lighten($primary, 35%);
-          }
-        }
-
-        .message-reply {
-          text-align: right;
-
-          img {
-            float: right;
-            margin-left: .625rem;
-          }
-
-          p {
-            background-color: lighten($gray-500, 15%);
-            transform-origin: top right;
-          }
-
-          small {
-            color: $gray-600;
-          }
-        }
+      small {
+        color: $gray-600;
       }
     }
   }
