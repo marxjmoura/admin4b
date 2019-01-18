@@ -29,7 +29,8 @@
       text-decoration: none;
     }
 
-    .card .card-body {
+    .card .card-body,
+    .card .list-group {
       border-bottom: $nav-link-collapse-border-bottom;
     }
   }

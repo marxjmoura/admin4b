@@ -86,12 +86,12 @@ $link-color: $primary !default;
 $btn-box-shadow: $box-shadow-base !default;
 $input-btn-padding-x: 1rem !default;
 
+$card-border-color: rgba($black, .125) !default;
 $card-border-width: 0 !default;
+$card-spacer-y: 1rem !default;
 $card-spacer-x: 1.25rem !default;
 $card-header-border-width: .0625rem !default;
-$card-header-padding: 1rem $card-spacer-x;
 $card-footer-border-width: .0625rem !default;
-$card-footer-padding: 1rem $card-spacer-x;
 $card-box-shadow: $box-shadow-base !default;
 $card-cap-bg: $white !default;
 $card-margin-bottom: 1rem !default;
@@ -113,12 +113,13 @@ $list-group-border-width: 0 !default;
 $list-group-box-shadow: $box-shadow-base !default;
 $list-group-item-border-color: rgba($black, .075) !default;
 
-$nav-tabs-border-color: $gray-400 !default;
+$nav-tabs-border-color: $card-border-color !default;
 $nav-tabs-link-active-border-color: $gray-400 $gray-400 $white !default;
 $nav-tabs-link-hover-border-color:  transparent !default;
 $nav-tabs-link-active-bg: $white !default;
 $nav-tabs-link-color: $gray-700 !default;
-$nav-link-padding-y: .75rem !default;
+$nav-link-padding-y: $card-spacer-y !default;
+$nav-link-padding-x: $card-spacer-x !default;
 $nav-link-collapse-padding-y: 1rem !default;
 $nav-link-collapse-border-bottom: .0625rem solid $gray-400 !default;
 

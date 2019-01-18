@@ -6,15 +6,17 @@
 
   .card-header {
     border-bottom: $card-header-border-width solid $card-border-color;
-    padding: $card-header-padding;
   }
 
   .card-footer {
     border-top: $card-footer-border-width solid $card-border-color;
-    padding: $card-footer-padding;
   }
 
   .table {
     margin: $card-spacer-y 0;
+  }
+
+  .list-group {
+    box-shadow: none;
   }
 }
