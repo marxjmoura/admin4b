@@ -1,7 +1,7 @@
 $('#spinner-toggle').on('click', function () {
-  $('#spinner').addClass('show');
+  $('#spinner').spinner('show');
 
   setTimeout(function () {
-    $('#spinner').removeClass('show');
+    $('#spinner').spinner('hide');
   }, 3000);
 });

@@ -12,6 +12,7 @@ import FileManager from './file-manager'
 import InputSuggestion from './input-suggestion'
 import Pagination from './pagination'
 import Sidebar from './sidebar'
+import Spinner from './spinner'
 
 window.$ = $
 window.jQuery = $
@@ -22,5 +23,6 @@ export {
   FileManager,
   InputSuggestion,
   Pagination,
-  Sidebar
+  Sidebar,
+  Spinner
 }
