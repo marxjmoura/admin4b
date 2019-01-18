@@ -16,9 +16,12 @@
 ### Features:
 - Upgrade bootstrap to version 4.2.1
 - Entire theme improvements
-- Table paging component
-- Dashboard page
 - Navbar now is static (does not scroll with content)
+- Pagination plugin
+- Dashboard page
+- Settings page
+- Error pages
+- Timeline
 
 ## [v1.2.2](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.2) (2018-10-20)
 ### Bug fixes:
