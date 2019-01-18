@@ -19,12 +19,13 @@
 
     .message-sent,
     .message-reply {
+      display: flex;
       margin-bottom: 1rem;
 
-      img {
-        vertical-align: top;
-        width: 3rem;
+      .chat-avatar {
         border-radius: 50%;
+        max-height: 3rem;
+        max-width: 3rem;
       }
 
       p {
@@ -38,21 +39,14 @@
       }
     }
 
-    .message-sent p {
-      border-top-left-radius: .5rem;
-    }
-
-    .message-reply p {
-      border-top-right-radius: .5rem;
-    }
-
     .message-sent {
-      img {
-        margin-right: .375rem;
+      .chat-avatar {
+        margin-right: .625rem;
       }
 
       p {
         background-color: $primary;
+        border-top-left-radius: .5rem;
         color: $white;
         transform-origin: top left;
       }
@@ -63,15 +57,15 @@
     }
 
     .message-reply {
-      text-align: right;
+      flex-direction: row-reverse;
 
-      img {
-        float: right;
+      .chat-avatar {
         margin-left: .625rem;
       }
 
       p {
         background-color: lighten($gray-500, 15%);
+        border-top-right-radius: .5rem;
         transform-origin: top right;
       }
 
