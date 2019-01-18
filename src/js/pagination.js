@@ -63,7 +63,10 @@ class Pagination {
   }
 
   _goToPage(page) {
-    this.update({ current: page })
+    if (page !== this._options.current) {
+      this.update({ current: page })
+      $(this._element).trigger('page:change', this._options)
+    }
   }
 
   _render(pages) {
@@ -71,7 +74,7 @@ class Pagination {
 
     for (let page of pages) {
       const $a = $(`<a href="#" class="page-link">${page}</a>`)
-          .on(Event.ON_CLICK, (e) => this._goToPage(page))
+        .on(Event.ON_CLICK, () => this._goToPage(page))
 
       const $li = $('<li class="page-item">')
         .toggleClass('active', page === this._options.current)
