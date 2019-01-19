@@ -13,13 +13,23 @@
 <!-- @@close -->
 <!-- @@block = body -->
 <div class="container-error">
-    <div class="error">
-      <svg class="mb-3">
-        <use href="/docs/assets/img/error.svg#500"/>
-      </svg>
-      <p class="text-uppercase">
-        Page is not working
-      </p>
+  <div class="error">
+    <svg class="mb-3">
+      <use href="/docs/assets/img/error.svg#500"/>
+    </svg>
+    <p class="text-uppercase">
+      Page is not working
+    </p>
+  </div>
+  <div class="container">
+    <div class="source-code">
+      <a href="#settings" data-toggle="collapse">
+        <i class="fa fa-code"></i> Source code
+      </a>
+      <div id="settings" class="collapse">
+        <pre><code class="html">@@include('includes/code-examples/content/error-500.html')</code></pre>
+      </div>
     </div>
   </div>
+</div>
 <!-- @@close -->
