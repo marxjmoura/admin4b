@@ -1,3 +1,12 @@
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .spinner {
   display: inline-block;
   text-align: center;
@@ -47,14 +56,5 @@
       opacity: 1;
       visibility: visible;
     }
-  }
-}
-
-@keyframes spinner {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

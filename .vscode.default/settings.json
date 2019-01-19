@@ -1,12 +1,12 @@
 {
-    "editor.minimap.enabled": false,
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.exclude": {
-      "**/.vscode.default": true,
-      "**/node_modules": true,
-      "browserify-cache.json": true
-    }
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.vscode.default": true,
+    "**/node_modules": true,
+    "browserify-cache.json": true
+  }
 }
