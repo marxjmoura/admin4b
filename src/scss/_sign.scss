@@ -1,11 +1,13 @@
 .page-sign {
   display: flex;
+  flex-direction: column;
   overflow-y: auto;
   height: 100%;
   width: 100%;
 
   .container-sign {
     display: flex;
+    flex: 1 1 0;
     margin: 0 auto;
     max-width: 26.25rem;
     width: 100%;
