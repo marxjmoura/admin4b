@@ -17,6 +17,10 @@ const Event = {
   SHOW: 'show'
 }
 
+const Prop = {
+  INITIALIZED: `${NAMESPACE}:initialized`,
+}
+
 const Selector = {
   DATA_TOGGLE: '[data-toggle="sidebar"]',
   SIDEBAR: '.app-sidebar'
@@ -39,23 +43,12 @@ class Sidebar {
     $(this._element).removeClass(ClassName.SHOW)
   }
 
-  static jQueryPlugin(event) {
-    return this.each(function () {
-      const sidebar = new Sidebar(this)
+  initialize() {
+    const $document = $(document)
 
-      switch (event) {
-        case Event.SHOW:
-          sidebar.show()
-          break
-        case Event.HIDE:
-          sidebar.hide()
-          break
-      }
-    })
-  }
+    if ($document.prop(Prop.INITIALIZED)) return
 
-  static initialize() {
-    $(document)
+    $document
       .on(Event.ON_CLICK, Selector.DATA_TOGGLE, () => {
         Sidebar.jQueryPlugin.call($(Selector.SIDEBAR), Event.SHOW)
       })
@@ -66,6 +59,25 @@ class Sidebar {
           }
         }
       })
+
+    $document.prop(Prop.INITIALIZED, true)
+  }
+
+  static jQueryPlugin(event) {
+    return this.each(function () {
+      const sidebar = new Sidebar(this)
+
+      sidebar.initialize()
+
+      switch (event) {
+        case Event.SHOW:
+          sidebar.show()
+          break
+        case Event.HIDE:
+          sidebar.hide()
+          break
+      }
+    })
   }
 }
 
@@ -81,6 +93,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = Sidebar.jQueryPlugin
  * Auto Initialize
  */
 
-Sidebar.initialize()
+$(Selector.SIDEBAR).sidebar()
 
 export default Sidebar

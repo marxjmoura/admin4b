@@ -26,6 +26,10 @@ const Error = {
   TYPE: 'type'
 }
 
+const Prop = {
+  INITIALIZED: `${NAMESPACE}:initialized`,
+}
+
 const Selector = {
   DATA_TOGGLE: '[data-toggle="file-manager"]'
 }
@@ -39,7 +43,27 @@ class FileManager {
     this._element = element
   }
 
-  validate(file) {
+  initialize() {
+    const $element = $(this._element)
+
+    if ($element.prop(Prop.INITIALIZED)) return
+
+    const $input = $('<input/>').attr('type', 'file')
+
+    $input.on(Event.ON_CHANGE, () => {
+      const file = $input.get(0).files[0]
+
+      if (file) {
+        this._validate(file)
+        $element.trigger(Event.TRIGGER_CHANGE, file)
+      }
+    })
+
+    $element.on(Event.ON_CLICK, () => $input.trigger(Event.TRIGGER_CLICK))
+    $element.prop(Prop.INITIALIZED, true)
+  }
+
+  _validate(file) {
     const maxsize = $(this._element).attr(DataAttribute.DATA_MAXSIZE)
     const type = $(this._element).attr(DataAttribute.DATA_TYPE)
 
@@ -57,24 +81,8 @@ class FileManager {
   static jQueryPlugin() {
     return this.each(function () {
       const fileManager = new FileManager(this)
-      const $element = $(this)
-      const $input = $('<input/>').attr('type', 'file')
-
-      $input.on(Event.ON_CHANGE, () => {
-        const file = $input.get(0).files[0]
-
-        if (file) {
-          fileManager.validate(file)
-          $element.trigger(Event.TRIGGER_CHANGE, file)
-        }
-      })
-
-      $element.on(Event.ON_CLICK, () => $input.trigger(Event.TRIGGER_CLICK))
+      fileManager.initialize()
     })
-  }
-
-  static initialize() {
-    $(Selector.DATA_TOGGLE).fileManager()
   }
 }
 
@@ -90,6 +98,6 @@ $.fn[NAME].noConflict = () => $.fn[NAME] = FileManager.jQueryPlugin
  * Auto Initialize
  */
 
-FileManager.initialize()
+$(Selector.DATA_TOGGLE).fileManager()
 
 export default FileManager
