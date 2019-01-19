@@ -5,6 +5,12 @@
   "homepage": "http://getadmin4b.com",
   "author": "Marx JMoura",
   "license": "MIT",
+  "keywords": [
+    "bootstrap-theme",
+    "bootstrap-template",
+    "bootstrap-4",
+    "front-end"
+  ],
   "bugs": {
     "url": "https://github.com/logiqsystem/admin4b/issues"
   },
