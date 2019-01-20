@@ -4,16 +4,25 @@ const babelify = require('babelify')
 const bro = require('gulp-bro')
 const connect = require('gulp-connect')
 const fileinclude = require('gulp-file-include')
+const gap = require('gulp-append-prepend')
 const htmlextend = require('gulp-html-extend')
 const htmlmin = require('gulp-htmlmin')
 const rename = require("gulp-rename")
 const sass = require('gulp-sass')
+
+const header = `
+/*!
+ * Admin 4B v2.0.0 (https://getadmin4b.com)
+ * Copyright 2018 LogiQ System (https://logiqsystem.com)
+ * Licensed under MIT (https://github.com/logiqsystem/admin4b/blob/master/LICENSE)
+ */`
 
 gulp.task('build-sass', () => {
   return gulp.src('src/scss/compile.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(rename({ basename: 'admin4b', extname: '.min.css' }))
+    .pipe(gap.prependText(header))
     .pipe(gulp.dest('dist'))
 })
 
@@ -26,6 +35,7 @@ gulp.task('build-js', () => {
       ]
     }))
     .pipe(rename({ basename: 'admin4b', extname: '.min.js' }))
+    .pipe(gap.prependText(header))
     .pipe(gulp.dest('dist'))
 })
 

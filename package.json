@@ -38,6 +38,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
     "gulp": "^4.0.0",
+    "gulp-append-prepend": "^1.0.6",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-bro": "^1.0.3",
     "gulp-connect": "^5.7.0",
