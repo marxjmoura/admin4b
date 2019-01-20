@@ -25,7 +25,7 @@
 
 Some options are available:
 
-- Install with [npm](https://www.npmjs.com/): `npm install admin4b`
+- Install with [npm](https://www.npmjs.com/package/admin4b): `npm install admin4b`
 - Download the latest release from [GitHub repo](https://github.com/logiqsystem/admin4b/releases/)
 - Clone the repo: `git clone git@github.com:logiqsystem/admin4b.git`
 
