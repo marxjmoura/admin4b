@@ -91,6 +91,11 @@ table.table-calendar {
 
       &.sunday {
         color: $danger;
+
+        &:hover,
+        &.active {
+          color: $white;
+        }
       }
     }
   }
