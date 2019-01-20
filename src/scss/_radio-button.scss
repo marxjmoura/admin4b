@@ -1,13 +1,15 @@
 @mixin radio-color($name, $color) {
-  .radio.radio-#{$name} input[type=radio],
-  .radio.radio-#{$name} input[type=checkbox] {
-    + .check-mark,
-    + .check-mark:after {
-      background: $color;
-    }
+  .radio.radio-#{$name} {
+    input[type=radio],
+    input[type=checkbox] {
+      + .check-mark,
+      + .check-mark:after {
+        background: $color;
+      }
 
-    &:focus + .check-mark {
-      box-shadow: 0 0 0 .2rem rgba($color, .25);
+      &:focus + .check-mark {
+        box-shadow: 0 0 0 .2rem rgba($color, .25);
+      }
     }
   }
 }

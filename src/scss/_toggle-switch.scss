@@ -1,31 +1,37 @@
 @mixin switch-color($name, $color) {
-  label.switch-#{$name} input[type=checkbox] {
-    + .switch-slider {
-      background: $color;
-    }
+  label.switch-#{$name} {
+    input[type=radio],
+    input[type=checkbox] {
+      + .switch-slider {
+        background: $color;
+      }
 
-    &:disabled + .switch-slider {
-      background: lighten($color, 20%);
-    }
+      &:disabled + .switch-slider {
+        background: lighten($color, 20%);
+      }
 
-    &:focus + .switch-slider {
-      box-shadow: 0 0 0 .2rem rgba($color, .25);
+      &:focus + .switch-slider {
+        box-shadow: 0 0 0 .2rem rgba($color, .25);
+      }
     }
   }
 }
 
 @mixin switch-to-color($name, $color) {
-  label.switch-to-#{$name} input[type=checkbox] {
-    &:checked + .switch-slider {
-      background: $color;
-    }
+  label.switch-to-#{$name} {
+    input[type=radio],
+    input[type=checkbox] {
+      &:checked + .switch-slider {
+        background: $color;
+      }
 
-    &:checked:disabled + .switch-slider {
-      background: lighten($color, 20%);
-    }
+      &:checked:disabled + .switch-slider {
+        background: lighten($color, 20%);
+      }
 
-    &:checked:focus + .switch-slider {
-      box-shadow: 0 0 0 .2rem rgba($color, .25);
+      &:checked:focus + .switch-slider {
+        box-shadow: 0 0 0 .2rem rgba($color, .25);
+      }
     }
   }
 }
