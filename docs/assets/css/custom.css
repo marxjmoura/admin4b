@@ -1,6 +1,7 @@
 .app-sidebar .sidebar-header {
   background-image: url("/docs/assets/img/sidebar-header.svg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .page-sign {
