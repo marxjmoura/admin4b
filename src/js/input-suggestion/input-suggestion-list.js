@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import keyboard from '../util/keyboard'
+import viewport from '../util/viewport'
 import { ClassName, Event, Selector } from './input-suggestion-constants'
 import InputSuggestionItem from './input-suggestion-item'
 
@@ -75,6 +76,7 @@ class InputSuggestionList {
           }
 
           const $currentItem = this.$itemList.children(Selector.ACTIVE)
+          let $activeItem = null
 
           if (key.isArrowDown) {
             if ($currentItem.is(Selector.LAST_CHILD)) {
@@ -83,20 +85,23 @@ class InputSuggestionList {
 
             if ($currentItem.length) {
               $currentItem.removeClass(ClassName.ACTIVE)
-              $currentItem.next().addClass(ClassName.ACTIVE)
+              $activeItem = $currentItem.next().addClass(ClassName.ACTIVE)
             } else {
-              this.$itemList.children().eq(0).addClass(ClassName.ACTIVE)
+              $activeItem = this.$itemList.children().eq(0).addClass(ClassName.ACTIVE)
             }
           }
 
           if (key.isArrowUp) {
             if ($currentItem.is(Selector.FIRST_CHILD)) {
+              viewport(this.$input)
               return
             }
 
             $currentItem.removeClass(ClassName.ACTIVE)
-            $currentItem.prev().addClass(ClassName.ACTIVE)
+            $activeItem = $currentItem.prev().addClass(ClassName.ACTIVE)
           }
+
+          viewport($activeItem)
         }
       })
       .on(Event.TRIGGER_CHANGE, () => this._hide())
@@ -112,6 +117,8 @@ class InputSuggestionList {
 
     this.$suggestion.removeClass(ClassName.OPEN)
     this.$input.trigger(Event.TRIGGER_HIDE)
+
+    viewport(this.$input)
   }
 
   _show() {

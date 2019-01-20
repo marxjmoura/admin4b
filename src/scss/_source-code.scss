@@ -1,10 +1,17 @@
-.source-code
-{
+.source-code {
   margin-bottom: 1rem;
 
-  .nav-tabs a
-  {
-    color: map-get($source-code-colors, "link");
+  @include make-container-sm-full-width();
+
+  > a {
+    @include breakpoint-down-to-sm {
+      margin-right: $grid-gutter-width / 2;
+      margin-left: $grid-gutter-width / 2;
+    }
+  }
+
+  .nav-tabs a {
+    color: $source-code-link;
     font-size: .95rem;
     text-decoration: none;
     padding: .75rem;
@@ -13,127 +20,107 @@
 
     &.active,
     &:active,
-    &:hover
-    {
-      color: darken(map-get($source-code-colors, "link"), 30%);
+    &:hover {
+      color: darken($source-code-link, 30%);
     }
   }
 
   pre,
-  .nav-tabs
-  {
-    background: map-get($source-code-colors, "background");
+  .nav-tabs {
+    background: $source-code-background;
     border: none;
   }
 
-  pre
-  {
+  pre {
     margin: 0;
     overflow-x: auto;
     padding: .75rem;
+    text-align: left;
   }
 
-  .html
-  {
-    .hljs-meta
-    {
-      color: map-get($source-code-colors, "namespace");
+  .html {
+    .hljs-meta {
+      color: $source-code-namespace;
     }
 
     .hljs-section,
-    .hljs-tag
-    {
-      color: map-get($source-code-colors, "keyword");
+    .hljs-tag {
+      color: $source-code-keyword;
     }
 
-    .hljs-tag .hljs-attr
-    {
-      color: map-get($source-code-colors, "attribute");
+    .hljs-tag .hljs-attr {
+      color: $source-code-attribute;
     }
 
-    .hljs-tag .hljs-string
-    {
-      color: map-get($source-code-colors, "string");
+    .hljs-tag .hljs-string {
+      color: $source-code-string;
     }
 
-    .hljs-comment
-    {
-      color: map-get($source-code-colors, "comment");
+    .hljs-comment {
+      color: $source-code-comment;
     }
   }
 
   .css,
-  .scss
-  {
-    .hljs-keyword
-    {
-      color: map-get($source-code-colors, "keyword");
+  .scss {
+    .hljs-keyword {
+      color: $source-code-keyword;
     }
 
-    .hljs-selector-class
-    {
-      color: map-get($source-code-colors, "class");
+    .hljs-selector-class {
+      color: $source-code-class;
     }
 
-    .hljs-attribute
-    {
-      color: map-get($source-code-colors, "attribute");
+    .hljs-attribute {
+      color: $source-code-attribute;
     }
 
-    .hljs-comment
-    {
-      color: map-get($source-code-colors, "comment");
+    .hljs-comment {
+      color: $source-code-comment;
     }
 
-    .hljs-number
-    {
-      color: map-get($source-code-colors, "number");
+    .hljs-number {
+      color: $source-code-number;
     }
   }
 
-  .js
-  {
-    .hljs-number
-    {
-      color: map-get($source-code-colors, "number");
+  .js {
+    .hljs-number {
+      color: $source-code-number;
     }
 
-    .hljs-string
-    {
-      color: map-get($source-code-colors, "string");
+    .hljs-string {
+      color: $source-code-string;
     }
 
-    .hljs-keyword
-    {
-      color: map-get($source-code-colors, "keyword");
+    .hljs-keyword {
+      color: $source-code-keyword;
     }
 
-    .hljs-comment
-    {
-      color: map-get($source-code-colors, "comment");
+    .hljs-comment {
+      color: $source-code-comment;
+    }
+
+    a .hljs-comment {
+      color: $blue;
     }
   }
 
-  .json
-  {
-    .hljs-attr
-    {
-      color: map-get($source-code-colors, "attribute");
+  .json {
+    .hljs-attr {
+      color: $source-code-attribute;
     }
 
-    .hljs-string
-    {
-      color: map-get($source-code-colors, "string");
+    .hljs-string {
+      color: $source-code-string;
     }
 
-    .hljs-literal,
-    {
-      color: map-get($source-code-colors, "keyword");
+    .hljs-literal, {
+      color: $source-code-keyword;
     }
 
-    .hljs-number
-    {
-      color: map-get($source-code-colors, "number");
+    .hljs-number {
+      color: $source-code-number;
     }
   }
 }

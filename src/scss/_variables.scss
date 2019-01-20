@@ -6,24 +6,11 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
-
-$grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
 
 $belize-hole: #3ca2e0 !default;
 $blue: #007bff !default;
@@ -40,14 +27,13 @@ $teal: #20c997 !default;
 $turquoise: #1abc9c !default;
 $yellow: #f3ca0c !default;
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary": $peter-river,
-  "success": $turquoise,
-  "info": $belize-hole,
-  "warning": $yellow,
-  "danger": $red
-), $theme-colors);
+$primary: $peter-river !default;
+$secondary: $gray-100 !default;
+$success: $turquoise !default;
+$info: $belize-hole !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $white !default;
 
 // Fonts
 
@@ -66,59 +52,120 @@ $h6-font-size: $font-size-base !default;
 
 $headings-margin-bottom: 1rem !default;
 
-$line-icons-font-path: "fonts/" !default;
-$line-icons-font-family: "line-icons" !default;
-$line-icons-prefix: "icon-" !default;
-
 // Responsive breakpoints
 
-$breakpoints: () !default;
-$breakpoints: map-merge((
-  "xs-max": 575.99px,
-  "sm-min": 576px,
-  "sm-max": 767.99px,
-  "md-min": 768px,
-  "md-max": 991.99px,
-  "lg-min": 992px,
-  "lg-max": 1199.99px,
-  "xl-min": 1200px
-), $breakpoints);
+$breakpoint-xs-max: 575.99px !default;
+$breakpoint-sm-min: 576px !default;
+$breakpoint-sm-max: 767.99px !default;
+$breakpoint-md-min: 768px !default;
+$breakpoint-md-max: 991.99px !default;
+$breakpoint-lg-min: 992px !default;
+$breakpoint-lg-max: 1199.99px !default;
+$breakpoint-xl-min: 1200p !default;
 
 // Layout
 
-$body-bg: $gray-200 !default;
-$breadcrumb-bg: $gray-300 !default;
+$box-shadow-base: 0 .0625rem .125rem 0 rgba(0, 0, 0, .1) !default;
+
+$body-bg: #f1f4f5 !default;
+$body-color: $gray-800 !default;
+
+$border-radius: .15rem !default;
+$border-radius-lg: .2rem !default;
+$border-radius-sm: .1rem !default;
+
+$breadcrumb-bg: $white !default;
 $breadcrumb-border-radius: 0 !default;
-$link-color: $blue !default;
-$table-head-bg: $gray-400 !default;
-$nav-tabs-border-color: $gray-400 !default;
-$nav-tabs-link-active-border-color: $gray-400 $gray-400 $body-bg !default;
-$nav-tabs-link-hover-border-color:  $gray-300 $gray-300 $nav-tabs-border-color !default;
+$breadcrumb-box-shadow: $box-shadow-base !default;
+$breadcrumb-color: $gray-700 !default;
+$breadcrumb-font-size: 11pt !default;
+$breadcrumb-margin-bottom: 0 !default;
 
-// Sidebar
+$link-color: $primary !default;
 
-$sidebar-background: $peter-river !default;
-$sidebar-box-shadow: 0 0 1.25rem rgba($black, 0.5) !default;
-$sidebar-btn-close: rgba($white, .5) !default;
-$sidebar-font-size: 0.95rem !default;
-$sidebar-header-color: rgba($white, .75) !default;
-$sidebar-header-img-bg: $gray-200 !default;
-$sidebar-header-img-border: rgba($white, .15) !default;
-$sidebar-nav-link-level-1: rgba($white, .75) !default;
-$sidebar-nav-link-level-1-hover: $white !default;
-$sidebar-nav-link-level-2: rgba($white, .75) !default;
-$sidebar-nav-link-level-2-hover: $white !default;
-$sidebar-nav-footer-link: rgba($white, .5) !default;
-$sidebar-nav-footer-link-hover: rgba($white, .75) !default;
-$sidebar-scrollbar: $peter-river !default;
-$sidebar-scrollbar-thumb: darken($peter-river, 7%) !default;
-$sidebar-scrollbar-width: .2rem !default;
+$btn-box-shadow: $box-shadow-base !default;
+$input-btn-padding-x: 1rem !default;
+
+$card-border-color: rgba($black, .125) !default;
+$card-border-width: 0 !default;
+$card-spacer-y: 1rem !default;
+$card-spacer-x: 1.25rem !default;
+$card-header-border-width: .0625rem !default;
+$card-footer-border-width: .0625rem !default;
+$card-box-shadow: $box-shadow-base !default;
+$card-cap-bg: $white !default;
+$card-margin-bottom: 1rem !default;
+
+$table-color: $white !default;
+$table-bg: $white !default;
+$table-border-width: 0 !default;
+$table-border-radius: $border-radius !default;
+$table-box-shadow: $box-shadow-base !default;
+$table-cell-padding: .75rem 1rem !default;
+$table-hover-bg: rgba($black, .05) !default;
+
+$pagination-active-color: $link-color !default;
+$pagination-font-size: 11pt !default;
+$pagination-hover-bg: $white !default;
+$pagination-margin-bottom: 0 !default;
+
+$list-group-border-width: 0 !default;
+$list-group-box-shadow: $box-shadow-base !default;
+$list-group-item-border-color: rgba($black, .075) !default;
+
+$nav-tabs-border-color: $card-border-color !default;
+$nav-tabs-link-active-border-color: $gray-400 $gray-400 $white !default;
+$nav-tabs-link-hover-border-color:  transparent !default;
+$nav-tabs-link-active-bg: $white !default;
+$nav-tabs-link-color: $gray-700 !default;
+$nav-link-padding-y: $card-spacer-y !default;
+$nav-link-padding-x: $card-spacer-x !default;
+$nav-link-collapse-padding-y: 1rem !default;
+$nav-link-collapse-border-bottom: .0625rem solid $gray-400 !default;
+
+$callout-bg: $white !default;
+$callout-border-radius: $border-radius !default;
+$callout-border-width: .25rem !default;
+$callout-padding-y: 1.25rem !default;
+$callout-padding-x: 1.25rem !default;
+$callout-margin-bottom: 1rem !default;
+$callout-box-shadow: $box-shadow-base !default;
+
+$badge-font-weight: normal !default;
+
+$thumbnail-bg: $white !default;
+
+$pagination-border-width: 0 !default;
+
+$sidebar-header-bg-color: $primary !default;
+$sidebar-box-shadow: 0 0 .25rem rgba(0, 0%, 0%, .25) !default;
+$sidebar-box-shadow-sm: 0 0 .5rem rgba(0, 0%, 0%, .25) !default;
+$sidebar-link-color: $gray-700 !default;
+$sidebar-link-hover-bg: darken($gray-100, 2%) !default;
+$sidebar-link-hover-color: $primary !default;
 $sidebar-width: 16.25rem !default;
+
+$modal-backdrop-bg: $white !default;
+$modal-backdrop-opacity: .85 !default;
+$modal-content-box-shadow: 0 0 .125rem 0 rgba(0, 0, 0, .5) !default;
+$modal-content-border-width: 0 !default;
+$modal-header-border-width: .0625rem !default;
+$modal-footer-border-width: .0625rem !default;
+$modal-fade-transform: scale(.9) !default;
+$modal-transition: transform .2s ease-out !default;
+
+$spinner-size: 3rem;
+$spinner-size-sm: 2.25rem;
+$spinner-size-lg: 3.75rem;
+$spinner-speed: .7s;
+$spinner-block-font-size: 11pt;
+
+$zindex-nav: 800 !default;
 
 // Code highlight
 
 $source-code-attribute: $blue !default;
-$source-code-background: $gray-300 !default;
+$source-code-background: $gray-200 !default;
 $source-code-class: $indigo !default;
 $source-code-comment: $gray-600 !default;
 $source-code-keyword: $indigo !default;
@@ -127,17 +174,3 @@ $source-code-literal: $gray-700 !default;
 $source-code-namespace: $green !default;
 $source-code-number: $carrot !default;
 $source-code-string: $red !default;
-
-$source-code-colors: () !default;
-$source-code-colors: map-merge((
-"attribute": $source-code-attribute,
-"background": $source-code-background,
-"class": $source-code-class,
-"comment": $source-code-comment,
-"keyword": $source-code-keyword,
-"link": $source-code-link,
-"literal": $source-code-literal,
-"namespace": $source-code-namespace,
-"number": $source-code-number,
-"string": $source-code-string
-), $source-code-colors);

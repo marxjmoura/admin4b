@@ -3,16 +3,33 @@
 <meta name="description" content="A 404 error is returned when pages have been moved, deleted or do not exist. " />
 <title>Admin 4B · Error 404</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item">Content</li>
-    <li class="breadcrumb-item active" aria-current="page">Error 404</li>
+    <li class="breadcrumb-item">Pages</li>
+    <li class="breadcrumb-item">Error 404</li>
   </ol>
 </nav>
-<div class="container-fluid">
-  <h1>
-    Soon...
-  </h1>
+<!-- @@close -->
+<!-- @@block = body -->
+<div class="container-error">
+  <div class="error">
+    <svg class="mb-3">
+      <use href="/docs/assets/img/error.svg#404"/>
+    </svg>
+    <p class="text-uppercase">
+      Page not found
+    </p>
+  </div>
+  <div class="container">
+    <div class="source-code">
+      <a href="#settings" data-toggle="collapse">
+        <i class="fa fa-code"></i> Source code
+      </a>
+      <div id="settings" class="collapse">
+        <pre><code class="html">@@include('includes/code-examples/content/error-404.html')</code></pre>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- @@close -->

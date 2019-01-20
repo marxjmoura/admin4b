@@ -1,12 +1,14 @@
-@media print
-{
-  .app .app-body
-  {
-    position: relative;
+@media print {
+  body {
+    display: block;
+  }
+
+  .app {
+    display: block;
     height: auto;
 
-    .app-sidebar
-    {
+    .app-sidebar,
+    .app-content .content-header {
       display: none;
     }
   }

@@ -5,9 +5,9 @@ import $ from 'jquery'
  */
 
 const NAME = 'scrollTo'
-const NAMESPACE = `admin4b.${NAME}`
 
 const Event = {
+  TOP: 'top',
   BOTTOM: 'bottom'
 }
 
@@ -25,11 +25,18 @@ class ScrollEvent {
     $(this._element).scrollTop(scrollHeight)
   }
 
+  toTop() {
+    $(this._element).scrollTop(0)
+  }
+
   static jQueryPlugin(event) {
     return this.each(function () {
       const scroll = new ScrollEvent(this)
 
       switch (event) {
+        case Event.TOP:
+          scroll.toTop()
+          break
         case Event.BOTTOM:
           scroll.toBottom()
           break

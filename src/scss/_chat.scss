@@ -1,153 +1,94 @@
-@keyframes ballon
-{
-  0%
-  {
+@keyframes ballon {
+  0% {
     transform: scale(0);
   }
-  100%
-  {
+  100% {
     transform: scale(1);
   }
 }
 
-.chat
-{
-  display: none;
+.chat {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
   padding: 0;
-  width: 100%;
 
-  &.chat-on // Set by JS after calculate the remaining height
-  {
-    display: table;
-  }
+  .chat-messages {
+    flex: 1 1 0;
+    overflow-y: auto;
 
-  .chat-body,
-  .chat-footer
-  {
-    display: table-row;
-  }
+    .message-sent,
+    .message-reply {
+      display: flex;
+      margin-bottom: 1rem;
 
-  .chat-body
-  {
-    height: 100%;
+      .chat-avatar {
+        border-radius: 50%;
+        max-height: 3rem;
+        max-width: 3rem;
+      }
 
-    .chat-content
-    {
-      display: table-cell;
-      height: 100%;
+      p {
+        display: inline-block;
+        margin: 0;
+        padding: .625rem 1.25rem;
+        text-align: left;
+        max-width: 75%;
+        animation: ballon .2s linear;
+        border-radius: 1.25rem;
+      }
+    }
 
-      .chat-messages
-      {
-        height: 100%;
-        position: relative;
-        overflow: auto;
+    .message-sent {
+      .chat-avatar {
+        margin-right: .625rem;
+      }
 
-        .container-fluid // Correct height for IE and Firefox
-        {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-        }
+      p {
+        background-color: $primary;
+        border-top-left-radius: .5rem;
+        color: $white;
+        transform-origin: top left;
+      }
 
-        .message-sent,
-        .message-reply
-        {
-          margin-bottom: 1rem;
+      small {
+        color: lighten($primary, 35%);
+      }
+    }
 
-          img
-          {
-            vertical-align: top;
-            width: 3rem;
-            border-radius: 50%;
-          }
+    .message-reply {
+      flex-direction: row-reverse;
 
-          p
-          {
-            display: inline-block;
-            margin: 0;
-            padding: .625rem 1.25rem;
-            text-align: left;
-            max-width: 75%;
-            animation: ballon .2s linear;
-            border-radius: 1.25rem;
-          }
-        }
+      .chat-avatar {
+        margin-left: .625rem;
+      }
 
-        .message-sent p
-        {
-          border-top-left-radius: .5rem;
-        }
+      p {
+        background-color: lighten($gray-500, 15%);
+        border-top-right-radius: .5rem;
+        transform-origin: top right;
+      }
 
-        .message-reply p
-        {
-          border-top-right-radius: .5rem;
-        }
-
-        .message-sent
-        {
-          img
-          {
-            margin-right: .375rem;
-          }
-
-          p
-          {
-            background-color: map-get($theme-colors, "primary");
-            color: map-get($colors, "white");
-            transform-origin: top left;
-          }
-
-          small
-          {
-            color: lighten(map-get($theme-colors, "primary"), 35%);
-          }
-        }
-
-        .message-reply
-        {
-          text-align: right;
-
-          img
-          {
-            float: right;
-            margin-left: .625rem;
-          }
-
-          p
-          {
-            background-color: lighten(map-get($grays, "500"), 15%);
-            transform-origin: top right;
-          }
-
-          small
-          {
-            color: map-get($grays, "600");
-          }
-        }
+      small {
+        color: $gray-600;
       }
     }
   }
 
-  .chat-footer
-  {
+  .chat-footer {
     .btn,
-    .form-control
-    {
+    .form-control {
       border-radius: 0;
       padding-top: 1rem;
       padding-bottom: 1rem;
     }
 
-    .btn
-    {
+    .btn {
       padding-left: 1.25rem;
       padding-right: 1.25rem;
     }
 
-    .form-control
-    {
+    .form-control {
       height: auto;
     }
   }

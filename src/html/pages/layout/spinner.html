@@ -3,14 +3,16 @@
 <meta name="description" content="Spinners enables you to tell the users that the app is currently processing." />
 <title>Admin 4B · Spinner</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Layout</li>
-    <li class="breadcrumb-item active" aria-current="page">Spinner</li>
+    <li class="breadcrumb-item">Spinner</li>
   </ol>
 </nav>
-<div class="container-fluid">
+<!-- @@close -->
+<!-- @@block = body -->
+<div class="container">
   <h1>
     Spinner
   </h1>
@@ -25,7 +27,7 @@
   </div>
   <div class="source-code">
     <a href="#spinner-basic" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="spinner-basic" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/spinner/spinner-basic.html')</code></pre>
@@ -50,7 +52,7 @@
   </div>
   <div class="source-code">
     <a href="#spinner-sizes" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="spinner-sizes" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/spinner/spinner-sizes.html')</code></pre>
@@ -67,16 +69,15 @@
   </p>
   <ul>
     <li>
-      To make the spinner full screen and block the interaction of the user to the app
+      To make the spinner full screen and block the interaction of the user to the app,
       you need to add the class <code>.spinner-block</code> to <code>.spinner</code>.
     </li>
     <li>
-      To show the spinner you just need to add the class <code>.show</code> to <code>.spinner</code>
-      and to hide you just need to remove this class.
+      To show the spinner you just need to call the plugin method <code>spinner('show')</code>
+      and to hide you just need to call the plugin method <code>spinner('hide')</code>.
     </li>
     <li>
-      You can also show small information to the user while the app is processing by using the
-      class <code>.spinner-text</code>.
+      You can also show small information to the user while the app is processing.
     </li>
   </ul>
   <div class="form-group">
@@ -85,12 +86,11 @@
     </button>
   </div>
   <div id="spinner" class="spinner spinner-block">
-    <div class="spinner-bar"></div>
-    <div class="spinner-text">Will close after 3 seconds...</div>
+    <div class="spinner-bar"></div> Will close after 3 seconds...
   </div>
   <div class="source-code">
     <a href="#spinner-block" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="spinner-block" class="collapse">
       <div class="nav nav-tabs">

@@ -3,22 +3,24 @@
 <meta name="description" content="Admin 4B is an open source and free admin template built on top of Bootstrap 4. Quickly customize with our Sass variables and mixins." />
 <title>Admin 4B · Bootstrap 4 Admin Template</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Get started</li>
+    <li class="breadcrumb-item">Get started</li>
   </ol>
 </nav>
-<div class="container-fluid">
+<!-- @@close -->
+<!-- @@block = body -->
+<div class="container">
   <h1>
     Introduction
   </h1>
   <p>
     Admin 4B is an open source admin template built on top of <a href="https://getbootstrap.com/">Bootstrap 4</a>.
-    The source code can be found on the <a href="https://github.com/marxjmoura/admin4b">GitHub repo</a>.
+    The source code can be found on the <a href="https://github.com/logiqsystem/admin4b">GitHub repo</a>.
   </p>
   <p>
-    <a href="https://github.com/marxjmoura/admin4b#quick-start" class="btn btn-outline-primary">
+    <a href="https://github.com/logiqsystem/admin4b#quick-start" class="btn btn-outline-primary">
       Download Admin 4B
     </a>
   </p>
@@ -33,17 +35,8 @@
     The <code>admin4b.min.*</code> is a template bundle that already includes jQuery, Bootstrap, Popper and Admin 4B theming and plugins.
   </p>
   <p>
-    For the template icons you can use <a href="http://simplelineicons.com/">Simple Line Icons</a> or
-    <a href="http://fontawesome.io/">Font Awesome</a>.
+    You can enrich the theme by using an icon library like <a href="http://fontawesome.io/">Font Awesome</a>.
   </p>
-  <div class="callout callout-warning">
-    <h5>Version 1.1.x and lower</h5>
-    <p>
-      For the template work properly you need to add Bootstrap dependencies manually:
-      <a href="https://jquery.com/">jQuery</a> and <a href="https://popper.js.org/">Popper</a>.
-      Also, you need to add <a href="http://fontawesome.io/">Font Awesome</a> CSS file.
-    </p>
-  </div>
   <h3>
     CSS
   </h3>
@@ -52,9 +45,9 @@
   </p>
   <div class="source-code">
     <a href="#css-setup" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
-    <div id="css-setup" class="sidebar-nav-group collapse">
+    <div id="css-setup" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/get-started/css-setup.html')</code></pre>
     </div>
   </div>
@@ -67,9 +60,9 @@
   </p>
   <div class="source-code">
     <a href="#js-setup" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
-    <div id="js-setup" class="sidebar-nav-group collapse">
+    <div id="js-setup" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/get-started/js-setup.html')</code></pre>
     </div>
   </div>
@@ -81,9 +74,9 @@
   </p>
   <div class="source-code">
     <a href="#initial-setup" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
-    <div id="initial-setup" class="sidebar-nav-group collapse">
+    <div id="initial-setup" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/get-started/initial-setup.html')</code></pre>
     </div>
   </div>
@@ -95,7 +88,7 @@
     What's next?
   </h2>
   <p>
-    <a href="@@webRoot/pages/layout/sidebar.html">Configure the sidebar navigation</a>
+    <a href="/docs/pages/layout/sidebar.html">Configure the sidebar navigation</a>
   </p>
 </div>
 <!-- @@close -->

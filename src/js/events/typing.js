@@ -13,6 +13,10 @@ const Event = {
   TRIGGER_INPUT_DELAY: 'input:delay'
 }
 
+const Prop = {
+  INITIALIZED: `${NAMESPACE}:initialized`,
+}
+
 const Selector = {
   INPUT: 'input'
 }
@@ -27,8 +31,15 @@ class TypingEvent {
     this._timeout = null
   }
 
-  watchAndTrigger() {
+  initialize() {
+    $(this._element).on(Event.ON_INPUT, () => {
+      this._watchAndTrigger()
+    })
+  }
+
+  _watchAndTrigger() {
     clearTimeout(this._timeout)
+
     this._timeout = setTimeout(() => {
       $(this._element).trigger(Event.TRIGGER_INPUT_DELAY)
     }, DELAY)
@@ -37,7 +48,7 @@ class TypingEvent {
   static jQueryPlugin() {
     return this.each(function () {
       const typingEvent = new TypingEvent(this)
-      $(this).on(Event.ON_INPUT, () => typingEvent.watchAndTrigger())
+      typingEvent.initialize()
     })
   }
 }

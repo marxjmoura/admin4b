@@ -3,14 +3,16 @@
 <meta name="description" content="Create a template using a sidebar with two level of navigation." />
 <title>Admin 4B · Sidebar</title>
 <!-- @@close -->
-<!-- @@block = body -->
-<nav aria-label="breadcrumb">
+<!-- @@block = breadcrumb -->
+<nav>
   <ol class="breadcrumb">
     <li class="breadcrumb-item">Layout</li>
-    <li class="breadcrumb-item active" aria-current="page">Sidebar</li>
+    <li class="breadcrumb-item">Sidebar</li>
   </ol>
 </nav>
-<div class="container-fluid">
+<!-- @@close -->
+<!-- @@block = body -->
+<div class="container">
   <h1>
     Layout
   </h1>
@@ -20,7 +22,7 @@
   </p>
   <div class="source-code">
     <a href="#basic-structure" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="basic-structure" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/basic-structure.html')</code></pre>
@@ -30,7 +32,7 @@
     Sidebar
   </h2>
   <p>
-    The sidebar is the left column of the layout structure and has a header, a navigation and a footer.
+    The sidebar is the left column of the layout structure and has a header and a navigation.
     The template was designed using a sidebar with a maximum of two level of navigation.
   </p>
   <h3>
@@ -41,7 +43,7 @@
   </p>
   <div class="source-code">
     <a href="#sidebar-header" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="sidebar-header" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-header.html')</code></pre>
@@ -51,32 +53,21 @@
     Navigation
   </h3>
   <p>
-    The single level of navigation is defined by class <code>.sidebar-nav-link</code> and takes the user to desired page.
-    You also can add buttons to sidebar wrapped with <code>.sidebar-nav-btn</code>.
-    The two level of navigation is defined by class <code>.sidebar-nav-group</code> and opens the corresponding group of links.
+    The first level of navigation is defined by a list of links and takes the user to desired page.
+    The second level of navigation is defined by a nested list.
+    Also, you can optionally use headers for group of links defined by class <code>.sidebar-nav-header</code>
+    and line separator defined by the tag <code>hr</code>.
+  </p>
+  <p>
     The attribute <code>data-parent</code> configures the accordion menu
     (refer to <a href="https://getbootstrap.com/docs/4.1/components/collapse">bootstrap documentation</a> for details).
   </p>
   <div class="source-code">
     <a href="#sidebar-navigation" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="sidebar-navigation" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-nav.html')</code></pre>
-    </div>
-  </div>
-  <h3>
-    Footer
-  </h3>
-  <p>
-    The sidebar footer contains a set of other buttons like a small toolbar.
-  </p>
-  <div class="source-code">
-    <a href="#sidebar-footer" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
-    </a>
-    <div id="sidebar-footer" class="collapse">
-      <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-footer.html')</code></pre>
     </div>
   </div>
   <h2>
@@ -84,11 +75,13 @@
   </h2>
   <p>
     The content is the right column of the layout structure and contains the page content that the user navigated to.
-    The content can contain the components of the bootstrap such as navbar, breadcrumb and any other components you may need.
+    The content header is defined by class <code>.content-header</code> and preserves the static position of the navbar.
+    The content body is defined by class <code>.content-body</code> and can contain the components of the bootstrap
+    such as cards, forms, tables and any other components you may need.
   </p>
   <div class="source-code">
     <a href="#app-content" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="app-content" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/app-content.html')</code></pre>
@@ -99,15 +92,15 @@
   </h2>
   <p>
     The template uses the bootstrap breakpoints to define the minimum width to show the sidebar.
-    When hidden the attributes <code>data-toggle="sidebar"</code> and <code>data-dismiss="sidebar"</code>
-    can be used to show and close the sidebar respectively.
+    When hidden the attribute <code>data-toggle="sidebar"</code> can be used to show the sidebar.
+    The sidebar will be hidden whenever the user click outside of the sidebar area.
   </p>
   <div class="source-code">
     <a href="#sidebar-triggers" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="sidebar-triggers" class="collapse">
-      <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-triggers.html')</code></pre>
+      <pre><code class="html">@@include('includes/code-examples/layout/sidebar/sidebar-trigger.html')</code></pre>
     </div>
   </div>
   <h3>
@@ -116,25 +109,30 @@
   <p>
     A few methods are available for toggle the sidebar via JavaScript:
   </p>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Method</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="text-nowrap"><code>sidebar('show')</code></td>
-          <td>Shows the sidebar.</td>
-        </tr>
-        <tr>
-          <td class="text-nowrap"><code>sidebar('hide')</code></td>
-          <td>Hides the sidebar.</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <div class="card-header">
+      Methods
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-nowrap"><code>sidebar('show')</code></td>
+            <td>Shows the sidebar.</td>
+          </tr>
+          <tr>
+            <td class="text-nowrap"><code>sidebar('hide')</code></td>
+            <td>Hides the sidebar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <h2>
     Theming
@@ -142,16 +140,7 @@
   <p>
     Theming can be done overriding Sass variables and custom CSS as well as in the
     <a href="https://getbootstrap.com/docs/4.1/getting-started/theming/">bootstrap</a>.
-    For example, the width of sidebar can be changed overriding the Sass variable but also can be changed using custom CSS:
   </p>
-  <div class="source-code">
-    <a href="#sidebar-width" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
-    </a>
-    <div id="sidebar-width" class="collapse">
-      <pre><code class="css">@@include('includes/code-examples/layout/sidebar/sidebar-width.css')</code></pre>
-    </div>
-  </div>
   <h2>
     Example
   </h2>
@@ -160,7 +149,7 @@
   </p>
   <div class="source-code">
     <a href="#starter-template" data-toggle="collapse">
-      <i class="icon-eye"></i> Source code
+      <i class="fa fa-code"></i> Source code
     </a>
     <div id="starter-template" class="collapse">
       <pre><code class="html">@@include('includes/code-examples/layout/starter-template.html')</code></pre>
