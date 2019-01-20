@@ -1,4 +1,4 @@
-## v2.0.0 (UNRELEASED)
+## [v2.0.0](https://github.com/logiqsystem/admin4b/releases/tag/v2.0.0) (2019-01-20)
 ### Breaking changes:
 - The theme was all rewritten using Flexbox (check [browser compatibility](https://caniuse.com/#feat=flexbox))
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
