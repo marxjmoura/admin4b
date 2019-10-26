@@ -5,8 +5,6 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm i
-      - run: npm run build
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run: npm publish
 workflows:

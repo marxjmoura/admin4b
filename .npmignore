@@ -1,5 +1,4 @@
 **/*
 !dist/**/*
-!src/fonts/**/*
-!src/scss/**/*
 !src/js/**/*
+!src/scss/**/*
