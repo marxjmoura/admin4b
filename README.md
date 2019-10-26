@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="http://getadmin4b.com">
-    <img src="http://getadmin4b.com/docs/assets/brand/admin4b.svg" alt="admin4b" width="64">
+  <a href="https://getadmin4b.com">
+    <img src="https://getadmin4b.com/docs/assets/brand/admin4b.svg" alt="admin4b" width="64">
   </a>
   <h3 align="center">
     Admin 4B
   </h3>
   <p align="center">
-    Admin template built on top of <a href="http://getbootstrap.com">Bootstrap 4</a>
+    Admin template built on top of <a href="https://getbootstrap.com">Bootstrap 4</a>
     <br>
-    <a href="http://getadmin4b.com"><strong>Explore Admin 4B docs</strong></a>
+    <a href="https://getadmin4b.com"><strong>Explore Admin 4B docs</strong></a>
   </p>
 </p>
 
@@ -31,7 +31,7 @@ Some options are available:
 
 ## Documentation
 
-The documentation is hosted on [GitHub pages](http://getadmin4b.com).
+The documentation is hosted on [GitHub pages](https://getadmin4b.com).
 
 ### Running documentation locally
 
@@ -45,4 +45,6 @@ Please, fell free to [open a new issue](https://github.com/marxjmoura/admin4b/is
 
 ## License
 
-Code released under the [MIT License](https://github.com/marxjmoura/admin4b/blob/master/LICENSE).
+[MIT](https://github.com/marxjmoura/admin4b/blob/master/LICENSE)
+
+Copyright (c) 2018-present, [Marx J. Moura](https://github.com/marxjmoura)
