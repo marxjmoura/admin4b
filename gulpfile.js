@@ -12,7 +12,7 @@ const handlebars = require('./handlebars')
 
 const header = `
 /*!
- * Admin 4B v2.0.0 (https://getadmin4b.com)
+ * Admin 4B v2.1.0 (https://getadmin4b.com)
  * Copyright 2017-present Marx J. Moura (https://github.com/marxjmoura)
  * Licensed under MIT (https://github.com/marxjmoura/admin4b/blob/master/LICENSE)
  */`
@@ -31,6 +31,7 @@ gulp.task('build-js', () => {
     .pipe(bro({ transform: [babelify.configure({ presets: ['@babel/preset-env'] })] }))
     .pipe(uglify().on('error', (e) => console.log(e)))
     .pipe(rename({ extname: '.min.js' }))
+    .pipe(gap.prependText(header))
     .pipe(gulp.dest('dist'))
 })
 
