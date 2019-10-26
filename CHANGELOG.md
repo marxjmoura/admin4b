@@ -1,3 +1,7 @@
+## [v2.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v2.1.0) (2019-10-26)
+### Features:
+- Upgrade bootstrap to version 4.3.1
+
 ## [v2.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v2.0.0) (2019-01-20)
 ### Breaking changes:
 - The theme was all rewritten using Flexbox (check [browser compatibility](https://caniuse.com/#feat=flexbox))
