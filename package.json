@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gulp-append-prepend": "^1.0.8",
     "inoutjs": "^0.1.4",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
@@ -40,6 +39,7 @@
     "browserify": "^16.5.0",
     "glob": "^7.1.5",
     "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.8",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-bro": "^1.0.3",
     "gulp-connect": "^5.7.0",
