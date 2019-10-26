@@ -1,0 +1,61 @@
+<div class="nav-tabs-responsive">
+  <div class="card">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#account" class="nav-link active" data-toggle="tab">
+          <i class="fa fa-lock mr-2"></i> Account
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#personal" class="nav-link" data-toggle="tab">
+          <i class="fa fa-user-circle-o mr-2"></i> Personal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#payment" class="nav-link" data-toggle="tab">
+          <i class="fa fa-credit-card mr-2"></i> Payment
+        </a>
+      </li>
+    </ul>
+    <div id="tabContent" class="tab-content">
+      <div id="account" class="tab-pane show active">
+        <a href="#account-collapse" class="nav-link-collapse" data-toggle="collapse">
+          <i class="fa fa-lock mr-2"></i> Account
+        </a>
+        <div id="account-collapse" class="collapse show" data-parent="#tabContent">
+          <div class="card-body">
+            <!-- Account content -->
+          </div>
+        </div>
+      </div>
+      <div id="personal" class="tab-pane">
+        <a href="#personal-collapse" class="nav-link-collapse" data-toggle="collapse">
+          <i class="fa fa-user-circle-o mr-2"></i> Personal
+        </a>
+        <div id="personal-collapse" class="collapse" data-parent="#tabContent">
+          <div class="card-body">
+            <!-- Personal content -->
+          </div>
+        </div>
+      </div>
+      <div id="payment" class="tab-pane">
+        <a href="#payment-collapse" class="nav-link-collapse" data-toggle="collapse">
+          <i class="fa fa-credit-card mr-2"></i> Payment
+        </a>
+        <div id="payment-collapse" class="collapse" data-parent="#tabContent">
+          <div class="card-body">
+            <!-- Payment content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <button type="submit" class="btn btn-primary mr-1">
+    Save
+  </button>
+  <button type="button" class="btn btn-secondary">
+    Cancel
+  </button>
+</div>

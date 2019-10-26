@@ -1,0 +1,30 @@
+<div class="form-group">
+  <button type="button" class="btn btn-primary" data-toggle="file-manager" data-maxsize="1MB" data-type="image/jpeg,image/png">
+    <i class="fa fa-folder-open"></i> Select a file
+  </button>
+  <small class="text-muted">Only .jpeg and .png and maximum 1MB.</small>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <tr>
+      <th>Filename</th>
+      <th>Size</th>
+    </tr>
+    <tr id="file-data" class="d-none">
+      <td class="align-middle">
+        <img id="file-preview" class="rounded d-none" width="64">
+        <span id="file-name"></span>
+        <i id="is-invalid" class="fa fa-times-circle-o text-danger d-none"></i>
+        <i id="is-valid" class="fa fa-check-circle-o text-success d-none"></i>
+      </td>
+      <td class="align-middle">
+        <span id="file-size"></span>
+      </td>
+    </tr>
+    <tr id="file-empty">
+      <td colspan="2" class="text-muted">
+        No file selected.
+      </td>
+    </tr>
+  </table>
+</div>

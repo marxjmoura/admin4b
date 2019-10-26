@@ -1,0 +1,88 @@
+<div class="card">
+  <div class="card-body">
+    <di class="row">
+      <div class="col-12 col-lg-8">
+        <div class="form-group">
+          <p class="text-muted text-center">
+            Sales per month
+          </p>
+          <canvas id="sales" height="120"></canvas>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <p class="text-muted text-center">
+          Last sales
+        </p>
+        <div class="table-responsive">
+          <table class="table table-sm mb-0">
+            <thead>
+              <tr>
+                <th><small>Order ID</small></th>
+                <th><small>Payment</small></th>
+                <th><small>Amount</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>9390</td>
+                <td>
+                  <span class="badge badge-success">cash</span>
+                </td>
+                <td>$12.25</td>
+              </tr>
+              <tr>
+                <td>9183</td>
+                <td>
+                  <span class="badge badge-secondary">credit card</span>
+                </td>
+                <td>$80.75</td>
+              </tr>
+              <tr>
+                <td>4640</td>
+                <td>
+                  <span class="badge badge-primary">paypal</span>
+                </td>
+                <td>$105.60</td>
+              </tr>
+              <tr>
+                <td>2442</td>
+                <td>
+                  <span class="badge badge-secondary">credit card</span>
+                </td>
+                <td>$32.50</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" class="text-center pt-3">
+                  <a href="#">See all sales</a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <p class="text-muted text-center">
+            Payment methods usage
+          </p>
+          <canvas id="pay-methods" height="120"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <p class="text-muted text-center">
+            Cash flow
+          </p>
+          <canvas id="cash-flow" height="120"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
