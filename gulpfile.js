@@ -3,12 +3,12 @@ const autoprefixer = require('gulp-autoprefixer')
 const babelify = require('babelify')
 const bro = require('gulp-bro')
 const connect = require('gulp-connect')
-const fileinclude = require('gulp-file-include')
-const gap = require('gulp-append-prepend')
-const htmlextend = require('gulp-html-extend')
 const htmlmin = require('gulp-htmlmin')
+const gap = require('gulp-append-prepend')
 const rename = require("gulp-rename")
 const sass = require('gulp-sass')
+const uglify = require('gulp-uglify')
+const handlebars = require('./handlebars')
 
 const header = `
 /*!
@@ -18,46 +18,35 @@ const header = `
  */`
 
 gulp.task('build-sass', () => {
-  return gulp.src('src/scss/compile.scss')
+  return gulp.src('src/scss/admin4b.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', (e) => console.log(e)))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
-    .pipe(rename({ basename: 'admin4b', extname: '.min.css' }))
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'], cascade: false }))
+    .pipe(rename({ extname: '.min.css' }))
     .pipe(gap.prependText(header))
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('build-js', () => {
-  return gulp.src('src/js/index.js')
-    .pipe(bro({
-      transform: [
-        babelify.configure({ presets: ['@babel/preset-env'] }),
-        ['uglifyify', { global: true }]
-      ]
-    }))
-    .pipe(rename({ basename: 'admin4b', extname: '.min.js' }))
-    .pipe(gap.prependText(header))
+  return gulp.src('src/js/admin4b.js')
+    .pipe(bro({ transform: [babelify.configure({ presets: ['@babel/preset-env'] })] }))
+    .pipe(uglify().on('error', (e) => console.log(e)))
+    .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('dist'))
 })
 
 gulp.task('build-html', () => {
-  return gulp.src(['src/html/**/*.html', '!src/html/includes/**/*.html'])
-    .pipe(htmlextend({
-      annotations: false,
-      verbose: false,
-      root: './src/html'
-    }).on('error', (e) => console.log(e)))
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: './src/html/'
-    }).on('error', (e) => console.log(e)))
-    .pipe(htmlmin({ collapseWhitespace: true }).on('error', (e) => console.log(e)))
+  return gulp.src(['src/hbs/**/_*.hbs', 'src/hbs/**/*.hbs'], { base: './src/hbs' })
+    .pipe(handlebars())
+    .pipe(rename({ extname: '.html' }))
+    .pipe(htmlmin({ collapseWhitespace: true })
+      .on('error', (e) => console.log(e)))
     .pipe(gulp.dest('docs'))
 })
 
 gulp.task('build', gulp.parallel('build-html', 'build-sass', 'build-js'))
 
-gulp.task('build-watching', done => {
-  gulp.watch('src/html/**/*.html', gulp.series('build-html'))
+gulp.task('watch', done => {
+  gulp.watch('src/hbs/**/*.{hbs,html,js,json}', gulp.series('build-html'))
   gulp.watch('src/scss/**/*.scss', gulp.series('build-sass'))
   gulp.watch('src/js/**/*.js', gulp.series('build-js'))
 
@@ -71,4 +60,4 @@ gulp.task('serve', done => {
   done()
 })
 
-gulp.task('start', gulp.series('serve', 'build-watching', 'build'))
+gulp.task('start', gulp.series('serve', 'watch', 'build'))

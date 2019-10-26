@@ -1,0 +1,30 @@
+{{#>src/hbs/page}}
+
+{{#*inline "head-block"}}
+<meta name="description" content="Blank page is a startup point for creating your content." />
+<title>Admin 4B · Blank page</title>
+{{/inline}}
+
+{{#*inline "body-block"}}
+<div class="app">
+  {{{ include 'src/hbs/includes/sidebar.html' }}}
+  <div class="app-content">
+    <div class="content-header">
+      {{{ include 'src/hbs/includes/navbar.html' }}}
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Pages</li>
+          <li class="breadcrumb-item">Blank page</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="content-body">
+      <div class="container">
+        Content goes here...
+      </div>
+    </div>
+  </div>
+</div>
+{{/inline}}
+
+{{/src/hbs/page}}

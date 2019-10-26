@@ -12,11 +12,11 @@
     "front-end"
   ],
   "bugs": {
-    "url": "https://github.com/logiqsystem/admin4b/issues"
+    "url": "https://github.com/marxjmoura/admin4b/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/logiqsystem/admin4b.git"
+    "url": "git://github.com/marxjmoura/admin4b.git"
   },
   "scripts": {
     "start": "gulp start",
@@ -27,26 +27,27 @@
     "build": "gulp build"
   },
   "dependencies": {
-    "bootstrap": "^4.2.1",
-    "inoutjs": "^0.1.2",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "bootstrap": "^4.3.1",
+    "gulp-append-prepend": "^1.0.8",
+    "inoutjs": "^0.1.4",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "babelify": "^10.0.0",
-    "browserify": "^16.2.3",
-    "gulp": "^4.0.0",
-    "gulp-append-prepend": "^1.0.6",
-    "gulp-autoprefixer": "^6.0.0",
+    "browserify": "^16.5.0",
+    "glob": "^7.1.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-bro": "^1.0.3",
     "gulp-connect": "^5.7.0",
-    "gulp-file-include": "^2.0.1",
-    "gulp-html-extend": "^1.1.6",
     "gulp-htmlmin": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "uglifyify": "^5.0.1"
+    "gulp-uglify": "^3.0.2",
+    "handlebars": "^4.4.5",
+    "jsdom": "^15.2.0"
   }
 }

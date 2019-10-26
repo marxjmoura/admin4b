@@ -1,0 +1,95 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="form-group">
+          <label>From</label>
+          <div class="input-group">
+            <div class="form-control"></div>
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+                <i class="fa fa-calendar-check-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="form-group">
+          <label>Until</label>
+          <div class="input-group">
+            <div class="form-control"></div>
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendar">
+                <i class="fa fa-calendar-check-o"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="calendar" class="modal modal-calendar fade" tabindex="-1" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-shadow text-primary" data-calendar-month="previous">
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <div class="dropdown">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item" data-calendar-month="0">January</a>
+            <a href="#" class="dropdown-item" data-calendar-month="1">February</a>
+            <a href="#" class="dropdown-item" data-calendar-month="2">March</a>
+            <a href="#" class="dropdown-item" data-calendar-month="3">April</a>
+            <a href="#" class="dropdown-item" data-calendar-month="4">May</a>
+            <a href="#" class="dropdown-item" data-calendar-month="5">June</a>
+            <a href="#" class="dropdown-item" data-calendar-month="6">July</a>
+            <a href="#" class="dropdown-item" data-calendar-month="7">August</a>
+            <a href="#" class="dropdown-item" data-calendar-month="8">September</a>
+            <a href="#" class="dropdown-item" data-calendar-month="9">October</a>
+            <a href="#" class="dropdown-item" data-calendar-month="10">November</a>
+            <a href="#" class="dropdown-item" data-calendar-month="11">December</a>
+          </div>
+        </div>
+        <input type="number" class="form-control" pattern="[0-9]*" maxlength="4">
+        <button type="button" class="btn btn-shadow text-primary" data-calendar-month="next">
+          <i class="fa fa-angle-right"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table-calendar">
+          <thead>
+            <tr>
+              <th>Su</th>
+              <th>Mo</th>
+              <th>Tu</th>
+              <th>We</th>
+              <th>Th</th>
+              <th>Fr</th>
+              <th>Sa</th>
+            </tr>
+          </thead>
+        </table>
+        <div class="text-center">
+          <button type="button" class="btn btn-link" data-calendar-link="today">
+            <i class="fa fa-clock-o"></i> today
+          </button>
+          <button type="button" class="btn btn-link" data-calendar-link="selected">
+            <i class="fa fa-check-circle-o"></i> selected
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="btnApplyDate" type="button" class="btn btn-primary" data-dismiss="modal">
+          Apply
+        </button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

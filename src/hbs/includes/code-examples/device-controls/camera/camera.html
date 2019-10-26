@@ -1,0 +1,26 @@
+<div class="form-group">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-camera">
+    <i class="fa fa-camera"></i> Take a picture
+  </button>
+</div>
+
+<img id="snapshot-preview" src="unknown.png" class="img-thumbnail">
+
+<div id="modal-camera" class="modal" tabindex="-1" data-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="fa fa-camera"></i> Camera
+        </h5>
+      </div>
+      <div class="modal-body">
+        <video id="camera" class="camera" data-size="320x240"></video>
+      </div>
+      <div class="modal-footer">
+        <button id="button-snapshot" type="button" class="btn btn-info">Take a picture</button>
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Turn off</button>
+      </div>
+    </div>
+  </div>
+</div>
