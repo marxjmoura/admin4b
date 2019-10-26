@@ -13,8 +13,8 @@ const sass = require('gulp-sass')
 const header = `
 /*!
  * Admin 4B v2.0.0 (https://getadmin4b.com)
- * Copyright 2018 LogiQ System (https://logiqsystem.com)
- * Licensed under MIT (https://github.com/logiqsystem/admin4b/blob/master/LICENSE)
+ * Copyright 2017-present Marx J. Moura (https://github.com/marxjmoura)
+ * Licensed under MIT (https://github.com/marxjmoura/admin4b/blob/master/LICENSE)
  */`
 
 gulp.task('build-sass', () => {
