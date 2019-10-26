@@ -1,4 +1,4 @@
-## [v2.0.0](https://github.com/logiqsystem/admin4b/releases/tag/v2.0.0) (2019-01-20)
+## [v2.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v2.0.0) (2019-01-20)
 ### Breaking changes:
 - The theme was all rewritten using Flexbox (check [browser compatibility](https://caniuse.com/#feat=flexbox))
 - Sidebar structure has changed ([refer to docs](https://getadmin4b.com/docs/pages/layout/sidebar.html))
@@ -23,20 +23,20 @@
 - Error pages (404 and 500)
 - Timeline
 
-## [v1.2.2](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.2) (2018-10-20)
+## [v1.2.2](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.2) (2018-10-20)
 ### Bug fixes:
 - Fix components to reference to the theme colors
 ### Features:
 - New table style
 
-## [v1.2.1](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.1) (2018-09-16)
+## [v1.2.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.1) (2018-09-16)
 ### Bug fixes:
 - Fix JavaScript reference error on NPM
 - Other minor bug fixes
 ### Features:
 - Small improvements on shadows
 
-## [v1.2.0](https://github.com/logiqsystem/admin4b/releases/tag/v1.2.0) (2018-07-08)
+## [v1.2.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.2.0) (2018-07-08)
 ### Breaking changes:
 - Plugins rewritten in ES6
 - Bootstrap, jQuery and Popper are now included as part of `admin4b.min.*` bundle (no more need to import)
@@ -47,7 +47,7 @@
 ### Features:
 - Sidebar respect max-width on small screens
 
-## [v1.1.1](https://github.com/logiqsystem/admin4b/releases/tag/v1.1.1) (2018-05-19)
+## [v1.1.1](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.1) (2018-05-19)
 ### Bug fixes:
 - Fix polyfill for `Object.keys`
 - Hover color of links in dropdown for notifications
@@ -57,7 +57,7 @@
   - Header sizing and margins
   - Add gray text colors (`text-gray-*`)
 
-## [v1.1.0](https://github.com/logiqsystem/admin4b/releases/tag/v1.1.0) (2018-05-05)
+## [v1.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.1.0) (2018-05-05)
 ### Bug fixes
 - Fix position of caret in sidebar link on Firefox
 - Fix `Object.keys` error on IE
@@ -71,7 +71,7 @@
   - Progress navigation (`.nav-tabs-progress`)
   - Responsive capabilities (turning into accordion on small screens)
 
-## [v1.0.0](https://github.com/logiqsystem/admin4b/releases/tag/v1.0.0) (2018-04-25)
+## [v1.0.0](https://github.com/marxjmoura/admin4b/releases/tag/v1.0.0) (2018-04-25)
 ### Breaking changes
 - Removed separate file for code highlight (`.source-code` included in `admim4b.min.css`)
 - Removed themes of code highlight (kept `light` only)
@@ -87,7 +87,7 @@
 - Layout improvement
 - Support for buttons in sidebar (wrapped with `.sidebar-nav-btn`)
 
-## [v0.8.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.8.0) (2018-04-21)
+## [v0.8.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.8.0) (2018-04-21)
 ### Bug fixes
 - Fix `page-sign` on IE11: forms were not centralized
 - Fix check mark of `.radio` when set text-align to parent
@@ -100,7 +100,7 @@
 - File manager
 - Themes for code highlight: light and dark
 
-## [v0.7.1](https://github.com/logiqsystem/admin4b/releases/tag/v0.7.1) (2018-03-17)
+## [v0.7.1](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.1) (2018-03-17)
 ### Bug fixes
 - Fix check mark for small and large radio buttons
 - Fix cross-browser border radius for some components
@@ -112,7 +112,7 @@
 - Code refactoring for sidebar colors
 - Form responsiveness in documentation
 
-## [v0.7.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.7.0) (2018-03-13)
+## [v0.7.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.7.0) (2018-03-13)
 ### Breaking changes
 - The text of radio button must to be stay outside of `.check-mark` (just like checkbox and switcher)
 - The element `pre > code` must to be wrapped with the class `.source-code`
@@ -124,7 +124,7 @@
 - Use Simple Line Icons in sidebar
 - Change units to `rem`
 
-## [v0.6.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.6.0) (2018-03-10)
+## [v0.6.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.6.0) (2018-03-10)
 ### Breaking changes
 - Rename `.form-signin` to `form-sign`
 ### Features
@@ -134,7 +134,7 @@
 - Remove margins of `callout` component and add documentation
 - Documentation for how to customize sidebar width
 
-## [v0.5.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.5.0) (2018-02-25)
+## [v0.5.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.5.0) (2018-02-25)
 ### Bug fixes
 - Borders of `.input-group` input showing on small screens
 ### Features
@@ -143,25 +143,25 @@
 - `label-floating` and `label-infield` components
 - New sidebar-light color
 
-## [v0.4.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.4.0) (2018-02-19)
+## [v0.4.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.4.0) (2018-02-19)
 ### Features
 - Notifications in navbar
 - Registration and login sample pages using the experimental component label-floating
 - Small documentation improvements
 - Utility classes page-sign and form-sign
 
-## [v0.3.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.3.0) (2018-02-18)
+## [v0.3.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.3.0) (2018-02-18)
 ### Features
 - Add scss to npm package
 - Add the component input-group
 - Small changes in the documentation
 
-## [v0.2.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.2.0) (2018-02-15)
+## [v0.2.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.2.0) (2018-02-15)
 ### Features
 - Add toggle switch
 - More flexible sidebar with colors and animations
 
-## [v0.1.0](https://github.com/logiqsystem/admin4b/releases/tag/v0.1.0) (2018-02-11)
+## [v0.1.0](https://github.com/marxjmoura/admin4b/releases/tag/v0.1.0) (2018-02-11)
 ### Features
 - Introducing the component input-suggestion
 - Layout structure
