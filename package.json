@@ -48,6 +48,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "handlebars": "^4.5.3",
-    "jsdom": "^15.2.0"
+    "jsdom": "^16.5.0"
   }
 }
